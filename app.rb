@@ -85,7 +85,7 @@ helpers do
     if asset = sprockets[name]
       "/assets/#{asset.digest}/#{name}"
     else
-      ""
+      name
     end
   end
 
