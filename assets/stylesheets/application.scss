@@ -8,16 +8,23 @@ html, body {
 }
 
 body {
-  font: 16px Times serif;
+  font-family: "minion-pro-1","minion-pro-2", georgia, serif;
+  font-size: 1em;
+  line-height: 140%;
+  color: #222;
 }
 
 .frame {
   position: relative;
-  top: 170px;
-  width: 1024px;
+  top: 120px;
+  width: 660px;
+  padding: 0 182px;
   margin: 0 auto;
 }
 
 @import "mast";
 @import "home";
 @import "slideshow";
+@import "typography";
+
+//typekit selector = .tk-minion-pro

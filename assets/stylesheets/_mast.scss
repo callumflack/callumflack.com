@@ -2,11 +2,11 @@
   position: fixed;
   top: 0;
   left: 50%;
-  width: 1024px;
-  margin-left: -512px;
-  padding: 20px 0;
+  width: 756px;
+  margin-left: -378px;
+  padding: 17px 0;
+  border-bottom: 1px dotted #ddd;
   z-index: 2;
-  color: #222;
   text-align: center;
   background-color: #fff;
   background-color: rgba(255, 255, 255, 0.8);
@@ -16,17 +16,26 @@
 }
 
 .tagline {
+  text-transform: uppercase;
+  font-weight: 600;
+  font-size: 75%;
+  letter-spacing: 0.1em;
   margin: 20px 0;
   text-align: center;
-  font-size: 16px;
+  a {
+    text-decoration: none;
+  }
 }
 
 .nav {
+  font-family: "runda-1","runda-2", helvetica, sans-serif;
+  font-size: 21px;
   position: relative;
   margin: 20px 0;
   a {
     margin: 0 30px;
-    font-weight: bold;
+    font-weight: 700;
+    text-decoration: none;
   }
 }
 
