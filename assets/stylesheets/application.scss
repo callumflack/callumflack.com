@@ -22,6 +22,11 @@ body {
   margin: 0 auto;
 }
 
+.log {
+  padding: 104px 0 40px 0;
+  border-bottom: 1px dotted #aaa;
+}
+
 @import "mast";
 @import "home";
 @import "slideshow";
