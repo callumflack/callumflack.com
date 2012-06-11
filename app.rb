@@ -49,11 +49,13 @@ end
 helpers do
 
   def javascript_tag(name, options = {})
-    content_tag :script, options.merge(type: "text/javascript", src: asset_path("#{name}.js")), ""
+    name = "#{name}.js" if Symbol === name
+    content_tag :script, options.merge(type: "text/javascript", src: asset_path(name)), ""
   end
 
   def stylesheet_tag(name, options = {})
-    tag :link, options.merge(rel: "stylesheet", media: "screen", type: "text/css", href: asset_path("#{name}.css"))
+    name = "#{name}.css" if Symbol === name
+    tag :link, options.merge(rel: "stylesheet", media: "screen", type: "text/css", href: asset_path(name))
   end
 
   def image_tag(name, options = {})
