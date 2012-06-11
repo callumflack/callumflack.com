@@ -5,6 +5,9 @@
     <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
     %title My Website
     = stylesheet_tag :application
+    = javascript_tag "http://use.typekit.com/byz1jhq.js"
+    :javascript
+      try{Typekit.load();}catch(e){}
   %body{ class: @body_class }
     .mast
       .tagline
