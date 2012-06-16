@@ -1,41 +1,55 @@
+@import "reset";
 @import "mixins";
 
 html, body {
-  font-size: 100%;
   width: 100%;
   height: 100%;
   margin: 0;
   padding: 0;
-  -webkit-margin-before: 0;
-  -webkit-margin-after: 0;
-  -webkit-margin-start: 0;
-  -webkit-margin-end: 0;
 }
 
 body {
-  font-family: "minion-pro-1","minion-pro-2", georgia, serif;
+  font-family: "minion-pro-1","minion-pro-2", georgia, serif; //"adriane-1", "adriane-2"
   font-size: 1.313em;
-  line-height: 140%; //1.524em
+  line-height: 145%; //1.524em
   color: #222;
-  background-color: #fdfdfd;
+  background-color: #fcfcfc;
+  &.journal {
+    h1 { padding-top: 0; }
+  }
 }
 
 .frame {
   position: relative;
   top: 120px;
-  width: 660px;
-  padding: 0 182px;
+  width: 670px;
+  padding: 0 177px 160px 177px;
   margin: 0 auto;
 }
 
 .log {
-  padding: 4em 0 1.25em 0;
-  border-bottom: 2px dotted #e5e5e5;
+  padding: 84px 0 32px 0;
+  border-bottom: 1px solid #e5e5e5; //border-bottom: 2px dotted #e5e5e5;
 }
 
-@import "mast";
+// images
+.centred {
+  position: relative;
+  margin-bottom: 20px;
+  &.portrait { 
+    left: 50%;
+    margin-left: -251px;
+  }
+  &.landscape {
+    left: 0;
+    padding-top: 84px;
+  }
+}
+
+@import "signupform";
 @import "home";
 @import "slideshow";
 @import "typography";
+@import "mast";
 
 //typekit selector = .tk-minion-pro

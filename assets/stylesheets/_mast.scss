@@ -2,46 +2,39 @@
   position: fixed;
   top: 0;
   left: 50%;
-  width: 660px;
-  margin-left: -330px;
+  width: 670px;
+  margin-left: -335px;
   padding: 17px 0;
-  border-bottom: 2px dotted #00abf2;
+  border-bottom: 1px solid #ddd;
   z-index: 2;
-  background-color: #fff;
-  background-color: rgba(255, 255, 255, 0.95);
+  background-color: #fdfdfd;
+  background-color: rgba(253, 253, 253, .9);
   text-align: center;
   line-height: 100%;
-  a { color: #00abf2; }
+  a { color: #222; }
 }
 
-.tagline {
-  text-transform: uppercase;
-  font-weight: 600;
-  font-size: 60%;
-  letter-spacing: 0.1em;
-  margin: 20px 0;
-  a { text-decoration: none; }
-  a:hover {text-decoration: underline; }
+.manifesto {
+  margin: 18px 0;
+  a:hover { 
+    color: #222;
+  }
 }
 
 .nav {
   font-family: "futura-pt-1", "futura-pt-2", helvetica, sans-serif;
   font-weight: 400;
-  font-size: 21px;
   position: relative;
-  margin: 20px 0;
+  margin: 18px 0;
   a {
     margin: 0 30px;
-    text-decoration: none;
   }
-  a:hover { text-decoration: underline; }
 }
 
 .details-link {
   visibility: hidden;
   position: absolute;
-  right: 100px;
-  font-style: italic;
+  right: 10px;
 }
 
 .work .details-link {

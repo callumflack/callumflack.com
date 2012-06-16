@@ -8,8 +8,9 @@
       try{Typekit.load();}catch(e){}
   %body{ class: @body_class }
     .mast
-      .tagline
-        = link_tag "Design for culture.", "/"
+      .manifesto
+        %p
+          = link_tag "Callum, Designing", "/"
       .nav
         = link_tag "Journal", "/journal"
         = link_tag "Work", "/work"
