@@ -1,17 +1,23 @@
 @import "mixins";
 
 html, body {
+  font-size: 100%;
   width: 100%;
   height: 100%;
   margin: 0;
   padding: 0;
+  -webkit-margin-before: 0;
+  -webkit-margin-after: 0;
+  -webkit-margin-start: 0;
+  -webkit-margin-end: 0;
 }
 
 body {
   font-family: "minion-pro-1","minion-pro-2", georgia, serif;
-  font-size: 1em;
-  line-height: 140%;
+  font-size: 1.313em;
+  line-height: 140%; //1.524em
   color: #222;
+  background-color: #fdfdfd;
 }
 
 .frame {
@@ -23,8 +29,8 @@ body {
 }
 
 .log {
-  padding: 104px 0 40px 0;
-  border-bottom: 1px dotted #aaa;
+  padding: 4em 0 1.25em 0;
+  border-bottom: 2px dotted #e5e5e5;
 }
 
 @import "mast";

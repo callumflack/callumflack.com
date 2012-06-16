@@ -18,3 +18,11 @@
   -webkit-transition: $value;
   transition: $value;
 }
+
+@mixin margin($value) {
+  -webkit-margin-before: 0;
+  -webkit-margin-after: 0;
+  -webkit-margin-start: 0;
+  -webkit-margin-end: 0;
+  margin: $value;
+}
