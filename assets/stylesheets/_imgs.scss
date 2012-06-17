@@ -1,0 +1,19 @@
+.centred {
+  position: relative;
+  margin-bottom: 20px;
+  &.portrait { 
+    left: 50%;
+    margin-left: -251px;
+  }
+  &.landscape {
+    left: 0;
+    padding-top: 84px;
+  }
+}
+
+.journal {
+  background: top left url(back-01.jpg) no-repeat fixed;
+  .frame {
+    background-color: #fcfcfc;
+  }
+}

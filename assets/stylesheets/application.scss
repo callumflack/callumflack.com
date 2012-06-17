@@ -32,20 +32,7 @@ body {
   border-bottom: 1px solid #e5e5e5; //border-bottom: 2px dotted #e5e5e5;
 }
 
-// images
-.centred {
-  position: relative;
-  margin-bottom: 20px;
-  &.portrait { 
-    left: 50%;
-    margin-left: -251px;
-  }
-  &.landscape {
-    left: 0;
-    padding-top: 84px;
-  }
-}
-
+@import "imgs";
 @import "signupform";
 @import "home";
 @import "slideshow";
