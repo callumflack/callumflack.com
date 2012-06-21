@@ -1,4 +1,4 @@
-@import "reset";
+@import "normalize";
 @import "mixins";
 
 html, body {
@@ -21,9 +21,9 @@ body {
 
 .frame {
   position: relative;
-  top: 120px;
+  top: 0;
   width: 670px;
-  padding: 0 177px 160px 177px;
+  padding: 120px 177px 160px 177px;
   margin: 0 auto;
 }
 
