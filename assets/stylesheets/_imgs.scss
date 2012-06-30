@@ -1,13 +1,32 @@
+//.centred {
+//  position: relative;
+//  margin-bottom: 20px;
+//  &.portrait { 
+//    left: 50%;
+//    margin-left: -251px;
+//    padding-top: 12%;
+//  }
+//  &.landscape {
+//    left: 0;
+//    padding-top: 84px;
+//  }
+//}
+//
+//.journal {
+//  background: top left url(back-01.jpg) no-repeat fixed;
+//  .frame {
+//    background-color: #fcfcfc;
+//  }
+//}
+
 .centred {
   position: relative;
-  margin-bottom: 20px;
+  padding-bottom: 20px;
+  margin: 0 auto;
   &.portrait { 
-    left: 50%;
-    margin-left: -251px;
     padding-top: 12%;
   }
   &.landscape {
-    left: 0;
     padding-top: 84px;
   }
 }
