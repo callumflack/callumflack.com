@@ -6,10 +6,23 @@
     left: 50%;
     margin-left: -251px;
     padding-top: 12%;
+    &.post-list {
+      width: 403px;
+      height: 502px;
+      margin-left: -201px;
+      padding-top: 1%;
+    }
   }
   &.landscape {
     left: 0;
     padding-top: 84px;
+    &.post-list {
+      width: 502px;
+      height: 403px;
+      left: 50%;
+      margin-left: -251px;
+      padding-top: 1%;
+    }
   }
 }
 
