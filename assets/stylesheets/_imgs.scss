@@ -1,15 +1,20 @@
+$img-1-1: 503px;
+$img-1-2: 670px;
+$img-2-1: 403px;
+$img-2-2: 502px;
+
 .centred {
   position: relative;
   padding-bottom: 20px;
 //  margin: 0 auto;
   &.portrait { 
     left: 50%;
-    margin-left: -251px;
+    margin-left: -$img-1-1 / 2;
     padding-top: 12%;
     &.post-list {
-      width: 403px;
-      height: 502px;
-      margin-left: -201px;
+      width: $img-2-1;
+      height: $img-2-2;
+      margin-left: -$img-2-1 / 2;
       padding-top: 1%;
     }
   }
@@ -17,10 +22,10 @@
     left: 0;
     padding-top: 84px;
     &.post-list {
-      width: 502px;
-      height: 403px;
+      width: $img-2-2;
+      height: $img-2-1;
       left: 50%;
-      margin-left: -251px;
+      margin-left: -$img-2-2 / 2;
       padding-top: 1%;
     }
   }
