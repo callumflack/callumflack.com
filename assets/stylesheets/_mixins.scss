@@ -18,3 +18,12 @@
   -webkit-transition: $value;
   transition: $value;
 }
+
+@mixin type-value {
+  font-size: 60%; //76%
+  font-weight: 600;
+  text-align: center;
+  text-transform: uppercase;
+  text-decoration: none;
+  letter-spacing: 0.1em;
+}

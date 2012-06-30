@@ -16,6 +16,7 @@
 
 .manifesto {
   margin: 18px 0;
+  @include type-value;
   a:hover { 
     color: #222;
   }

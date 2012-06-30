@@ -1,6 +1,10 @@
 a { 
   text-decoration: none; 
   color: #222;
+  &.more { 
+    @include type-value;
+    margin-left: .33em;
+  }
 }
 
 a:hover { 
@@ -32,16 +36,8 @@ p {
   line-height: 140%;
   margin: 0;
   padding: 0;
-  a { margin-left: .33em; }
-  a, &.date {
-    font-size: 60%; //76%
-    font-weight: 600;
-    text-transform: uppercase;
-    text-decoration: none;
-    letter-spacing: 0.1em;
-  }
   &.date {
-    text-align: center;
+    @include type-value;
     margin-bottom: 32px;
   }
   &.intro {
@@ -51,5 +47,16 @@ p {
     font-size: .875em;
     color: #aaa;
     margin-bottom: 32px;
+  }
+}
+
+ul {
+  padding: 0;
+  text-align: center;
+  li {
+    display: inline-block;
+    margin: 0.57em 1.14em;
+    padding: 1em;
+    @include type-value;
   }
 }
