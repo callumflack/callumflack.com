@@ -9,7 +9,7 @@ $img-posts2: $img-side2 * 0.8;
 //  margin: 0 auto;
   &.portrait { 
     left: 50%;
-    margin-left: -$img-posts1 / 2;
+    margin-left: -$img-side1 / 2;
     padding-top: 12%;
     &.post-list {
       width: $img-posts1;
