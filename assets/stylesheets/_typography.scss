@@ -9,13 +9,12 @@ a {
 
 a:hover { 
   text-decoration: underline;
-  color: #00abf2;
+  color: $link;
 }
 
 h1 {
-  font-family: "futura-pt-1", "futura-pt-2", helvetica, sans-serif;
+  @include type-item;
   text-align: center;
-  font-weight: 400;
   font-size: 1.524em;
   line-height: 140%;
   color: #222;
@@ -29,6 +28,10 @@ h1 {
     font-size: 100%;
     padding-top: 1%;
   }
+}
+
+h2 {
+  @include type-value;
 }
 
 p {
@@ -47,16 +50,5 @@ p {
     font-size: .875em;
     color: #aaa;
     margin-bottom: 32px;
-  }
-}
-
-ul {
-  padding: 0;
-  text-align: center;
-  li {
-    display: inline-block;
-    margin: 0.57em 1.14em;
-    padding: 1em;
-    @include type-value;
   }
 }
