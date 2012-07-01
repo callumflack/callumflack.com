@@ -1,7 +1,12 @@
 $img-side1: 503px;
 $img-side2: 670px;
-$img-posts1: $img-side1 * 0.8;
-$img-posts2: $img-side2 * 0.8;
+$img-posts1: $img-side1 * 0.75;
+$img-posts2: $img-side2 * 0.75;
+
+a img:hover {
+  color: $link;
+  border: 1px sold $link;
+}
 
 .centred {
   position: relative;
