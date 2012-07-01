@@ -13,11 +13,10 @@
     :javascript
       try{Typekit.load();}catch(e){}
   %body{ class: @body_class }
-    .mast
+    %header
       .manifesto
-        %p
-          = link_tag "Callum, Designing", "/"
-      .nav
+        = link_tag "Callum, Designing", "/"
+      %nav.main
         = link_tag "Journal", "/journal"
         = link_tag "Work", "/work"
         = link_tag "Profile", "/profile"
