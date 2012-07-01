@@ -1,4 +1,4 @@
-.mast {
+header {
   position: fixed;
   top: 0;
   left: 50%;
@@ -7,24 +7,25 @@
   padding: 17px 0;
   border-bottom: 1px solid #ddd;
   z-index: 2;
-  background-color: #fdfdfd;
+  background-color: $unwhite;
   background-color: rgba(253, 253, 253, .9);
   text-align: center;
   line-height: 100%;
-  a { color: #222; }
-}
-
-.manifesto {
-  margin: 18px 0;
-  @include type-value;
-  a:hover { 
+  a { 
     color: #222;
   }
 }
 
-.nav {
+.manifesto {
+  @include type-value;
+  margin: 18px 0;
+//  a:hover { color: #222; }
+}
+
+nav.main {
   font-family: "futura-pt-1", "futura-pt-2", helvetica, sans-serif;
   font-weight: 400;
+  font-size: 100%;
   position: relative;
   margin: 18px 0;
   a {
