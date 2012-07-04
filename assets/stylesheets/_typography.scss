@@ -1,54 +1,54 @@
-a { 
-  text-decoration: none; 
-  color: #222;
-  &.more { 
-    @include type-value;
-    margin-left: .33em;
-  }
+.type-body {
+  font-family: "minion-pro-1","minion-pro-2", georgia, times, serif; 
+  //, "pt-serif-1", "pt-serif-2", "calluna-1", "calluna-2", "livory-1", "livory-2", 
+  font-style: normal;
+  text-align: left;
+  text-transform: none;
+  text-decoration: none;
+  letter-spacing: 0;
 }
 
-a:hover { 
-  text-decoration: underline;
-  color: $link;
+.type-value {
+  font-size: 60%; //76%
+  font-style: normal;
+  font-weight: 700;
+  text-align: center;
+  text-transform: uppercase;
+  text-decoration: none;
+  letter-spacing: 0.1em;
+}
+
+.type-item {
+  font-family: "futura-pt-1", "futura-pt-2", helvetica, sans-serif;
+  //  "pt-sans-1", "pt-sans-2", 
+  font-style: normal;
+  font-weight: 300;
+}
+
+a { 
+  text-decoration: none; 
+  color: #222; //202F63
+  &:hover { 
+    text-decoration: underline;
+    color: $link;
+  }
 }
 
 h1 {
-  @include type-item;
+  @extend .type-item;
+//  font-weight: 400;
   text-align: center;
   font-size: 1.524em;
   line-height: 140%;
-  color: #222;
-  margin-bottom: 6px;
-  padding-top: 84px;
-  &.h-title { 
-    font-size: 4em;
-    letter-spacing: -3px;
-  }
-  &.caption {
-    font-size: 100%;
-    padding-top: 1%;
-  }
+  margin: 0 0 6px 0;
 }
 
-h2 {
-  @include type-value;
+h3 {
+  @extend .type-value;
+  margin: 0 0 10px 0;
 }
 
 p {
-  font-size: 1em;
-  line-height: 140%;
+  @extend .type-body;
   margin: 0;
-  padding: 0;
-  &.date {
-    @include type-value;
-    margin-bottom: 32px;
-  }
-  &.intro {
-    text-align: center;
-    font-weight: 500;
-    font-style: italic;
-    font-size: .875em;
-    color: #aaa;
-    margin-bottom: 32px;
-  }
 }

@@ -4,11 +4,10 @@ header {
   left: 50%;
   width: 670px;
   margin-left: -335px;
-  padding: 17px 0;
-  border-bottom: 1px solid #ddd;
+  padding: 16px 0;
+  border-bottom: 2px solid #555;
   z-index: 2;
-  background-color: $unwhite;
-  background-color: rgba(253, 253, 253, .9);
+  background-color: rgba(253, 253, 253, 1);
   text-align: center;
   line-height: 100%;
   a { 
@@ -17,19 +16,23 @@ header {
 }
 
 .manifesto {
-  @include type-value;
-  margin: 18px 0;
+  @extend .type-value;
+  margin: 16px 0;
 //  a:hover { color: #222; }
 }
 
-nav.main {
-  font-family: "futura-pt-1", "futura-pt-2", helvetica, sans-serif;
+nav {
+  @extend .type-item;
+  font-size: 95%;
   font-weight: 400;
-  font-size: 100%;
+  text-transform: none;
+  text-align: center;
+  line-height: 100%;
+  letter-spacing: 0;
   position: relative;
-  margin: 18px 0;
+  margin: 16px 0;
   a {
-    margin: 0 30px;
+    margin: 0 21px;
   }
 }
 

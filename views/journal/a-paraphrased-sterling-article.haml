@@ -1,40 +1,49 @@
+- @body_class = "journal"
+
 .frame
   %h1 A paraphrased Sterling article
   %p.date June 11, 2012
   
-  :markdown
-    And *they* were tracking that and they were going to adopt that too. In other words, they were going to move the Fiat 500 into emergent demographic groups. This was the way forward. They were looking for emergent consumer groups and they were going to move the car into their social space year by year.
-    
-    I thought this is a really clever idea. I thought I’m in a society that’s going to do a lot of this. And I thought this is a terrible and scary paradigm of the future. Because it’s very difficult for us to construe that kind of activity as progress.  
-
-    Everybody for 200 years, almost since the twelve hundreds have known what progress means. They know what it means to be progressive and they know what it means to be futuristic.  
-
-    You get more scientific knowledge, you create more tools, make more jobs, you master nature, you get more power, cheaper power, you struggle for a better life for your children, you’re looking for health, prosperity, material security, shelter, bigger, faster, stronger, knowing more. Everybody knows that’s progress. That’s not what we’re going to get.  
-
-    The actual objective situation looks more like this: No money, scarcity, financial collapse, collapsed states, general precarity, an energy crisis, low intensity global warfare, and a rapidly advancing climate crisis.  
-
-    That’s the situation on the ground. People ask where did the future go? Where are these glamorous versions of the future? Why are we…? – Okay, we’re deliberately choosing to move away from that and into a non-twentieth century space.  
-
-    We’re moving into a situation with Generation-Xers in power, in a Depression. A Depression where people are afraid of the sky.  
-
-    That’s what the next decade actually looks like. And you’re going to live there.
+  / :markdown
+  %p And they were tracking that and they were going to adopt that too. In other words, they were going to move the Fiat 500 into emergent demographic groups. This was the way forward. They were looking for emergent consumer groups and they were going to move the car into their social space year by year.
+  %br
+  %p I thought this is a really clever idea. I thought I’m in a society that’s going to do a lot of this. And I thought this is a terrible and scary paradigm of the future. Because it’s very difficult for us to construe that kind of activity as progress.  
+  %br
+  %p Everybody for 200 years, almost since the twelve hundreds have known what progress means. They know what it means to be progressive and they know what it means to be futuristic.  
+  %br
+  %p You get more scientific knowledge, you create more tools, make more jobs, you master nature, you get more power, cheaper power, you struggle for a better life for your children, you’re looking for health, prosperity, material security, shelter, bigger, faster, stronger, knowing more. Everybody knows that’s progress. That’s not what we’re going to get.  
+  %br
+  %p The actual objective situation looks more like this: No money, scarcity, financial collapse, collapsed states, general precarity, an energy crisis, low intensity global warfare, and a rapidly advancing climate crisis.  
+  %br
+  %p That’s the situation on the ground. People ask where did the future go? Where are these glamorous versions of the future? Why are we…? – Okay, we’re deliberately choosing to move away from that and into a non-twentieth century space.  
+  %br
+  %p We’re moving into a situation with Generation-Xers in power, in a Depression. A Depression where people are afraid of the sky.  
+  %br
+  %p That’s what the next decade actually looks like. And you’re going to live there.
   
-  %aside
-    %h2 Read further Journal articles
-    %p  
-      %a{:href => "mailto:callumflack@gmail.com"} This is another article I've written
-    %p
-      %a{:href => "https://twitter.com/callumflack"} Twitter is a riddle
-            
   %footer
-    %nav
-      %a{:href => "mailto:callumflack@gmail.com"} Converse
-      &nbsp;|&nbsp;
-      %a{:href => "https://twitter.com/callumflack"} Twitter
-      / = link_tag "twitter", "https://twitter.com/callumflack"
-      &nbsp;|&nbsp;
-      %form{:action => "http://callumflackdesign.createsend.com/t/r/s/xjrurh/", :method => "post", :id => "subForm"}
-        %div
-          %input{:type => "text", :name => "cm-xjrurh-xjrurh", :id => "xjrurh-xjrurh", :placeholder => "Add your email"}
-          %input{:type => "submit", :value => "Subscribe"}
-    %p &copy;2012 Callum Flack        
+    %h3 
+      Got a comment?
+      %a add it on twitter
+    / %h3 Further Articles
+    / %p  
+    /   %a{:href => "/journal/i-thought-you-were-my-lady"} This is another article I've written
+    / %p
+    /   %a{:href => "/journal/i-thought-you-were-my-lady"} Twitter is a riddle    
+    / %p
+    /   %a{:href => "/journal/i-thought-you-were-my-lady"} This here's another thing I wot wrote
+      
+    %form{:action => "http://callumflackdesign.createsend.com/t/r/s/xjrurh/", :method => "post", :id => "subscribe"}
+      %input{:type => "text", :name => "cm-xjrurh-xjrurh", :id => "xjrurh-xjrurh", :placeholder => "Add your email to receive articles"}
+      %input{:type => "submit", :value => "Subscribe"} 
+        
+    %h3 How can I help?
+    %p
+      I'm a designer for print & online who solves problems elegantly. 
+      %br
+      Start an
+      %a{:href => "mailto:callumflack@gmail.com"} email conversation
+      with me to discuss projects.
+    
+  %footer.last
+    %h3 &copy;2012 Callum Flack

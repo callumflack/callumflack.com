@@ -3,42 +3,40 @@ $img-side2: 670px;
 $img-posts1: $img-side1 * 0.75;
 $img-posts2: $img-side2 * 0.75;
 
-a img:hover {
-  color: $link;
-  border: 1px sold $link;
+.log > a > img:hover {
+  zoom: 1;
+  filter: alpha(opacity=50);
+  opacity: 0.5;
+}
+
+.log > a > img {
+  background-color: $link;
 }
 
 .centred {
   position: relative;
-  padding-bottom: 20px;
+  margin-bottom: 20px;
 //  margin: 0 auto;
   &.portrait { 
     left: 50%;
     margin-left: -$img-side1 / 2;
-    padding-top: 12%;
+    margin-top: 84px;
     &.post-list {
       width: $img-posts1;
       height: $img-posts2;
       margin-left: -$img-posts1 / 2;
-      padding-top: 1%;
+      margin-top: 8px;
     }
   }
   &.landscape {
     left: 0;
-    padding-top: 84px;
+    margin-top: 84px;
     &.post-list {
       width: $img-posts2;
       height: $img-posts1;
       left: 50%;
       margin-left: -$img-posts2 / 2;
-      padding-top: 1%;
+      margin-top: 8px;
     }
-  }
-}
-
-.journal {
-  background: top left url(back-01.jpg) no-repeat fixed;
-  .frame {
-    background-color: #fcfcfc;
   }
 }

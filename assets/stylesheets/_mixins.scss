@@ -1,14 +1,17 @@
+$link: #00abf2;
+$unwhite: #fdfdfd;
+
 @mixin border-radius($values) {
   -moz-border-radius: $values;
   -webkit-border-radius: $values;
   border-radius: $values;
 }
 
-@mixin box-shadow($x, $y, $offset, $color) {
-  -moz-box-shadow: $x $y $offset $color;
-  -o-box-shadow: $x $y $offset $color;
-  -webkit-box-shadow: $x $y $offset $color;
-  box-shadow: $x $y $offset $color;
+@mixin box-shadow($inset, $x, $y, $offset, $color) {
+  -moz-box-shadow: $inset $x $y $offset $color;
+  -o-box-shadow: $inset $x $y $offset $color;
+  -webkit-box-shadow: $inset $x $y $offset $color;
+  box-shadow: $inset $x $y $offset $color;
 }
 
 @mixin transition($value) {
@@ -19,20 +22,32 @@
   transition: $value;
 }
 
-@mixin type-value {
-  font-size: 60%; //76%
-  font-weight: 600;
-  text-align: center;
-  text-transform: uppercase;
-  text-decoration: none;
-  letter-spacing: 0.1em;
+@mixin background-gradient {
+  background: #F9F9F9;
+  background: -moz-linear-gradient(top, #F9F9F9 0%, #DBDBDB 100%);
+  background: -ms-linear-gradient(top, #F9F9F9 0%, #DBDBDB 100%);
+  background: -o-linear-gradient(top, #F9F9F9 0%, #DBDBDB 100%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #F9F9F9), color-stop(100%, #DBDBDB));
+  background: -webkit-linear-gradient(top, #F9F9F9 0%, #DBDBDB 100%);
+  background: linear-gradient(top, #F9F9F9 0%, #DBDBDB 100%);
 }
 
-@mixin type-item {
-  font-family: "futura-pt-1", "futura-pt-2", helvetica, sans-serif;
-  font-weight: 400;
-  
+@mixin background-gradient-hover {
+  background: #FAFAFA;
+  background: -moz-linear-gradient(top, #FAFAFA 0%, #EAEAEA 100%);
+  background: -ms-linear-gradient(top, #FAFAFA 0%, #EAEAEA 100%);
+  background: -o-linear-gradient(top, #FAFAFA 0%, #EAEAEA 100%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #FAFAFA), color-stop(100%, #EAEAEA));
+  background: -webkit-linear-gradient(top, #FAFAFA 0%, #EAEAEA 100%);
+  background: linear-gradient(top, #FAFAFA 0%, #EAEAEA 100%);
 }
 
-$link: #00abf2;
-$unwhite: #fdfdfd;
+@mixin background-gradient-active {
+  background: #DBDBDB;
+  background: -moz-linear-gradient(top, #DBDBDB 0%, #F9F9F9 100%);
+  background: -ms-linear-gradient(top, #DBDBDB 0%, #F9F9F9 100%);
+  background: -o-linear-gradient(top, #DBDBDB 0%, #F9F9F9 100%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #DBDBDB), color-stop(100%, #F9F9F9));
+  background: -webkit-linear-gradient(top, #DBDBDB 0%, #F9F9F9 100%);
+  background: linear-gradient(top, #DBDBDB 0%, #F9F9F9 100%);
+}
