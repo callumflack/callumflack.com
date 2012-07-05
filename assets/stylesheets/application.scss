@@ -11,7 +11,7 @@ html, body {
 
 body {
   @extend .type-body;
-  font-size: 1.313em;
+  font-size: 1.375em;
   line-height: 140%;
   font-weight: 400;
   color: #222; //202F63
@@ -23,7 +23,7 @@ body {
   position: relative;
   top: 0;
   width: 670px;
-  padding: 131px 118px 0 118px;
+  padding: 131px 145px 0 145px;
   margin: 0 auto;
 }
 
@@ -36,3 +36,4 @@ body {
 @import "journal";
 @import "profile";
 @import "work";
+@import "home";

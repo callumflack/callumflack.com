@@ -1,6 +1,6 @@
 .type-body {
-  font-family: "minion-pro-1","minion-pro-2", georgia, times, serif; 
-  //, "pt-serif-1", "pt-serif-2", "calluna-1", "calluna-2", "livory-1", "livory-2", 
+  font-family: "freight-text-pro-1", "freight-text-pro-2", georgia, times, serif; 
+  //, "pt-serif-1", "pt-serif-2", "calluna-1", "calluna-2", "livory-1", "livory-2", "minion-pro-1","minion-pro-2", "adobe-caslon-pro-1", "adobe-caslon-pro-2", 
   font-style: normal;
   text-align: left;
   text-transform: none;
@@ -9,28 +9,34 @@
 }
 
 .type-value {
-  font-size: 60%; //76%
+  font-size: 66%;
+  line-height: 100%;
   font-style: normal;
-  font-weight: 700;
+  font-weight: 500;
   text-align: center;
   text-transform: uppercase;
   text-decoration: none;
-  letter-spacing: 0.1em;
+  letter-spacing: 1px;
 }
 
 .type-item {
   font-family: "futura-pt-1", "futura-pt-2", helvetica, sans-serif;
   //  "pt-sans-1", "pt-sans-2", 
   font-style: normal;
-  font-weight: 300;
 }
 
 a { 
   text-decoration: none; 
   color: #222; //202F63
   &:hover { 
-    text-decoration: underline;
-    color: $link;
+    zoom: 1;
+    filter: alpha(opacity=10);
+    opacity: 0.1;
+    p, h1, h2, h3 {
+      zoom: 1;
+      filter: alpha(opacity=10);
+      opacity: 0.1;
+    }
   }
 }
 
@@ -40,15 +46,17 @@ h1 {
   text-align: center;
   font-size: 1.524em;
   line-height: 140%;
+  font-weight: 300;
   margin: 0 0 6px 0;
 }
 
 h3 {
+  @extend .type-item;
   @extend .type-value;
-  margin: 0 0 10px 0;
+//  margin: 0 0 10px 0;
 }
 
 p {
   @extend .type-body;
-  margin: 0;
+  margin: 0 0 20px 0;
 }

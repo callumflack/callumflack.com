@@ -5,13 +5,12 @@ footer {
   margin-top: 42px;
   h3 { 
     margin-top: 11px;
-    line-height: 100%;
   }
   p { 
-    @extend .type-body;
+    @extend .type-item;
     font-weight: 400;
     text-align: center;
-    font-size: .9em;
+    font-size: 1em;
   }
   a {
     text-decoration: underline;

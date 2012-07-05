@@ -14,10 +14,10 @@
       try{Typekit.load();}catch(e){}
   %body{ class: @body_class }
     %header
-      .manifesto
-        = link_tag "Callum, Designing", "/"
+      / .manifesto
+      /   = link_tag "Callum, Designing", "/"
       %nav
-        = link_tag "Journal", "/journal"
+        = link_tag "Journal", "/journal", class: "journal-active"
         = link_tag "Work", "/work"
         = link_tag "Profile", "/profile"
         = link_tag "Info", "#", class: "details-link"
