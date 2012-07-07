@@ -17,9 +17,9 @@
       / .manifesto
       /   = link_tag "Callum, Designing", "/"
       %nav
+        = link_tag "Work", "/work", class: "work-active"
         = link_tag "Journal", "/journal", class: "journal-active"
-        = link_tag "Work", "/work"
-        = link_tag "Profile", "/profile"
+        = link_tag "Profile", "/profile", class: "profile-active"
         = link_tag "Info", "#", class: "details-link"
     ~ yield
     = javascript_tag :application

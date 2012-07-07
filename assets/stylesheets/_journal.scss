@@ -1,6 +1,6 @@
 .log {
   padding: 4.5em 0 1.25em 0;
-  border-bottom: 2px dotted #e5e5e5;
+  border-bottom: 2px dotted #d5d5d5;
 }
 
 h1 {
@@ -71,7 +71,7 @@ body.journal {
 // SPECIFIC TO BOTH
 body.journal-posts, body.journal {
   header {
-    .journal-active {
+    a.journal-active {
       text-decoration: underline;
     }
   }
