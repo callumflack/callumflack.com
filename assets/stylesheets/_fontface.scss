@@ -1,31 +1,35 @@
 @font-face {
-  font-family: "n001001t";
-  src: url("assets/fonts/n001001tWeb.eot") format ("eot");
-  src: url("assets/fonts/n001001tWeb.eot?#iefix") format ("embedded-opentype"),
-       url("assets/fonts/n001001tWeb.woff") format("woff");
-  font-weight: lighter, 300;
+  font-family: Neuzeit;
+  src: url("font/n001001tWeb.eot") format ("eot");
+  src: url("font/n001001tWeb.eot?#iefix") format ("embedded-opentype"),
+       url("font/n001001tWeb.woff") format("woff");
+  font-weight: lighter;
+  font-style: normal;
 }
 
 @font-face {
-  font-family: "n001002t";
-  src: url("assets/fonts/n001002tWeb.eot") format ("eot");
-  src: url("assets/fonts/n001002tWeb.eot?#iefix") format ("embedded-opentype"),
-       url("assets/fonts/n001002tWeb.woff") format("woff");
+  font-family: Neuzeit;
+  src: url("font/n001002tWeb.eot") format ("eot");
+  src: url("font/n001002tWeb.eot?#iefix") format ("embedded-opentype"),
+       url("font/n001002tWeb.woff") format("woff");
   font-weight: normal;
+  font-style: normal;
 }
 
 @font-face {
-  font-family: "n001004t";
-  src: url("assets/fonts/n001004tWeb.eot") format ("eot");
-  src: url("assets/fonts/n001004tWeb.eot?#iefix") format ("embedded-opentype"),
-       url("assets/fonts/n001004tWeb.woff") format("woff");
+  font-family: Neuzeit;
+  src: url("font/n001004tWeb.eot") format ("eot");
+  src: url("font/n001004tWeb.eot?#iefix") format ("embedded-opentype"),
+       url("font/n001004tWeb.woff") format("woff");
   font-weight: bold;
+  font-style: normal;
 }
 
 @font-face {
-  font-family: "n001006t";
-  src: url("assets/fonts/n001006tWeb.eot") format ("eot");
-  src: url("assets/fonts/n001006tWeb.eot?#iefix") format ("embedded-opentype"),
-       url("assets/fonts/n001006tWeb.woff") format("woff");
+  font-family: Neuzeit;
+  src: url("font/n001006tWeb.eot") format ("eot");
+  src: url("font/n001006tWeb.eot?#iefix") format ("embedded-opentype"),
+       url("font/n001006tWeb.woff") format("woff");
   font-weight: bolder;
+  font-style: normal;
 }
