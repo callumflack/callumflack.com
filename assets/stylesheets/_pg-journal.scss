@@ -1,0 +1,97 @@
+//-----------------------------------------------------------BOTH
+body.journal-posts, body.journal {
+  header {
+    background-color: #f9f9f9;
+    a.journal-active {
+      @extend .rule-nav;
+    }
+  }
+  .next {
+    position: absolute;
+    top: 50%;
+    right: 10%;
+    @extend .opacity-20;
+    &:hover {
+      @extend .opacity-100;
+    }
+//    background: 50% 50% url(back-01.jpg) no-repeat fixed;
+  }
+}
+
+
+//-----------------------------------------------------------POSTS
+body.journal-posts {
+  header {
+    a:hover { 
+//      &.journal-active { color: #ccc; }
+    }
+  }
+  .frame {
+    padding-bottom: 131px;
+  }
+  a.log {
+    position: relative;
+    display: block;
+    padding: 80px 0 0 0;
+    @extend .rule-bottom;
+    span {
+      font-style: italic;
+      text-decoration: underline;
+    }
+    img {
+      margin-bottom: 30px;
+    }
+    &.picture {
+      @extend .rule-dark;
+    }
+    .caption {
+      width: 100%;
+      position: absolute;
+      top: 50%;
+      z-index: 1000;
+    }
+    &:hover {
+      border-bottom-color: $highlight;
+      text-decoration: none;
+      p, h1, a.read-more { 
+        color: $highlight;
+      }
+      h1.picture {
+        visibility: visible;
+      }
+      img {
+        @extend .opacity-20;
+      }
+    }
+//    &.picture {
+//      border-bottom: 1px solid #ddd;
+//      h3 {
+//        color: #aaa;
+//        font-weight: 300;
+//      }
+//    }
+  }
+  h1 { 
+    padding-top: 0;
+    &.picture {
+      visibility: hidden;
+      margin: 0 auto;
+    }
+  }
+  h3.date {
+    margin-bottom: 20px;
+  }
+}
+
+
+//-----------------------------------------------------------ARTICLES
+body.journal {
+//  background: top left url(back-01.jpg) no-repeat fixed;
+  header {
+//    background-color: rgba(253, 253, 253, 1);
+//      a { color: #fff; }
+  }
+  .frame {
+//    background-color: $background;
+  }    
+}

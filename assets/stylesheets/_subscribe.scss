@@ -4,8 +4,8 @@ form {
 }
 
 button, input, select, textarea {
-  @extend .type-value;
-  @extend .type-body;
+  @extend .body;
+  @extend .sub;
 //  line-height: 100%;
 }
 
@@ -37,4 +37,8 @@ input[type="submit"] {
 
 input[type="text"] {
   text-align: left;
+  margin-right: 10px;
+  font-weight: 600;
+  color: #777;
+  letter-spacing: 1px;
 }

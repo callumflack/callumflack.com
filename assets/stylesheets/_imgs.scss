@@ -1,21 +1,31 @@
 $img-side1: 503px;
 $img-side2: 670px;
-$img-posts1: $img-side1 * 0.75;
-$img-posts2: $img-side2 * 0.75;
+$img-posts1: $img-side1 * 0.7;
+$img-posts2: $img-side2 * 0.7;
+
+.opacity-20 {
+  zoom: 1;
+  filter: alpha(opacity=20);
+  opacity: 0.2;
+}
+
+.opacity-100 {
+  zoom: 1;
+  filter: alpha(opacity=100);
+  opacity: 1;
+}
 
 .log > a > img:hover {
-  zoom: 1;
-  filter: alpha(opacity=50);
-  opacity: 0.5;
+  @extend .opacity-20;
 }
 
-.log > a > img {
-  background-color: $link;
-}
+//.log > a > img {
+//  background-color: $link;
+//}
 
 .centred {
   position: relative;
-  margin-bottom: 20px;
+//  margin-bottom: 20px;
 //  margin: 0 auto;
   &.portrait { 
     left: 50%;
@@ -39,4 +49,15 @@ $img-posts2: $img-side2 * 0.75;
       margin-top: 8px;
     }
   }
+}
+
+.img-center {
+  position: relative;
+  top: 17%;
+  text-align: center;
+  img {
+    display: inline-block;
+    width: 23%;
+    margin: 2em;
+    }
 }

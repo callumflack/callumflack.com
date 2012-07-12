@@ -1,9 +1,9 @@
 ::selection {
-	background: $link;
-	color: white;
+	background: $text;
+	color: $background;
 }
 ::-moz-selection {
-	background: $link;
+	background: #d5d5d5;
 	color: white;
 }
 

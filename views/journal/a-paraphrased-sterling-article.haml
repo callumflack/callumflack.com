@@ -1,11 +1,12 @@
 - @body_class = "journal"
 
 .frame
-  %h1 A paraphrased Sterling article
+  %h1.title Paraphrasing Sterling
   %h3.date June 11, 2012
   
+  %p.intro And they were tracking that and they were going to adopt that too. In other words, they were going to move the Fiat 500 into emergent demographic groups. This was the way forward. They were looking for emergent consumer groups and they were going to move the car into their social space year by year.
+  
   :markdown
-    And they were tracking that and they were going to adopt that too. In other words, they were going to move the Fiat 500 into emergent demographic groups. This was the way forward. They were looking for emergent consumer groups and they were going to move the car into their social space year by year.
 
     I thought this is a really clever idea. I thought I’m in a society that’s going to do a lot of this. And I thought this is a terrible and scary paradigm of the future. Because it’s very difficult for us to construe that kind of activity as progress.  
 
@@ -31,18 +32,14 @@
     /   %a{:href => "/journal/i-thought-you-were-my-lady"} Twitter is a riddle    
     / %p
     /   %a{:href => "/journal/i-thought-you-were-my-lady"} This here's another thing I wot wrote
-      
-    %form{:action => "http://callumflackdesign.createsend.com/t/r/s/xjrurh/", :method => "post", :id => "subscribe"}
-      %input{:type => "text", :name => "cm-xjrurh-xjrurh", :id => "xjrurh-xjrurh", :placeholder => "Add your email to receive articles"}
-      %input{:type => "submit", :value => "Subscribe"} 
-        
-    %h3 How can I help?
+
+    %h3 Comments? Get in touch on twitter
     %p
       I'm a designer for print & online who solves problems elegantly. 
       %br
-      Start an
-      %a{:href => "mailto:callumflack@gmail.com"} email conversation
+      %a{:href => "mailto:callumflack@gmail.com"} Start a conversation
       with me to discuss projects.
     
-  %footer.last
-    %h3 &copy;2012 Callum Flack
+    %form{:action => "http://callumflackdesign.createsend.com/t/r/s/xjrurh/", :method => "post", :id => "subscribe"}
+      %input{:type => "text", :name => "cm-xjrurh-xjrurh", :id => "xjrurh-xjrurh", :placeholder => "Add your email"}
+      %input{:type => "submit", :value => "Subscribe"}

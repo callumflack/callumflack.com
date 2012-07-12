@@ -1,39 +1,30 @@
 header {
   position: fixed;
   top: 0;
-//  left: 50%;
-  width: 100%; //670px
-//  margin-left: -335px;
-  padding: 16px 0;
-  border-bottom: 1px solid #d5d5d5;
+  width: 100%;
+  padding: 50px 0;
+//  border-bottom: 1px solid #eee;
   z-index: 2;
-  background-color: rgba(253, 253, 253, 0.1);
   text-align: center;
   line-height: 100%;
-  a { 
-    color: #222;
-  }
-}
-
-.manifesto {
-  @extend .type-value;
-  font-family: "futura-pt-1", "futura-pt-2", helvetica, sans-serif;
-  margin: 16px 0;
-//  a:hover { color: #222; }
+  background-color: #fdfdfd; //rgba(253, 253, 253, 0.1)
+//  &:hover { 
+//    color: white;
+//    background-color: $highlight; //rgba(253, 253, 253, 0.1)
+//  }
 }
 
 nav {
-  @extend .type-item;
-  font-size: 95%;
-  font-weight: 400;
-  text-transform: none;
-  text-align: center;
-  line-height: 100%;
-  letter-spacing: 0;
+  @extend .body;
+  @extend .sub;
   position: relative;
-  margin: 16px 0;
   a {
+    color: $text;
     margin: 0 21px;
+    &:hover {
+      text-decoration: none;
+      @extend .rule-nav;
+    }
   }
 }
 

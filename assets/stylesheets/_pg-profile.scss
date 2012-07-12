@@ -1,0 +1,11 @@
+.profile {
+//  background-color: #d65200;
+  background: 100% 0% url(profile-1207-01.png) repeat-x fixed;
+  header {
+    background-color: #a37946;
+    a.profile-active {
+      @extend .rule-nav;
+    }
+//    a { color: #fff; }
+  }
+}

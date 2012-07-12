@@ -1,68 +1,113 @@
-.type-body {
-  font-family: "freight-text-pro-1", "freight-text-pro-2", georgia, times, serif; 
-  //, "pt-serif-1", "pt-serif-2", "calluna-1", "calluna-2", "livory-1", "livory-2", "minion-pro-1","minion-pro-2", "adobe-caslon-pro-1", "adobe-caslon-pro-2", 
+.typeset {
+  font-weight: normal;
   font-style: normal;
+  line-height: 140%;
   text-align: left;
   text-transform: none;
   text-decoration: none;
+  margin: 0;
+}
+
+.body {
+  font-family: "calluna-1", "calluna-2"; //"prenton-1", "prenton-2"
+  @extend .typeset;
+}
+
+.display {
+  font-family: "freight-sans-pro-1", "freight-sans-pro-2"; //"prenton-display-1", "prenton-display-2"
+  @extend .typeset;
+}
+
+.sub {
+  font-size: 1.6em;
+  font-weight: 900;
+  text-transform: uppercase;
+  text-align: center;
+  line-height: 100%;
   letter-spacing: 0;
 }
 
-.type-value {
-  font-size: 66%;
-  line-height: 100%;
-  font-style: normal;
-  font-weight: 400;
-  text-align: center;
-  text-transform: uppercase;
-  text-decoration: none;
-  letter-spacing: 1px;
+.rule-bottom { border-bottom: 8px solid $text; }
+.rule-top { border-top: 8px solid $text; }
+.rule-nav { border-bottom: 5px solid $text; }
+.rule-dark { border-bottom: 1px solid #888; }
+.rule-picture { border-bottom: 1px solid #888; }
+
+.hover {
+//  zoom: 1;
+//  filter: alpha(opacity=20);
+//  opacity: 0.2;
+//  color: $highlight;
 }
 
-.type-item {
-  font-family: Neuzeit, helvetica, sans-serif;
-  //  "pt-sans-1", "pt-sans-2", "futura-pt-1", "futura-pt-2"
-  font-style: normal;
-}
-
-.hover-opacity {
-  zoom: 1;
-  filter: alpha(opacity=20);
-  opacity: 0.2;
-}
+//----------------------------------------------------------------------elements
 
 a { 
+  color: $text;
   text-decoration: none; 
-  color: #222; //202F63
   &:hover { 
-    zoom: 1;
-    filter: alpha(opacity=20);
-    opacity: 0.2;
+    @extend .hover;
+    text-decoration: underline;
     p, h1, h2, h3 {
-      zoom: 1;
-      filter: alpha(opacity=20);
-      opacity: 0.2;
+      @extend .hover;
     }
   }
 }
 
 h1 {
-  @extend .type-item;
-//  font-weight: 400;
+  @extend .body;
+  color: $text;
+  font-weight: 900;
+  font-size: 1.8em;
+  line-height: 130%;
   text-align: center;
-  font-size: 1.524em;
-  line-height: 140%;
-  font-weight: 400;
-  margin: 0 0 6px 0;
+  text-transform: uppercase;
+  margin: 0 0 1em 0;
+  &.title {
+    font-weight: 300;
+    font-size: 6em;
+    line-height: 100%;
+    text-transform: none;
+  //    color: $highlight;
+  //    text-transform: uppercase;
+    letter-spacing: -1px;
+    margin: 120px 0 0 0;
+  }
+  &.caption {
+    @extend p;
+    text-align: center;
+    padding-top: 30px;
+  }
 }
 
 h3 {
-  @extend .type-item;
-  @extend .type-value;
-//  margin: 0 0 10px 0;
+  @extend .body;
+  font-size: 1.7em;
+  font-style: italic;
+  text-align: center;
+//  text-transform: uppercase;
+  &.date {
+    font-weight: 300;
+    margin-top: 20px;
+    margin-bottom: 110px;
+  }
 }
 
 p {
-  @extend .type-body;
+  @extend .body;
+  font-size: 2em;
+  font-weight: 400;
   margin: 0 0 20px 0;
+  &.intro {
+    font-weight: 700;
+  }
+  &.read-more {
+    display: inline-block;
+    font-weight: 400;
+    font-style: italic;
+    letter-spacing: 0;
+    text-decoration: underline;
+//        color: $highlight;
+    margin-left: .2em;
+  }  
 }

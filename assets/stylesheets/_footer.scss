@@ -1,16 +1,17 @@
 footer {
-  border-top: 2px dotted #e5e5e5;
-//  border-bottom: 1px solid #e5e5e5;
-  padding: 42px 0;
+  @extend .rule-top;
+//  @extend .rule-bottom;
+  padding: 42px 0 84px 0;
   margin-top: 42px;
   h3 { 
-    margin-top: 11px;
+    @extend .sub;
+    font-style: normal;
+    margin: 11px 0 20px 0;
   }
   p { 
-    @extend .type-item;
+    ;
     font-weight: 400;
     text-align: center;
-    font-size: 1em;
   }
   a {
     text-decoration: underline;

@@ -1,6 +1,5 @@
 @import "normalize";
 @import "mixins";
-@import "fontface";
 @import "typography";
 
 html, body {
@@ -11,12 +10,11 @@ html, body {
 }
 
 body {
-  @extend .type-body;
-  font-size: 1.375em;
-  line-height: 140%;
-  font-weight: 400;
-  color: #222; //202F63
-  background-color: #fcfcfc;
+  @extend .body;
+  font-size: 62.5%;
+  color: $text;
+  text-rendering: optimizeLegibility;
+  background-color: $background;
   -webkit-tap-highlight-color: rgba(255,0,0, 0.62);
 }
 
@@ -24,17 +22,17 @@ body {
   position: relative;
   top: 0;
   width: 670px;
-  padding: 131px 145px 0 145px;
+  padding: 80px 145px 0 145px;
   margin: 0 auto;
 }
 
 @import "selection";
 @import "imgs";
-@import "ender";
+@import "footer";
 @import "subscribe";
 @import "slideshow";
 @import "header";
-@import "journal";
-@import "profile";
-@import "work";
-@import "home";
+@import "pg-journal";
+@import "pg-profile";
+@import "pg-work";
+@import "pg-home";
