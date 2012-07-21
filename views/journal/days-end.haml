@@ -1,6 +1,12 @@
+- @body_class = "journal-picture"
+
 .frame
-  .centred.landscape
-    = image_tag "Notice_120418_02.jpg"
+  .centred
+    .landscape-picture
+      = image_tag "Notice_120418_02.jpg"
+    %a{:href => "/journal/i-thought-you-were-my-lady"}
+      .next
+    %a{:href => "/journal/i-thought-you-were-my-lady"}
+      .previous
   %h1.caption Day's end
-  %p.date 
-    April 18, 2012
+  %h3.date.picture April 18, 2012

@@ -1,23 +1,21 @@
 //-----------------------------------------------------------BOTH
-body.journal-posts, body.journal {
+body.journal-posts, body.journal, body.journal-picture {
   header {
-    background-color: #f9f9f9;
     a.journal-active {
       @extend .rule-nav;
     }
-  }
-  .next {
-    position: absolute;
-    top: 50%;
-    right: 10%;
-    @extend .opacity-20;
-    &:hover {
-      @extend .opacity-100;
+    nav.journal {
+      visibility: visible;      
     }
-//    background: 50% 50% url(back-01.jpg) no-repeat fixed;
   }
 }
 
+body.journal-picture {
+  .frame {
+    width: 960px;
+    padding: 80px 0 120px 0;
+  }
+}
 
 //-----------------------------------------------------------POSTS
 body.journal-posts {
@@ -27,7 +25,7 @@ body.journal-posts {
     }
   }
   .frame {
-    padding-bottom: 131px;
+//    padding-bottom: 131px;
   }
   a.log {
     position: relative;
@@ -51,35 +49,31 @@ body.journal-posts {
       z-index: 1000;
     }
     &:hover {
-      border-bottom-color: $highlight;
+      border-bottom-color: $link;
       text-decoration: none;
       p, h1, a.read-more { 
-        color: $highlight;
+        color: $link;
       }
       h1.picture {
         visibility: visible;
       }
       img {
-        @extend .opacity-20;
+        @extend .opacity-10;
       }
     }
-//    &.picture {
-//      border-bottom: 1px solid #ddd;
-//      h3 {
-//        color: #aaa;
-//        font-weight: 300;
-//      }
-//    }
+    &.first {
+      padding-top: 0;
+    }
   }
   h1 { 
-    padding-top: 0;
+    margin-bottom: 7px;
     &.picture {
       visibility: hidden;
       margin: 0 auto;
     }
   }
   h3.date {
-    margin-bottom: 20px;
+    margin: 0 0 22px 0;
   }
 }
 

@@ -19,7 +19,7 @@
 }
 
 .sub {
-  font-size: 1.6em;
+  font-size: 1.5em;
   font-weight: 900;
   text-transform: uppercase;
   text-align: center;
@@ -27,17 +27,23 @@
   letter-spacing: 0;
 }
 
+.meta {
+  font-size: 2em;
+  font-weight: 400;
+  margin: 0 0 20px 0;
+}
+
 .rule-bottom { border-bottom: 8px solid $text; }
 .rule-top { border-top: 8px solid $text; }
 .rule-nav { border-bottom: 5px solid $text; }
 .rule-dark { border-bottom: 1px solid #888; }
-.rule-picture { border-bottom: 1px solid #888; }
+.rule-aside { border-top: 1px solid #888; }
 
 .hover {
 //  zoom: 1;
 //  filter: alpha(opacity=20);
 //  opacity: 0.2;
-//  color: $highlight;
+//  color: $link;
 }
 
 //----------------------------------------------------------------------elements
@@ -45,8 +51,10 @@
 a { 
   color: $text;
   text-decoration: none; 
+  font-style: italic;
   &:hover { 
     @extend .hover;
+    color: $link;
     text-decoration: underline;
     p, h1, h2, h3 {
       @extend .hover;
@@ -62,27 +70,28 @@ h1 {
   line-height: 130%;
   text-align: center;
   text-transform: uppercase;
-  margin: 0 0 1em 0;
+  letter-spacing: 1px;
+  margin: 0 0 20px 0;
   &.title {
     font-weight: 300;
     font-size: 6em;
     line-height: 100%;
     text-transform: none;
-  //    color: $highlight;
-  //    text-transform: uppercase;
     letter-spacing: -1px;
     margin: 120px 0 0 0;
   }
   &.caption {
-    @extend p;
+    @extend .meta;
     text-align: center;
+    text-transform: none;
     padding-top: 30px;
+    margin: 0 0 12px 0;
   }
 }
 
 h3 {
   @extend .body;
-  font-size: 1.7em;
+  font-size: 1.6em;
   font-style: italic;
   text-align: center;
 //  text-transform: uppercase;
@@ -90,14 +99,15 @@ h3 {
     font-weight: 300;
     margin-top: 20px;
     margin-bottom: 110px;
+    &.picture {
+      margin-top: 0;
+    }
   }
 }
 
 p {
   @extend .body;
-  font-size: 2em;
-  font-weight: 400;
-  margin: 0 0 20px 0;
+  @extend .meta;
   &.intro {
     font-weight: 700;
   }
@@ -107,7 +117,26 @@ p {
     font-style: italic;
     letter-spacing: 0;
     text-decoration: underline;
-//        color: $highlight;
     margin-left: .2em;
-  }  
+  }
+  &.quote {
+    padding-top: 20px;
+    font-size: 2.5em;
+    font-style: italic;
+    text-align: center;
+    &.author {
+      font-size: 1.6em;
+    }
+  }
+  &.links {
+    padding-top: 20px;
+    a {
+      display: block;
+      padding: 0px 0 0px 70px;
+      background: url(link.png) no-repeat scroll 38px 48%;
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
 }

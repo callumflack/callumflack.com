@@ -1,10 +1,10 @@
 ::selection {
 	background: $text;
-	color: $background;
+	color: #777;
 }
 ::-moz-selection {
-	background: #d5d5d5;
-	color: white;
+	background: $text;
+	color: #777;
 }
 
 img::selection {

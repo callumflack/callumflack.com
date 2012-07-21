@@ -1,17 +1,18 @@
 footer {
   @extend .rule-top;
 //  @extend .rule-bottom;
-  padding: 42px 0 84px 0;
-  margin-top: 42px;
+  padding: 42px 0 0 0; //bottom 84px
+  margin-top: 48px;
   h3 { 
     @extend .sub;
     font-style: normal;
-    margin: 11px 0 20px 0;
+    line-height: 140%;
+    margin: 11px 0;
   }
   p { 
-    ;
     font-weight: 400;
     text-align: center;
+    font-style: italic;
   }
   a {
     text-decoration: underline;

@@ -22,8 +22,14 @@ body {
   position: relative;
   top: 0;
   width: 670px;
-  padding: 80px 145px 0 145px;
+  padding: 80px 145px 120px 145px;
   margin: 0 auto;
+}
+
+aside {
+  @extend .rule-aside;
+  padding: 42px 0 0 0; //bottom 84px
+  margin-top: 42px;
 }
 
 @import "selection";

@@ -1,11 +1,22 @@
 .profile {
-//  background-color: #d65200;
-  background: 100% 0% url(profile-1207-01.png) repeat-x fixed;
+  background-color: $background; //#d65200;
+//  background: $background 100% 0% url(profile-1207-01.png) repeat-x fixed;
   header {
-    background-color: #a37946;
+//    background-color: $link; //#a37946
     a.profile-active {
       @extend .rule-nav;
     }
-//    a { color: #fff; }
+  }
+  .frame {
+    img {
+      margin-top: 120px;
+    }
+    h1 {
+      margin-top: 40px;
+    }
+//    p {
+//      a { color: $text; }
+//      a:hover { color: $link; }
+//    }
   }
 }

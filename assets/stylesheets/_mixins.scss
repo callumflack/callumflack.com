@@ -1,7 +1,9 @@
 $text: #222; //#222 #202F63
-$link: #00abf2; //A70202
+$link: #01A0BD; //#D7BD21 #f54e00 #841025 A70202 00abf2
+$header: #f9f9f9;
 $background: #f6f5f3; // ffe066 fff6d1 ffec9d fff6d1 fdfcfb dceae4 cad4d0 f3f3f3 fdfcfb fdfdfe #fcfcfc #f7f3ee
 $highlight: #841025; //f5b105 a70202 c00 fad219 590d0d 202F63
+$tertiary-profile: #a37946;
 $orange: #f56600;
 $on-dark: #ccc;
 
@@ -24,6 +26,15 @@ $on-dark: #ccc;
   -ms-transition: $value;
   -webkit-transition: $value;
   transition: $value;
+}
+
+@mixin transparent($color, $alpha) {
+  $rgba: rgba($color, $alpha);
+  $ie-hex-str: ie-hex-str($rgba);
+  background-color: transparent;
+  background-color: $rgba;
+  filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#{$ie-hex-str},endColorstr=#{$ie-hex-str});
+  zoom: 1;
 }
 
 @mixin background-gradient {

@@ -4,13 +4,13 @@ header {
   width: 100%;
   padding: 50px 0;
 //  border-bottom: 1px solid #eee;
-  z-index: 2;
+  z-index: 2000;
   text-align: center;
   line-height: 100%;
-  background-color: #fdfdfd; //rgba(253, 253, 253, 0.1)
+  background-color: $background; // #fdfdfd rgba(253, 253, 253, 0.1)
 //  &:hover { 
 //    color: white;
-//    background-color: $highlight; //rgba(253, 253, 253, 0.1)
+//    background-color: $link; //rgba(253, 253, 253, 0.1)
 //  }
 }
 
@@ -20,8 +20,10 @@ nav {
   position: relative;
   a {
     color: $text;
+    font-style: normal;
     margin: 0 21px;
     &:hover {
+      color: $text;
       text-decoration: none;
       @extend .rule-nav;
     }
