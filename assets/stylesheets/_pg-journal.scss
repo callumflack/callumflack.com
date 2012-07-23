@@ -1,52 +1,50 @@
 //-----------------------------------------------------------BOTH
-body.journal-posts, body.journal, body.journal-picture {
+body.journal-list, 
+body.journal-article, 
+body.journal-picture {
   header {
     a.journal-active {
       @extend .rule-nav;
     }
-    nav.journal {
-      visibility: visible;      
-    }
   }
 }
 
-body.journal-picture {
-  .frame {
-    width: 960px;
-    padding: 80px 0 120px 0;
-  }
-}
 
-//-----------------------------------------------------------POSTS
-body.journal-posts {
-  header {
-    a:hover { 
-//      &.journal-active { color: #ccc; }
-    }
-  }
-  .frame {
-//    padding-bottom: 131px;
-  }
+
+//-----------------------------------------------------------LIST
+body.journal-list {
   a.log {
     position: relative;
     display: block;
     padding: 80px 0 0 0;
     @extend .rule-bottom;
-    span {
-      font-style: italic;
-      text-decoration: underline;
+    h1 { 
+      margin-bottom: 7px;
     }
-    img {
-      margin-bottom: 30px;
+    h3 {
+      margin: 0 0 22px 0;
+    }
+    &.first-img {
+      padding-top: 15px;
+    }
+    &.first-text {
+      padding-top: 40px;
     }
     &.picture {
-      @extend .rule-dark;
-    }
-    .caption {
-      width: 100%;
-      position: absolute;
-      top: 50%;
-      z-index: 1000;
+      @extend .rule-list-picture;
+      img {
+        margin-bottom: 30px;
+      }
+      .picture-caption {
+        width: 100%;
+        position: absolute;
+        top: 50%;
+        z-index: 1000;
+      }
+      h1, h3 {
+        visibility: hidden;
+        margin: 0 auto 7px auto;
+      }
     }
     &:hover {
       border-bottom-color: $link;
@@ -54,32 +52,23 @@ body.journal-posts {
       p, h1, a.read-more { 
         color: $link;
       }
-      h1.picture {
+      &.picture h1, &.picture h3 {
         visibility: visible;
       }
-      img {
-        @extend .opacity-10;
+      &.picture img {
+        @extend .opacity-0;
+        @extend .fade-delay;
       }
     }
-    &.first {
-      padding-top: 0;
-    }
-  }
-  h1 { 
-    margin-bottom: 7px;
-    &.picture {
-      visibility: hidden;
-      margin: 0 auto;
-    }
-  }
-  h3.date {
-    margin: 0 0 22px 0;
   }
 }
 
 
+
+
+
 //-----------------------------------------------------------ARTICLES
-body.journal {
+body.journal-article {
 //  background: top left url(back-01.jpg) no-repeat fixed;
   header {
 //    background-color: rgba(253, 253, 253, 1);
@@ -88,4 +77,11 @@ body.journal {
   .frame {
 //    background-color: $background;
   }    
+}
+
+body.journal-picture {
+  .frame {
+    width: 960px;
+    padding: 80px 0 120px 0;
+  }
 }

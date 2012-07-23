@@ -10,7 +10,8 @@ html, body {
 }
 
 body {
-  @extend .body;
+  font-family: "calluna-1", "calluna-2";
+  @extend .typeset;  
   font-size: 62.5%;
   color: $text;
   text-rendering: optimizeLegibility;
@@ -22,14 +23,8 @@ body {
   position: relative;
   top: 0;
   width: 670px;
-  padding: 80px 145px 120px 145px;
+  padding: 115px 145px 120px 145px;
   margin: 0 auto;
-}
-
-aside {
-  @extend .rule-aside;
-  padding: 42px 0 0 0; //bottom 84px
-  margin-top: 42px;
 }
 
 @import "selection";

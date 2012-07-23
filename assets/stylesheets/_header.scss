@@ -15,7 +15,7 @@ header {
 }
 
 nav {
-  @extend .body;
+  @extend .typeset;
   @extend .sub;
   position: relative;
   a {
@@ -30,12 +30,23 @@ nav {
   }
 }
 
-.details-link {
+.work-details {
   visibility: hidden;
   position: absolute;
-  right: 10px;
+  right: 20px;
+  top: -6px;
+  color: #d5d5d5;
+  padding: 8px 10px 5px 10px;
+  @include border-radius(4px);
+  background-color: $text;
+  &:hover {
+    @extend .fade-details;
+    border-bottom: 0;
+    color: $header;
+    background-color: $link; 
+  }
 }
 
-.work .details-link {
+.work .work-details {
   visibility: visible;
 }

@@ -4,9 +4,9 @@ form {
 }
 
 button, input, select, textarea {
-  @extend .body;
+  @extend .typeset;
   @extend .sub;
-//  line-height: 100%;
+  font-family: "calluna-1", "calluna-2";
 }
 
 input, textarea {

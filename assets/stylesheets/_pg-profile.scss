@@ -9,10 +9,17 @@
   }
   .frame {
     img {
-      margin-top: 120px;
+      margin-top: 40px;
+//      position: relative;
+//      left: 50%;
+//      width: $img-side1;
+//      margin-left: -$img-side1 / 2;        
     }
     h1 {
       margin-top: 40px;
+    }
+    h3.date {
+      margin-bottom: 100px;
     }
 //    p {
 //      a { color: $text; }

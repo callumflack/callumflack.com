@@ -1,21 +1,12 @@
 .typeset {
-  font-weight: normal;
+  font-weight: 400;
   font-style: normal;
   line-height: 140%;
   text-align: left;
   text-transform: none;
   text-decoration: none;
+  letter-spacing: 0;
   margin: 0;
-}
-
-.body {
-  font-family: "calluna-1", "calluna-2"; //"prenton-1", "prenton-2"
-  @extend .typeset;
-}
-
-.display {
-  font-family: "freight-sans-pro-1", "freight-sans-pro-2"; //"prenton-display-1", "prenton-display-2"
-  @extend .typeset;
 }
 
 .sub {
@@ -27,116 +18,88 @@
   letter-spacing: 0;
 }
 
-.meta {
-  font-size: 2em;
-  font-weight: 400;
-  margin: 0 0 20px 0;
-}
-
 .rule-bottom { border-bottom: 8px solid $text; }
 .rule-top { border-top: 8px solid $text; }
 .rule-nav { border-bottom: 5px solid $text; }
-.rule-dark { border-bottom: 1px solid #888; }
+.rule-list-picture { border-bottom: 1px solid #888; }
 .rule-aside { border-top: 1px solid #888; }
 
-.hover {
-//  zoom: 1;
-//  filter: alpha(opacity=20);
-//  opacity: 0.2;
-//  color: $link;
-}
 
 //----------------------------------------------------------------------elements
 
 a { 
   color: $text;
-  text-decoration: none; 
   font-style: italic;
+  text-decoration: none; 
   &:hover { 
-    @extend .hover;
     color: $link;
     text-decoration: underline;
-    p, h1, h2, h3 {
-      @extend .hover;
+  }
+}
+
+span {
+  font-style: italic;
+  text-decoration: underline;
+}
+
+p {
+  @extend .typeset;
+  font-size: 2em;
+  margin: 0 0 20px 0;
+  &.intro {
+    font-weight: 700;
+  }
+  &.read-more {
+    display: inline-block;
+    text-decoration: underline;
+    margin-left: .2em;
+  }
+  &.links {
+    font-size: 1.75em;
+    padding: 20px 0;
+    &.last { padding-bottom: 0; }
+    a {
+      display: block;
+      padding-left: 70px;
+      background: url(link.png) no-repeat scroll 38px 48%;
     }
   }
 }
 
 h1 {
-  @extend .body;
-  color: $text;
-  font-weight: 900;
+  @extend .typeset;
+  @extend .sub;
   font-size: 1.8em;
   line-height: 130%;
-  text-align: center;
-  text-transform: uppercase;
   letter-spacing: 1px;
   margin: 0 0 20px 0;
   &.title {
-    font-weight: 300;
     font-size: 6em;
+    font-weight: 300;
     line-height: 100%;
     text-transform: none;
     letter-spacing: -1px;
-    margin: 120px 0 0 0;
+    margin: 90px 0 0 0;
   }
   &.caption {
-    @extend .meta;
+    @extend p;
     text-align: center;
-    text-transform: none;
     padding-top: 30px;
     margin: 0 0 12px 0;
   }
 }
 
 h3 {
-  @extend .body;
+  @extend .typeset;
   font-size: 1.6em;
   font-style: italic;
   text-align: center;
-//  text-transform: uppercase;
   &.date {
-    font-weight: 300;
     margin-top: 20px;
-    margin-bottom: 110px;
+    margin-bottom: 115px;
     &.picture {
       margin-top: 0;
     }
   }
 }
 
-p {
-  @extend .body;
-  @extend .meta;
-  &.intro {
-    font-weight: 700;
-  }
-  &.read-more {
-    display: inline-block;
-    font-weight: 400;
-    font-style: italic;
-    letter-spacing: 0;
-    text-decoration: underline;
-    margin-left: .2em;
-  }
-  &.quote {
-    padding-top: 20px;
-    font-size: 2.5em;
-    font-style: italic;
-    text-align: center;
-    &.author {
-      font-size: 1.6em;
-    }
-  }
-  &.links {
-    padding-top: 20px;
-    a {
-      display: block;
-      padding: 0px 0 0px 70px;
-      background: url(link.png) no-repeat scroll 38px 48%;
-      &:hover {
-        text-decoration: underline;
-      }
-    }
-  }
-}

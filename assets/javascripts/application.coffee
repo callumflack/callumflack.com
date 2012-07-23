@@ -46,7 +46,7 @@ $ ->
   resize()
   $(window).on "resize", resize
 
-  $(".details-link").click (e) ->
+  $(".work-details").click (e) ->
     e.preventDefault()
     if expanded
       startSlideshow()
