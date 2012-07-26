@@ -34,8 +34,8 @@ nav {
   visibility: hidden;
   position: absolute;
   right: 20px;
-  top: -6px;
-  color: #d5d5d5;
+  top: -7px;
+  color: #f5f5f5;
   padding: 8px 10px 5px 10px;
   @include border-radius(4px);
   background-color: $text;
@@ -45,8 +45,4 @@ nav {
     color: $header;
     background-color: $link; 
   }
-}
-
-.work .work-details {
-  visibility: visible;
 }

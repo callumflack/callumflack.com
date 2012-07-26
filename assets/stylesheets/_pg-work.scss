@@ -1,14 +1,8 @@
 .work {
   header {
     background-color: rgba(249, 249, 249, 0.35);
-//    @extend .rule-list-picture;
-    a {
-//    color: $on-dark;
-//    font-weight: 600;
-    &.work-active {
+    a.work-active {
       @extend .rule-nav;
-//      border-bottom-color: $on-dark;
-      }
     }
   }
 }

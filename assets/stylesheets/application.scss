@@ -21,7 +21,6 @@ body {
 
 .frame {
   position: relative;
-  top: 0;
   width: 670px;
   padding: 115px 145px 120px 145px;
   margin: 0 auto;
@@ -31,8 +30,8 @@ body {
 @import "imgs";
 @import "footer";
 @import "subscribe";
-@import "slideshow";
 @import "header";
+@import "slideshow";
 @import "pg-journal";
 @import "pg-profile";
 @import "pg-work";
