@@ -33,16 +33,23 @@ nav {
 .work-details {
   visibility: hidden;
   position: absolute;
-  right: 20px;
-  top: -7px;
-  color: #f5f5f5;
-  padding: 8px 10px 5px 10px;
-  @include border-radius(4px);
-  background-color: $text;
+  right: 30px;
+//  top: -7px;
+  color: $text;
+//  padding: 8px 10px 5px 10px;
+//  @include border-radius(4px);
+//  background-color: $text;
   &:hover {
-    @extend .fade-details;
-    border-bottom: 0;
-    color: $header;
-    background-color: $link; 
+//    @extend .fade-details;
+//    border-bottom: 0;
+//    color: $link;
+//    background-color: $link; 
   }
+}
+
+.home-active {
+  visibility: hidden;
+  position: absolute;
+  left: 30px;
+  color: $text;
 }

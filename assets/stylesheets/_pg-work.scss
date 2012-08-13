@@ -1,6 +1,6 @@
 .work {
   header {
-    background-color: rgba(249, 249, 249, 0.35);
+    background-color: $background; //rgba(249, 249, 249, 0.9);
     a.work-active {
       @extend .rule-nav;
     }

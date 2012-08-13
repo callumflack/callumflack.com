@@ -78,10 +78,30 @@ body.journal-article {
 //    background-color: $background;
   }    
 }
-
-body.journal-picture {
+//body.journal-picture, 
+body.home {
   .frame {
     width: 960px;
     padding: 80px 0 120px 0;
+  }
+}
+
+body.journal-picture {
+  .caption {
+    position: relative;
+    width: 100%;
+    h1 {
+      font-size: 2em;
+      line-height: 100%;
+      font-weight: 400;
+      text-transform: none;
+      text-align: center;
+      letter-spacing: 0;
+//      padding-top: 30px;
+      margin: 40px 0 12px 0;
+      a {
+        font-style: normal;
+      }
+    }
   }
 }

@@ -1,12 +1,25 @@
 - @body_class = "journal-picture"
 
+/ .frame —————————> alternate arrows layout
+/   .centred
+/     .portrait-picture
+/       = image_tag "Notice_120404~03.jpg"
+/     %a{:href => "/journal/days-end", :alt => "Next"}
+/       .next
+/     %a{:href => "/journal/days-end", :alt => "Previous"}
+/       .previous
+/   %h1.caption I thought you were my lady
+/   %h3.date.picture June 16, 2012
+  
+  
 .frame
   .centred
     .portrait-picture
       = image_tag "Notice_120404~03.jpg"
+  .caption
+    %h1.caption I thought you were my lady
+    %h3.date.picture June 16, 2012
     %a{:href => "/journal/days-end", :alt => "Next"}
       .next
     %a{:href => "/journal/days-end", :alt => "Previous"}
       .previous
-  %h1.caption I thought you were my lady
-  %h3.date.picture June 16, 2012

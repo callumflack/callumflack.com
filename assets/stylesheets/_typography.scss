@@ -62,7 +62,14 @@ p {
       display: block;
       padding-left: 70px;
       background: url(link.png) no-repeat scroll 38px 48%;
-    }
+    } 
+  }
+  &.link-home {
+    @extend .links;
+    font-weight: 400;
+    text-align: center;
+    font-style: italic;
+    text-decoration: underline;
   }
 }
 
@@ -74,18 +81,14 @@ h1 {
   letter-spacing: 1px;
   margin: 0 0 20px 0;
   &.title {
+//    font-family: "prenton-display-1", "prenton-display-2";
+    text-transform: none;
     font-size: 6em;
     font-weight: 300;
-    line-height: 100%;
-    text-transform: none;
+//    font-style: italic;
+    line-height: 120%;
     letter-spacing: -1px;
     margin: 90px 0 0 0;
-  }
-  &.caption {
-    @extend p;
-    text-align: center;
-    padding-top: 30px;
-    margin: 0 0 12px 0;
   }
 }
 

@@ -55,3 +55,13 @@ $ ->
       stopSlideshow()
       $("body").addClass("expand-details")
     expanded = !expanded
+
+  $(".work-details-on").click (e) ->
+    e.preventDefault()
+    if expanded
+      startSlideshow()
+      $("body").removeClass("expand-details")
+    else
+      stopSlideshow()
+      $("body").addClass("expand-details")
+    expanded = !expanded
