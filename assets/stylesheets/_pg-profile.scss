@@ -2,7 +2,7 @@
   background-color: $background; //#d65200;
 //  background: $background 100% 0% url(profile-1207-01.png) repeat-x fixed;
   header {
-//    background-color: $link; //#a37946
+//    background-color: $text; //#a37946
     a.profile-active {
       @extend .rule-nav;
     }
@@ -25,7 +25,7 @@
     }
 //    p {
 //      a { color: $text; }
-//      a:hover { color: $link; }
+//      a:hover { color: $text; }
 //    }
   }
 }

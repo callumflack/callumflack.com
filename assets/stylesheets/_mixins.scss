@@ -1,10 +1,8 @@
-$text: #222; //#222 #202F63
-$link: #5E8DBC; // almost: 01A0BD #D7BD21 #f54e00 #841025 A70202 00abf2
+$text: #002669;
+$background: #FDFDFD;
 $header: #f9f9f9;
-$background: #FDFDFD; // iA:FDFDFD branders:FEFCF6 almost:f6f5f3 ffe066 fff6d1 ffec9d fff6d1 fdfcfb dceae4 cad4d0 f3f3f3 fdfcfb fdfdfe #fcfcfc #f7f3ee
 $highlight: #841025; // f5b105 a70202 c00 fad219 590d0d 202F63
 $tertiary-profile: #a37946;
-$orange: #f56600;
 $on-dark: #ccc;
 
 @mixin border-radius($values) {

@@ -1,22 +1,19 @@
+.rule-bottom { border-bottom: 8px solid $text; }
+.rule-top { border-top: 1px solid $text; }
+.rule-nav { border-bottom: 5px solid $text; }
+.rule-list-picture { border-bottom: 1px solid #888; }
+.rule-aside { border-top: 1px solid #888; }
+
 footer {
   @extend .rule-top;
-//  @extend .rule-bottom;
-  padding: 42px 0 0 0; //bottom 84px
+  padding: 42px 0 135px 0; //bottom 84px
   margin-top: 48px;
   h3 { 
-    @extend .sub;
-    font-style: normal;
     line-height: 140%;
     margin: 11px 0;
   }
   p {
-    font-size: 1.75em;
-    font-weight: 400;
     text-align: center;
-    font-style: italic;
-  }
-  a {
-    text-decoration: underline;
   }
   &.last {
     margin: 0;

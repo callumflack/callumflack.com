@@ -1,18 +1,13 @@
 - @body_class = "profile"
 
 .frame
-  %img{:src => "assets/images/callum-5.png", :alt => "Callum Flack, Designer"}
-  %h1.title Callum, Designing
-  %h3.date 
-    %a{:href => "mailto:callumflack@gmail.com"} Email
-    &nbsp; | &nbsp;
-    +61 (0)408 767 540
-    &nbsp; | &nbsp;
-    %a{:href => "https://twitter.com/callumflack"} Twitter
-  
-  %p.intro My name is Callum Flack. I design for page and screen. I plan, design and make communication assets for business and culture. 
+  %h2.title 
+    = link_tag "Profile", "/profile"
+  / %img{:src => "assets/images/callum-5.png", :alt => "Callum Flack, Designer"}
     
   :markdown
+    I design for page and screen. I plan, create and build communication assets for business and culture. 
+    
     I work within the contradictory fields of emotion and logic, and aim to communicate a lot of information with ease and distinction. As such, I concentrate on the essence of Why, not the hang-up of What. The result is often defined by what’s not there as much as what is.
 
     The work begins by defining purpose: I eliminate the extraneous and focus on essence & usefulness. Collaboration is a necessity throughout the work process, as requirements develop and opportunities unfold.
@@ -22,10 +17,7 @@
     I aim to build work that’s elegantly effective, now and tomorrow.
 
     I live in Melbourne, Australia with my wife and newborn daughter, where I also collect vinyl records of all kinds, read about software eating the world, and try to practise unwired boredom.
-    
-  / %p.quote Callum is just totally fucking amazing at everything he puts his mind too. And his collection of records is also fucking amazing. 
-  / %p.quote.author — Jeff Kennett, founder of the Hackysack Club
-  
+      
   %p.links.last
     / %a{:href => "mailto:callumflack@gmail.com"} Start a conversation by emailing me
     %a{:href => "https://twitter.com/callumflack"} Read more of my approach in my Journal articles

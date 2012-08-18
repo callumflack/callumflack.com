@@ -9,8 +9,9 @@ html, body {
   padding: 0;
 }
 
-body {
-  font-family: "calluna-1", "calluna-2";
+body { 
+  font-family: "soleil-1", "soleil-2";
+  //"sirba-web-1", "sirba-web-2" "prenton-1", "prenton-2" "calluna-1", "calluna-2"
   @extend .typeset;  
   font-size: 62.5%;
   color: $text;
@@ -21,8 +22,8 @@ body {
 
 .frame {
   position: relative;
-  width: 670px;
-  padding: 115px 145px 120px 145px;
+  width: 600px;
+  padding: 24px 360px 0 0;
   margin: 0 auto;
 }
 

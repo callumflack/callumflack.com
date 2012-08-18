@@ -1,12 +1,13 @@
 - @body_class = "journal-article"
 
 .frame
-  %h1.title Paraphrasing Sterling
-  %h3.date Saturday June 11, 2012
-  
-  %p.intro And they were tracking that and they were going to adopt that too. In other words, they were going to move the Fiat 500 into emergent demographic groups. This was the way forward. They were looking for emergent consumer groups and they were going to move the car into their social space year by year.
+  %h2.title 
+    = link_tag "Journal", "/journal"
+  %h1.article-title Paraphrasing Sterling
+  / %h3 Saturday June 11, 2012
   
   :markdown
+    And they were tracking that and they were going to adopt that too. In other words, they were going to move the Fiat 500 into emergent demographic groups. This was the way forward. They were looking for emergent consumer groups and they were going to move the car into their social space year by year.
 
     I thought this is a really clever idea. I thought I’m in a society that’s going to do a lot of this. And I thought this is a terrible and scary paradigm of the future. Because it’s very difficult for us to construe that kind of activity as progress.  
 
@@ -29,7 +30,7 @@
     /   %a{:href => "https://twitter.com/callumflack"} I'm curious to hear your comments. Lend them to me on Twitter.
 
     %p
-      I design elegant, effective experiences for print & screen. 
+      I design elegant, effective experiences for print and screen. 
       %br
       %a{:href => "mailto:callumflack@gmail.com"} Start a conversation with me to discuss projects.
     %form{:action => "http://callumflackdesign.createsend.com/t/r/s/xjrurh/", :method => "post", :id => "subscribe"}

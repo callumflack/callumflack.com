@@ -1,10 +1,12 @@
 - @body_class = "journal-list"
 
 .frame
+  %h2.title 
+    = link_tag "Journal", "/journal"
 
-  %a.log.first-text{:href => "/journal/a-paraphrased-sterling-article"}  
+  %a.log{:href => "/journal/a-paraphrased-sterling-article"}  
     %h1 A paraphrased Sterling article
-    %h3 Saturday July 21, 2012
+    / %h3 Saturday July 21, 2012
     %p 
       I want to share the story behind approximately $2700 dollars worth of my spending this year that reveals how  
       I am finally starting to leave the middle class, materially, financially and psychologically. No, I am not  

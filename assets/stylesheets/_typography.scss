@@ -1,54 +1,25 @@
 .typeset {
-  font-weight: 400;
+  font-weight: 300;
   font-style: normal;
+  font-size: 1.8em;
   line-height: 140%;
   text-align: left;
   text-transform: none;
   text-decoration: none;
   letter-spacing: 0;
-  margin: 0;
+  margin: 0 0 20px 0;
 }
-
-.sub {
-  font-size: 1.5em;
-  font-weight: 900;
-  text-transform: uppercase;
-  text-align: center;
-  line-height: 100%;
-  letter-spacing: 0;
-}
-
-.rule-bottom { border-bottom: 8px solid $text; }
-.rule-top { border-top: 8px solid $text; }
-.rule-nav { border-bottom: 5px solid $text; }
-.rule-list-picture { border-bottom: 1px solid #888; }
-.rule-aside { border-top: 1px solid #888; }
-
-
-//----------------------------------------------------------------------elements
 
 a { 
   color: $text;
-  font-style: italic;
-  text-decoration: none; 
+  text-decoration: none;
   &:hover { 
-    color: $link;
     text-decoration: underline;
   }
 }
 
-span {
-  font-style: italic;
-  text-decoration: underline;
-}
-
 p {
   @extend .typeset;
-  font-size: 2em;
-  margin: 0 0 20px 0;
-  &.intro {
-    font-weight: 700;
-  }
   &.read-more {
     display: inline-block;
     text-decoration: underline;
@@ -75,27 +46,18 @@ p {
 
 h1 {
   @extend .typeset;
-  @extend .sub;
-  font-size: 1.8em;
+  font-size: 2.6em;
   line-height: 130%;
-  letter-spacing: 1px;
-  margin: 0 0 20px 0;
-  &.title {
-//    font-family: "prenton-display-1", "prenton-display-2";
-    text-transform: none;
-    font-size: 6em;
-    font-weight: 300;
-//    font-style: italic;
-    line-height: 120%;
-    letter-spacing: -1px;
-    margin: 90px 0 0 0;
-  }
+  text-align: center;
+}
+
+h2.title {
+  @extend .typeset;
+  margin-bottom: 90px;
 }
 
 h3 {
   @extend .typeset;
-  font-size: 1.6em;
-  font-style: italic;
   text-align: center;
   &.date {
     margin-top: 20px;

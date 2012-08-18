@@ -1,36 +1,35 @@
 form {
-  margin: 33px 0 42px 0;
   text-align: center;
+  margin: 33px 0 42px 0;
 }
 
 button, input, select, textarea {
   @extend .typeset;
-  @extend .sub;
-  font-family: "calluna-1", "calluna-2";
+  font-family: "soleil-1", "soleil-2";
 }
 
 input, textarea {
   width: 340px;
-//  height: 2em;
   white-space: nowrap;
   overflow: hidden;
   -o-text-overflow: ellipsis;
   text-overflow: ellipsis;
-  padding: 0.9em 0 0.5em 10px;
+  padding: 0.6em 0 0.4em 10px;
   border: 1px solid #D8D8D8;
   background-color: white;
   @include border-radius(2px);
   @include box-shadow(inset, -1px, 1px, 4px, #eee);
-//  box-sizing: content-box;
 }
 
 input[type="submit"] {
   width: 130px;
-  height: 42px;
-  font-weight: 700;
+  height: 48px;
+  text-align: center;
   text-shadow: 0 1px 0 white;
+  color: $text;
   border: 1px solid #D8D8D8;
   padding-left: 0;
+  margin: 0;
   @include background-gradient;
   @include box-shadow(none, none, none, none, none);
   &:hover { @include background-gradient-hover };
@@ -39,8 +38,6 @@ input[type="submit"] {
 
 input[type="text"] {
   text-align: left;
-  margin-right: 10px;
-  font-weight: 600;
-  color: #777;
-  letter-spacing: 1px;
+  color: $text;
+  margin: 0 10px 0 0;
 }

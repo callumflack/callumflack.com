@@ -1,25 +1,28 @@
 //-----------------------------------------------------------BOTH
-body.journal-list, 
-body.journal-article, 
-body.journal-picture {
-  header {
-    a.journal-active {
-      @extend .rule-nav;
-    }
-  }
-}
+//body.journal-list, 
+//body.journal-article, 
+//body.journal-picture {
+//  header {
+//    a.journal-active {
+//      @extend .rule-nav;
+//    }
+//  }
+//}
 
 
 
 //-----------------------------------------------------------LIST
 body.journal-list {
+  h2 {
+    margin-bottom: 223px;
+  }
   a.log {
     position: relative;
     display: block;
-    padding: 80px 0 0 0;
-    @extend .rule-bottom;
-    h1 { 
-      margin-bottom: 7px;
+    padding: 0 0 80px 0;
+//    @extend .rule-bottom;
+    h1 {
+      margin-bottom: 25px;
     }
     h3 {
       margin: 0 0 22px 0;
@@ -27,11 +30,8 @@ body.journal-list {
     &.first-img {
       padding-top: 15px;
     }
-    &.first-text {
-      padding-top: 40px;
-    }
     &.picture {
-      @extend .rule-list-picture;
+//      @extend .rule-list-picture;
       img {
         margin-bottom: 30px;
       }
@@ -47,10 +47,10 @@ body.journal-list {
       }
     }
     &:hover {
-      border-bottom-color: $link;
+      border-bottom-color: $text;
       text-decoration: none;
       p, h1, a.read-more { 
-        color: $link;
+        color: $text;
       }
       &.picture h1, &.picture h3 {
         visibility: visible;
@@ -70,12 +70,10 @@ body.journal-list {
 //-----------------------------------------------------------ARTICLES
 body.journal-article {
 //  background: top left url(back-01.jpg) no-repeat fixed;
-  header {
-//    background-color: rgba(253, 253, 253, 1);
-//      a { color: #fff; }
-  }
   .frame {
-//    background-color: $background;
+    h1.article-title {
+      margin-bottom: 100px;
+    }
   }    
 }
 //body.journal-picture, 

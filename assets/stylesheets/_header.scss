@@ -2,54 +2,38 @@ header {
   position: fixed;
   top: 0;
   width: 100%;
-  padding: 50px 0;
-//  border-bottom: 1px solid #eee;
-  z-index: 2000;
-  text-align: center;
+  padding: 25px 0;
+  margin: 0;
+  @extend .typeset;
   line-height: 100%;
-  background-color: $background; // #fdfdfd rgba(253, 253, 253, 0.1)
-//  &:hover { 
-//    color: white;
-//    background-color: $link; //rgba(253, 253, 253, 0.1)
-//  }
+  z-index: 2000;
+//  background-color: $background;
+}
+
+.menu {
+  width: 960px;
+  margin: 0 auto;  
 }
 
 nav {
-  @extend .typeset;
-  @extend .sub;
-  position: relative;
+  float: right;
   a {
-    color: $text;
-    font-style: normal;
-    margin: 0 21px;
-    &:hover {
-      color: $text;
-      text-decoration: none;
-      @extend .rule-nav;
-    }
+    margin: 0 8px;
+    text-decoration: none;
   }
 }
 
-.work-details {
-  visibility: hidden;
-  position: absolute;
-  right: 30px;
-//  top: -7px;
-  color: $text;
-//  padding: 8px 10px 5px 10px;
-//  @include border-radius(4px);
-//  background-color: $text;
-  &:hover {
-//    @extend .fade-details;
-//    border-bottom: 0;
-//    color: $link;
-//    background-color: $link; 
-  }
-}
-
-.home-active {
-  visibility: hidden;
-  position: absolute;
-  left: 30px;
-  color: $text;
-}
+//.work-details {
+//  visibility: hidden;
+//  position: absolute;
+//  right: 30px;
+//  color: $text;
+//  &:hover {
+//  }
+//}
+//
+//.home-active {
+//  position: absolute;
+//  left: 30px;
+//  color: $text;
+//}
