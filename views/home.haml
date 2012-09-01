@@ -1,14 +1,14 @@
 - @body_class = "home"
 
-.slide.active
-  .frame
-    %a{:href => "/profile"}
-      %h1.title 
-        Designing 
-        %br
-        elegantly & effectively
-        %br
-        / experiences 
-        / %br
-        for print & screen.
-      %p.link-home Read my profile & working process.
+.frame.menu
+  %nav
+    %a{:href => "/work"} Work
+    %a{:href => "/journal"} Journal
+    %a.last{:href => "/profile"} Profile
+
+.frame
+  %header
+    %a{:href => "/"} Callum Flack
+  %article
+    %h1.landscape-picture
+      = image_tag "Notice_120418_02-960.jpg"

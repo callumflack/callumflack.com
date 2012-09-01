@@ -1,58 +1,55 @@
-//-----------------------------------------------------------BOTH
-//body.journal-list, 
-//body.journal-article, 
-//body.journal-picture {
-//  header {
-//    a.journal-active {
-//      @extend .rule-nav;
-//    }
-//  }
-//}
-
-
-
-//-----------------------------------------------------------LIST
-body.journal-list {
-  h2 {
-    margin-bottom: 223px;
+// Centering an h1 image
+.h1-img {
+  h1 {
+    width: 960px;
+    padding-right: 0;
+    margin-bottom: 100px;
+    img {
+      display: inline-block;
+    }
   }
-  a.log {
+}
+
+//-----------------------------------------------------------JOURNAL POST LIST
+body.journal-list {
+  header {
+    position: fixed;
+    z-index: 999;
+//    padding-bottom: 148px;
+  }
+  article {
+    padding-top: 190px;
+  }
+  .post {
     position: relative;
     display: block;
-    padding: 0 0 80px 0;
-//    @extend .rule-bottom;
-    h1 {
-      margin-bottom: 25px;
-    }
-    h3 {
-      margin: 0 0 22px 0;
-    }
-    &.first-img {
-      padding-top: 15px;
-    }
+    h1 { margin-bottom: 25px; }
+    p { margin-bottom: 100px; }
+    //---------------------------------------------PICTURE POSTS
     &.picture {
-//      @extend .rule-list-picture;
-      img {
-        margin-bottom: 30px;
-      }
-      .picture-caption {
+      @extend .h1-img;
+      img.portrait { height: 426px; }
+      img.landscape { height: 320px; }
+      .caption {
         width: 100%;
         position: absolute;
         top: 50%;
-        z-index: 1000;
-      }
-      h1, h3 {
-        visibility: hidden;
-        margin: 0 auto 7px auto;
+        z-index: 99;
+        p {
+          text-align: center;
+          text-decoration: underline;
+          visibility: hidden;
+        }
       }
     }
+    //---------------------------------------------HOVER OVER POSTS
     &:hover {
       border-bottom-color: $text;
       text-decoration: none;
-      p, h1, a.read-more { 
-        color: $text;
+      h1, span { 
+        text-decoration: underline;
       }
-      &.picture h1, &.picture h3 {
+      &.picture p {
         visibility: visible;
       }
       &.picture img {
@@ -70,36 +67,20 @@ body.journal-list {
 //-----------------------------------------------------------ARTICLES
 body.journal-article {
 //  background: top left url(back-01.jpg) no-repeat fixed;
-  .frame {
-    h1.article-title {
-      margin-bottom: 100px;
-    }
-  }    
-}
-//body.journal-picture, 
-body.home {
-  .frame {
-    width: 960px;
-    padding: 80px 0 120px 0;
+  h1 {
+    margin-bottom: 84px;
   }
 }
 
+
+
+//-------------------------------------------------------------PICTURES
 body.journal-picture {
-  .caption {
-    position: relative;
-    width: 100%;
-    h1 {
-      font-size: 2em;
-      line-height: 100%;
-      font-weight: 400;
-      text-transform: none;
-      text-align: center;
-      letter-spacing: 0;
-//      padding-top: 30px;
-      margin: 40px 0 12px 0;
-      a {
-        font-style: normal;
-      }
-    }
+  h2 {
+    margin-bottom: 86px;
+  }
+  .picture {
+    @extend .h1-img;
+//    img.portrait { height: 426px; }
   }
 }

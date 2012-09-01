@@ -1,25 +1,20 @@
 - @body_class = "journal-picture"
 
-/ .frame —————————> alternate arrows layout
-/   .centred
-/     .portrait-picture
-/       = image_tag "Notice_120404~03.jpg"
-/     %a{:href => "/journal/days-end", :alt => "Next"}
-/       .next
-/     %a{:href => "/journal/days-end", :alt => "Previous"}
-/       .previous
-/   %h1.caption I thought you were my lady
-/   %h3.date.picture June 16, 2012
-  
-  
+.frame.menu
+  %nav
+    %a{:href => "/journal"} Index
+    %a{:href => "/journal/a-paraphrased-sterling-article"} Next
+    %a.last{:href => "/journal/days-end"} Previous
+
 .frame
-  .centred
-    .portrait-picture
-      = image_tag "Notice_120404~03.jpg"
-  .caption
-    %h1.caption I thought you were my lady
-    %h3.date.picture June 16, 2012
-    %a{:href => "/journal/days-end", :alt => "Next"}
-      .next
-    %a{:href => "/journal/days-end", :alt => "Previous"}
-      .previous
+  %header
+    %a{:href => "/"} Journal
+  %article
+    %h2 Headline, possible link
+    .picture
+      %h1
+        %img.portrait{:src => "/assets/images/Notice_120404~03.jpg", :alt => "I thought you were my lady"}
+    / .caption
+    /   %h2
+    /     %a{:href => "http://inbetweenings.tumblr.com/"} View more on my inbetweenings tumblr. 
+    /   %p April 18, 2012

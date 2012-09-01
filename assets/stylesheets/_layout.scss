@@ -1,0 +1,64 @@
+.frame {
+  position: relative;
+  margin: 0 auto;
+  width: 640px;
+  padding-right: 320px;
+  &.menu {
+    width: 320px;
+    padding: 0 0 0 640px;
+  }
+}
+
+nav {
+  position: fixed;
+  top: 0;
+  @extend .typeset;
+  line-height: 100%;
+  text-align: right;
+  width: 320px;
+  padding: 25px 0;
+  margin-bottom: 0;
+  z-index: 1;
+  a {
+    text-decoration: none;
+//    padding-right: 10px;
+    margin-right: 15px;
+    &:hover {
+//      text-decoration: underline;
+    }
+    &.last {
+      margin: 0;
+      padding: 0;
+      border-right: 0;
+    }
+  }
+}
+
+header {
+  @extend .typeset;
+  line-height: 100%;
+  padding: 25px 0 66px 0;
+  margin-bottom: 0;
+  z-index: 1000;
+}
+
+article {
+  width: 640px;
+  padding-bottom: 250px;
+  z-index: 1000;
+}
+
+//.work-details {
+//  visibility: hidden;
+//  position: absolute;
+//  right: 30px;
+//  color: $text;
+//  &:hover {
+//  }
+//}
+//
+//.home-active {
+//  position: absolute;
+//  left: 30px;
+//  color: $text;
+//}

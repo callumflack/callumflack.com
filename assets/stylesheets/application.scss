@@ -1,5 +1,6 @@
 @import "normalize";
 @import "mixins";
+@import "fontface";
 @import "typography";
 
 html, body {
@@ -10,8 +11,7 @@ html, body {
 }
 
 body { 
-  font-family: "soleil-1", "soleil-2";
-  //"sirba-web-1", "sirba-web-2" "prenton-1", "prenton-2" "calluna-1", "calluna-2"
+  font-family: 'Avenir LT Roman';
   @extend .typeset;  
   font-size: 62.5%;
   color: $text;
@@ -20,18 +20,11 @@ body {
   -webkit-tap-highlight-color: rgba(255,0,0, 0.62);
 }
 
-.frame {
-  position: relative;
-  width: 600px;
-  padding: 24px 360px 0 0;
-  margin: 0 auto;
-}
-
+@import "layout";
 @import "selection";
 @import "imgs";
 @import "footer";
 @import "subscribe";
-@import "header";
 @import "slideshow";
 @import "pg-journal";
 @import "pg-profile";

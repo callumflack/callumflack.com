@@ -1,37 +1,9 @@
 .home {
   header {
-    background-color: $background; //rgba(249, 249, 249, 0.9);
+    position: fixed;
+    padding-bottom: 148px;
   }
-  h1.title {
-    font-size: 9em;
-    letter-spacing: -2px;
-    line-height: 110%;
-    margin-top: 3%;
-    &.white {
-      color: #e5e5e5;
-    }
-  }
-  h2 {
-    @extend .sub;
-    font-size: 1.75em;
-    font-style: normal;
-    letter-spacing: 1px;
-    margin-top: 22%;
-  }
-}
-
-.slide-home-rt {
-  header {
-    background-color: rgba(249, 249, 249, 0.1);
-    nav a {
-      color: #ccc;
-    }
-  }
-  h1.title {
-    font-size: 8em;
-    letter-spacing: -2px;
-    &.white {
-      color: #e5e5e5;
-    }
+  article {
+    padding-top: 190px;
   }
 }

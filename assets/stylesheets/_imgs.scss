@@ -1,7 +1,7 @@
-$img-side1: 503px;
-$img-side2: 670px;
-$img-posts1: $img-side1 * 0.7;
-$img-posts2: $img-side2 * 0.7;
+$img-side1: 671px; //721
+$img-side2: 960px;
+$img-posts1: $img-side1 * 0.6875;
+$img-posts2: $img-side2 * 0.6875;
 
 .opacity-0 {
   zoom: 1;
@@ -36,88 +36,30 @@ $img-posts2: $img-side2 * 0.7;
 }
 
 
-.log > a > img:hover {
+.post > a > img:hover {
   @extend .opacity-20;
 }
 
-.centred {
-  position: relative;
-  &.portrait-list {
-    left: 50%;
-    width: $img-posts1;
-    height: $img-posts2;
-    margin-left: -$img-posts1 / 2;
-    margin-top: 8px;
-  }
-  .portrait-picture { 
-    position: relative;
-    left: 50%;
-    margin-left: -$img-side1 / 2;
-    margin-top: 42px;
-  }
-  &.landscape-list {
-    width: $img-posts2;
-    height: $img-posts1;
-    left: 50%;
-    margin-left: -$img-posts2 / 2;
-    margin-top: 8px;
-  }
-  .landscape-picture {
-    position: relative;
-    left: 50%;
-    top: 50%;
-//    height: $img-side2;
-    margin-left: -$img-side2 / 2;
-    margin-top: 84px;
-  }
-}
 
-.img-center {
-  position: relative;
-  top: 17%;
-  text-align: center;
-  img {
-    display: inline-block;
-    margin: 2em;
-    &.single {
-      width: 50%;
-    }
-    &.multiple {
-      width: 23%;      
-    }
-  }
+//---------------------------------Dependent on body class refactoring article to 960px wide
+.portrait-list {
+  left: 50%;
+  width: $img-posts1;
+  height: $img-posts2;
+  margin-left: -$img-posts1 / 2;
 }
-
-.arrow {
-  @extend .opacity-20;
-  position: absolute;
-  width: 15%;  //145px
-  height: 100%;
-  top: 0;
+//.portrait { 
+//  left: 50%;
+//  margin-left: -$img-side1 / 2;
+//}
+.landscape-list {
+  width: $img-posts2;
+  height: $img-posts1;
+  left: 50%;
+  margin-left: -$img-posts2 / 2;
 }
-
-.next {
-  @extend .arrow;
-  background: url(next-02.png) no-repeat scroll 50% 50%;
-  right: 0;
-  background-position: 40% 50%;
-  &.large {
-    @extend .opacity-0;
-    background: url(next-large.png) no-repeat scroll 86% 45%;
-    z-index: 1000;
-  }
-}
-.previous {
-  @extend .arrow;
-  left: 0;
-  background: url(prev-02.png) no-repeat scroll 40% 50%;
-  &.large {
-    @extend .opacity-0;
-    background: url(prev-large.png) no-repeat scroll 14% 45%;
-    z-index: 1000;
-  }
-}
-.next:hover, 
-.previous:hover {
-  @extend .opacity-100;
-}
+//.landscape {
+//  left: 50%;
+//  top: 50%;
+//  margin-left: -$img-side2 / 2;
+//}

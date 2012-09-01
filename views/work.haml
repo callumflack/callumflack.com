@@ -1,12 +1,16 @@
 - @body_class = "work"
 
-.slideshow
-  .slide.active= snippet "slides/slide4"
-  .slide= snippet "slides/slide2"
-  .slide= snippet "slides/slide1"
-  .slide= snippet "slides/slide5"
+.frame.menu
+  %nav
+    %a{:href => "/journal"} Index
+    %a{:href => "/journal/i-thought-you-were-my-lady"} Next
+    %a.last{:href => "/journal/days-end"} Previous
+
+.frame
+
+  %header
+    %a{:href => "/"} Work
   
-%a{:href => "/journal/days-end", :alt => "Next"}
-  .next.large
-%a{:href => "/journal/days-end", :alt => "Previous"}
-  .previous.large
+  %article
+    %h1 Paraphrasing Sterling
+    / %h3 Saturday June 11, 2012

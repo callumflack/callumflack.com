@@ -1,14 +1,16 @@
 - @body_class = "journal-picture"
 
+.frame.menu
+  %nav
+    %a{:href => "/journal"} Index
+    %a{:href => "/journal/a-paraphrased-sterling-article"} Next
+    %a.last{:href => "/journal/i-thought-you-were-my-lady"} Previous
+
 .frame
-  .centred
-    .landscape-picture
-      = image_tag "Notice_120418_02.jpg"
-  .caption
-    %h1 
-      %a{:href => "http://inbetweenings.tumblr.com/"} View more on my inbetweenings tumblr. 
-    %h3.date.picture April 18, 2012
-    / %a{:href => "/journal/i-thought-you-were-my-lady"}
-    /   .next
-    / %a{:href => "/journal/i-thought-you-were-my-lady"}
-    /   .previous
+  %header
+    %a{:href => "/"} Journal
+  %article
+    %h2 Headline, possible link
+    .picture
+      %h1
+        %img.landscape{:src => "/assets/images/Notice_120418_02-960.jpg", :alt => "Day's end"}
