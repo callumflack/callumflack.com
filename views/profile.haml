@@ -1,20 +1,21 @@
 - @body_class = "profile"
 
-.frame.menu
+%header
   %nav
-    %a{:href => "/journal"} Index
-    %a{:href => "/journal/i-thought-you-were-my-lady"} Next
-    %a.last{:href => "/journal/days-end"} Previous
+    %a{:href => "/work"} Work
+    %a{:href => "/journal"} Journal
+    %a.selected{:href => "/profile"} Profile
 
 .frame
-
-  %header
-    %a{:href => "/"} Profile
   
   %article
+    %img{:src => "assets/images/profile.jpg", :alt => "Callum Flack"}
 
-    / %img{:src => "assets/images/callum-5.png", :alt => "Callum Flack, Designer"}
-    
+    %p.sub-nav 
+      %a{:href => "mailto:callumflack@gmail.com"} Email
+      +61 (0)408 767 540
+      %a{:href => "https://twitter.com/callumflack"} Twitter
+
     :markdown
       I design for page and screen. I plan, create and build communication assets for business and culture. 
     
@@ -29,15 +30,11 @@
       I live in Melbourne, Australia with my wife and newborn daughter, where I also collect vinyl records of all kinds, read about software eating the world, and try to practise unwired boredom.
       
     %p.links.last
-      / %a{:href => "mailto:callumflack@gmail.com"} Start a conversation by emailing me
-      %a{:href => "https://twitter.com/callumflack"} Read more of my approach in my Journal articles
-      / %a{:href => "https://twitter.com/callumflack"} Follow and comment on Twitter
+      %a{:href => "journal/articles"} Read more of my approach in my Journal articles
       %a{:href => "http://www.linkedin.com/in/callumflack"} View my curriculum vitæ on Linkedin
       %a{:href => "http://www.quora.com/Callum-Flack"} Read my Quora boards
       %a{:href => "https://sites.google.com/site/coloronetear/"} Listen to a decade of collected soul 45 mixtapes
     
     %footer
-      %h3 
-        &copy; Callum Flack 1999-2012
-        / %br
-        / Learning, unlearning, relearning.
+      %p &copy; Callum Flack 2012. Chopping recursively since 1998. 
+      //Learning, unlearning, relearning.

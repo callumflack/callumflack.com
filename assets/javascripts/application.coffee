@@ -46,7 +46,7 @@ $ ->
   resize()
   $(window).on "resize", resize
 
-  $(".work-details").click (e) ->
+  $(".slide-off").click (e) ->
     e.preventDefault()
     if expanded
       startSlideshow()
@@ -56,7 +56,7 @@ $ ->
       $("body").addClass("expand-details")
     expanded = !expanded
 
-  $(".work-details-on").click (e) ->
+  $(".slide-on").click (e) ->
     e.preventDefault()
     if expanded
       startSlideshow()

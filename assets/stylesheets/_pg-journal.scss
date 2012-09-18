@@ -1,62 +1,55 @@
 // Centering an h1 image
 .h1-img {
   h1 {
-    width: 960px;
-    padding-right: 0;
-    margin-bottom: 100px;
-    img {
-      display: inline-block;
-    }
+    width: 580px;
+    img { display: inline-block; }
   }
 }
 
-//-----------------------------------------------------------JOURNAL POST LIST
 body.journal-list {
-  header {
-    position: fixed;
-    z-index: 999;
-//    padding-bottom: 148px;
-  }
+  .article-nav { top: 272px; }
   article {
-    padding-top: 190px;
-  }
-  .post {
-    position: relative;
-    display: block;
-    h1 { margin-bottom: 25px; }
-    p { margin-bottom: 100px; }
-    //---------------------------------------------PICTURE POSTS
-    &.picture {
-      @extend .h1-img;
-      img.portrait { height: 426px; }
-      img.landscape { height: 320px; }
-      .caption {
-        width: 100%;
-        position: absolute;
-        top: 50%;
-        z-index: 99;
-        p {
-          text-align: center;
-          text-decoration: underline;
-          visibility: hidden;
+    width: 580px;
+    margin-top: 64px;
+    h1 { 
+      padding: 0 0 18px 0;
+      margin: 0;
+    }
+    a {
+      position: relative;
+      display: block;
+      padding: 70px 0;
+
+      //PICTURE POSTS
+      &.picture {
+        @extend .h1-img;
+        img.portrait { height: 426px; }
+        img.landscape { height: 320px; }
+        .caption {
+          width: 100%;
+          position: absolute;
+          top: 40%;
+          z-index: 99;
+          p {
+            text-align: center;
+            text-decoration: underline;
+            visibility: hidden;
+          }
         }
       }
-    }
-    //---------------------------------------------HOVER OVER POSTS
-    &:hover {
-      border-bottom-color: $text;
-      text-decoration: none;
-      h1, span { 
-        text-decoration: underline;
+      
+      //HOVER OVER POSTS
+      &:hover {
+        border-bottom-color: $text;
+        text-decoration: none;
+        h1, span { text-decoration: underline; }
+        &.picture p { visibility: visible; }
+        &.picture img {
+          @extend .opacity-0;
+          @extend .fade-delay;
+        }
       }
-      &.picture p {
-        visibility: visible;
-      }
-      &.picture img {
-        @extend .opacity-0;
-        @extend .fade-delay;
-      }
-    }
+    }  
   }
 }
 

@@ -7,7 +7,11 @@
   text-transform: none;
   text-decoration: none;
   letter-spacing: 0;
-  margin: 0 0 20px 0;
+  margin: 0;
+}
+
+.type-small {
+  font-size: 1.5em;
 }
 
 a { 
@@ -15,15 +19,35 @@ a {
   text-decoration: none;
   &:hover { 
     text-decoration: underline;
-//    border-bottom: 2px solid $text;
+  }
+}
+
+nav {    
+  text-align: center;
+  a {
+    font-family: 'Avenir LT Heavy';
+    @extend .type-small;
+    line-height: 100%;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    text-decoration: none;
+  }
+}
+
+.article-nav {
+  a, p { @extend .type-small; }
+}
+
+footer {
+  a, p { 
+    @extend .type-small;
+    text-align: center;
   }
 }
 
 p {
   @extend .typeset;
-  &.date {
-    text-align: center;
-  }
+  margin: 0 0 20px 0;
   &.read-more {
     display: inline-block;
     text-decoration: underline;
@@ -38,12 +62,15 @@ p {
       background: url(link.png) no-repeat scroll 38px 50%;
     } 
   }
-  &.link-home {
-    @extend .links;
-    font-weight: 400;
+  &.sub-nav {
+    @extend .type-small;
     text-align: center;
-    font-style: italic;
-    text-decoration: underline;
+    padding: 50px 0;
+    margin-bottom: 0;
+    a {
+      display: inline;
+      margin: 0 12px;
+    }
   }
 }
 
@@ -56,4 +83,8 @@ span {
 h1, h2, h3 {
   @extend .typeset;
   text-align: center;
+}
+
+h1 {
+  padding: 50px 0;
 }

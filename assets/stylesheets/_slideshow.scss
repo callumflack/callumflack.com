@@ -89,15 +89,15 @@
 //  visibility: visible;
 }
 
-.work .work-details {
+.work .slide-on {
   visibility: visible;
 }
 
-.work.expand-details .work-details {
+.work.expand-details .slide-on {
   visibility: hidden;
 }
 
-.work.expand-details .work-details-on {
+.work.expand-details .slide-off {
   visibility: visible;
 }
 

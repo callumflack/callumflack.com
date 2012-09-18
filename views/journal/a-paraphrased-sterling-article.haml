@@ -1,17 +1,21 @@
 - @body_class = "journal-article"
 
-.frame.menu
+%header
   %nav
-    %a{:href => "/journal"} Index
-    %a{:href => "/journal/i-thought-you-were-my-lady"} Next
-    %a.last{:href => "/journal/days-end"} Previous
-
+    %a{:href => "/work"} Work
+    %a.selected{:href => "/journal"} Journal
+    %a{:href => "/profile"} Profile
+  
 .frame
 
-  %header
-    %a{:href => "/"} Journal
-  
+  .article-nav
+    .fixed
+      %a{:href => "/journal"} Index
+      %a{:href => "/journal/i-thought-you-were-my-lady"} Next
+      %a{:href => "/journal/days-end"} Previous
+
   %article
+
     %h1 Paraphrasing Sterling
     / %h3 Saturday June 11, 2012
 

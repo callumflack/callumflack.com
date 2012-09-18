@@ -1,77 +1,76 @@
 - @body_class = "journal-list"
 
-.frame.menu
+%header
   %nav
-    %a{:href => "/journal"} All
-    %a{:href => "/journal"} Articles
-    %a{:href => "/journal"} Links
-    %a.last{:href => "/journal"} In progress
-
+    %a{:href => "/work"} Work
+    %a.selected{:href => "/journal"} Journal
+    %a{:href => "/profile"} Profile
+  
 .frame
 
-  %header
-    %a{:href => "/"} Journal
+  .article-nav
+    .fixed
+      %a{:href => "/journal"} All
+      %a{:href => "/journal/articles"} Articles
+      %a{:href => "/journal/links"} Links
+      %a{:href => "/journal/in-progress"} In progress
 
   %article
 
-    %a.post{:href => "/journal/a-paraphrased-sterling-article"}  
+    %a{:href => "/journal/a-paraphrased-sterling-article"}  
       %h1 A paraphrased Sterling article
       %p 
         I want to share the story behind approximately $2700 dollars worth of my spending this year that reveals
-        how I am finally starting to leave the middle class, materially, financially and psychologically. No, I am 
-        not moving up into the rich class or down into the poor class. I am doing something complicated called                        
-        trading up.
-        %span Read more
+        how I am finally starting to leave the middle class, materially, financially and psychologically. I am
+        doing something complicated called trading up.
 
-    %a.post.picture{:href => "/journal/i-thought-you-were-my-lady", :alt => "I thought you were my lady"}
+    %a.picture{:href => "/journal/i-thought-you-were-my-lady", :alt => "I thought you were my lady"}
       %h1
         %img.portrait{:src => "assets/images/Notice_120404~03.jpg", :alt => "I thought you were my lady"}
       .caption
         %p Things inbetween: a tumblr blog
   
-    %a.post{:href => "/journal/a-paraphrased-sterling-article"}  
+    %a{:href => "/journal/a-paraphrased-sterling-article"}  
       %h1 A paraphrased Sterling article
       %p 
         I want to share the story behind approximately $2700 dollars worth of my spending this year that reveals
-        how I am finally starting to leave the middle class, materially, financially and psychologically. No, I am 
-        not moving up into the rich class or down into the poor class. I am doing something complicated called                        
-        trading up.
+        how I am finally starting to leave the middle class, materially, financially and psychologically. I am
+        doing something complicated called trading up.
         %span Read more
 
-    %a.post.picture{:href => "/journal/days-end", :alt => "Day's end"}
+    %a.picture{:href => "/journal/days-end", :alt => "Day's end"}
       %h1
         %img.landscape{:src => "assets/images/Notice_120418_02.jpg", :alt => "Day's end"}
       .caption
         %p Expectrum Petronus!
       
-    %a.post{:href => "/journal/a-paraphrased-sterling-article"}  
+    %a{:href => "/journal/a-paraphrased-sterling-article"}  
       %h1 A paraphrased Sterling article
       %p 
         I want to share the story behind approximately $2700 dollars worth of my spending this year that reveals
-        how I am finally starting to leave the middle class, materially, financially and psychologically. No, I am 
-        not moving up into the rich class or down into the poor class. I am doing something complicated called                        
-        trading up.
+        how I am finally starting to leave the middle class, materially, financially and psychologically. I am
+        doing something complicated called trading up.
         %span Read more
 
-    %a.post.picture{:href => "/journal/i-thought-you-were-my-lady", :alt => "I thought you were my lady"}
+    %a.picture{:href => "/journal/i-thought-you-were-my-lady", :alt => "I thought you were my lady"}
       %h1
         %img.portrait{:src => "assets/images/Notice_120404~03.jpg", :alt => "I thought you were my lady"}
       .caption
         %p Things inbetween: a tumblr blog
       
-    %a.post.picture{:href => "/journal/days-end", :alt => "Day's end"}
+    %a.picture{:href => "/journal/days-end", :alt => "Day's end"}
       %h1
         %img.landscape{:src => "assets/images/Notice_120418_02.jpg", :alt => "Day's end"}
       .caption
         %p Expectrum Petronus!
       
-    %a.post.picture{:href => "/journal/i-thought-you-were-my-lady", :alt => "I thought you were my lady"}
+    %a.picture{:href => "/journal/i-thought-you-were-my-lady", :alt => "I thought you were my lady"}
       %h1
         %img.portrait{:src => "assets/images/Notice_120404~03.jpg", :alt => "I thought you were my lady"}
       .caption
         %p Things inbetween: a tumblr blog
             
-    %a.post.picture{:href => "/journal/days-end", :alt => "Day's end"}
+    %a.picture{:href => "/journal/days-end", :alt => "Day's end"}
       %h1
         %img.landscape{:src => "assets/images/Notice_120418_02.jpg", :alt => "Day's end"}
       .caption
