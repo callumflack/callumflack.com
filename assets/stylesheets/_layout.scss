@@ -5,6 +5,9 @@ header {
   z-index: 999;
 }
 
+.on { background: url(NavSelected.png) no-repeat scroll 50% 82%; }
+.fixed { position: fixed; }
+
 nav {
   position: fixed;
   width: 960px;
@@ -18,10 +21,8 @@ nav {
     margin: 0 12px;
     &:hover {
       text-decoration: none;
-      background: url(NavHover.png) no-repeat 50% 82% ;
-    }
-    &.selected {
-      background: url(NavSelected.png) no-repeat scroll 50% 82%;
+      @extend .on;
+      background-image: url(NavHover.png);
     }
   }
 }
@@ -30,19 +31,16 @@ nav {
   position: relative;
   width: 960px;
   margin: 0 auto;
-  padding-top: 87px;
+  padding-top: 86px;
   background-color: $frame;
   .article-nav {
     position: absolute;
     top: 144px;
-    right: 30px;
+    left: 810px;
     width: 120px;
-    .fixed {
-      position: fixed;
-    }
-//    z-index: 99;
-    a { 
+    a, p { 
       display: block;
+      width: 100%;
       margin-bottom: 9px;
     }
     a:hover {
@@ -50,16 +48,31 @@ nav {
       background-image: none; 
     }
   }
+  p.sub-nav {
+    padding: 50px 0;
+    margin-bottom: 0;
+    a {
+      display: inline;
+      margin: 0 12px;
+    }
+  }
 }
 
-article {
+article, ul {
   width: 900px;
   margin: 0 auto;
   padding-bottom: 250px;
   p, h1 {
-    margin: 0 auto 20px auto;
+    margin: 0 auto;
     width: 580px;
   }
+  p {
+    margin-bottom: 20px;
+  }
+}
+
+.item {
+  margin-bottom: 1000px;
 }
 
 footer {

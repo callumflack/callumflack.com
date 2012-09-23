@@ -1,18 +1,40 @@
 - @body_class = "work"
 
-%header
-  %nav
-    %a.selected{:href => "/work"} Work
-    %a{:href => "/journal"} Journal
-    %a{:href => "/profile"} Profile
-
 .frame
   
   %p.sub-nav
-    %a{:href => "/journal"} Index
-    %a{:href => "/journal/i-thought-you-were-my-lady"} Next
-    %a{:href => "/journal/days-end"} Previous
+    %a{:href => "/work/by-alphabet"} Alphabetically
+    %a{:href => "/work/by-category"} Categorically
+    /%a{:href => "/work/by-year"} By Year
   
   %article
-    %h1 You gotta pay, pay, pay & deal too.
-    %p Ah!
+  
+    %a.picture{:href => "/work/roundtable-records", :alt => "Roundtable Records"}
+      %img{:src => "assets/images/work-1.png", :alt => "Roundtable Records"}
+      .caption
+        %h1 Roundtable Records
+
+    %a.picture{:href => "/work/weird-gear", :alt => "Weird Gear"}
+      %img{:src => "assets/images/work-2.png", :alt => "Weird Gear"}
+      .caption
+        %h1 Weird Gear
+
+    %a.picture{:href => "/work/roundtable-records", :alt => "Roundtable Records"}
+      %img{:src => "assets/images/work-3.png", :alt => "Roundtable Records"}
+      .caption
+        %h1 Roundtable Records
+
+    %a.picture{:href => "/work/weird-gear", :alt => "Weird Gear"}
+      %img{:src => "assets/images/work-1.png", :alt => "Roundtable Records"}
+      .caption
+        %h1 Roundtable Records
+
+    %a.picture{:href => "/work/roundtable-records", :alt => "Roundtable Records"}
+      %img{:src => "assets/images/work-2.png", :alt => "Roundtable Records"}
+      .caption
+        %h1 Roundtable Records
+
+    %a.picture{:href => "/work/weird-gear", :alt => "Weird Gear"}
+      %img{:src => "assets/images/work-3.png", :alt => "Roundtable Records"}
+      .caption
+        %h1 Roundtable Records

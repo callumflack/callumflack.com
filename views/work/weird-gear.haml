@@ -1,16 +1,15 @@
-- @body_class = "work"
-
-%header
-  %nav
-    %a.selected{:href => "/work"} Work
-    %a{:href => "/journal"} Journal
-    %a{:href => "/profile"} Profile
+- @body_class = "work-project"
 
 .frame
+  .article-title
+    .fixed
+      %h1 Roundtable Records
   .article-nav
-    %a.slide-off{:href => "/work"} Info
-    / %a.slide-on{:href => "/work"} Pictures
+    .fixed
+      %a.slide-on{:href => "/work"} Info
+      /%a.slide-off{:href => "/work"} Pictures    
   
-  %article
-    %h1 Work: 3 new LPs for Madhuti
+  %article  
     %img{:src => "/assets/images/Eggleston.jpg", :alt => "Eggleston"}
+    %img{:src => "/assets/images/dicorcia.jpg", :alt => "Eggleston"}
+    %img{:src => "/assets/images/profile.jpg", :alt => "Eggleston"}

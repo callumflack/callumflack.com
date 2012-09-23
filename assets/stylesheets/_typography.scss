@@ -12,6 +12,7 @@
 
 .type-small {
   font-size: 1.5em;
+  font-family: 'Avenir LT Medium';
 }
 
 a { 
@@ -25,8 +26,8 @@ a {
 nav {    
   text-align: center;
   a {
-    font-family: 'Avenir LT Heavy';
     @extend .type-small;
+    font-family: 'Avenir LT Heavy';
     line-height: 100%;
     letter-spacing: 1px;
     text-transform: uppercase;
@@ -65,12 +66,6 @@ p {
   &.sub-nav {
     @extend .type-small;
     text-align: center;
-    padding: 50px 0;
-    margin-bottom: 0;
-    a {
-      display: inline;
-      margin: 0 12px;
-    }
   }
 }
 

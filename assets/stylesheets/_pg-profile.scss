@@ -1,5 +1,12 @@
 .profile {
+  a.on-profile {
+    @extend .on;
+  }
   img {
     margin-top: 30px;
+    //margin-bottom: 60px;
+  }
+  .article-nav {
+    top: 507px;
   }
 }

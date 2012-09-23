@@ -1,3 +1,70 @@
-.work {
+.work, .work-project {
+  a.on-work { @extend .on; }
+}
 
+.work {
+  .article-nav { top: 272px; }
+  article {
+    width: 900px;
+    a {
+      position: relative;
+      display: block;
+      height: 100px;
+      margin-bottom: 3px;
+
+      //PICTURE POSTS
+      &.picture {
+        img {
+          display: inline-block;
+          height: 100px;
+          width: 900px;
+          padding: 0;
+          margin: 0;
+        }
+        .caption {
+          width: 100%;
+          position: absolute;
+          top: 40%;
+          z-index: 99;
+          h1 {
+            padding: 0;
+            text-align: center;
+            text-decoration: none;
+            visibility: hidden;
+          }
+        }
+      }
+      
+      //HOVER OVER POSTS
+      &:hover {
+        border-bottom-color: $text;
+        text-decoration: none;
+        h1, span { text-decoration: underline; }
+        &.picture h1 { visibility: visible; }
+        &.picture img {
+          @extend .opacity-0;
+          @extend .fade-delay;
+        }
+      }
+    }  
+  }
+}
+
+.work-project {
+  .article-title {
+    width: 960px;
+    top: 86px;
+    left: 0;
+    h1 {
+      width: 960px;
+      text-align: center;
+    }
+  }
+  .article-nav {
+    top: 144px;
+  }
+  article {
+    margin-top: 126px;
+  }
+  img { padding-bottom: 1000px; }
 }

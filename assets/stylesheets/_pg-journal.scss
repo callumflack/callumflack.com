@@ -1,17 +1,16 @@
-// Centering an h1 image
-.h1-img {
-  h1 {
-    width: 580px;
-    img { display: inline-block; }
+.journal-list, .journal-article, .journal-picture {
+  a.on-journal {
+    @extend .on;
   }
 }
 
-body.journal-list {
+.journal-list {
   .article-nav { top: 272px; }
   article {
     width: 580px;
     margin-top: 64px;
     h1 { 
+      width: 580px;
       padding: 0 0 18px 0;
       margin: 0;
     }
@@ -22,7 +21,7 @@ body.journal-list {
 
       //PICTURE POSTS
       &.picture {
-        @extend .h1-img;
+        img { display: inline-block; }
         img.portrait { height: 426px; }
         img.landscape { height: 320px; }
         .caption {
@@ -58,7 +57,7 @@ body.journal-list {
 
 
 //-----------------------------------------------------------ARTICLES
-body.journal-article {
+.journal-article {
 //  background: top left url(back-01.jpg) no-repeat fixed;
   h1 {
     margin-bottom: 84px;
@@ -68,12 +67,12 @@ body.journal-article {
 
 
 //-------------------------------------------------------------PICTURES
-body.journal-picture {
+.journal-picture {
   h2 {
     margin-bottom: 86px;
   }
   .picture {
-    @extend .h1-img;
+    img { display: inline-block; }
 //    img.portrait { height: 426px; }
   }
 }
