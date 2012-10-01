@@ -1,6 +1,7 @@
 .journal-list, .journal-article, .journal-picture {
   a.on-journal {
     @extend .on;
+    @extend .opacity-100;
   }
 }
 

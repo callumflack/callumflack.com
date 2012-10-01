@@ -1,6 +1,7 @@
 .profile {
   a.on-profile {
     @extend .on;
+    @extend .opacity-100;
   }
   img {
     margin-top: 30px;

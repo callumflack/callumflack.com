@@ -1,7 +1,7 @@
 .typeset {
   font-weight: normal;
   font-style: normal;
-  font-size: 1.9em;
+  font-size: 2.2em;
   line-height: 140%;
   text-align: left;
   text-transform: none;
@@ -11,8 +11,10 @@
 }
 
 .type-small {
-  font-size: 1.5em;
-  font-family: 'Avenir LT Medium';
+  font-size: 1.2em;
+  font-family: 'Avenir LT Heavy';
+  text-transform: uppercase;
+  letter-spacing: 1px;
 }
 
 a { 
@@ -27,7 +29,7 @@ nav {
   text-align: center;
   a {
     @extend .type-small;
-    font-family: 'Avenir LT Heavy';
+    //font-family: 'Avenir LT Heavy';
     line-height: 100%;
     letter-spacing: 1px;
     text-transform: uppercase;

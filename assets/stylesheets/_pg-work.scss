@@ -1,5 +1,11 @@
 .work, .work-project {
-  a.on-work { @extend .on; }
+  a.on-work { 
+    @extend .on;
+    @extend .opacity-100;
+  }
+  .selected {
+    text-decoration: underline;
+  }
 }
 
 .work {
