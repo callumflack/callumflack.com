@@ -1,10 +1,12 @@
 .work, .work-project {
   a.on-work { 
-    @extend .on;
     @extend .opacity-100;
   }
   .selected {
     text-decoration: underline;
+  }
+  .nav-frame {
+    //position: fixed;
   }
 }
 
@@ -25,7 +27,7 @@
           height: 100px;
           width: 900px;
           padding: 0;
-          margin: 0;
+          margin: 0 auto;
         }
         .caption {
           width: 100%;
@@ -59,15 +61,16 @@
 .work-project {
   .article-title {
     width: 960px;
-    top: 86px;
+    //top: 86px;
     left: 0;
     h1 {
       width: 960px;
       text-align: center;
+      padding-top: 12px;
     }
   }
   .article-nav {
-    top: 144px;
+    top: 22px;
   }
   article {
     margin-top: 126px;

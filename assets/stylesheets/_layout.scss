@@ -1,51 +1,57 @@
-header {
+header, nav {
   position: relative;
-  width: 960px;
+  width: 100%;
   margin: 0 auto;
   z-index: 999;
+  background-color: $background;
+  &:hover {
+    @extend .fade-details;
+    background-color: $text;
+    a { 
+      color: $background;
+      font-family: 'Avenir LT Roman';
+    }
+    .page-pathways {
+      visibility: visible;
+    }
+  }
 }
 
-.on { 
-  background: url(NavSelected.png) no-repeat scroll 50% 82%;
-}
 .fixed { position: fixed; }
 
-nav {
-  position: fixed;
+.nav-frame {
+  width: 960px;
+  margin: 0 auto;
+}
+
+.page-title, .page-pathways {
+  //position: fixed;
   width: 960px;
   top: 0;
   margin-bottom: 0;
-  padding: 35px 0;
-  background-color: $background;
-  //border-bottom: 1px solid #bfc8d4; //$text
+  padding: 30px 0 20px 0;
   a {
-    padding: 35px 0;
+    padding: 30px 0;
     margin: 0 12px;
-    //@extend .opacity-0;
     &:hover {
-      text-decoration: none;
-      @extend .on;
+      text-decoration: underline;
       //@extend .opacity-20;
-      background-image: url(NavHover.png);
     }
   }
 }
 
-nav {
-  &:hover {
-    a {
-      //@extend .on;
-      //extend .opacity-20;
-      //@extend .fade-details;
-    }
-  }
+.page-pathways { 
+  visibility: hidden;
+  top: 64px;
+  padding: 20px 0 30px 0;
 }
 
 .frame {
   position: relative;
   width: 960px;
+  height: 100%;
   margin: 0 auto;
-  padding-top: 86px;
+  //padding-top: 86px;
   background-color: $background;
   .article-nav {
     position: absolute;
