@@ -1,40 +1,37 @@
 - @body_class = "work-project"
 
 %nav
-  .nav-frame
-    .page-title
-      %a.on-work{:href => "/work"} Work
-    .page-pathways  
-      %a.on-home{:href => "/home"} Home
-      %a.on-journal{:href => "/journal"} Journal
-      %a.on-profile{:href => "/profile"} Profile
+  .container
+    .fixed
+      .header
+        %a.on{:href => "/work"} Work
+      .paths
+        %a{:href => "/home"} Home
+        %a{:href => "/work"} Work
+        %a{:href => "/journal"} Journal
+        %a{:href => "/profile"} Profile
 
-.frame
-  .article-title
-    .fixed
-      %h1 Roundtable Records
-  .article-nav
-    .fixed  
-      %a.slide-off{:href => "/work"} Pictures    
-    .fixed
-      %a.slide-on{:href => "/work"} Info
+.container#slideshow
+  .absolute
   
-  %article.slidesh0w  
-    %img{:src => "/assets/images/Eggleston.jpg", :alt => "Eggleston"}
-    %img{:src => "/assets/images/dicorcia.jpg", :alt => "Eggleston"}
-    %img{:src => "/assets/images/profile.jpg", :alt => "Eggleston"}
+    .title.fixed
+      %h1 Roundtable Records
+      .paths
+        %a.show-pictures{:href => "/work"} Pictures    
+      .paths.top
+        %a.show-info{:href => "/work"} Info
+  
+    .slides.absolute  
+      %img{:src => "/assets/images/Eggleston.jpg", :alt => "Eggleston"}
+      %img{:src => "/assets/images/dicorcia.jpg", :alt => "Eggleston"}
+      %img{:src => "/assets/images/profile.jpg", :alt => "Eggleston"}
     
-  .slide-details
-    .frame
-      %h1.title Roundtable Records
-      %h3.date 2009-2012
-
-      %p.intro And they were tracking that and they were going to adopt that too. In other words, they were going to move the Fiat 500 into emergent demographic groups. This was the way forward. They were looking for emergent consumer groups and they were going to move the car into their social space year by year. And such and such and so on and on.
-
+    .info.absolute
+      /%h3 2009-2012
+      %p And they were tracking that and they were going to adopt that too. In other words, they were going to move the Fiat 500 into emergent demographic groups. This was the way forward. They were looking for emergent consumer groups and they were going to move the car into their social space year by year. And such and such and so on and on.
       %p.links
         %a{:href => "https://twitter.com/callumflack"} Download a PDF case study of this project
         %a{:href => "https://twitter.com/callumflack"} Visit the business website
-
       %p And they were tracking that and they were going to adopt that too. In other words, they were going to move the Fiat 500 into emergent demographic groups. This was the way forward. They were looking for emergent consumer groups and they were going to move the car into their social space year by year. I thought this is a really clever idea. I thought I’m in a society that’s going to do a lot of this. And I thought this is a terrible and scary paradigm of the future. Because it’s very difficult for us to construe that kind of activity as progress. Everybody for 200 years, almost since the twelve hundreds have known what progress means. They know what it means to be progressive and they know what it means to be futuristic.
 
       %footer

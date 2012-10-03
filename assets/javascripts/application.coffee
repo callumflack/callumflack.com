@@ -46,22 +46,22 @@ $ ->
   resize()
   $(window).on "resize", resize
 
-  $(".slide-off").click (e) ->
+  $(".show-info").click (e) ->
     e.preventDefault()
     if expanded
       startSlideshow()
-      $("body").removeClass("expand-details")
+      $("body").removeClass("expand-info")
     else
       stopSlideshow()
-      $("body").addClass("expand-details")
+      $("body").addClass("expand-info")
     expanded = !expanded
 
-  $(".slide-on").click (e) ->
+  $(".show-pictures").click (e) ->
     e.preventDefault()
     if expanded
       startSlideshow()
-      $("body").removeClass("expand-details")
+      $("body").removeClass("expand-info")
     else
       stopSlideshow()
-      $("body").addClass("expand-details")
+      $("body").addClass("expand-info")
     expanded = !expanded
