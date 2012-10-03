@@ -1,6 +1,16 @@
 - @body_class = "work"
 
-.frame
+%nav#relative
+  .container
+    .header
+      %a.on{:href => "/journal"} Journal
+    .menu
+      %a{:href => "/home"} Home
+      %a{:href => "/work"} Work
+      %a{:href => "/journal"} Journal
+      %a{:href => "/profile"} Profile
+
+.container
   
   %p.sub-nav
     %a.selected{:href => "/work/by-alphabet"} Alphabetically

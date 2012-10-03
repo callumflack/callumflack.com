@@ -1,13 +1,16 @@
 - @body_class = "journal-list"
 
-.frame
+%nav#relative
+  .container
+    .header
+      %a.on{:href => "/journal"} Journal
+    .menu
+      %a{:href => "/home"} Home
+      %a{:href => "/work"} Work
+      %a{:href => "/journal"} Journal
+      %a{:href => "/profile"} Profile
 
-  .article-nav
-    .fixed
-      %a{:href => "/journal"} All
-      %a{:href => "/journal/articles"} Articles
-      %a{:href => "/journal/links"} Links
-      %a{:href => "/journal/in-progress"} In progress
+.container
 
   %article
 

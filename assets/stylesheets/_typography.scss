@@ -11,6 +11,8 @@
 }
 
 .type-small {
+  font-weight: normal;
+  font-style: normal;
   font-size: 1.2em;
   font-family: 'Avenir LT Heavy';
   text-transform: uppercase;
@@ -19,6 +21,10 @@
 
 .leading-reset {
   line-height: 100%;
+}
+
+.selected {
+  text-decoration: underline;
 }
 
 a { 
@@ -45,10 +51,15 @@ nav {
   a, p { @extend .type-small; }
 }
 
-footer {
-  a, p { 
-    text-align: center;
-  }
+h1 {
+  @extend .typeset;
+  text-align: center;
+  padding: 50px 0;
+}
+
+h2 {
+  @extend .type-small;
+  text-align: center;
 }
 
 p {
@@ -80,11 +91,9 @@ span {
   background: url(link.png) no-repeat scroll 100% 50%;
 }
 
-h1, h2, h3 {
-  @extend .typeset;
-  text-align: center;
+footer {
+  a, p { 
+    text-align: center;
+  }
 }
 
-h1 {
-  padding: 50px 0;
-}

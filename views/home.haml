@@ -1,10 +1,16 @@
 - @body_class = "home"
 
-%header
-  %nav
-    %a{:href => "/"} Callum Flack is a designer.
+%nav#relative
+  .container
+    .header
+      %a.on{:href => "/journal"} Callum Flack is a graphic designer.
+    .menu
+      %a{:href => "/home"} Home
+      %a{:href => "/work"} Work
+      %a{:href => "/journal"} Journal
+      %a{:href => "/profile"} Profile
 
-.frame
+.container
   
   %article
     .item

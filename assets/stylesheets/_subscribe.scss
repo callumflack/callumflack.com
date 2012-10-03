@@ -23,7 +23,7 @@ input, textarea {
 
 input[type="submit"] {
   width: 130px;
-  height: 48px;
+  height: 53px;
   text-align: center;
   text-shadow: 0 1px 0 white;
   color: $text;
@@ -37,6 +37,7 @@ input[type="submit"] {
 }
 
 input[type="text"] {
+  font-family: 'Avenir LT Light';
   text-align: left;
   color: $text;
   margin: 0 10px 0 0;

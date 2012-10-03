@@ -15,18 +15,19 @@
   position: fixed;
   width: 960px;
   top: 0;
+  &.wide {
+    width: 100%;
+  }
 }
 
-//---------------------------------------------------------Extending the classes: 
+//---------------------------------------------------------Nav: 
 
 nav {
   @extend .fixed;
   width: 100%;
   height: 74px;
   z-index: 1977;
-  .container {
-    //border-top: 5px $text solid;
-  }
+  background: $background;
   .header {
     @extend .fixed;
     padding: 30px 0;
@@ -36,22 +37,20 @@ nav {
       @extend .leading-reset;
     }
   }
-  //HIDE OR SHOW MENU
-  .paths {
+  .menu {
     @extend .header;
     visibility: hidden;
     a:hover {
       text-decoration: underline;
     }
   }
-  //HOVER SHOW MENU
   &:hover {
     @extend .fade-details;
     background-color: $text;
     .header {
       visibility: hidden;
     }
-    .paths {
+    .menu {
       visibility: visible;
       a { 
         color: $background;
@@ -61,69 +60,91 @@ nav {
   }
 }
 
+nav#relative {
+  position: relative;
+  .header, .menu {
+    @extend .absolute;
+  }
+}
 
+//---------------------------------------------------------Slideshow fixed alts:
 
+.container#fixed, .container#relative {
+  background: $background;
+}
 
+.container#fixed, .container#relative, .absolute, .title {
+  width: 100%;
+}
 
+.container#fixed {
+  height: 0;
+}
 
-#slideshow {
+.paths {
+  position: absolute;
+  top: 60px;
+  left: 810px;
+  //width: 100%;
+  z-index: 1977;
+  a { 
+    display: inline-block;
+    //width: 120px;
+    margin-bottom: 9px;
+    @extend .type-small;
+  }
+}
+
+.title {
   top: 74px;
-  //ABSOLUTE
-  .title.fixed {
-    top: 74px;
-    z-index: 1977;
-  }
-  .paths {
-    position: absolute;
-    top: 60px;
-    left: 810px;
-    width: 120px;
-    z-index: 1977;
-    a { 
-      display: block;
-      width: 100%;
-      margin-bottom: 9px;
-      @extend .type-small;
-    }
+  height: 130px;
+  z-index: 1977;
+  background: $background url(title-rule.png) repeat-x scroll 0 50%;
+  a {
+    background: $background;
+    padding: 0 12px;
   }
 }
 
-
-
-
-
-
-
-.frame {
-  @extend .container;  
-  //padding-top: 86px;
-  background-color: $background;
-  p.sub-nav {
-    padding: 50px 0;
-    margin-bottom: 0;
-    a {
-      display: inline;
-      margin: 0 12px;
-    }
-  }
+.container#slideshow {
+  top: 74px;
 }
 
-article, ul {
-  width: 900px;
-  margin: 0 auto;
-  padding-bottom: 250px;
-  p, h1 {
-    margin: 0 auto;
+
+//---------------------------------------------------------Article relative alts:
+
+.container#relative {
+  .container.article {
     width: 580px;
   }
-  p {
-    margin-bottom: 20px;
+  .title {
+    top: 0;
+  }
+  &:hover {
+    //background: $text;
   }
 }
 
-.item {
-  margin-bottom: 1000px;
-}
+
+
+
+
+//article, ul {
+//  width: 900px;
+//  margin: 0 auto;
+//  padding-bottom: 250px;
+//  p, h1 {
+//    margin: 0 auto;
+//    width: 580px;
+//  }
+//  p {
+//    margin-bottom: 20px;
+//  }
+//}
+//
+//.item {
+//  margin-bottom: 1000px;
+//}
 
 footer {
   width: 580px;
@@ -131,17 +152,4 @@ footer {
   padding-top: 42px;  
 }
 
-//.work-details {
-//  visibility: hidden;
-//  position: absolute;
-//  right: 30px;
-//  color: $text;
-//  &:hover {
-//  }
-//}
-//
-//.home-active {
-//  position: absolute;
-//  left: 30px;
-//  color: $text;
-//}
+

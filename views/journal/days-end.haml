@@ -1,16 +1,18 @@
 - @body_class = "journal-picture"
 
-.frame.menu
-  %nav
-    %a{:href => "/journal"} Index
-    %a{:href => "/journal/a-paraphrased-sterling-article"} Next
-    %a.last{:href => "/journal/i-thought-you-were-my-lady"} Previous
+%nav#relative
+  .container
+    .header
+      %a.on{:href => "/journal"} Journal
+    .menu
+      %a{:href => "/home"} Home
+      %a{:href => "/work"} Work
+      %a{:href => "/journal"} Journal
+      %a{:href => "/profile"} Profile
 
-.frame
-  %header
-    %a{:href => "/"} Journal
+.container
   %article
-    %h2 Headline, possible link
+    %h1 Headline, possible link
     .picture
       %h1
         %img.landscape{:src => "/assets/images/Notice_120418_02-960.jpg", :alt => "Day's end"}

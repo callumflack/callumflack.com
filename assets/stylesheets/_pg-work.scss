@@ -1,12 +1,5 @@
 .work, .work-project {
   a.on-work { 
-    @extend .opacity-100;
-  }
-  .selected {
-    text-decoration: underline;
-  }
-  .nav-frame {
-    //position: fixed;
   }
 }
 
@@ -59,21 +52,7 @@
 }
 
 .work-project {
-  .article-title {
-    width: 960px;
-    //top: 86px;
-    left: 0;
-    h1 {
-      width: 960px;
-      text-align: center;
-      padding-top: 12px;
-    }
+  img { 
+    padding-bottom: 800px;
   }
-  .article-nav {
-    top: 22px;
-  }
-  article {
-    margin-top: 126px;
-  }
-  img { padding-bottom: 1000px; }
 }
