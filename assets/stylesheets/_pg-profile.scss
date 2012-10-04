@@ -4,10 +4,9 @@
     @extend .opacity-100;
   }
   img {
-    margin-top: 30px;
-    //margin-bottom: 60px;
+    width: 960px;
   }
-  .article-nav {
-    top: 507px;
+  .container.scroll {
+    height: 130px;
   }
 }
