@@ -67,3 +67,6 @@ $on-dark: #ccc;
   background: linear-gradient(top, #DBDBDB 0%, #F9F9F9 100%);
 }
 
+@mixin section-rule {
+  border-top: 1px solid $text-20;
+}

@@ -43,12 +43,10 @@
 }
 
 .info {
-  width: 580px;
-  padding: 0 190px;
+  width: $w-text;
+  padding: 0 150px;
   height: 100%;
   z-index: 1;
-  //background: $background;
-  //@include transition(all 0.2s ease);
   visibility: hidden;
   &.absolute {
     top: 140px;

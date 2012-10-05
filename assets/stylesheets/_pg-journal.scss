@@ -1,36 +1,29 @@
-.journal-list, .journal-article, .journal-picture {
-  a.on-journal {
-    @extend .on;
-    @extend .opacity-100;
-  }
-}
-
 .journal-list {
-  .title.absolute {
-    //background-color: none;
-    a {
-      width: 100%;
-      height: 275px;
-    }
-  }
   p {
     margin-bottom: 0;
   }
-  .container#post-text {
-    @extend .container.scroll;
-    height: 275px;
-    margin-bottom: 80px;
-  }
-  .container#post-picture {
-    @extend .container.scroll;
-    width: 600px;
-    height: 426px;
-    margin: 0 auto 30px auto;
-    h1 { 
-      height: 426px;
-      margin: 0;
-      padding: 0;
+  a.post {
+    display: block;
+    &.text {
+      margin-bottom: 30px;
     }
+    &.picture {
+      //width: 600px;
+      height: 426px;
+      margin: 0 auto 30px auto;
+      h1 { 
+        height: 426px;
+        margin: 0;
+        padding: 0;
+      }  
+    }
+    &:hover {
+      text-decoration: none;
+      span {
+        text-decoration: underline;
+      }
+    }
+
     a {
       //position: relative;
       display: block;

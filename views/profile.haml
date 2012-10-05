@@ -2,28 +2,28 @@
 
 %nav.scroll
   .container
-    .header
-      /%a.on{:href => "/journal"} Profile
+    .location
+      %a.on{:href => "/work"} Profile
     .menu
       %a{:href => "/home"} Home
       %a{:href => "/work"} Work
       %a{:href => "/journal"} Journal
       %a{:href => "/profile"} Profile
 
-.container
+.container.slides
   %img{:src => "assets/images/profile-1.jpg", :alt => "Callum Flack"}
-  
-.container.scroll
-  .title.absolute
-    .container
-      %h1 
-        %a{:href => "mailto:callumflack@gmail.com"} Email
-        %a{:href => "https://twitter.com/callumflack"} Twitter
 
-.container.article
-  :markdown
+.container
+  %h1 
+    Contact me:
+    %a{:href => "mailto:callumflack@gmail.com"} Email
+    or
+    %a{:href => "https://twitter.com/callumflack"} Twitter
+
+  %p.first 
     I design for page and screen. I plan, create and build communication assets for business and culture. 
 
+  :markdown
     I work within the contradictory fields of emotion and logic, and aim to communicate a lot of information with ease and distinction. As such, I concentrate on the essence of Why, not the hang-up of What. The result is often defined by what’s not there as much as what is.
 
     The work begins by defining purpose: I eliminate the extraneous and focus on essence & usefulness. Collaboration is a necessity throughout the work process, as requirements develop and opportunities unfold.
@@ -42,6 +42,6 @@
 
   %footer
     %h2 
-      &copy; Callum Flack 1998–2012.
+      &copy; Callum Flack 1998–2012
       //%a Chopping recursively since 1998. 
       //Learning, unlearning, relearning.

@@ -2,89 +2,81 @@
 
 %nav.scroll
   .container
-    .header
-      %a.on{:href => "/journal"} Journal
+    .location
+      %a.on{:href => "/work"} Journal
     .menu
       %a{:href => "/home"} Home
       %a{:href => "/work"} Work
       %a{:href => "/journal"} Journal
       %a{:href => "/profile"} Profile
 
-.container#post-text
-  .title.absolute
-    .container.article
-      %a{:href => "/journal/a-paraphrased-sterling-article"}
-        %h1 
-          %a{:href => "/journal/a-paraphrased-sterling-article"} A paraphrased Sterling article
-        %p 
-          I want to share the story behind approximately $2700 dollars worth of my spending this year that reveals
-          how I am finally starting to leave the middle class, materially, financially and psychologically. I am
-          doing something complicated called trading up.
-          %a{:href => "/journal/a-paraphrased-sterling-article"} Read more
+%article.container
 
-.container#post-picture
-  %a.picture{:href => "/journal/i-thought-you-were-my-lady", :alt => "I thought you were my lady"}
+  %a.post.text{:href => "/journal/a-paraphrased-sterling-article"}
+    %h1 A paraphrased Sterling article
+    %p 
+      I want to share the story behind approximately $2700 dollars worth of my spending this year that reveals
+      how I am finally starting to leave the middle class, materially, financially and psychologically. I am
+      doing something complicated called trading up.
+      %span Read more
+
+  %a.post.picture{:href => "/journal/i-thought-you-were-my-lady", :alt => "I thought you were my lady"}
     %h1
       %img.portrait{:src => "assets/images/Notice_120404~03.jpg", :alt => "I thought you were my lady"}
     .caption
       %p Things inbetween: a tumblr blog
   
-.container#post-text
-  .title.absolute
-    .container.article
-      %a{:href => "/journal/a-paraphrased-sterling-article"}
-        %h1 
-          %a{:href => "/journal/a-paraphrased-sterling-article"} A paraphrased Sterling article
-        %p 
-          I want to share the story behind approximately $2700 dollars worth of my spending this year that reveals
-          how I am finally starting to leave the middle class, materially, financially and psychologically. I am
-          doing something complicated called trading up.
-          %a{:href => "/journal/a-paraphrased-sterling-article"} Read more
+  %a.post.text{:href => "/journal/a-paraphrased-sterling-article"}
+    %h1 A paraphrased Sterling article
+    %p 
+      I want to share the story behind approximately $2700 dollars worth of my spending this year that reveals
+      how I am finally starting to leave the middle class, materially, financially and psychologically. I am
+      doing something complicated called trading up.
+      %span Read more
 
-.container#post-picture
-  %a.picture{:href => "/journal/days-end", :alt => "Day's end"}
+  %a.post.picture{:href => "/journal/days-end", :alt => "Day's end"}
     %h1
       %img.landscape{:src => "assets/images/Notice_120418_02.jpg", :alt => "Day's end"}
     .caption
       %p Do the (extra) work!
       
-.container#post-text
-  .title.absolute
-    .container.article
-      %a{:href => "/journal/a-paraphrased-sterling-article"}
-        %h1
-          %a{:href => "/journal/a-paraphrased-sterling-article"} A paraphrased Sterling article
-        %p 
-          I want to share the story behind approximately $2700 dollars worth of my spending this year that reveals
-          how I am finally starting to leave the middle class, materially, financially and psychologically. I am
-          doing something complicated called trading up.
-          %span Read more
+  .container#post-text
+    .title.absolute
+      .container.article
+        %a{:href => "/journal/a-paraphrased-sterling-article"}
+          %h1
+            %a{:href => "/journal/a-paraphrased-sterling-article"} A paraphrased Sterling article
+          %p 
+            I want to share the story behind approximately $2700 dollars worth of my spending this year that reveals
+            how I am finally starting to leave the middle class, materially, financially and psychologically. I am
+            doing something complicated called trading up.
+            %span Read more
 
-.container#post-picture
-  %a.picture{:href => "/journal/i-thought-you-were-my-lady", :alt => "I thought you were my lady"}
-    %h1
-      %img.portrait{:src => "assets/images/Notice_120404~03.jpg", :alt => "I thought you were my lady"}
-    .caption
-      %p Things inbetween: a tumblr blog
+  .container#post-picture
+    %a.picture{:href => "/journal/i-thought-you-were-my-lady", :alt => "I thought you were my lady"}
+      %h1
+        %img.portrait{:src => "assets/images/Notice_120404~03.jpg", :alt => "I thought you were my lady"}
+      .caption
+        %p Things inbetween: a tumblr blog
   
-.container#post-picture
-  %a.picture{:href => "/journal/days-end", :alt => "Day's end"}
-    %h1
-      %img.landscape{:src => "assets/images/Notice_120418_02.jpg", :alt => "Day's end"}
-    .caption
-      %p Do the (extra) work!
+  .container#post-picture
+    %a.picture{:href => "/journal/days-end", :alt => "Day's end"}
+      %h1
+        %img.landscape{:src => "assets/images/Notice_120418_02.jpg", :alt => "Day's end"}
+      .caption
+        %p Do the (extra) work!
       
-.container#post-picture
-  %a.picture{:href => "/journal/i-thought-you-were-my-lady", :alt => "I thought you were my lady"}
-    %h1
-      %img.portrait{:src => "assets/images/Notice_120404~03.jpg", :alt => "I thought you were my lady"}
-    .caption
-      %p Things inbetween: a tumblr blog
+  .container#post-picture
+    %a.picture{:href => "/journal/i-thought-you-were-my-lady", :alt => "I thought you were my lady"}
+      %h1
+        %img.portrait{:src => "assets/images/Notice_120404~03.jpg", :alt => "I thought you were my lady"}
+      .caption
+        %p Things inbetween: a tumblr blog
   
-.container#post-picture
-  %a.picture{:href => "/journal/days-end", :alt => "Day's end"}
-    %h1
-      %img.landscape{:src => "assets/images/Notice_120418_02.jpg", :alt => "Day's end"}
-    .caption
-      %p Do the (extra) work!
+  .container#post-picture
+    %a.picture{:href => "/journal/days-end", :alt => "Day's end"}
+      %h1
+        %img.landscape{:src => "assets/images/Notice_120418_02.jpg", :alt => "Day's end"}
+      .caption
+        %p Do the (extra) work!
       

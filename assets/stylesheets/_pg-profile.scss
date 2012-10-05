@@ -6,7 +6,12 @@
   img {
     width: 960px;
   }
-  .container.scroll {
-    height: 130px;
+  .container.slides {
+    top: 0;
+    height: 341px;
+    margin-bottom: 50px;
+  }
+  h1 {
+    border-top: 0;
   }
 }
