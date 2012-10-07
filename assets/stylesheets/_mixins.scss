@@ -1,11 +1,6 @@
-$text: #222255;
-$text-20: #ccd3dd;
-$background: #f5f6f7;
-$frame: #fdfdfd;
-$header: #f9f9f9;
-$highlight: #841025; // f5b105 a70202 c00 fad219 590d0d 202F63
-$tertiary-profile: #a37946;
-$on-dark: #ccc;
+@mixin section-rule {
+  border-top: 1px solid $text-20;
+}
 
 @mixin border-radius($values) {
   -moz-border-radius: $values;
@@ -65,8 +60,4 @@ $on-dark: #ccc;
   background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #DBDBDB), color-stop(100%, #F9F9F9));
   background: -webkit-linear-gradient(top, #DBDBDB 0%, #F9F9F9 100%);
   background: linear-gradient(top, #DBDBDB 0%, #F9F9F9 100%);
-}
-
-@mixin section-rule {
-  border-top: 1px solid $text-20;
 }

@@ -1,7 +1,8 @@
 - @body_class = "work"
 
-%nav.scroll
-  .container
+.container
+
+  %nav
     .location
       %a.on{:href => "/work"} Work
     .menu
@@ -10,15 +11,15 @@
       %a{:href => "/journal"} Journal
       %a{:href => "/profile"} Profile
 
-.container
-  
+  %section
+    
+
   %p.sub-nav
     %a.selected{:href => "/work/by-alphabet"} Alphabetically
     %a{:href => "/work/by-category"} Categorically
     /%a{:href => "/work/by-year"} By Year
   
-  %article
-  
+  %article.post
     %a.picture{:href => "/work/roundtable-records", :alt => "Roundtable Records"}
       %img{:src => "assets/images/work-1.png", :alt => "Roundtable Records"}
       .caption
@@ -28,23 +29,3 @@
       %img{:src => "assets/images/work-2.png", :alt => "Weird Gear"}
       .caption
         %h1 Weird Gear
-
-    %a.picture{:href => "/work/roundtable-records", :alt => "Roundtable Records"}
-      %img{:src => "assets/images/work-3.png", :alt => "Roundtable Records"}
-      .caption
-        %h1 Roundtable Records
-
-    %a.picture{:href => "/work/weird-gear", :alt => "Weird Gear"}
-      %img{:src => "assets/images/work-1.png", :alt => "Roundtable Records"}
-      .caption
-        %h1 Roundtable Records
-
-    %a.picture{:href => "/work/roundtable-records", :alt => "Roundtable Records"}
-      %img{:src => "assets/images/work-2.png", :alt => "Roundtable Records"}
-      .caption
-        %h1 Roundtable Records
-
-    %a.picture{:href => "/work/weird-gear", :alt => "Weird Gear"}
-      %img{:src => "assets/images/work-3.png", :alt => "Roundtable Records"}
-      .caption
-        %h1 Roundtable Records

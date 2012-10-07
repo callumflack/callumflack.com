@@ -1,7 +1,8 @@
 - @body_class = "profile"
 
-%nav.scroll
-  .container
+.container
+
+  %nav
     .location
       %a.on{:href => "/work"} Profile
     .menu
@@ -10,37 +11,38 @@
       %a{:href => "/journal"} Journal
       %a{:href => "/profile"} Profile
 
-.container.slides
-  %img{:src => "assets/images/profile-1.jpg", :alt => "Callum Flack"}
 
-.container
-  %h1 
-    Contact me:
-    %a{:href => "mailto:callumflack@gmail.com"} Email
-    or
-    %a{:href => "https://twitter.com/callumflack"} Twitter
+  %section
+    %img{:src => "assets/images/profile-1.jpg", :alt => "Callum Flack"}
 
-  %p.first 
-    I design for page and screen. I plan, create and build communication assets for business and culture. 
+  %section.text
+    %h1 
+      Contact by:
+      %a{:href => "mailto:callumflack@gmail.com"} Email
+      or
+      %a{:href => "https://twitter.com/callumflack"} Twitter
 
-  :markdown
-    I work within the contradictory fields of emotion and logic, and aim to communicate a lot of information with ease and distinction. As such, I concentrate on the essence of Why, not the hang-up of What. The result is often defined by what’s not there as much as what is.
+    %p.first 
+      I design for page and screen. I plan, create and build communication assets for business and culture. 
 
-    The work begins by defining purpose: I eliminate the extraneous and focus on essence & usefulness. Collaboration is a necessity throughout the work process, as requirements develop and opportunities unfold.
+    :markdown
+      I work within the contradictory fields of emotion and logic, and aim to communicate a lot of information with ease and distinction. As such, I concentrate on the essence of Why, not the hang-up of What. The result is often defined by what’s not there as much as what is.
 
-    Craft is everything. While clear thinking and smart ideas will connect people, only care and attentiveness will enable a seamless experience.
+      The work begins by defining purpose: I eliminate the extraneous and focus on essence & usefulness. Collaboration is a necessity throughout the work process, as requirements develop and opportunities unfold.
 
-    I aim to build work that’s elegantly effective, now and tomorrow.
+      Craft is everything. While clear thinking and smart ideas will connect people, only care and attentiveness will enable a seamless experience.
 
-    I live in Melbourne, Australia with my wife and newborn daughter, where I also collect vinyl records of all kinds, read about software eating the world, and try to practise unwired boredom.
+      I aim to build work that’s elegantly effective, now and tomorrow.
+
+      I live in Melbourne, Australia with my wife and newborn daughter, where I also collect vinyl records of all kinds, read about software eating the world, and try to practise unwired boredom.
   
-  %p.links.last
-    %a{:href => "journal/articles"} Read more of my approach in my Journal articles
-    %a{:href => "http://www.linkedin.com/in/callumflack"} View my curriculum vitæ on Linkedin
-    %a{:href => "http://www.quora.com/Callum-Flack"} Read my Quora boards
-    %a{:href => "https://sites.google.com/site/coloronetear/"} Listen to a decade of collected soul 45 mixtapes
+    %p.links.last
+      %a{:href => "journal/articles"} Read more of my approach in my Journal articles
+      %a{:href => "http://www.linkedin.com/in/callumflack"} View my curriculum vitæ on Linkedin
+      %a{:href => "http://www.quora.com/Callum-Flack"} Read my Quora boards
+      %a{:href => "https://sites.google.com/site/coloronetear/"} Listen to a decade of collected soul 45 mixtapes
 
-  %footer
+  %footer.last
     %h2 
       &copy; Callum Flack 1998–2012
       //%a Chopping recursively since 1998. 

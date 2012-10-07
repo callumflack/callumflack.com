@@ -1,64 +1,49 @@
+.journal, .journal-list, .journal-picture, .journal-article {
+//  a.on {
+//    text-decoration: underline;
+//  }
+}
+
 .journal-list {
   p {
     margin-bottom: 0;
   }
-  a.post {
-    display: block;
-    &.text {
-      margin-bottom: 30px;
-    }
+  .post {
+    margin-bottom: 90px;
     &.picture {
-      //width: 600px;
-      height: 426px;
-      margin: 0 auto 30px auto;
-      h1 { 
+      position: relative;
+      margin: 0 auto 90px auto;
+      a { 
+        width: $w-text;
+        display: block;
+        position: absolute;
+        top: 0;
+        z-index: 99;
         height: 426px;
         margin: 0;
         padding: 0;
-      }  
-    }
-    &:hover {
-      text-decoration: none;
-      span {
-        text-decoration: underline;
-      }
-    }
-
-    a {
-      //position: relative;
-      display: block;
-      //padding: 70px 0;
-
-      //PICTURE POSTS
-      &.picture {
-        //img { display: inline-block; }
-        img.portrait { height: 426px; }
-        img.landscape { height: 320px; }
-        .caption {
-          width: 100%;
-          position: absolute;
+        visibility: hidden;
+        h1 {
           top: 35%;
-          z-index: 99;
-          p {
-            text-align: center;
-            text-decoration: underline;
-            visibility: hidden;
-          }
+          padding: 192px 0 0 0;
         }
+      }  
+      img {
+        display: block;
+        margin: 0 auto;
+        &.portrait { height: 426px; }
+        &.landscape { height: 320px; }
       }
-      
-      //HOVER OVER POSTS
-      &:hover {
-        border-bottom-color: $text;
-        text-decoration: none;
-        h1, span { text-decoration: underline; }
-        &.picture p { visibility: visible; }
-        &.picture img {
-          @extend .opacity-0;
-          @extend .fade-delay;
-        }
+    }
+    //Hover over picture posts
+    &:hover {
+      //border-bottom-color: $text;
+      &.picture a { visibility: visible; }
+      &.picture img {
+        @extend .opacity-0;
+        @extend .fade-delay;
       }
-    }  
+    }
   }
 }
 
@@ -69,6 +54,8 @@
 //-----------------------------------------------------------ARTICLES
 .journal-article {
   h1 {
+    //font-size: 3.6em;
+    margin-bottom: 80px;
   }
 }
 

@@ -1,11 +1,6 @@
 form {
   text-align: center;
-  margin: 33px 0 42px 0;
-}
-
-button, input, select, textarea {
-  @extend .typeset;
-  font-family: 'Avenir LT Roman';
+  margin: 0;
 }
 
 input, textarea {
@@ -15,7 +10,7 @@ input, textarea {
   -o-text-overflow: ellipsis;
   text-overflow: ellipsis;
   padding: 0.6em 0 0.4em 10px;
-  border: 1px solid #D8D8D8;
+  border: 1px solid $text-20;
   background-color: white;
   @include border-radius(2px);
   @include box-shadow(inset, -1px, 1px, 4px, #eee);
@@ -27,7 +22,7 @@ input[type="submit"] {
   text-align: center;
   text-shadow: 0 1px 0 white;
   color: $text;
-  border: 1px solid #D8D8D8;
+  border: 1px solid $text-20;
   padding-left: 0;
   margin: 0;
   @include background-gradient;
@@ -37,7 +32,6 @@ input[type="submit"] {
 }
 
 input[type="text"] {
-  font-family: 'Avenir LT Light';
   text-align: left;
   color: $text;
   margin: 0 10px 0 0;

@@ -1,10 +1,14 @@
 $w-text: 660px;
 $w-pic: 960px;
 $h-nav: 109px;
+$text: #222; //222255
+$text-20: #D8D8D8; //ccd3dd;
+$link: #0096e0;
+$background: #fdfdfd; //f5f6f7
 
 .container {
   position: relative;
-  width: $w-text;
+  width: 960px;
   margin: 0 auto;
   height: 100%;
   &.slides {
@@ -15,160 +19,149 @@ $h-nav: 109px;
 
 .absolute {
   position: absolute;
-  width: 100%;
   top: 0; 
 }
 
 .fixed { 
   position: fixed;
-  //width: 100%;
   top: 0;
 }
 
+.rule { border-top: 1px solid $text-20; }
 
-//---------------------------------------------------------Nav: 
+
+//---------------------------------------------------------Nav
 
 nav {
-  position: fixed;
+  position: relative;
   top: 0;
   width: 100%;
   height: $h-nav;
   z-index: 1977;
   background: $background;
-
-  .container {
-    border-top: 5px solid $text;
-    height: $h-nav - 5px;
-
+  border-top: 16px solid $text;
+  .location {
+    @extend .absolute;
+    width: $w-pic;
+    padding: 30px 0 60px 0;
+    a {
+      padding: 30px 0;
+      margin: 0 12px;
+    }
+  } 
+  .menu {
+    @extend .location;
+    visibility: hidden;
+    a:hover {
+      text-decoration: underline;
+    }
+  }  
+  &:hover {
+    @extend .fade-details;
+    border-color: $background;
     .location {
-      @extend .fixed;
-      width: $w-text;
-      padding: 30px 0 60px 0;
+      visibility: hidden;
+    }
+    .menu {
+      visibility: visible;
+    }
+  }
+
+  //————————————————————————————————Nav at bottom
+  &.bottom {
+    @extend .rule;
+    width: $w-text;
+    margin: 48px auto 0 auto;
+    padding: 34px 0 250px 0;
+    &:hover {
+      @extend .rule;
+    };
+    .menu {
+      @extend .absolute;
+      top: 30px;
+      width: 100%;
+      padding: 30px 0;
+      visibility: visible;
       a {
         padding: 30px 0;
         margin: 0 12px;
-      }
-    }
-    
-    .menu {
-      @extend .location;
-      visibility: hidden;
-      a:hover {
-        text-decoration: underline;
-      }
-    }
-    
-    &:hover {
-      @extend .fade-details;
-      background-color: $text;
-      .location {
-        visibility: hidden;
-      }
-      .menu {
-        visibility: visible;
-        a { 
-          color: $background;
-          font-family: 'Avenir LT Roman';
-        }
-      }
+      }     
     }
   }
 }
 
-nav.scroll {
-  position: relative;
-  .location, .menu {
-    position: absolute;
-  }
-}
-
-//---------------------------------------------------------Header:
-
-header {
+nav.stay {
   position: fixed;
-  top: $h-nav;
-  width: 100%;
-  z-index: 1977;
-  background: $background;
-  
-  .paths {
-    position: absolute;
-    top: 30px;
-    right: 0;
-    //width: 100%;
-    //z-index: 1977;
-    a { 
-      display: inline-block;
-      //width: 120px;
-      //margin-bottom: 9px;
-      @extend .type-small;
-    }
+  top: 0;
+  .location, .menu {
+    position: fixed;
   }
 }
 
-h1, footer {
-  @include section-rule;
-}
-
-//---------------------------------------------------------Slideshow fixed alts:
-
-
-.container.stay {
-  height: 0;
-}
-
-.title {
-  width: 100%;
-  top: 74px;
-  height: 130px;
-  z-index: 1977;
-  background: $background url(title-rule.png) repeat-x scroll 0 50%;
-  a {
-    background: $background;
-    padding: 0 10px;
-  }
-  &:hover {
-    //background-image: url(title-rule-hover.png);
-  }
-}
-
-
-
-//---------------------------------------------------------Article relative alts:
-
-.container.scroll {
-  .title {
-    top: 0;
-  }
-  &:hover {
-    //background: $text;
-  }
-}
-
-
-
-
-
-//article, ul {
-//  width: 900px;
-//  margin: 0 auto;
-//  padding-bottom: 250px;
-//  p, h1 {
-//    margin: 0 auto;
-//    width: 580px;
-//  }
-//  p {
-//    margin-bottom: 20px;
+////---------------------------------------------------------Header
+//
+//header {
+//  position: fixed;
+//  top: $h-nav;
+//  width: 100%;
+//  z-index: 1977;
+//  background: $background;
+//  
+//  .paths {
+//    position: absolute;
+//    top: 30px;
+//    right: 0;
+//    //width: 100%;
+//    //z-index: 1977;
+//    a { 
+//      display: inline-block;
+//      //width: 120px;
+//      //margin-bottom: 9px;
+//      @extend .type-small;
+//    }
 //  }
 //}
 //
-//.item {
-//  margin-bottom: 1000px;
+////---------------------------------------------------------Slideshow fixed
+//
+//.title {
+//  width: 100%;
+//  top: 74px;
+//  height: 130px;
+//  z-index: 1977;
+//  background: $background url(title-rule.png) repeat-x scroll 0 50%;
+//  a {
+//    background: $background;
+//    padding: 0 10px;
+//  }
 //}
+
+//---------------------------------------------------------Text article width
+
+section {
+  margin-bottom: 60px;
+  &.text {
+    width: $w-text;
+    margin: 0 auto 60px auto;
+  }
+}
+
+article {
+  .post {
+    
+  }
+}
+
+//---------------------------------------------------------Footer
 
 footer {
   width: $w-text;
   margin: 48px auto 0 auto;
+  padding: 34px 0 0 0;
+  @extend .rule;
+  &.last {
+    padding-bottom: 250px;
+  }
 }
 
 

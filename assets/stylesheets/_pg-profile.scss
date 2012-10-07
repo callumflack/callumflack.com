@@ -1,17 +1,8 @@
 .profile {
-  a.on-profile {
-    @extend .on;
-    @extend .opacity-100;
-  }
   img {
     width: 960px;
   }
-  .container.slides {
-    top: 0;
-    height: 341px;
-    margin-bottom: 50px;
-  }
   h1 {
-    border-top: 0;
+    padding-bottom: 60px;
   }
 }
