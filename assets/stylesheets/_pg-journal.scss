@@ -1,48 +1,17 @@
 .journal, .journal-list, .journal-picture, .journal-article {
-//  a.on {
-//    text-decoration: underline;
-//  }
 }
 
 .journal-list {
   p {
     margin-bottom: 0;
   }
-  .post {
+  article {
     margin-bottom: 90px;
-    &.picture {
-      position: relative;
-      margin: 0 auto 90px auto;
-      a { 
-        width: $w-text;
-        display: block;
-        position: absolute;
-        top: 0;
-        z-index: 99;
-        height: 426px;
-        margin: 0;
-        padding: 0;
-        visibility: hidden;
-        h1 {
-          top: 35%;
-          padding: 192px 0 0 0;
-        }
-      }  
-      img {
-        display: block;
-        margin: 0 auto;
-        &.portrait { height: 426px; }
-        &.landscape { height: 320px; }
-      }
-    }
-    //Hover over picture posts
-    &:hover {
-      //border-bottom-color: $text;
-      &.picture a { visibility: visible; }
-      &.picture img {
-        @extend .opacity-0;
-        @extend .fade-delay;
-      }
+    img {
+      display: block;
+      margin: 0 auto;
+      &.portrait { height: 426px; }
+      &.landscape { height: 320px; }
     }
   }
 }

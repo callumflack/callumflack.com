@@ -5,7 +5,7 @@
   //font-family: "URWClarendonT-LigExtNar";
   font-weight: 400;
   font-style: normal;
-  font-size: 2.2em;
+  font-size: 2.1em;
   line-height: 140%;
   text-align: left;
   text-transform: none;
@@ -14,14 +14,11 @@
   margin: 0;
 }
 
-.type-small {
+.headline {
+  font-family: "Helvetica Neue";
   font-weight: 500;
   font-style: normal;
-  font-size: 19px;
-  font-family: "Helvetica Neue";
-  //text-transform: uppercase;
-  //text-decoration: none;
-  //letter-spacing: 1px;
+  font-size: 18px;
   margin: 0;
 }
 
@@ -34,10 +31,9 @@
 }
 
 a {
-  font-family: "Helvetica Neue";
+  @extend .headline;
   color: $text;
   text-decoration: none;
-  //font-style: italic;
   &:hover { 
     text-decoration: underline;
     color: $link;
@@ -45,12 +41,9 @@ a {
 }
 
 nav {    
-  text-align: center;
   a {
-    @extend .type-small;
+    @extend .headline;
     @extend .leading-reset;
-    //letter-spacing: 1px;
-    //text-transform: uppercase;
     text-decoration: none;
   }
 }
@@ -64,7 +57,6 @@ p {
     margin-left: .2em;
   }
   &.links {
-    padding: 20px 0;
     &.last { padding-bottom: 0; }
     a {
       display: block;
@@ -72,22 +64,10 @@ p {
       background: url(link.png) no-repeat scroll 38px 50%;
     } 
   }
-  a {
-    @extend .type-small;
-    //font-size: 18px;
-//    font-weight: 800;
-//    text-transform: uppercase;
-//    text-decoration: underline;
-  }
 }
 
 h1 {
-  @extend .typeset;
-  font-family: "Helvetica Neue";
-  font-size: 2.1em;
-  font-weight: 500;
-  text-align: center;
-  text-transform: uppercase;
+  @extend .headline;
   padding: 0 0 20px 0;
   a {
     //font-family: "freight-text-pro-1", "freight-text-pro-2";
@@ -102,8 +82,7 @@ h1 {
 //}
 
 h2 {
-  @extend .type-small;
-  text-align: center;
+  @extend .headline;
   padding: 30px 0;
   &.links {
     @extend p.links;
@@ -117,9 +96,8 @@ span {
 }
 
 footer {
-  p {
-    @extend .type-small;
-    text-align: center;
+  a, p {
+    color: $text-70;
   }
   a {
     text-decoration: underline;

@@ -1,48 +1,57 @@
-$w-text: 660px;
-$w-pic: 960px;
+$w-text: 600px;
+$w-pic: 920px;
+$w-nav: 300px;
 $h-nav: 78px; //109
+$top: 80px;
 $text: #222; //222255
 $text-20: #D8D8D8; //ccd3dd;
+$text-70: #666;
 $link: #d00; //0096e0
 $background: #fdfdfd; //f5f6f7
+
+header {
+  position: relative;
+  height: $top;
+  width: 100%;
+  background-color: $background;
+  z-index: 2001;
+}
 
 .container {
   position: relative;
   width: $w-pic;
   margin: 0 auto;
+  padding: 0 20px;
   height: 100%;
 }
 
-.absolute {
-  position: absolute;
-  top: 0; 
-}
+.absolute { position: absolute; }
+.fixed { position: fixed; }
 
-.fixed { 
-  position: fixed;
-  top: 0;
-}
-
-.rule { border-top: 3px solid $text; }
-.rule-lite { border-top: 6px solid $text; }
+.rule { border-top: 1px solid $text; }
+.rule-lite { border-top: 1px solid #ddd; }
+.rule-padding { padding: 4px 0 45px 0; }
 
 
 //---------------------------------------------------------Nav
 
 nav {
-  position: relative;
-  width: 100%;
-  height: $h-nav;
+  position: absolute;
+  width: $w-nav;
+  height: 69px;
   z-index: 1977;
   background: $background;
-  @extend .rule;
   .location {
+    @extend .rule;
     @extend .absolute;
-    width: $w-pic;
-    padding: 15px 0 45px 0; //30px 0 60px 0
+    @extend .rule-padding;
+    width: $w-nav;
     a {
-      padding: 30px 0;
-      margin: 0 12px;
+      @extend .rule-padding;
+      margin-left: 12px;
+      &.first {
+        margin-left: 0;
+      }
     }
   } 
   .menu {
@@ -53,8 +62,10 @@ nav {
     }
   }  
   &:hover {
+    height: 3000px;
+    width: $w-pic;
+    @include transparent($background, 1);
     @extend .fade-delay-2;
-    //border-color: $background;
     .location {
       @extend .fade-delay;
       @extend .opacity-0;
@@ -62,6 +73,10 @@ nav {
     .menu {
       @extend .fade-delay-2;
       @extend .opacity-100;
+      width: 100%;
+      a.first {
+        text-decoration: underline;
+      }
     }
   }
 
@@ -73,7 +88,7 @@ nav {
     padding: 34px 0 250px 0;
     &:hover {
       @extend .rule;
-    };
+    }
     .menu {
       @extend .absolute;
       top: 30px;
@@ -88,19 +103,23 @@ nav {
   }
 }
 
+
 //---------------------------------------------------------Text article width
 
 section {
+  position: relative;
+  width: $w-text;
+  padding-left: $w-nav + 20px;
   margin-bottom: 60px;
-  &.text {
-    width: $w-text;
-    margin: 0 auto 60px auto;
-  }
+  background-color: $background;
 }
 
 article {
-  .post {
-    
+  width: $w-text;
+  h1 {
+    @extend .rule-padding;
+    padding-top: 5px;
+    @extend .rule;
   }
 }
 
@@ -108,13 +127,11 @@ article {
 
 footer {
   width: $w-text;
-  margin: 48px auto 0 auto;
-  padding: 34px 0 250px 0;
-  h2 {
-    width: 164px;
-    margin: 0 auto;
-    padding: 12px 0 30px 0;
-    @extend .rule-lite;
+  margin: 60px 0 0 0;
+  padding: 4px 0 150px 0;
+  @extend .rule-lite;
+  p {
+    @extend .rule-padding;
   }
   &.first {
     padding-bottom: 0;

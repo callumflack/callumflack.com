@@ -1,4 +1,5 @@
 .work {
+
   section {
     
     p {
@@ -58,45 +59,39 @@
   }
 }
 
+
+
+
 .work-project {
-  nav {
+  header {
     position: fixed;
-    width: $w-pic;
-    top: 0;
-    .location, .menu {
-      position: fixed;
-    }
   }
-  
+  .container {
+    padding-top: 80px;
+  }
+
   section.fixed {
-    width: $w-pic;
-    top: 81px;
     margin-bottom: 0;
-    padding: 12px 0 45px 0;
-    background-color: $background;
-    border-top: 1px solid #ccc;
-    z-index: 1977;
+    z-index: 1968;
     h1 {
      line-height: 100%;
-     padding: 0; 
+     //padding: 0; 
     }
     .paths {
       position: absolute;
-      top: 16px;
+      top: 7px;
       right: 0;
-      //width: 100%;
       a { 
         display: inline-block;
-        //width: 120px;
-        //margin-bottom: 9px;
-        @extend .type-small;
-        font-weight: 400;
+        @extend .headline;
       }
     }
   }
   
   section.absolute {
-    top: 74px; //94
+    top: 150px;
+    width: $w-pic;
+    padding: 0;
   }
   img { 
     padding-bottom: 800px;

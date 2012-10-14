@@ -1,19 +1,20 @@
 - @body_class = "journal-list"
 
+%header
 .container
 
   %nav
     .location
-      %a.on{:href => "/work"} Journal
+      %a.on.first{:href => "/work"} Journal
     .menu
-      %a{:href => "/home"} Home
-      %a{:href => "/work"} Work
-      %a.on{:href => "/journal"} Journal
+      %a.first{:href => "/journal"} Journal
       %a{:href => "/profile"} Profile
+      %a{:href => "/work"} Work
+      %a{:href => "/home"} Home
 
-  %section.text
-    
-    %article.post
+  %section
+  
+    %article
       %h1 
         %a{:href => "/journal/a-paraphrased-sterling-article"} A paraphrased Sterling article
       %p       
@@ -22,12 +23,12 @@
         doing something complicated called trading up.
         %a{:href => "/journal/a-paraphrased-sterling-article"} Read more
 
-    %article.post.picture
+    %article
+      %h1 
+        %a{:href => "/journal/i-thought-you-were-my-lady"} Things inbetween: a tumblr blog
       %img.portrait{:src => "assets/images/Notice_120404~03.jpg", :alt => "I thought you were my lady"}
-      %a{:href => "/journal/i-thought-you-were-my-lady"}
-        %h1 Things inbetween: a tumblr blog
 
-    %article.post
+    %article
       %h1 
         %a{:href => "/journal/a-paraphrased-sterling-article"} A paraphrased Sterling article
       %p       
@@ -36,12 +37,12 @@
         doing something complicated called trading up.
         %a{:href => "/journal/a-paraphrased-sterling-article"} Read more
 
-    %article.post.picture
+    %article
+      %h1 
+        %a{:href => "/journal/days-end"} Things inbetween: a tumblr blog
       %img.portrait{:src => "assets/images/Notice_120418_02.jpg", :alt => "Day's end"}
-      %a{:href => "/journal/days-end"}
-        %h1 Things inbetween: a tumblr blog
 
-    %article.post
+    %article
       %h1 
         %a{:href => "/journal/a-paraphrased-sterling-article"} A paraphrased Sterling article
       %p       
@@ -50,21 +51,21 @@
         doing something complicated called trading up.
         %a{:href => "/journal/a-paraphrased-sterling-article"} Read more
 
-    %article.post.picture
+    %article
+      %h1 
+        %a{:href => "/journal/i-thought-you-were-my-lady"} Things inbetween: a tumblr blog
       %img.portrait{:src => "assets/images/Notice_120404~03.jpg", :alt => "I thought you were my lady"}
-      %a{:href => "/journal/i-thought-you-were-my-lady"}
-        %h1 Things inbetween: a tumblr blog
 
-    %article.post.picture
+    %article
+      %h1 
+        %a{:href => "/journal/days-end"} Things inbetween: a tumblr blog
       %img.portrait{:src => "assets/images/Notice_120418_02.jpg", :alt => "Day's end"}
-      %a{:href => "/journal/days-end"}
-        %h1 Things inbetween: a tumblr blog
 
-    %article.post.picture
+    %article
+      %h1 
+        %a{:href => "/journal/i-thought-you-were-my-lady"} Things inbetween: a tumblr blog
       %img.portrait{:src => "assets/images/Notice_120404~03.jpg", :alt => "I thought you were my lady"}
-      %a{:href => "/journal/i-thought-you-were-my-lady"}
-        %h1 Things inbetween: a tumblr blog
 
-  %footer
-    %h2
-      %a{:href => "/journal"} Load more posts
+    %footer
+      %h2
+        %a{:href => "/journal"} Load more posts

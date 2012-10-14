@@ -35,7 +35,7 @@
 }
 
 .slides {
-  top: 86px;
+  top: 0;
   zoom: 1;
   img {
     width: $w-pic;
@@ -43,13 +43,16 @@
 }
 
 .info {
+  position: relative;
   width: $w-text;
-  padding: 0 150px;
+  padding: 0;
+  padding-left: $w-nav + 20px;
+  border: 0;
   height: 100%;
   z-index: 1;
   visibility: hidden;
   &.absolute {
-    top: 113px;
+    top: 0;
   }
 }
 
@@ -64,37 +67,3 @@
 .expand-info .paths.top, .expand-info .slides.absolute  { display: none; }
 .expand-info .show-pictures { visibility: visible; }
 
-
-//.info-fix {
-//  position: absolute;
-//  top: 245px;
-//  width: 580px;
-//  height: 0;
-//  overflow: hidden;
-//  background-color: transparent;
-//  @include transition(all 0.2s ease);
-//}
-
-//.work-details-on {
-//  @extend .work-details;
-//  visibility: hidden;
-//  position: absolute;
-//  right: 20px;
-//  top: -6px;
-//  color: #f5f5f5;
-//  font-size: .9em;
-//  font-weight: 700;
-//  padding: 6px 8px 3px 8px;
-//  @include border-radius(4px);
-//  background-color: $text;
-//  &:hover {
-//    @extend .fade-details;
-//    border-bottom: 0;
-//    color: #f5f5f5;
-//    background-color: $text; 
-//  }
-//}
-//
-//.work .home-active {
-//  visibility: visible;
-//}
