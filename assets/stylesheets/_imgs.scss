@@ -1,5 +1,5 @@
 $img-side1: 671px; //721
-$img-side2: 960px;
+$img-side2: $w-pic;
 $img-posts1: $img-side1 * 0.6875;
 $img-posts2: $img-side2 * 0.6875;
 
@@ -28,6 +28,13 @@ $img-posts2: $img-side2 * 0.6875;
   transition: opacity 0.3s ease;
 }
 
+.fade-delay-2 {
+  -webkit-transition: opacity 1s ease;
+  -moz-transition: opacity 1s ease;
+  -o-transition: opacity 1s ease;
+  transition: opacity 1s ease;
+}
+
 .fade-details {
   -webkit-transition: background 0.3s ease;
   -moz-transition: background 0.3s ease;
@@ -37,7 +44,7 @@ $img-posts2: $img-side2 * 0.6875;
 
 
 .post > a > img:hover {
-  @extend .opacity-20;
+  //@extend .opacity-20;
 }
 
 

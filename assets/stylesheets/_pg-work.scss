@@ -1,44 +1,55 @@
 .work {
-  .article-nav { top: 272px; }
-  article {
-    .post {
-      margin-bottom: 2px;
-    }
-    a {
-      position: relative;
-      display: block;
-      height: 100px;
-
-      //PICTURE POSTS
-      &.picture {
-        img {
-          display: inline-block;
-          height: 100px;
-          width: 900px;
-          padding: 0;
-          margin: 0 auto;
-        }
-        .caption {
-          width: 100%;
-          position: absolute;
-          top: 40%;
-          z-index: 99;
-          h1 {
-            padding: 0;
-            text-align: center;
-            text-decoration: none;
-            visibility: hidden;
-          }
+  section {
+    
+    p {
+      width: 100%;
+      text-align: center;
+      padding-bottom: 30px;
+      //font-size: 22px;
+      padding-top: 2px;
+      a {
+        text-decoration: none;
+        &.on {
+          text-decoration: underline;
         }
       }
-      
-      //HOVER OVER POSTS
+    }
+
+    .project {
+      position: relative;
+      display: block;
+      height: 90px;
+      margin-bottom: 2px;
+      //font-size: 61%;
+
+      img {
+        display: inline-block;
+        height: 90px;
+        width: $w-pic;
+        padding: 0;
+        margin: 0 auto;
+      }
+      .caption {
+        width: 100%;
+        position: absolute;
+        top: 40%;
+        z-index: 99;
+        h1 {
+          padding: 0;
+          text-align: center;
+          text-decoration: none;
+          visibility: hidden;
+          color: $text;
+        }
+      }
+    
+      //HOVER OVER PROJECTS
       &:hover {
         border-bottom-color: $text;
         text-decoration: none;
-        h1, span { text-decoration: underline; }
-        &.picture h1 { visibility: visible; }
-        &.picture img {
+        //h1, span { text-decoration: underline; }
+        &.project h1 { visibility: visible; }
+        &.project img {
           @extend .opacity-0;
           @extend .fade-delay;
         }
@@ -48,6 +59,45 @@
 }
 
 .work-project {
+  nav {
+    position: fixed;
+    width: $w-pic;
+    top: 0;
+    .location, .menu {
+      position: fixed;
+    }
+  }
+  
+  section.fixed {
+    width: $w-pic;
+    top: 81px;
+    margin-bottom: 0;
+    padding: 12px 0 45px 0;
+    background-color: $background;
+    border-top: 1px solid #ccc;
+    z-index: 1977;
+    h1 {
+     line-height: 100%;
+     padding: 0; 
+    }
+    .paths {
+      position: absolute;
+      top: 16px;
+      right: 0;
+      //width: 100%;
+      a { 
+        display: inline-block;
+        //width: 120px;
+        //margin-bottom: 9px;
+        @extend .type-small;
+        font-weight: 400;
+      }
+    }
+  }
+  
+  section.absolute {
+    top: 74px; //94
+  }
   img { 
     padding-bottom: 800px;
   }

@@ -11,8 +11,10 @@
     = stylesheet_tag :application
     = javascript_tag "http://use.typekit.com/byz1jhq.js"
     :javascript
-      try{Typekit.load();}catch(e){}    
-  
+      try{Typekit.load();}catch(e){}
+    /= javascript_tag "http://fast.fonts.com/jsapi/7091e86f-c7e7-429c-9549-9deeaad77469.js" 
+    %link{:rel => "stylesheet", :href => "http://f.fontdeck.com/s/css/OkC3piv0PJOyoOtFOulsmet50go/localhost/24706.css", :type => "text/css"}
+      
   %body{ class: @body_class }
       
     ~ yield

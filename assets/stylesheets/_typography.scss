@@ -1,6 +1,9 @@
 .typeset {
-  font-family: "warnock-pro-1", "warnock-pro-2";
-  font-weight: 300;
+  font-family: "freight-text-pro-1", "freight-text-pro-2";
+//  font-family: "schoolbook-web-1", "schoolbook-web-2";
+  //font-family: "Avenir LT Book"; 
+  //font-family: "URWClarendonT-LigExtNar";
+  font-weight: 400;
   font-style: normal;
   font-size: 2.2em;
   line-height: 140%;
@@ -12,13 +15,13 @@
 }
 
 .type-small {
-  font-weight: 700;
+  font-weight: 500;
   font-style: normal;
-  font-size: 1.3em;
+  font-size: 19px;
   font-family: "Helvetica Neue";
-  text-transform: uppercase;
+  //text-transform: uppercase;
   //text-decoration: none;
-  letter-spacing: 1px;
+  //letter-spacing: 1px;
   margin: 0;
 }
 
@@ -30,10 +33,11 @@
   text-decoration: underline;
 }
 
-a { 
+a {
+  font-family: "Helvetica Neue";
   color: $text;
   text-decoration: none;
-  font-style: italic;
+  //font-style: italic;
   &:hover { 
     text-decoration: underline;
     color: $link;
@@ -45,21 +49,10 @@ nav {
   a {
     @extend .type-small;
     @extend .leading-reset;
-    //font-family: 'Avenir LT Heavy';
-    letter-spacing: 1px;
-    text-transform: uppercase;
+    //letter-spacing: 1px;
+    //text-transform: uppercase;
     text-decoration: none;
   }
-}
-
-footer {
-  a {
-    font-style: normal;
-  }
-}
-
-.article-nav {
-  a, p { @extend .type-small; }
 }
 
 p {
@@ -79,27 +72,34 @@ p {
       background: url(link.png) no-repeat scroll 38px 50%;
     } 
   }
-  &.sub-nav {
+  a {
     @extend .type-small;
-    text-align: center;
+    //font-size: 18px;
+//    font-weight: 800;
+//    text-transform: uppercase;
+//    text-decoration: underline;
   }
 }
 
 h1 {
   @extend .typeset;
-  font-size: 3.6em;
+  font-family: "Helvetica Neue";
+  font-size: 2.1em;
+  font-weight: 500;
   text-align: center;
+  text-transform: uppercase;
   padding: 0 0 20px 0;
   a {
-    font-style: normal;
+    //font-family: "freight-text-pro-1", "freight-text-pro-2";
+    //font-style: normal;
   }
 }
 
-.post {
-  h1 {
-    font-size: 2.9em;
-  }
-}
+//.post {
+//  h1 {
+//    font-size: 2.5em;
+//  }
+//}
 
 h2 {
   @extend .type-small;
@@ -117,13 +117,16 @@ span {
 }
 
 footer {
-  a, p { 
+  p {
+    @extend .type-small;
     text-align: center;
+  }
+  a {
+    text-decoration: underline;
   }
 }
 
 button, input, select, textarea {
   @extend .typeset;
-  //font-family: 'Avenir LT Roman';
 }
 

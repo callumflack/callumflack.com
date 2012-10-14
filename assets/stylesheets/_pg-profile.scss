@@ -1,8 +1,15 @@
 .profile {
   img {
-    width: 960px;
+    display: inline;
+    //margin: 0 380px;
+    width: $w-pic;
   }
   h1 {
     padding-bottom: 60px;
+  }
+  footer {
+    h2 {
+      width: 220px;
+    }
   }
 }

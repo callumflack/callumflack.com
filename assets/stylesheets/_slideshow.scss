@@ -35,10 +35,10 @@
 }
 
 .slides {
-  top: 121px;
+  top: 86px;
   zoom: 1;
   img {
-    width: 960px;
+    width: $w-pic;
   }
 }
 
@@ -49,7 +49,7 @@
   z-index: 1;
   visibility: hidden;
   &.absolute {
-    top: 140px;
+    top: 113px;
   }
 }
 

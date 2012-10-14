@@ -1,20 +1,16 @@
 $w-text: 660px;
 $w-pic: 960px;
-$h-nav: 109px;
+$h-nav: 78px; //109
 $text: #222; //222255
 $text-20: #D8D8D8; //ccd3dd;
-$link: #0096e0;
+$link: #d00; //0096e0
 $background: #fdfdfd; //f5f6f7
 
 .container {
   position: relative;
-  width: 960px;
+  width: $w-pic;
   margin: 0 auto;
   height: 100%;
-  &.slides {
-    top: $h-nav;
-    width: $w-pic;
-  }
 }
 
 .absolute {
@@ -27,23 +23,23 @@ $background: #fdfdfd; //f5f6f7
   top: 0;
 }
 
-.rule { border-top: 1px solid $text-20; }
+.rule { border-top: 3px solid $text; }
+.rule-lite { border-top: 6px solid $text; }
 
 
 //---------------------------------------------------------Nav
 
 nav {
   position: relative;
-  top: 0;
   width: 100%;
   height: $h-nav;
   z-index: 1977;
   background: $background;
-  border-top: 16px solid $text;
+  @extend .rule;
   .location {
     @extend .absolute;
     width: $w-pic;
-    padding: 30px 0 60px 0;
+    padding: 15px 0 45px 0; //30px 0 60px 0
     a {
       padding: 30px 0;
       margin: 0 12px;
@@ -51,19 +47,21 @@ nav {
   } 
   .menu {
     @extend .location;
-    visibility: hidden;
+    @extend .opacity-0;
     a:hover {
       text-decoration: underline;
     }
   }  
   &:hover {
-    @extend .fade-details;
-    border-color: $background;
+    @extend .fade-delay-2;
+    //border-color: $background;
     .location {
-      visibility: hidden;
+      @extend .fade-delay;
+      @extend .opacity-0;
     }
     .menu {
-      visibility: visible;
+      @extend .fade-delay-2;
+      @extend .opacity-100;
     }
   }
 
@@ -90,52 +88,6 @@ nav {
   }
 }
 
-nav.stay {
-  position: fixed;
-  top: 0;
-  .location, .menu {
-    position: fixed;
-  }
-}
-
-////---------------------------------------------------------Header
-//
-//header {
-//  position: fixed;
-//  top: $h-nav;
-//  width: 100%;
-//  z-index: 1977;
-//  background: $background;
-//  
-//  .paths {
-//    position: absolute;
-//    top: 30px;
-//    right: 0;
-//    //width: 100%;
-//    //z-index: 1977;
-//    a { 
-//      display: inline-block;
-//      //width: 120px;
-//      //margin-bottom: 9px;
-//      @extend .type-small;
-//    }
-//  }
-//}
-//
-////---------------------------------------------------------Slideshow fixed
-//
-//.title {
-//  width: 100%;
-//  top: 74px;
-//  height: 130px;
-//  z-index: 1977;
-//  background: $background url(title-rule.png) repeat-x scroll 0 50%;
-//  a {
-//    background: $background;
-//    padding: 0 10px;
-//  }
-//}
-
 //---------------------------------------------------------Text article width
 
 section {
@@ -157,11 +109,14 @@ article {
 footer {
   width: $w-text;
   margin: 48px auto 0 auto;
-  padding: 34px 0 0 0;
-  @extend .rule;
-  &.last {
-    padding-bottom: 250px;
+  padding: 34px 0 250px 0;
+  h2 {
+    width: 164px;
+    margin: 0 auto;
+    padding: 12px 0 30px 0;
+    @extend .rule-lite;
+  }
+  &.first {
+    padding-bottom: 0;
   }
 }
-
-
