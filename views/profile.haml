@@ -1,15 +1,16 @@
 - @body_class = "profile"
 
+%header
 .container
 
   %nav
     .location
-      %a.on{:href => "/work"} Profile
+      %a.first{:href => "/work"} Profile
     .menu
+      %a.first{:href => "/profile"} Profile
       %a{:href => "/home"} Home
       %a{:href => "/work"} Work
-      %a{:href => "/journal"} Journal
-      %a{:href => "/profile"} Profile
+      %a.last{:href => "/journal"} Journal
 
 
   %section

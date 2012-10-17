@@ -7,6 +7,15 @@
   }
   article {
     margin-bottom: 90px;
+    p > a {
+      display: inline-block;
+      padding-right: 25px;
+      background: url(link.png) no-repeat scroll 100% 50%;
+      text-decoration: underline;
+      &:hover {
+        background-image: url(link-h.png);
+      }
+    }
     img {
       display: block;
       margin: 0 auto;

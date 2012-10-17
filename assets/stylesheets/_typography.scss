@@ -1,6 +1,5 @@
 .typeset {
   font-family: "freight-text-pro-1", "freight-text-pro-2";
-//  font-family: "schoolbook-web-1", "schoolbook-web-2";
   //font-family: "Avenir LT Book"; 
   //font-family: "URWClarendonT-LigExtNar";
   font-weight: 400;
@@ -16,7 +15,7 @@
 
 .headline {
   font-family: "Helvetica Neue";
-  font-weight: 500;
+  font-weight: 400;
   font-style: normal;
   font-size: 18px;
   margin: 0;
@@ -30,13 +29,21 @@
   text-decoration: underline;
 }
 
+
+//--------------------------------------------- a
 a {
   @extend .headline;
   color: $text;
   text-decoration: none;
   &:hover { 
-    text-decoration: underline;
+    text-decoration: none;
     color: $link;
+  }
+}
+
+h1, .paths, .menu, section.pic {
+  a:hover {
+    text-decoration: none;
   }
 }
 
@@ -48,6 +55,10 @@ nav {
   }
 }
 
+
+
+
+//--------------------------------------------- p
 p {
   @extend .typeset;
   margin: 0 0 20px 0;
@@ -62,45 +73,50 @@ p {
       display: block;
       padding-left: 70px;
       background: url(link.png) no-repeat scroll 38px 50%;
+      &:hover {
+        background-image: url(link-h.png);
+      }
     } 
+  }
+  a {
+    @extend .typeset;
+    font-style: italic;
+    font-size: 21px;
   }
 }
 
 h1 {
   @extend .headline;
   padding: 0 0 20px 0;
-  a {
-    //font-family: "freight-text-pro-1", "freight-text-pro-2";
-    //font-style: normal;
-  }
 }
 
-//.post {
-//  h1 {
-//    font-size: 2.5em;
-//  }
-//}
 
 h2 {
-  @extend .headline;
-  padding: 30px 0;
+  @extend h1;
   &.links {
     @extend p.links;
   }
 }
 
-span {
-  display: inline-block;
-  padding-right: 25px;
-  background: url(link.png) no-repeat scroll 100% 50%;
+footer {
+  h2 {
+    color: $text-80;
+    text-decoration: none;
+    &:hover {
+      color: $link;
+      text-decoration: none;
+    }
+  }
 }
 
-footer {
-  a, p {
-    color: $text-70;
-  }
-  a {
-    text-decoration: underline;
+a > footer {
+  text-decoration: none;
+  &:hover {
+    text-decoration: none;
+    h2 {
+      color: $link;
+      text-decoration: none;
+    }
   }
 }
 

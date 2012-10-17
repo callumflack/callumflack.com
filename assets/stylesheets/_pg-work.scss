@@ -4,9 +4,7 @@
     
     p {
       width: 100%;
-      text-align: center;
       padding-bottom: 30px;
-      //font-size: 22px;
       padding-top: 2px;
       a {
         text-decoration: none;
@@ -37,10 +35,10 @@
         z-index: 99;
         h1 {
           padding: 0;
-          text-align: center;
-          text-decoration: none;
+          @extend .text-align;
+          text-decoration: underline;
           visibility: hidden;
-          color: $text;
+          color: $link;
         }
       }
     
@@ -48,7 +46,6 @@
       &:hover {
         border-bottom-color: $text;
         text-decoration: none;
-        //h1, span { text-decoration: underline; }
         &.project h1 { visibility: visible; }
         &.project img {
           @extend .opacity-0;
@@ -73,9 +70,15 @@
   section.fixed {
     margin-bottom: 0;
     z-index: 1968;
+    article {
+      @extend .rule;
+      &:hover {
+        border-color: $text;
+      }
+    }
     h1 {
      line-height: 100%;
-     //padding: 0; 
+     border: 0;
     }
     .paths {
       position: absolute;
@@ -89,7 +92,7 @@
   }
   
   section.absolute {
-    top: 150px;
+    top: 149px;
     width: $w-pic;
     padding: 0;
   }
