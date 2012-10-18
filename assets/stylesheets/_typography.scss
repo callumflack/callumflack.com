@@ -1,7 +1,5 @@
 .typeset {
   font-family: "freight-text-pro-1", "freight-text-pro-2";
-  //font-family: "Avenir LT Book"; 
-  //font-family: "URWClarendonT-LigExtNar";
   font-weight: 400;
   font-style: normal;
   font-size: 2.1em;
@@ -25,9 +23,6 @@
   line-height: 100%;
 }
 
-.selected {
-  text-decoration: underline;
-}
 
 
 //--------------------------------------------- a
@@ -41,20 +36,16 @@ a {
   }
 }
 
-h1, .paths, .menu, section.pic {
-  a:hover {
-    text-decoration: none;
-  }
+nav > a {    
+  @extend .headline;
+  @extend .leading-reset;
 }
 
-nav {    
-  a {
-    @extend .headline;
-    @extend .leading-reset;
-    text-decoration: none;
-  }
-}
-
+//h1, .paths, .menu, section.pic, nav > a {
+//  a:hover {
+//    text-decoration: none;
+//  }
+//}
 
 
 
@@ -75,6 +66,7 @@ p {
       background: url(link.png) no-repeat scroll 38px 50%;
       &:hover {
         background-image: url(link-h.png);
+        text-decoration: underline;
       }
     } 
   }
@@ -84,6 +76,16 @@ p {
     font-size: 21px;
   }
 }
+
+//--------------------------only used for think em-dashes
+span.em {
+  font-family: "freight-text-pro-1", "freight-text-pro-2";
+  letter-spacing: -1px;
+  padding: 0;
+  margin-right: 1px;
+  background: none;
+}
+
 
 h1 {
   @extend .headline;
@@ -98,24 +100,21 @@ h2 {
   }
 }
 
+.paths {
+  @extend .headline;
+  font-size: 12px;
+}
+
 footer {
-  h2 {
+  h2, p {
+    color: $text-80;
+  }
+  a {
     color: $text-80;
     text-decoration: none;
     &:hover {
       color: $link;
-      text-decoration: none;
-    }
-  }
-}
-
-a > footer {
-  text-decoration: none;
-  &:hover {
-    text-decoration: none;
-    h2 {
-      color: $link;
-      text-decoration: none;
+      text-decoration: underline;
     }
   }
 }

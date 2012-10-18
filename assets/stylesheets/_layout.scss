@@ -30,6 +30,7 @@ header {
 .fixed { position: fixed; }
 
 .rule { border-top: 1px solid $text; }
+.rule-h { border-top: 1px solid $link; }
 .rule-lite { border-top: 1px solid #bbb; }
 .rule-padding { padding: 6px 0 49px 0; }
 .text-align { margin-left: $w-nav + 20px; }
@@ -46,11 +47,10 @@ nav {
   .location {
     @extend .rule;
     @extend .absolute;
-    padding: 3px 0 49px 0;
+    padding: 6px 0 49px 0;
     width: $w-nav;
     a {
-      padding: 3px 0 49px 0;
-      padding-left: 12px;
+      padding: 6px 0 49px 12px;
       &.first {
         padding-left: 0;
       }
@@ -63,31 +63,22 @@ nav {
       color: $text-70;
     }
     a:hover {
-      //text-decoration: underline;
       color: $link;
     }
     a.last {
-      padding-right: 36px;
+      padding-right: 57px;
     }
   }  
   &:hover {
-    //height: 3000px;
-    //width: $w-pic;
     @include transparent($background, 1);
     font-weight: 400;
-    .location {
-      //@extend .opacity-0;
-    }
     .menu {
       @extend .fade-delay;
       @extend .opacity-100;
+      @extend .rule-h;
       width: 100%;
-      border-color: $link;
       background: $background;
       padding-bottom: 45px;
-      a.first {
-        text-decoration: underline;
-      }
     }
   }
 
@@ -124,14 +115,30 @@ section {
   margin-bottom: 60px;
   background-color: $background;
   
+  .paths {
+    position: absolute;
+    top: 7px;
+    right: 0;
+    a { 
+      @extend .headline;
+    }
+  }
+
+  
   article {
     width: $w-text;
     h1, p.work-filter {
       @extend .rule-padding;
       @extend .rule;
       @extend .fade-delay;
+      &.first {
+        text-decoration: underline;
+      }
       &:hover {
-        border-color: $link;
+        @extend .rule-h;
+      }
+      a {
+        padding: 3px 0 49px 0;
       }
     }
   }
@@ -146,6 +153,10 @@ section {
         @extend .text-align;
       }
     }
+    footer {
+      width: $w-text;
+      @extend .text-align;
+    }
   }
 }
 
@@ -154,12 +165,14 @@ section {
 
 footer {
   width: $w-text;
-  //margin: 60px 0 0 0;
+  margin: 100px 0 0 0;
   @extend .rule-padding;
   padding-bottom: 150px;
   @extend .rule-lite;
   p {
-    @extend .rule-padding;
+    //@extend .rule-padding;
+    padding-bottom: 0;
+    margin: 0;
   }
   h2 {
     display: inline-block;
@@ -167,12 +180,18 @@ footer {
     background: url(link-grey.png) no-repeat scroll 100% 16%;
   }
   &.first {
-    padding-bottom: 0;
+    padding: 3px 0 0 0;
   }
-  &:hover {
-    border-color: $link;
-    h2 {
-      background-image: url(link-h.png);
+  &.second {
+    margin-top: 70px;
+  }
+  &.load-more {
+    &:hover {
+      @extend .rule-h;
+      h2 {
+        color: $link;
+        background-image: url(link-h.png);
+      }
     }
   }
 }

@@ -2,6 +2,13 @@
 
   section {
     
+    article .first {
+      text-decoration: underline;
+    }
+    article .last {
+      padding-right: 222px;
+    }
+    
     p {
       width: 100%;
       padding-bottom: 30px;
@@ -18,8 +25,8 @@
       position: relative;
       display: block;
       height: 90px;
-      margin-bottom: 2px;
-      //font-size: 61%;
+      margin-bottom: 3px;
+      @extend .rule;
 
       img {
         display: inline-block;
@@ -36,7 +43,6 @@
         h1 {
           padding: 0;
           @extend .text-align;
-          text-decoration: underline;
           visibility: hidden;
           color: $link;
         }
@@ -44,8 +50,8 @@
     
       //HOVER OVER PROJECTS
       &:hover {
+        @extend .rule-h;
         border-bottom-color: $text;
-        text-decoration: none;
         &.project h1 { visibility: visible; }
         &.project img {
           @extend .opacity-0;
@@ -81,12 +87,15 @@
      border: 0;
     }
     .paths {
-      position: absolute;
-      top: 7px;
-      right: 0;
       a { 
-        display: inline-block;
-        @extend .headline;
+        padding-left: 25px;
+        background: url(link-l.png) no-repeat scroll 0% 50%;
+        &:hover {
+          background-image: url(link-l-h.png);
+        }
+      }
+      &.top a, &.top a:hover {
+        background-image: none;
       }
     }
   }

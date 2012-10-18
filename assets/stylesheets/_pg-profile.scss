@@ -1,15 +1,13 @@
 .profile {
+  section {
+    margin-bottom: 0;
+  }
   img {
     display: inline;
-    //margin: 0 380px;
     width: $w-pic;
+    margin-bottom: 42px;
   }
-  h1 {
-    padding-bottom: 60px;
-  }
-  footer {
-    h2 {
-      width: 220px;
-    }
+  h1:hover {
+    border-color: $text;
   }
 }
