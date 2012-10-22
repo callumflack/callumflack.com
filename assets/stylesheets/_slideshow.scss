@@ -54,6 +54,12 @@
   &.absolute {
     top: 0;
   }
+  footer {
+    width: $w-text;
+    aside {
+      margin-left: 0;
+    }
+  }
 }
 
 .expand-info .info {

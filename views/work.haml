@@ -1,53 +1,52 @@
 - @body_class = "work"
 
-%header
-.container
+%nav
+  .location
+    %a.first{:href => "/work"} Work
+  .menu
+    %a.first{:href => "/work"} Work
+    %a{:href => "/journal"} Journal
+    %a{:href => "/profile"} Profile
+    %a.last{:href => "/home"} Home
 
+%section.pic
   %nav
     .location
-      %a.first{:href => "/work"} Work
+      %a.first{:href => "/work"} Alphabetically
     .menu
-      %a.first{:href => "/work"} Work
-      %a{:href => "/journal"} Journal
-      %a{:href => "/profile"} Profile
-      %a.last{:href => "/home"} Home
+      %a.first{:href => "/work"} Alphabetically
+      %a{:href => "/work/by-category"} Categorically
+      %a.last{:href => "/work/by-year"} Chronologically
 
-  %section.pic
+  %article.spacer
+    %h1 &nbsp;
   
-    %article
-      %h1
-        %a.first{:href => "/work/by-alphabet"} Alphabetically
-        &nbsp;
-        %a{:href => "/work/by-category"} Categorically
-        &nbsp;
-        %a.last{:href => "/work/by-year"} Chronologically
-    
-    %a.project{:href => "/work/roundtable-records", :alt => "Roundtable Records"}
-      %img{:src => "assets/images/roundtable-00.jpg", :alt => "Roundtable Records"}
-      .caption
-        %h1 Roundtable Records
+  %a.project{:href => "/work/roundtable-records", :alt => "Roundtable Records"}
+    %img{:src => "assets/images/roundtable-00.jpg", :alt => "Roundtable Records"}
+    .caption
+      %h1 Roundtable Records
 
-    %a.project{:href => "/work/weird-gear", :alt => "Weird Gear"}
-      %img{:src => "assets/images/roundtable-00.jpg", :alt => "Weird Gear"}
-      .caption
-        %h1 Weird Gear
-        
-    %a.project{:href => "/work/roundtable-records", :alt => "Roundtable Records"}
-      %img{:src => "assets/images/roundtable-00.jpg", :alt => "Roundtable Records"}
-      .caption
-        %h1 Roundtable Records
+  %a.project{:href => "/work/weird-gear", :alt => "Weird Gear"}
+    %img{:src => "assets/images/weirdgear-00.jpg", :alt => "Weird Gear"}
+    .caption
+      %h1 Weird Gear
+      
+  %a.project{:href => "/work/roundtable-records", :alt => "Roundtable Records"}
+    %img{:src => "assets/images/roundtable-00.jpg", :alt => "Roundtable Records"}
+    .caption
+      %h1 Roundtable Records
 
-    %a.project{:href => "/work/weird-gear", :alt => "Weird Gear"}
-      %img{:src => "assets/images/roundtable-00.jpg", :alt => "Weird Gear"}
-      .caption
-        %h1 Weird Gear
-        
-    %a.project{:href => "/work/roundtable-records", :alt => "Roundtable Records"}
-      %img{:src => "assets/images/roundtable-00.jpg", :alt => "Roundtable Records"}
-      .caption
-        %h1 Roundtable Records
+  %a.project{:href => "/work/weird-gear", :alt => "Weird Gear"}
+    %img{:src => "assets/images/weirdgear-00.jpg", :alt => "Weird Gear"}
+    .caption
+      %h1 Weird Gear
+      
+  %a.project{:href => "/work/roundtable-records", :alt => "Roundtable Records"}
+    %img{:src => "assets/images/roundtable-00.jpg", :alt => "Roundtable Records"}
+    .caption
+      %h1 Roundtable Records
 
-    %a.project{:href => "/work/weird-gear", :alt => "Weird Gear"}
-      %img{:src => "assets/images/roundtable-00.jpg", :alt => "Weird Gear"}
-      .caption
-        %h1 Weird Gear    
+  %a.project{:href => "/work/weird-gear", :alt => "Weird Gear"}
+    %img{:src => "assets/images/weirdgear-00.jpg", :alt => "Weird Gear"}
+    .caption
+      %h1 Weird Gear    

@@ -2,11 +2,16 @@
 
   section {
     
-    article .first {
-      text-decoration: underline;
-    }
-    article .last {
-      padding-right: 222px;
+    
+    nav {
+      width: $w-text;
+      @extend .text-align;
+      .location, .menu {
+        width: $w-text;
+      }
+    }    
+    article.spacer {
+      height: 82px;
     }
     
     p {
@@ -26,7 +31,10 @@
       display: block;
       height: 90px;
       margin-bottom: 3px;
-      @extend .rule;
+      //@extend .rule;
+      &.first {
+        padding-top: 82px;
+      }
 
       img {
         display: inline-block;
@@ -50,7 +58,7 @@
     
       //HOVER OVER PROJECTS
       &:hover {
-        @extend .rule-h;
+        //@extend .rule-h;
         border-bottom-color: $text;
         &.project h1 { visibility: visible; }
         &.project img {
@@ -66,27 +74,23 @@
 
 
 .work-project {
-  header {
-    position: fixed;
-  }
-  .container {
-    padding-top: 80px;
-  }
+  padding-top: 0;
+  nav, section.fixed { padding-top: 80px; }
+  section { margin-bottom: 0; }
 
   section.fixed {
     margin-bottom: 0;
     z-index: 1968;
     article {
-      @extend .rule;
       &:hover {
         border-color: $text;
       }
     }
-    h1 {
-     line-height: 100%;
-     border: 0;
+    h1:hover {
+      border-color: $text;
     }
     .paths {
+      top: 95px;
       a { 
         padding-left: 25px;
         background: url(link-l.png) no-repeat scroll 0% 50%;
@@ -101,7 +105,7 @@
   }
   
   section.absolute {
-    top: 149px;
+    top: 161px;
     width: $w-pic;
     padding: 0;
   }

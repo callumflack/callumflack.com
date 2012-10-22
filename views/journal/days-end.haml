@@ -1,16 +1,15 @@
 - @body_class = "journal-picture"
 
-%nav#relative
-  .container
-    .location
-      %a.on{:href => "/journal"} Journal
-    .menu
-      %a{:href => "/home"} Home
-      %a{:href => "/work"} Work
-      %a{:href => "/journal"} Journal
-      %a{:href => "/profile"} Profile
+%nav
+  .location
+    %a.first{:href => "/work"} Journal
+  .menu
+    %a.first{:href => "/journal"} Journal
+    %a{:href => "/profile"} Profile
+    %a{:href => "/home"} Home
+    %a.last{:href => "/work"} Work
 
-.container
+%section.pic
   %article
     %h1 Headline, possible link
     .picture

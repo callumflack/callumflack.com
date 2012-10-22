@@ -2,13 +2,13 @@
   font-family: "freight-text-pro-1", "freight-text-pro-2";
   font-weight: 400;
   font-style: normal;
-  font-size: 2.1em;
+  font-size: 21px;
   line-height: 140%;
   text-align: left;
   text-transform: none;
   text-decoration: none;
   letter-spacing: 0;
-  margin: 0;
+  //margin: 0;
 }
 
 .headline {
@@ -16,13 +16,9 @@
   font-weight: 400;
   font-style: normal;
   font-size: 18px;
-  margin: 0;
-}
-
-.leading-reset {
   line-height: 100%;
+  //margin: 0;
 }
-
 
 
 //--------------------------------------------- a
@@ -38,14 +34,7 @@ a {
 
 nav > a {    
   @extend .headline;
-  @extend .leading-reset;
 }
-
-//h1, .paths, .menu, section.pic, nav > a {
-//  a:hover {
-//    text-decoration: none;
-//  }
-//}
 
 
 
@@ -59,7 +48,7 @@ p {
     margin-left: .2em;
   }
   &.links {
-    &.last { padding-bottom: 0; }
+    //padding-top: 20px;
     a {
       display: block;
       padding-left: 70px;
@@ -73,23 +62,45 @@ p {
   a {
     @extend .typeset;
     font-style: italic;
-    font-size: 21px;
+  }
+  &.contact a {
+    text-decoration: underline;
   }
 }
 
-//--------------------------only used for think em-dashes
+//----------------------------ems & dots
 span.em {
   font-family: "freight-text-pro-1", "freight-text-pro-2";
+  font-size: 23px;
+  font-weight: 300;
   letter-spacing: -1px;
   padding: 0;
   margin-right: 1px;
   background: none;
+  &.footer {
+    margin: 0 8px 0 7px;
+  }
+}
+
+span.dot {
+  font-size: 12px;
+  padding-top: -3px;
 }
 
 
+//----------------------------titles
 h1 {
   @extend .headline;
   padding: 0 0 20px 0;
+  margin: 0;
+  &.title { 
+    @extend .typeset;
+    font-size: 42px;
+    font-weight: 500;
+    line-height: 100%;
+    padding-bottom: 122px;
+  }
+  &.title, &.title:hover { border: 0; }
 }
 
 
@@ -102,15 +113,14 @@ h2 {
 
 .paths {
   @extend .headline;
-  font-size: 12px;
 }
 
 footer {
   h2, p {
-    color: $text-80;
+    //color: $text-80;
   }
   a {
-    color: $text-80;
+    //color: $text-80;
     text-decoration: none;
     &:hover {
       color: $link;

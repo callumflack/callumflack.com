@@ -1,42 +1,51 @@
 - @body_class = "work-project"
 
-%header
-.container
-  %nav.fixed
-    .location
-      %a.first{:href => "/work"} Work
-    .menu
-      %a.first{:href => "/work"} Work
-      %a{:href => "/journal"} Journal
-      %a{:href => "/profile"} Profile
-      %a.last{:href => "/home"} Home
+%nav.fixed
+  .location
+    %a.first{:href => "/work"} Work
+  .menu
+    %a.first{:href => "/work"} Work
+    %a{:href => "/home"} Home
+    %a{:href => "/journal"} Journal
+    %a.last{:href => "/profile"} Profile
 
-  %section.fixed
-    %article
-      /%a{:href => "/work/weird-gear"}
-      %h1 Roundtable Records
-      .paths
-        %a.show-pictures{:href => "/work"} Pictures    
-      .paths.top
-        %a.show-info{:href => "/work"} Info
+%section.fixed
+  %article
+    /%a{:href => "/work/weird-gear"}
+    %h1.anchor Roundtable Records
+    .paths
+      %a.show-pictures{:href => "/work"} Pictures    
+    .paths.top
+      %a.show-info{:href => "/work"} Info
 
-  %section.absolute
-    .slides.absolute  
-      %img{:src => "/assets/images/Eggleston.jpg", :alt => "Eggleston"}
-      %img{:src => "/assets/images/dicorcia.jpg", :alt => "Eggleston"}
-      %img{:src => "/assets/images/profile.jpg", :alt => "Eggleston"}
 
-    %article.info.absolute
-      /%h3 2009-2012
-      %p And they were tracking that and they were going to adopt that too. In other words, they were going to move the Fiat 500 into emergent demographic groups. This was the way forward. They were looking for emergent consumer groups and they were going to move the car into their social space year by year. And such and such and so on and on.
-      %p.links
-        %a{:href => "https://twitter.com/callumflack"} Download a PDF case study of this project
-        %a{:href => "https://twitter.com/callumflack"} Visit the business website
-      %p And they were tracking that and they were going to adopt that too. In other words, they were going to move the Fiat 500 into emergent demographic groups. This was the way forward. They were looking for emergent consumer groups and they were going to move the car into their social space year by year. I thought this is a really clever idea. I thought I’m in a society that’s going to do a lot of this. And I thought this is a terrible and scary paradigm of the future. Because it’s very difficult for us to construe that kind of activity as progress. Everybody for 200 years, almost since the twelve hundreds have known what progress means. They know what it means to be progressive and they know what it means to be futuristic.
+%section.absolute
+  .slides.absolute  
+    %img{:src => "/assets/images/Eggleston.jpg", :alt => "Eggleston"}
+    %img{:src => "/assets/images/dicorcia.jpg", :alt => "Eggleston"}
+    %img{:src => "/assets/images/profile.jpg", :alt => "Eggleston"}
 
-      %footer
-        /%h2 Like to know more?
+
+  %article.info.absolute
+    /%h3 2009-2012
+    %p And they were tracking that and they were going to adopt that too. In other words, they were going to move the Fiat 500 into emergent demographic groups. This was the way forward. They were looking for emergent consumer groups and they were going to move the car into their social space year by year. And such and such and so on and on.
+    %p.links
+      %a{:href => "https://twitter.com/callumflack"} Download a PDF case study of this project
+      %a{:href => "https://twitter.com/callumflack"} Visit the business website
+    %p And they were tracking that and they were going to adopt that too. In other words, they were going to move the Fiat 500 into emergent demographic groups. This was the way forward. They were looking for emergent consumer groups and they were going to move the car into their social space year by year. I thought this is a really clever idea. I thought I’m in a society that’s going to do a lot of this. And I thought this is a terrible and scary paradigm of the future. Because it’s very difficult for us to construe that kind of activity as progress. Everybody for 200 years, almost since the twelve hundreds have known what progress means. They know what it means to be progressive and they know what it means to be futuristic.
+
+    %footer      
+      %aside.contact
         %p 
           I design elegant, effective experiences for print & screen.
           %br
           %a{:href => "mailto:callumflack@gmail.com"} Start a conversation with me to discuss projects.
+
+      %aside.links
+        %a{:href => "/journal/days-end"} Day's end
+        %span.em.footer ~
+        %a{:href => "/journal/days-end"} Index
+        %span.em.footer ~
+        %a.next{:href => "/journal/i-thought-you-were-my-lady"} I thought you were my lady
+
+          

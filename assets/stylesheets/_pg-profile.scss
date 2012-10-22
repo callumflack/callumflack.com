@@ -2,12 +2,27 @@
   section {
     margin-bottom: 0;
   }
+  h1.anchor:hover {
+    border-color: $text;
+  }
+  h1.title { 
+    font-size: 33px;
+    font-weight: 500;
+    line-height: 120%;
+    padding: 0 0 30px 0;
+  }
   img {
     display: inline;
     width: $w-pic;
     margin-bottom: 42px;
   }
-  h1:hover {
-    border-color: $text;
+  footer {
+    h2 {
+      padding-right: 0;
+      background: none;
+    }
+    nav {
+      margin-top: 191px;
+    }
   }
 }

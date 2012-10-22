@@ -1,0 +1,69 @@
+footer {
+  width: $w-pic;
+  margin: 80px 0 0 0;
+  
+  p { margin: 0; }
+  
+  nav {
+    margin-top: 190px;
+    .location, .menu { 
+      @extend .rule-lite;
+      a { color: $text-80; }
+    }
+    .location:hover, .menu:hover { @extend .rule-h; }
+  }
+  
+  aside {
+    width: $w-text;
+    @extend .text-align;
+    padding: 6px 0 40px 0;
+    color: $text-80;
+    
+    p, a { 
+      @extend .headline;
+      line-height: 140%;
+    }
+    a { 
+      @extend .rule-padding-f;
+      padding-bottom: 60px;
+    }
+    
+    &.contact {
+      @extend .rule-lite;
+      background-color: #f1f1f1;
+      padding-left: 12px;
+      a, p { line-height: 140%; }
+      a { color: $text-80; }
+      a, a:hover { text-decoration: underline; }
+      a:hover { color: $link; }
+    }
+    
+    &.links {
+      @extend .rule-lite;
+      padding-bottom: 0;
+      a {
+        color: $text-80;
+        padding-left: 25px;
+        background: url(link-l-grey.png) no-repeat scroll 0% 17%;
+        &:hover { 
+          background-image: url(link-l-h.png); 
+          color: $link;
+        }
+      }
+      a.next {
+        padding-left: 0;
+        padding-right: 25px;
+        background: url(link-grey.png) no-repeat scroll 100% 17%;
+        &:hover { background-image: url(link-h.png); }
+      }
+      &:hover {
+        @extend .rule-h;
+        a { text-decoration: none; }
+//        a { 
+//          background-image: url(link-l-h.png);
+//        }
+//        a.next { background-image: url(link.png); }
+      }
+    }
+  }
+}

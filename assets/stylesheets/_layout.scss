@@ -3,37 +3,34 @@ $w-pic: 920px;
 $w-nav: 300px;
 $h-nav: 78px; //109
 $top: 80px;
-$text: #222; //222255
-$text-20: #D8D8D8; //ccd3dd;
-$text-70: #ccc;
-$text-80: #888;
-$link: #fa6000; //dd0 0096e0
-$background: #fdfdfd; //f5f6f7
-
-header {
-  position: relative;
-  height: $top;
-  width: 100%;
-  background-color: $background;
-  z-index: 2001;
-}
+$text: #333; //222255
+$text-20: #d5d5d5;
+$text-30: #c5c5c5;
+$text-50: #ccc;
+$text-80: #a5a5a5;
+$link: #ff6400; //0f0 ff7c00 fa6000 dd0 0096e0
+$background: #fefefe; //f5f6f7
+$lit: #f9ff80; //CR grey #d3d3ce
 
 .container {
   position: relative;
   width: $w-pic;
   margin: 0 auto;
   padding: 0 20px;
-  height: 100%;
+  //height: 100%;
 }
-
 .absolute { position: absolute; }
 .fixed { position: fixed; }
+.text-align { margin-left: $w-nav + 20px; }
+
+.rule-padding { padding: 6px 0 49px 0; }
+.rule-padding-f { padding: 6px 0 30px 0; }
 
 .rule { border-top: 1px solid $text; }
+.rule-lite { border-top: 1px solid $text-30; }
+.rule-dark { border-top: 8px solid $link; }
 .rule-h { border-top: 1px solid $link; }
-.rule-lite { border-top: 1px solid #bbb; }
-.rule-padding { padding: 6px 0 49px 0; }
-.text-align { margin-left: $w-nav + 20px; }
+.rule-h-dark { border-top: 8px solid $link; }
 
 
 //---------------------------------------------------------Nav
@@ -45,14 +42,19 @@ nav {
   z-index: 1977;
   background: $background;
   .location {
-    @extend .rule;
+    @extend .rule-dark;
     @extend .absolute;
-    padding: 6px 0 49px 0;
+    @extend .rule-padding;
     width: $w-nav;
     a {
-      padding: 6px 0 49px 12px;
+      @extend .rule-padding;
+      padding-left: 12px;
+      color: $link;
       &.first {
         padding-left: 0;
+      }
+      &:hover {
+        text-decoration: none;
       }
     }
   } 
@@ -60,7 +62,7 @@ nav {
     @extend .location;
     @extend .opacity-0;
     a {
-      color: $text-70;
+      color: $text-50;
     }
     a:hover {
       color: $link;
@@ -75,38 +77,26 @@ nav {
     .menu {
       @extend .fade-delay;
       @extend .opacity-100;
-      @extend .rule-h;
+      @extend .rule-h-dark;
       width: 100%;
       background: $background;
-      padding-bottom: 45px;
-    }
-  }
-
-  //————————————————————————————————Nav at bottom
-  &.bottom {
-    @extend .rule;
-    width: $w-text;
-    margin: 48px auto 0 auto;
-    padding: 34px 0 250px 0;
-    &:hover {
-      @extend .rule;
-    }
-    .menu {
-      @extend .absolute;
-      top: 30px;
-      width: 100%;
-      padding: 30px 0;
-      visibility: visible;
-      a {
-        padding: 30px 0;
-        margin: 0 12px;
-      }     
+      //padding-bottom: 45px;
     }
   }
 }
 
 
 //---------------------------------------------------------Text article width
+
+.paths {
+  position: absolute;
+  top: 15px;
+  right: 0;
+  a { 
+    @extend .headline;
+    color: $link;
+  }
+}
 
 section {
   position: relative;
@@ -115,30 +105,23 @@ section {
   margin-bottom: 60px;
   background-color: $background;
   
-  .paths {
-    position: absolute;
-    top: 7px;
-    right: 0;
-    a { 
-      @extend .headline;
-    }
-  }
-
-  
   article {
     width: $w-text;
-    h1, p.work-filter {
+    h1 {
       @extend .rule-padding;
       @extend .rule;
       @extend .fade-delay;
-      &.first {
-        text-decoration: underline;
+      &:hover { @extend .rule-h; }
+      &.anchor { 
+        @extend .rule-dark;
+        color: $link;
       }
-      &:hover {
-        @extend .rule-h;
-      }
+      &.anchor:hover { @extend .rule-h-dark; }
       a {
         padding: 3px 0 49px 0;
+      }
+      &.first {
+        text-decoration: underline;
       }
     }
   }
@@ -146,6 +129,7 @@ section {
   &.pic {
     width: $w-pic;
     padding-left: 0;
+    margin: 0;
     article {
       width: $w-pic;
       h1, p {
@@ -159,40 +143,3 @@ section {
     }
   }
 }
-
-
-//---------------------------------------------------------Footer
-
-footer {
-  width: $w-text;
-  margin: 100px 0 0 0;
-  @extend .rule-padding;
-  padding-bottom: 150px;
-  @extend .rule-lite;
-  p {
-    //@extend .rule-padding;
-    padding-bottom: 0;
-    margin: 0;
-  }
-  h2 {
-    display: inline-block;
-    padding-right: 25px;
-    background: url(link-grey.png) no-repeat scroll 100% 16%;
-  }
-  &.first {
-    padding: 3px 0 0 0;
-  }
-  &.second {
-    margin-top: 70px;
-  }
-  &.load-more {
-    &:hover {
-      @extend .rule-h;
-      h2 {
-        color: $link;
-        background-image: url(link-h.png);
-      }
-    }
-  }
-}
-

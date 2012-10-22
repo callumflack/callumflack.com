@@ -1,19 +1,17 @@
 - @body_class = "journal-picture"
 
-.frame.menu
-  %nav
-    %a{:href => "/journal"} Index
-    %a{:href => "/journal/a-paraphrased-sterling-article"} Next
-    %a.last{:href => "/journal/days-end"} Previous
+%nav
+  .location
+    %a.first{:href => "/work"} Journal
+  .menu
+    %a.first{:href => "/journal"} Journal
+    %a{:href => "/profile"} Profile
+    %a{:href => "/home"} Home
+    %a.last{:href => "/work"} Work
 
-.frame
-
+%section.pic  
   %article
     %h2 Headline, possible link
     .picture
       %h1
         %img.portrait{:src => "/assets/images/Notice_120404~03.jpg", :alt => "I thought you were my lady"}
-    / .caption
-    /   %h2
-    /     %a{:href => "http://inbetweenings.tumblr.com/"} View more on my inbetweenings tumblr. 
-    /   %p April 18, 2012

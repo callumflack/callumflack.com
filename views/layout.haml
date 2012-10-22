@@ -17,6 +17,7 @@
       
   %body{ class: @body_class }
     
-
-    ~ yield
-    = javascript_tag :application
+    .container
+    
+      ~ yield
+      = javascript_tag :application
