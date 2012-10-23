@@ -5,13 +5,14 @@
     %a.first{:href => "/work"} Journal
   .menu
     %a.first{:href => "/journal"} Journal
-    %a{:href => "/profile"} Profile
     %a{:href => "/home"} Home
-    %a.last{:href => "/work"} Work
+    %a{:href => "/work"} Work
+    %a.last{:href => "/profile"} Profile
 
-%section.pic  
+%section.pic
   %article
-    %h2 Headline, possible link
-    .picture
-      %h1
-        %img.portrait{:src => "/assets/images/Notice_120404~03.jpg", :alt => "I thought you were my lady"}
+    %h1.anchor I thought you were my lady
+    .paths
+      %a.arrow{:href => "/journal"} Index
+  
+  %img.portrait{:src => "/assets/images/Notice_120404~03.jpg", :alt => "I thought you were my lady"}

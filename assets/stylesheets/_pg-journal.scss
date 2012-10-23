@@ -1,9 +1,23 @@
 .journal-list {
+  a:hover {
+    article {
+      h1 { 
+        @extend .rule-h-dark;
+      }
+      p {
+        color: $text;
+      }
+      span {
+        color: $link;
+        background-image: url(link-h.png);
+      }
+    }
+  }
   p {
     margin-bottom: 0;
   }
   article {
-    margin-bottom: 60px;
+    margin-bottom: 90px;
     &.title {
       margin-bottom: 26px;
       h1:hover {
@@ -13,7 +27,7 @@
     h1 {
       padding-bottom: 25px;
     }
-    p > a {
+    p > a, p > span {
       padding-right: 25px;
       background: url(link.png) no-repeat scroll 100% 50%;
       text-decoration: underline;
@@ -30,7 +44,6 @@
   }
   footer {
     a {
-    //display: block;
       &:hover {
         text-decoration: none;
       }
@@ -51,8 +64,7 @@
   h2 {
     margin-bottom: 86px;
   }
-  .picture {
-    img { display: inline-block; }
-//    img.portrait { height: 426px; }
+  section.pic {
+    h1.anchor:hover { @extend .rule-dark; }
   }
 }

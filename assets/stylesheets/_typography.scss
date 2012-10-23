@@ -8,32 +8,27 @@
   text-transform: none;
   text-decoration: none;
   letter-spacing: 0;
-  //margin: 0;
 }
 
 .headline {
   font-family: "Helvetica Neue";
-  font-weight: 400;
+  font-weight: 500;
   font-style: normal;
-  font-size: 18px;
-  line-height: 100%;
-  //margin: 0;
+  font-size: 19px;
+  line-height: 140%;
 }
 
 
 //--------------------------------------------- a
 a {
-  @extend .headline;
+  //@extend .headline;
   color: $text;
+  font-size: 21px;
   text-decoration: none;
   &:hover { 
     text-decoration: none;
     color: $link;
   }
-}
-
-nav > a {    
-  @extend .headline;
 }
 
 
@@ -48,7 +43,6 @@ p {
     margin-left: .2em;
   }
   &.links {
-    //padding-top: 20px;
     a {
       display: block;
       padding-left: 70px;
@@ -59,7 +53,7 @@ p {
       }
     } 
   }
-  a {
+  a, span {
     @extend .typeset;
     font-style: italic;
   }
@@ -71,8 +65,8 @@ p {
 //----------------------------ems & dots
 span.em {
   font-family: "freight-text-pro-1", "freight-text-pro-2";
-  font-size: 23px;
-  font-weight: 300;
+  font-size: 21px;
+  font-weight: 400;
   letter-spacing: -1px;
   padding: 0;
   margin-right: 1px;
@@ -80,11 +74,6 @@ span.em {
   &.footer {
     margin: 0 8px 0 7px;
   }
-}
-
-span.dot {
-  font-size: 12px;
-  padding-top: -3px;
 }
 
 
@@ -95,10 +84,11 @@ h1 {
   margin: 0;
   &.title { 
     @extend .typeset;
+    //color: $link;
     font-size: 42px;
-    font-weight: 500;
+    font-weight: 400;
     line-height: 100%;
-    padding-bottom: 122px;
+    padding-bottom: 64px;
   }
   &.title, &.title:hover { border: 0; }
 }
@@ -116,15 +106,21 @@ h2 {
 }
 
 footer {
-  h2, p {
+  a, p, span {
     //color: $text-80;
+    //font-weight: 400;
   }
   a {
-    //color: $text-80;
     text-decoration: none;
+    font-style: normal;
     &:hover {
       color: $link;
-      text-decoration: underline;
+    }
+  }
+  .contact {
+    a { font-style: italic; }
+    a, p { 
+      //color: $text-80; 
     }
   }
 }

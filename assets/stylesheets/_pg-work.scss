@@ -46,7 +46,7 @@
       .caption {
         width: 100%;
         position: absolute;
-        top: 40%;
+        top: 37%;
         z-index: 99;
         h1 {
           padding: 0;
@@ -90,26 +90,19 @@
       border-color: $text;
     }
     .paths {
-      top: 95px;
-      a { 
-        padding-left: 25px;
-        background: url(link-l.png) no-repeat scroll 0% 50%;
-        &:hover {
-          background-image: url(link-l-h.png);
-        }
-      }
-      &.top a, &.top a:hover {
-        background-image: none;
-      }
+      top: 85px;
     }
   }
   
   section.absolute {
-    top: 161px;
+    top: 157px; //body padding top of 80px + h1.anchor height of 77px
     width: $w-pic;
     padding: 0;
   }
   img { 
     padding-bottom: 800px;
+  }
+  footer {
+    padding-bottom: 140px;
   }
 }

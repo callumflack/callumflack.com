@@ -1,46 +1,7 @@
 $img-side1: 671px; //721
-$img-side2: $w-pic;
+$w-pic-p: 500px;
 $img-posts1: $img-side1 * 0.6875;
-$img-posts2: $img-side2 * 0.6875;
-
-.opacity-0 {
-  zoom: 1;
-  filter: alpha(opacity=0);
-  opacity: 0.0;
-}
-
-.opacity-20 {
-  zoom: 1;
-  filter: alpha(opacity=40);
-  opacity: 0.4;
-}
-
-.opacity-100 {
-  zoom: 1;
-  filter: alpha(opacity=100);
-  opacity: 1;
-}
-
-.fade-delay {
-  -webkit-transition: opacity 0.3s ease;
-  -moz-transition: opacity 0.3s ease;
-  -o-transition: opacity 0.3s ease;
-  transition: opacity 0.3s ease;
-}
-
-.fade-delay-2 {
-  -webkit-transition: opacity 1s ease;
-  -moz-transition: opacity 1s ease;
-  -o-transition: opacity 1s ease;
-  transition: opacity 1s ease;
-}
-
-.fade-details {
-  -webkit-transition: background 0.3s ease;
-  -moz-transition: background 0.3s ease;
-  -o-transition: background 0.3s ease;
-  transition: background 0.3s ease;
-}
+$img-posts2: $w-pic * 0.6875;
 
 
 .post > a > img:hover {
@@ -48,26 +9,26 @@ $img-posts2: $img-side2 * 0.6875;
 }
 
 
-
-//---------------------------------Dependent on body class refactoring article to 960px wide
 .portrait-list {
   left: 50%;
   width: $img-posts1;
   height: $img-posts2;
   margin-left: -$img-posts1 / 2;
 }
-//.portrait { 
-//  left: 50%;
-//  margin-left: -$img-side1 / 2;
-//}
+.portrait { 
+  width: $w-pic-p;
+  left: 50%;
+  //margin-left: -$img-side1 / 2;
+  margin-left: ($w-pic - $w-pic-p) / 2;
+}
 .landscape-list {
   width: $img-posts2;
   height: $img-posts1;
   left: 50%;
   margin-left: -$img-posts2 / 2;
 }
-//.landscape {
-//  left: 50%;
-//  top: 50%;
-//  margin-left: -$img-side2 / 2;
-//}
+.landscape {
+  left: 50%;
+  top: 50%;
+  margin-left: -$w-pic / 2;
+}

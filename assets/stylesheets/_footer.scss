@@ -1,28 +1,25 @@
 footer {
   width: $w-pic;
   margin: 80px 0 0 0;
-  
   p { margin: 0; }
   
   nav {
-    margin-top: 190px;
+    margin-top: 224px;
     .location, .menu { 
-      @extend .rule-lite;
-      a { color: $text-80; }
+      @extend .rule;
+      //a { color: $link; }
+      //a:hover { text-decoration: underline; }
     }
-    .location:hover, .menu:hover { @extend .rule-h; }
+    .location:hover, .menu:hover { 
+      @extend .rule-h;
+    }
   }
   
   aside {
     width: $w-text;
     @extend .text-align;
-    padding: 6px 0 40px 0;
-    color: $text-80;
+    margin-bottom: 30px; //12
     
-    p, a { 
-      @extend .headline;
-      line-height: 140%;
-    }
     a { 
       @extend .rule-padding-f;
       padding-bottom: 60px;
@@ -30,39 +27,46 @@ footer {
     
     &.contact {
       @extend .rule-lite;
-      background-color: #f1f1f1;
-      padding-left: 12px;
-      a, p { line-height: 140%; }
-      a { color: $text-80; }
-      a, a:hover { text-decoration: underline; }
-      a:hover { color: $link; }
+      padding: 6px 12px 36px 12px;
+      width: 576px;
+      background: #f5f5e5; //eff6f6
+      //@extend .rule;
+      //background: $link;
+      //padding: 3px;
+      p {  }
+      p, a { 
+        //font-weight: 600;
+      }
+      a:hover { 
+        color: $link;
+        text-decoration: underline;
+      }
     }
     
     &.links {
-      @extend .rule-lite;
-      padding-bottom: 0;
+      @extend .rule;
+      padding-top: 7px;
       a {
-        color: $text-80;
-        padding-left: 25px;
-        background: url(link-l-grey.png) no-repeat scroll 0% 17%;
+        padding-left: 28px;
+        background: url(link-l.png) no-repeat scroll 0% 14%;
+        font-weight: 500;
         &:hover { 
-          background-image: url(link-l-h.png); 
-          color: $link;
+          background-image: url(link-l-h.png);
+          text-decoration: underline;
         }
       }
       a.next {
         padding-left: 0;
-        padding-right: 25px;
-        background: url(link-grey.png) no-repeat scroll 100% 17%;
+        padding-right: 28px;
+        background: url(link.png) no-repeat scroll 100% 14%;
         &:hover { background-image: url(link-h.png); }
       }
       &:hover {
         @extend .rule-h;
-        a { text-decoration: none; }
-//        a { 
-//          background-image: url(link-l-h.png);
-//        }
-//        a.next { background-image: url(link.png); }
+      }
+      a.none, a.none:hover {
+        padding: 0;
+        background: none;
       }
     }
   }
