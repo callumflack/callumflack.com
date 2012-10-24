@@ -1,10 +1,11 @@
 .journal-list {
   a:hover {
     article {
+      //background: #f2f5f8;
       h1 { 
         @extend .rule-h-dark;
       }
-      p {
+      p, span {
         color: $text;
       }
       span {

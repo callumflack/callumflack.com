@@ -1,6 +1,6 @@
-$w-text: 600px;
+$w-text: 640px;
 $w-pic: 920px;
-$w-nav: 300px;
+$w-nav: 260px;
 $h-nav: 78px; //109
 $top: 80px;
 $text: #333; //222255
@@ -8,9 +8,9 @@ $text-20: #d5d5d5;
 $text-30: #c5c5c5;
 $text-50: #ccc;
 $text-80: #999;
-$link: #d00; //00b4e1 #01a0bd #ff6400 0f0 ff7c00 fa6000 dd0 0096e0
+$link: #00a1ff; //0062eb fabb00 dd0 00b4e1 #01a0bd #ff6400 0f0 ff7c00 fa6000 dd0 0096e0
 $link-20: #e5f5f8;
-$background: #fefefe; //f5f6f7
+$background: #fdfdfd; //f5f6f7
 $lit: #f9ff80; //CR grey #d3d3ce
 
 .container {
@@ -28,7 +28,7 @@ $lit: #f9ff80; //CR grey #d3d3ce
 .rule-padding-f { padding: 0 0 30px 0; } //-----if you change, change footer > aside padding too
 
 .rule { border-top: 1px solid $text; }
-.rule-lite { border-top: 1px solid $text-50; }
+.rule-lite { border-top: 1px solid $text-80; }
 .rule-dark { border-top: 3px solid $text; } //-----if you change the px size, change .paths too
 .rule-h { border-top: 1px solid $link; }
 .rule-h-dark { border-top: 3px solid $link; }
@@ -71,7 +71,7 @@ nav {
       color: $link;
     }
     a.last {
-      padding-right: 35px;
+      padding-right: 8px; //35
     }
   }  
   &:hover {
@@ -111,7 +111,7 @@ section {
   position: relative;
   width: $w-text;
   padding-left: $w-nav + 20px;
-  margin-bottom: 60px;
+  margin-bottom: 50px;
   background-color: $background;
   
   img { width: $w-pic; }

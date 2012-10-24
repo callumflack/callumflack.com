@@ -1,6 +1,6 @@
 footer {
   width: $w-pic;
-  margin: 80px 0 0 0;
+  margin: 60px 0 0 0;
   p { margin: 0; }
   
   nav {
@@ -29,10 +29,7 @@ footer {
       @extend .rule-lite;
       padding: 6px 12px 36px 12px;
       width: 576px;
-      background: #f5f5e5; //eff6f6
-      //@extend .rule;
-      //background: $link;
-      //padding: 3px;
+      background: #f3f3f3; //f2f5f8 f4eec2 f5f5e5 eff6f6
       p {  }
       p, a { 
         //font-weight: 600;
@@ -45,14 +42,15 @@ footer {
     
     &.links {
       @extend .rule;
-      padding-top: 7px;
+      p, a { @extend .headline; }
+      //padding-top: 7px;
       a {
         padding-left: 28px;
         background: url(link-l.png) no-repeat scroll 0% 14%;
         font-weight: 500;
         &:hover { 
           background-image: url(link-l-h.png);
-          text-decoration: underline;
+          text-decoration: none;
         }
       }
       a.next {
