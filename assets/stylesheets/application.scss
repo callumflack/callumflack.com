@@ -19,10 +19,10 @@ body {
   text-rendering: optimizeLegibility;
   background-color: $background;
   -webkit-tap-highlight-color: rgba(255,0,0, 0.62);
-  padding: 60px 0 180px 0;
+  padding: 35px 0 140px 0;
   margin: 0;
-  border-top: 4px solid $text;
-//  border-left: 8px solid $text;
+  //border-top: 4px solid $text;
+  //border-bottom: 20px solid $text;
 }
 
 @import "imgs";

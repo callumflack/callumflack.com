@@ -84,13 +84,9 @@
     }
   }
   
-  section.absolute {
-    top: 95px; //body padding top of 80px + h1 height of 77px
-    width: $w-pic;
-    padding: 0;
-  }
   img { 
-    padding-bottom: 800px;
+    height: 627px;
+    padding: 4px 0 800px 0;
   }
   footer {
     padding-bottom: 140px;

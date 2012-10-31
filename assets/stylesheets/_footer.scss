@@ -31,22 +31,24 @@ footer {
     }
     
     &.contact {
-      //@extend .rule-lite;
       margin-bottom: 60px;
       a {
         text-decoration: underline;
-        font-style: normal;
+        //font-style: italic;
       }
       a:hover { 
         color: $link;
         text-decoration: underline;
       }
+      h2 {
+        margin: 90px 0 6px 0;
+      }
       h2::before {
         content: ' ';
         display: block;
-        width: 5%;
-        border-top: 6px solid $text;
-        margin: 20px auto 60px auto;
+        width: 30%;
+        border-top: 1px solid #ccc;
+        margin: 0 auto 80px auto;
       }
     }
     

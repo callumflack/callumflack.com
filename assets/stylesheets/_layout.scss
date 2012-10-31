@@ -1,13 +1,13 @@
 $w-text: 660px;
 $w-pic: 960px;
-$w-nav: 260px;
+$h-nav: 67px;
 $top: 80px;
 $text: #333; //222255
 $text-20: #d5d5d5;
 $text-30: #c5c5c5;
 $text-50: #ccc;
 $text-80: #999;
-$link: #00e000; // 00a1ff 0062eb fabb00 dd0 00b4e1 #01a0bd #ff6400 0f0 ff7c00 fa6000 dd0 0096e0
+$link: $text; // 00e000 00a1ff 0062eb fabb00 dd0 00b4e1 #01a0bd #ff6400 0f0 ff7c00 fa6000 dd0 0096e0
 $link-20: #e5f5f8;
 $background: #fdfdfd; //f5f6f7
 $lit: #f9ff80; //CR grey #d3d3ce
@@ -22,10 +22,9 @@ $lit: #f9ff80; //CR grey #d3d3ce
 .absolute { position: absolute; }
 .fixed { position: fixed; }
 
-.text-align { margin-left: $w-nav + 20px; }
 .text-padding { padding: 0 ($w-pic - $w-text) / 2; }
 
-.rule-padding { padding: 0 0 49px 0; }
+.rule-padding { padding: 0 0 41px 0; } //----text height plus padding to make nav height of 67px
 .rule-padding-f { padding: 0 0 30px 0; } //-----if you change, change footer > aside padding too
 
 .rule { border-top: 1px solid $text; }
@@ -40,9 +39,9 @@ $lit: #f9ff80; //CR grey #d3d3ce
 nav {
   position: relative;
   width: $w-pic;
-  height: 80px;
+  height: $h-nav;
   z-index: 1977;
-  //background: $background;
+  //background: pink;
   
   &:hover {
     @include transparent($background, 1);
@@ -97,6 +96,12 @@ section {
   width: $w-pic;
   margin: 0 auto 50px 0;
   background-color: $background;
+  
+  &.absolute {
+    top: $h-nav;
+    width: $w-pic;
+    padding: 0;
+  }
   
   img { width: $w-pic; }
   

@@ -2,19 +2,18 @@
 
 %nav.fixed
   .location
-    %a.first{:href => "/work/roundtable-records"} 
-      Work
-      %span.em ——
-      Roundtable Records
+    %a.first{:href => "/work/roundtable-records"} Roundtable Records
   .menu
     %a.first{:href => "/home"} Home
-    %a{:href => "/journal"} Journal
-    %a{:href => "/profile"} Profile
+    %a.first{:href => "/journal"} Journal
+    %a.last{:href => "/profile"} Profile
     %span.em ——
     %a.show-pictures{:href => "/work"} Show pictures
     %a.show-info{:href => "/work"} Show information
     %span.em ——
-    %a.last{:href => "/work"} Index
+    %a.first{:href => "/journal"} Next
+    %a.first{:href => "/journal"} Index
+    %a.last{:href => "/work"} Previous
     
 %section.absolute
   .slides.absolute  
@@ -32,16 +31,7 @@
 
     %footer.inside-fixed     
       %aside.contact
-        %p 
+        %h2 
           I design elegant, effective experiences for print & screen.
-          %br
-          %a{:href => "mailto:callumflack@gmail.com"} Start a conversation with me to discuss projects.
-
-      %aside.links
-        %a{:href => "/journal/days-end"} Next
-        %span.em —
-        %a.none{:href => "/work"} Index
-        %span.em —
-        %a.next{:href => "/journal/i-thought-you-were-my-lady"} Previous
-
-          
+        %p
+          %a{:href => "mailto:callumflack@gmail.com"} Start a conversation with me to discuss a project.
