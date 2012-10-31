@@ -1,14 +1,13 @@
-$w-text: 640px;
-$w-pic: 920px;
+$w-text: 660px;
+$w-pic: 960px;
 $w-nav: 260px;
-$h-nav: 78px; //109
 $top: 80px;
 $text: #333; //222255
 $text-20: #d5d5d5;
 $text-30: #c5c5c5;
 $text-50: #ccc;
 $text-80: #999;
-$link: #00a1ff; //0062eb fabb00 dd0 00b4e1 #01a0bd #ff6400 0f0 ff7c00 fa6000 dd0 0096e0
+$link: #00e000; // 00a1ff 0062eb fabb00 dd0 00b4e1 #01a0bd #ff6400 0f0 ff7c00 fa6000 dd0 0096e0
 $link-20: #e5f5f8;
 $background: #fdfdfd; //f5f6f7
 $lit: #f9ff80; //CR grey #d3d3ce
@@ -22,13 +21,15 @@ $lit: #f9ff80; //CR grey #d3d3ce
 }
 .absolute { position: absolute; }
 .fixed { position: fixed; }
+
 .text-align { margin-left: $w-nav + 20px; }
+.text-padding { padding: 0 ($w-pic - $w-text) / 2; }
 
 .rule-padding { padding: 0 0 49px 0; }
 .rule-padding-f { padding: 0 0 30px 0; } //-----if you change, change footer > aside padding too
 
 .rule { border-top: 1px solid $text; }
-.rule-lite { border-top: 1px solid $text-80; }
+.rule-lite { border-top: 1px solid #e5e5e5; }
 .rule-dark { border-top: 3px solid $text; } //-----if you change the px size, change .paths too
 .rule-h { border-top: 1px solid $link; }
 .rule-h-dark { border-top: 3px solid $link; }
@@ -37,97 +38,73 @@ $lit: #f9ff80; //CR grey #d3d3ce
 //---------------------------------------------------------Nav
 
 nav {
-  position: absolute;
-  width: $w-nav;
-  height: 69px;
+  position: relative;
+  width: $w-pic;
+  height: 80px;
   z-index: 1977;
-  background: $background;
-  .location {
-    @extend .rule-dark;
-    @extend .absolute;
-    @extend .rule-padding;
-    //padding-top: 1px;
-    width: $w-nav;
-    a {
-      @extend .headline;
-      @extend .rule-padding;
-      padding-left: 12px;
-      color: $text;
-      &.first {
-        padding-left: 0;
-      }
-      &:hover {
-        text-decoration: none;
-      }
-    }
-  } 
-  .menu {
-    @extend .location;
-    @extend .opacity-0;
-    a {
-      color: $text-50;
-    }
-    a:hover {
-      color: $link;
-    }
-    a.last {
-      padding-right: 8px; //35
-    }
-  }  
+  //background: $background;
+  
   &:hover {
     @include transparent($background, 1);
-    font-weight: 400;
     .menu {
       @extend .fade-delay;
       @extend .opacity-100;
-      @extend .rule-h-dark;
-      width: 100%;
       background: $background;
-      //padding-bottom: 45px;
     }
+    //.location { display: none; }
   }
 }
+
+.location {
+  position: absolute;
+  width: $w-pic;
+  text-align: center;
+  a {
+    @extend .headline;
+    @extend .rule-padding;
+    color: $text;
+    &.first {
+      padding-left: 0;
+    }
+    &:hover {
+      text-decoration: none;
+    }
+  }
+} 
+.menu {
+  @extend .location;
+  a { 
+    color: $text-50;
+    padding-left: 10px;
+    &.show-info, &.show-pictures, &.last, &.first { padding-left: 0; }
+  }
+  a:hover { color: $link; }
+  @extend .opacity-0;
+  @extend .headline;
+  span.em {
+    color: $text-50;
+  }
+}  
+
 
 
 //---------------------------------------------------------Text article width
 
-.paths {
-  position: absolute;
-  top: 4px; //------------change this in work-project too
-  right: 0;
-  a { 
-    @extend .headline;
-    &.arrow {
-      padding-left: 25px;
-      background: url(link-l.png) no-repeat scroll 0% 50%;
-      &:hover {
-        background-image: url(link-l-h.png);
-      }
-    }
-  }
-}
+
 
 section {
   position: relative;
-  width: $w-text;
-  padding-left: $w-nav + 20px;
-  margin-bottom: 50px;
+  width: $w-pic;
+  margin: 0 auto 50px 0;
   background-color: $background;
   
   img { width: $w-pic; }
   
   article {
     width: $w-text;
+    @extend .text-padding;
     h1 {
-      @extend .rule-padding;
-      @extend .rule-dark;
       @extend .fade-delay;
-      &:hover { @extend .rule-h-dark; }
-      &.anchor { 
-        @extend .rule-dark;
-        //color: $link;
-      }
-      &.anchor:hover { @extend .rule-h-dark; }
       a {
         padding: 3px 0 49px 0;
       }
@@ -136,21 +113,7 @@ section {
       }
     }
   }
-
-  &.pic {
-    width: $w-pic;
-    padding-left: 0;
-    margin: 0;
-    article {
-      width: $w-pic;
-      h1, p {
-        width: $w-text;
-        @extend .text-align;
-      }
-    }
-    footer {
-      width: $w-text;
-      @extend .text-align;
-    }
+  &.first {
+    padding-top: 120px;
   }
 }

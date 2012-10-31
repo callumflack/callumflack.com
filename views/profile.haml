@@ -2,33 +2,35 @@
 
 %nav
   .location
-    %a.first{:href => "/work"} Profile
+    %a.first{:href => "/profile"} 
+      Profile
   .menu
-    %a.first{:href => "/profile"} Profile
-    %a{:href => "/home"} Home
+    %a.first{:href => "/home"} Home
     %a{:href => "/work"} Work
-    %a.last{:href => "/journal"} Journal
+    %a{:href => "/journal"} Journal
 
 %section
+  %img{:src => "assets/images/profile-1207-01.png", :alt => "Callum Flack"}
+
   %article
-    %h1.anchor Callum Flack is a graphic designer
-    .paths
+    %h2 
+      Callum Flack is a graphic designer.
+      %br
+      Contact him by 
       %a{:href => "mailto:callumflack@gmail.com"} Email
-      %span.em ~
+      or 
       %a{:href => "https://twitter.com/callumflack"} Twitter
 
-%section.pic
-  /%img{:src => "assets/images/me.jpg", :alt => "Callum Flack"}
-
-  %article
-    /%h1.title 
     %p I design for page and screen. I plan, create and build communication assets for business and culture. 
 
     :markdown
       I work within the contradictory fields of emotion and logic, and aim to communicate a lot of information with ease and distinction. As such, I concentrate on the essence of Why, not the hang-up of What. The result is often defined by what’s not there as much as what is.
 
       The work begins by defining purpose: I eliminate the extraneous and focus on essence & usefulness. Collaboration is a necessity throughout the work process, as requirements develop and opportunities unfold.
-
+      
+    %h2 This is a subheadline  
+      
+    :markdown  
       Craft is everything. While clear thinking and smart ideas will connect people, only care and attentiveness will enable a seamless experience.
 
       I aim to build work that’s elegantly effective, now and tomorrow.
@@ -40,20 +42,25 @@
       %a{:href => "http://www.linkedin.com/in/callumflack"} View my curriculum vitæ on Linkedin
       %a{:href => "http://www.quora.com/Callum-Flack"} Read my Quora boards
       %a{:href => "https://sites.google.com/site/coloronetear/"} Listen to a decade of collected soul 45 mixtapes
+      
+    %h2 Please note
+    %p All work shown on this site is &copy; Callum Flack 2012, unless stated otherwise.
 
 %footer
   %aside.contact
-    %p
+    %h2
       Interested in making something valuable?
       %br
-      %a{:href => "mailto:callumflack@gmail.com"} Start a conversation with me to discuss projects.
+      %a{:href => "mailto:callumflack@gmail.com"} Start a conversation to discuss a project
   
     %form{:action => "http://callumflackdesign.createsend.com/t/r/s/xjrurh/", :method => "post", :id => "subscribe"}
       %input{:type => "text", :name => "cm-xjrurh-xjrurh", :id => "xjrurh-xjrurh", :placeholder => "Add your email"}
       %input{:type => "submit", :value => "Subscribe"}
     
   %aside.links
-    %p
-      &copy; Callum Flack 2012. Chopping recursively since 1998.
+    %a.first{:href => "/home"} Home
+    %a{:href => "/work"} Work
+    %a{:href => "/journal"} Journal
+
       
 

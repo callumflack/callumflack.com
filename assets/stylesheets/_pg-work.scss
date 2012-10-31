@@ -2,7 +2,6 @@
 
   section {
     
-    
     nav {
       width: $w-text;
       @extend .text-align;
@@ -12,6 +11,7 @@
     }    
     article.spacer {
       height: 82px;
+      padding: 0;
     }
     
     p {
@@ -31,10 +31,6 @@
       display: block;
       height: 90px;
       margin-bottom: 3px;
-      //@extend .rule;
-      &.first {
-        padding-top: 82px;
-      }
 
       img {
         display: inline-block;
@@ -50,7 +46,6 @@
         z-index: 99;
         h1 {
           padding: 0;
-          @extend .text-align;
           visibility: hidden;
           color: $link;
         }
@@ -58,7 +53,6 @@
     
       //HOVER OVER PROJECTS
       &:hover {
-        //@extend .rule-h;
         border-bottom-color: $text;
         &.project h1 { visibility: visible; }
         &.project img {
@@ -74,8 +68,7 @@
 
 
 .work-project {
-  padding-top: 0;
-  nav, section.fixed { padding-top: 80px; }
+
   section { margin-bottom: 0; }
 
   section.fixed {
@@ -89,13 +82,10 @@
     h1:hover {
       border-color: $text;
     }
-    .paths {
-      top: 85px;
-    }
   }
   
   section.absolute {
-    top: 157px; //body padding top of 80px + h1.anchor height of 77px
+    top: 95px; //body padding top of 80px + h1 height of 77px
     width: $w-pic;
     padding: 0;
   }

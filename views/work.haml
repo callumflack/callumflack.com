@@ -2,25 +2,17 @@
 
 %nav
   .location
-    %a.first{:href => "/work"} Work
+    %a{:href => "/work"} 
+      Callum Flack
+      %span.em —
+      Work
   .menu
-    %a.first{:href => "/work"} Work
     %a{:href => "/home"} Home
     %a{:href => "/journal"} Journal
-    %a.last{:href => "/profile"} Profile
+    %a{:href => "/profile"} Profile
 
 %section.pic
-  %nav
-    .location
-      %a.first{:href => "/work"} Alphabetically
-    .menu
-      %a.first{:href => "/work"} Alphabetically
-      %a{:href => "/work/by-category"} Categorically
-      %a.last{:href => "/work/by-year"} Chronologically
 
-  %article.spacer
-    %h1 &nbsp;
-  
   %a.project{:href => "/work/roundtable-records", :alt => "Roundtable Records"}
     %img{:src => "assets/images/roundtable-00.jpg", :alt => "Roundtable Records"}
     .caption

@@ -1,19 +1,17 @@
 .journal-list {
   a:hover {
     article {
-      //background: #f2f5f8;
-      h1 { 
-        @extend .rule-h-dark;
-      }
       p, span {
         color: $text;
       }
       span {
         color: $link;
-        background-image: url(link-h.png);
       }
+      h1.header { text-decoration: underline; }
     }
   }
+  
+  
   p {
     margin-bottom: 0;
   }
@@ -29,11 +27,8 @@
       padding-bottom: 25px;
     }
     p > a, p > span {
-      padding-right: 25px;
-      background: url(link.png) no-repeat scroll 100% 50%;
       text-decoration: underline;
       &:hover {
-        background-image: url(link-h.png);
       }
     }
     img {
@@ -52,6 +47,10 @@
     nav { margin-top: 0; }
   }
 }
+
+
+
+
 
 
 //-----------------------------------------------------------ARTICLES

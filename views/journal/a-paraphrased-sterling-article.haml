@@ -2,16 +2,18 @@
 
 %nav
   .location
-    %a.first{:href => "/work"} Journal
+    %a.first{:href => "/work"} 
+      Journal 
+      %span.em —— 
+      12.03.19
   .menu
-    %a.first{:href => "/journal"} Journal
-    %a{:href => "/home"} Home
+    %a.first{:href => "/home"} Home
     %a{:href => "/work"} Work
-    %a.last{:href => "/profile"} Profile
-
-%section
+    %a{:href => "/journal"} Journal
+    %a{:href => "/profile"} Profile
+    
+%section.first
   %article
-    %h1.anchor Saturday March 19, 2012
     %h1.title A paraphrased Sterling article
 
     :markdown
@@ -32,20 +34,12 @@
       That’s what the next decade actually looks like. And you’re going to live there.
 
 %footer
-  %nav
-    .location
-      %a.first{:href => "/work"} Journal
-    .menu
-      %a.first{:href => "/journal"} Journal
-      %a{:href => "/profile"} Profile
-      %a{:href => "/work"} Work
-      %a.last{:href => "/home"} Home    
 
   %aside.contact
     %p
       I design elegant, effective experiences for print and screen. 
       %br
-      %a{:href => "mailto:callumflack@gmail.com"} Start a conversation with me to discuss projects.
+      %a{:href => "mailto:callumflack@gmail.com"} Start a conversation with me to discuss a project
 
     %form{:action => "http://callumflackdesign.createsend.com/t/r/s/xjrurh/", :method => "post", :id => "subscribe"}
       %input{:type => "text", :name => "cm-xjrurh-xjrurh", :id => "xjrurh-xjrurh", :placeholder => "Add your email"}
@@ -53,6 +47,8 @@
 
   %aside.links
     %a{:href => "/journal/days-end"} Day's end
-    %span.em.footer ~
+    %span.em —
+    %a{:href => "/journal"} Index
+    %span.em —
     %a.next{:href => "/journal/i-thought-you-were-my-lady"} I thought you were my lady
 

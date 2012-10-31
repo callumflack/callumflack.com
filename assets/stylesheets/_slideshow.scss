@@ -11,13 +11,13 @@
   position: relative;
   width: $w-text;
   padding: 0;
-  padding-left: $w-nav + 20px;
+  margin: 0 auto;
   border: 0;
   height: 100%;
   z-index: 1;
   visibility: hidden;
   &.absolute {
-    top: 0;
+    top: -12px;
   }
   footer {
     width: $w-text;
@@ -32,9 +32,13 @@
   @include transition(all 0.2s ease);
 }
 
-.show-info { visibility: visible; }
-.show-pictures { visibility: hidden; }
+.expand-info nav {
+  position: relative;
+}
 
-.expand-info .paths.top, .expand-info .slides.absolute  { display: none; }
-.expand-info .show-pictures { visibility: visible; }
+.show-info { visibility: visible; }
+.show-pictures { display: none; }
+
+.expand-info .show-info, .expand-info .slides.absolute  { display: none; }
+.expand-info .show-pictures { display: inline; }
 

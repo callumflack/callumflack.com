@@ -1,8 +1,9 @@
 .typeset {
-  font-family: "freight-text-pro-1", "freight-text-pro-2";
+  //font-family: "freight-text-pro-1", "freight-text-pro-2";
+  font-family: "lemonde-journal-1", "lemonde-journal-2"; //400 600 700
   font-weight: 400;
   font-style: normal;
-  font-size: 21px;
+  font-size: 19px;
   line-height: 140%;
   text-align: left;
   text-transform: none;
@@ -10,11 +11,23 @@
   letter-spacing: 0;
 }
 
+.sub {
+  font-family: "lemonde-journal-1", "lemonde-journal-2"; //400 600 700
+  font-weight: 700;
+  font-style: normal;
+  font-size: 16px;
+  line-height: 140%;
+  text-align: center;
+  text-transform: uppercase;
+  text-decoration: none;
+  letter-spacing: 1px;
+}
+
 .headline {
   font-family: "Helvetica Neue";
   font-weight: 500;
   font-style: normal;
-  font-size: 18px;
+  font-size: 22px;
   line-height: 140%;
 }
 
@@ -23,7 +36,7 @@
 a {
   //@extend .headline;
   color: $text;
-  font-size: 21px;
+  //font-size: 21px;
   text-decoration: none;
   &:hover { 
     text-decoration: none;
@@ -64,9 +77,8 @@ p {
 
 //----------------------------ems & dots
 span.em {
-  font-family: "freight-text-pro-1", "freight-text-pro-2";
-  font-size: 21px;
-  font-weight: 400;
+  @extend .headline;
+  font-weight: 300;
   letter-spacing: -1px;
   padding: 0;
   margin-right: 1px;
@@ -82,33 +94,45 @@ h1 {
   @extend .headline;
   padding: 0 0 20px 0;
   margin: 0;
+  text-align: center;
   &.title { 
     @extend .typeset;
     //color: $link;
-    font-size: 42px;
-    font-weight: 400;
+    font-size: 28px;
+    font-weight: 700;
+    text-transform: uppercase;
     line-height: 100%;
-    padding-bottom: 64px;
+    text-align: center;
+    padding-bottom: 105px;
   }
   &.title, &.title:hover { border: 0; }
+  &.header {
+    @extend .typeset;
+    font-size: 19px;
+    font-weight: 600;
+    text-transform: uppercase;
+    line-height: 140%;
+    text-align: center;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
 }
 
 
 h2 {
-  @extend h1;
+  @extend .sub;
+  margin: 60px 0 30px 0;
+  a { text-decoration: underline; }
   &.links {
     @extend p.links;
   }
 }
 
-.paths {
-  @extend .headline;
-}
 
 footer {
   a, p, span {
-    //color: $text-80;
-    //font-weight: 400;
+    text-align: center;
   }
   a {
     text-decoration: none;
