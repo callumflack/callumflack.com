@@ -34,7 +34,7 @@ nav {
   height: $h-nav;
   //margin-bottom: 40px;
   z-index: 1977;
-  
+
   &:hover {
     //@include transparent($background, 1);
     .location {
@@ -61,11 +61,11 @@ nav {
       @extend .rule-invisible;
     }
   }
-} 
+}
 .menu {
   @extend .location;
   height: 30px;
-  a { 
+  a {
     color: $text-50;
     margin-left: 0;
     //@extend .rule-invisible;
@@ -73,7 +73,7 @@ nav {
     &.show-info, &.show-pictures { margin-left: 0; }
     &.spaced { margin-left: 6px; }
   }
-  a:hover { 
+  a:hover {
     color: $link;
     border-color: $link;
   }
@@ -82,7 +82,7 @@ nav {
   span.em {
     color: $text;
   }
-}  
+}
 
 
 
@@ -94,15 +94,14 @@ section {
   position: relative;
   width: $w-pic;
   margin: 0 auto 40px 0;
-  
   &.absolute {
-    top: $h-nav;
+    top: 0;
+    padding-top: $h-nav;
     width: $w-pic;
-    padding: 0;
   }
-  
+
   img { width: $w-pic; }
-  
+
   article {
     width: $w-text;
     @extend .text-padding;
