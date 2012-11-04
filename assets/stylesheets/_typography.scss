@@ -1,13 +1,10 @@
 .typeset {
-  //font-family: "freight-text-pro-1", "freight-text-pro-2"; // 3 4 5 6 7 9
-  //font-family: "lemonde-journal-1", "lemonde-journal-2"; //4 6 7
-  //font-family: "minion-pro-1", "minion-pro-2"; //4 5 6 7
   //font-family: 'serif72_beta_rgregular';
   //font-family: 'Avenir LT Book';
   font-family: 'arnhem_blondregular';
   font-weight: normal;
   font-style: normal;
-  font-size: 20px;
+  font-size: 21px;
   line-height: 140%;
   text-align: left;
   text-transform: none;
@@ -29,10 +26,14 @@
 
 .headline {
   font-family: 'arnhem_bold_scregular';
-  font-weight: normal;
-  font-style: normal;
-  font-size: 20px;
-  line-height: 140%;
+  text-align: center;
+  letter-spacing: 1px;
+}
+
+.headline-2 {
+  font-family: 'arnhem_normal_scregular'; //'arnhem_bold_italic'
+  text-align: center;
+  //font-size: 26px;
   letter-spacing: 1px;
 }
 
@@ -48,32 +49,22 @@ a {
   }
 }
 
-p > a, p > a:hover {
-  text-decoration: underline;
-}
+.underline { a, a:hover { text-decoration: underline; } }
+
+p > a, p > a:hover { text-decoration: underline; }
 
 
 
 //--------------------------------------------- p
 p {
-  margin: 0 0 16px 0;
-  &.no-indent {
-  }
+  margin: 0 0 18px 0;
   &.links {
     a {
       display: block;
       padding-left: 70px;
-      //background: url(link.png) no-repeat scroll 38px 45%;
-      text-decoration: underline;
-      &.first { 
-        //background-position: 38px 70%;
-      }
-      &.last { 
-        //background-position: 38px 24%;
-      }
+      background: url(link.png) no-repeat scroll 38px 45%;
       &:hover {
-        //background-image: url(link-h.png);
-        text-decoration: none;
+        background-image: url(link-h.png);
       }
     } 
   }
@@ -84,13 +75,12 @@ p {
 
 
 
-//----------------------------ems & dots
+//----------------------------em dash
 span.em {
-  font-family: 'arnhem_normal_scregular';
-  color: $text-50;
+  font-family: 'arnhem_blondregular';
   letter-spacing: -2px;
   padding: 0;
-  margin: 0 2px 0 0;
+  margin: 0 6px 0 3px;
   background: none;
   &.footer {
     margin: 0 8px 0 7px;
@@ -100,20 +90,12 @@ span.em {
 
 //----------------------------titles
 h1 {
-  @extend .sub;
+  @extend .typeset;
+  @extend .headline;
   margin: 0 0 20px 0;
-  text-align: center;
   &.title { 
     font-family: 'arnhem_normal_scregular';
-    //color: $link;
-    //font-size: 28px;
-    //font-weight: 700;
-    //text-transform: uppercase;
-    //line-height: 100%;
-    //text-align: center;
-    //padding-bottom: 105px;
   }
-  &.title, &.title:hover { border: 0; }
 }
 
 //a h1 span {
@@ -126,26 +108,22 @@ h1 {
 
 
 h2 {
+  @extend .typeset;
   @extend .headline;
+  @extend .underline;
   margin: 70px 0 30px 0;
-  a, a:hover { text-decoration: underline; }
-  &.links {
-    @extend p.links;
+  a { @extend h2 }
+  &.subsub { 
+    @extend .headline-2;
+    a { @extend h2.subsub; }
   }
 }
 
 
 footer {
-  a, p, span, h1, h2 {
-    text-align: center;
-    //color: $text-50;
-  }
-  a, a:hover {
-    text-decoration: underline;
-  }
-  a:hover {
-      color: $link;
-  }
+  a, p, span, h1, h2 { text-align: center; }
+  @extend .underline;
+  a:hover { color: $link; }
 }
 
 button, input, select, textarea {

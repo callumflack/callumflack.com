@@ -26,19 +26,23 @@
         .caption {
           width: 100%;
           position: absolute;
-          top: 44%;
+          top: 34%;
           z-index: 99;
-          h1 {
+          h1, p {
             padding: 0;
             visibility: hidden;
-            color: $link;
+            color: $text;
+            margin-bottom: 0;
+          }
+          p {
+            text-align: center;
           }
         }
     
         //HOVER OVER PROJECTS
         &:hover {
           //border-bottom-color: $text;
-          &.project h1 { visibility: visible; }
+          &.project h1, &.project p { visibility: visible; }
           &.project img {
             @extend .opacity-0;
             @extend .fade-delay;
