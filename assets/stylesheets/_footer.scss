@@ -2,67 +2,14 @@ footer {
   width: $w-text;
   @extend .text-padding;
   margin: 0;
-  &.inside-fixed {
-    padding: 0;
-  }
-  p { margin: 0; }
-  
-  
-  
-  nav {
-    margin-top: 224px;
-    .location, .menu { 
-      @extend .rule;
-      //a { color: $link; }
-      //a:hover { text-decoration: underline; }
-    }
-    .location:hover, .menu:hover { 
-      @extend .rule-h;
-    }
-  }
-  
-  
-  
-  aside {
-    width: $w-text;
-    
-    a { 
-      padding-bottom: 60px;
-    }
-    
-    &.contact {
-      margin-bottom: 60px;
-      a {
-        text-decoration: underline;
-        //font-style: italic;
-      }
-      a:hover { 
-        color: $link;
-        text-decoration: underline;
-      }
-      h2 {
-        margin: 90px 0 6px 0;
-      }
-      h2::before {
-        content: ' ';
-        display: block;
-        width: 30%;
-        border-top: 1px solid #ccc;
-        margin: 0 auto 80px auto;
-      }
-    }
-    
-    &.links {
-      text-align: center;
-      p, a { 
-        @extend .headline;
-      }
-      a {
-        padding-left: 12px;
-        &.first {
-          padding-left: 0;
-        }
-      }
-    }
+  &.inside-fixed { padding: 0; }
+  h2 { margin: 30px 0 0 0; }
+  h2::before {
+    content: ' ';
+    display: block;
+    width: 10%;
+    @extend .rule;
+    border-color: $text-50;
+    margin: 0 auto 30px auto;
   }
 }

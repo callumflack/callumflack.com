@@ -7,13 +7,15 @@
       span {
         color: $link;
       }
-      h1.header { text-decoration: underline; }
     }
   }
   
   
   p {
     margin-bottom: 0;
+  }
+  section {
+    margin-top: 50px;
   }
   article {
     margin-bottom: 90px;
@@ -22,9 +24,6 @@
       h1:hover {
         border-color: $text;
       }
-    }
-    h1 {
-      padding-bottom: 25px;
     }
     p > a, p > span {
       text-decoration: underline;

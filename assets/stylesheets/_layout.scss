@@ -1,37 +1,29 @@
-$w-text: 660px;
+$w-text: 600px;
 $w-pic: 960px;
-$h-nav: 67px;
-$top: 80px;
-$text: #333; //222255
-$text-20: #d5d5d5;
-$text-30: #c5c5c5;
-$text-50: #ccc;
-$text-80: #999;
-$link: $text; // 00e000 00a1ff 0062eb fabb00 dd0 00b4e1 #01a0bd #ff6400 0f0 ff7c00 fa6000 dd0 0096e0
-$link-20: #e5f5f8;
-$background: #fdfdfd; //f5f6f7
-$lit: #f9ff80; //CR grey #d3d3ce
+$h-nav: 90px;
+$text: #222; //222255
+$text-50: #888;
+$text-20: #ccc;
+$link: $text; // #0193f4 00e000 00a1ff 0062eb fabb00 00b4e1 #01a0bd #ff6400 0f0 ff7c00 fa6000 dd0 0096e0
+$background: #fdfdfd; //f5f6f7 fdfdfd f1f1f1
 
 .container {
   position: relative;
   width: $w-pic;
   margin: 0 auto;
   padding: 0 20px;
-  //height: 100%;
 }
 .absolute { position: absolute; }
 .fixed { position: fixed; }
 
 .text-padding { padding: 0 ($w-pic - $w-text) / 2; }
+.rule-padding { padding: 0 0 2px 0; } //----text height plus padding to make nav height of 67px
 
-.rule-padding { padding: 0 0 41px 0; } //----text height plus padding to make nav height of 67px
-.rule-padding-f { padding: 0 0 30px 0; } //-----if you change, change footer > aside padding too
+.rule { border-bottom: 1px solid $text; }
+.rule-invisible { border-bottom: 1px solid $background; }
+.rule-h { border-bottom: 1px solid $link; }
 
-.rule { border-top: 1px solid $text; }
-.rule-lite { border-top: 1px solid #e5e5e5; }
 .rule-dark { border-top: 3px solid $text; } //-----if you change the px size, change .paths too
-.rule-h { border-top: 1px solid $link; }
-.rule-h-dark { border-top: 3px solid $link; }
 
 
 //---------------------------------------------------------Nav
@@ -40,17 +32,19 @@ nav {
   position: relative;
   width: $w-pic;
   height: $h-nav;
+  //margin-bottom: 40px;
   z-index: 1977;
-  //background: pink;
   
   &:hover {
-    @include transparent($background, 1);
+    //@include transparent($background, 1);
+    .location {
+      @extend .opacity-0;
+    }
     .menu {
       @extend .fade-delay;
       @extend .opacity-100;
-      background: $background;
+      //background: $background;
     }
-    //.location { display: none; }
   }
 }
 
@@ -61,27 +55,32 @@ nav {
   a {
     @extend .headline;
     @extend .rule-padding;
-    color: $text;
-    &.first {
-      padding-left: 0;
-    }
+    @extend .rule;
+    color: $link;
     &:hover {
-      text-decoration: none;
+      @extend .rule-invisible;
     }
   }
 } 
 .menu {
   @extend .location;
+  height: 30px;
   a { 
     color: $text-50;
-    padding-left: 10px;
-    &.show-info, &.show-pictures, &.last, &.first { padding-left: 0; }
+    margin-left: 0;
+    //@extend .rule-invisible;
+    text-decoration: none;
+    &.show-info, &.show-pictures { margin-left: 0; }
+    &.spaced { margin-left: 6px; }
   }
-  a:hover { color: $link; }
+  a:hover { 
+    color: $link;
+    border-color: $link;
+  }
   @extend .opacity-0;
   @extend .headline;
   span.em {
-    color: $text-50;
+    color: $text;
   }
 }  
 
@@ -94,8 +93,7 @@ nav {
 section {
   position: relative;
   width: $w-pic;
-  margin: 0 auto 50px 0;
-  background-color: $background;
+  margin: 0 auto 40px 0;
   
   &.absolute {
     top: $h-nav;

@@ -2,65 +2,50 @@
 
   section {
     
-    nav {
-      width: $w-text;
-      @extend .text-align;
-      .location, .menu {
-        width: $w-text;
-      }
-    }    
-    article.spacer {
-      height: 82px;
+    article {
+      width: $w-pic;
+      height: 200px;
       padding: 0;
-    }
+      margin-bottom: 1px;
     
-    p {
-      width: 100%;
-      padding-bottom: 30px;
-      padding-top: 2px;
-      a {
-        text-decoration: none;
-        &.on {
-          text-decoration: underline;
-        }
-      }
-    }
-
-    .project {
-      position: relative;
-      display: block;
-      height: 90px;
-      margin-bottom: 3px;
-
-      img {
+      .project {
+        position: relative;
         display: inline-block;
-        height: 90px;
-        width: $w-pic;
-        padding: 0;
-        margin: 0 auto;
-      }
-      .caption {
-        width: 100%;
-        position: absolute;
-        top: 37%;
-        z-index: 99;
-        h1 {
+        width: 314px;
+        height: 200px;
+        margin-right: 1px;
+        &.last { margin-right: 0; }
+
+        img {
+          display: inline-block;
+          height: 200px;
+          width: 318px;
           padding: 0;
-          visibility: hidden;
-          color: $link;
+          margin: 0 auto;
         }
-      }
+        .caption {
+          width: 100%;
+          position: absolute;
+          top: 44%;
+          z-index: 99;
+          h1 {
+            padding: 0;
+            visibility: hidden;
+            color: $link;
+          }
+        }
     
-      //HOVER OVER PROJECTS
-      &:hover {
-        border-bottom-color: $text;
-        &.project h1 { visibility: visible; }
-        &.project img {
-          @extend .opacity-0;
-          @extend .fade-delay;
+        //HOVER OVER PROJECTS
+        &:hover {
+          //border-bottom-color: $text;
+          &.project h1 { visibility: visible; }
+          &.project img {
+            @extend .opacity-0;
+            @extend .fade-delay;
+          }
         }
       }
-    }  
+    }
   }
 }
 
@@ -68,6 +53,8 @@
 
 
 .work-project {
+  
+  .menu a.spaced { margin-left: 3px; }
 
   section { margin-bottom: 0; }
 
@@ -76,11 +63,11 @@
     z-index: 1968;
     article {
       &:hover {
-        border-color: $text;
+        //border-color: $text;
       }
     }
     h1:hover {
-      border-color: $text;
+      //border-color: $text;
     }
   }
   

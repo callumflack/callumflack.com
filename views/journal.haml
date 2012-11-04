@@ -3,30 +3,34 @@
 %nav
   .location
     %a{:href => "/journal"} 
-      A journal about design practise.
+      Journal
   .menu
     %a{:href => "/home"} Work
-    %a{:href => "/journal"} Journal
-    %a{:href => "/profile"} Profile
+    %a.last{:href => "/journal"} Journal
+    %a.last{:href => "/profile"} Profile
 
 %section
 
   %a{:href => "/journal/a-paraphrased-sterling-article"}
     %article
-      %h1.header A paraphrased Sterling article
+      %h1.title 
+        %span A paraphrased Sterling article
       %p       
         I want to share the story behind approximately $2700 dollars worth of my spending this year that reveals
         how I am finally starting to leave the middle class, materially, financially and psychologically. I am
         doing something complicated called trading up.
+        %span Read more
 
   %a{:href => "/journal/i-thought-you-were-my-lady"} 
     %article    
-      %h1.header Things inbetween: a tumblr blog
+      %h1.title
+        %span Things inbetween: a tumblr blog
       %img.portrait{:src => "assets/images/Notice_120404~03.jpg", :alt => "I thought you were my lady"}
 
   %a{:href => "/journal/a-paraphrased-sterling-article"}
     %article
-      %h1.header A paraphrased Sterling article
+      %h1
+        %span A paraphrased Sterling article
       %p       
         I want to share the story behind approximately $2700 dollars worth of my spending this year that reveals
         how I am finally starting to leave the middle class, materially, financially and psychologically. I am
@@ -34,12 +38,14 @@
 
   %a{:href => "/journal/days-end"}
     %article
-      %h1.header Things inbetween: a tumblr blog
+      %h1
+        %span Things inbetween: a tumblr blog
       %img.landscape{:src => "assets/images/Notice_120418_02.jpg", :alt => "Day's end"}
 
   %a{:href => "/journal/i-thought-you-were-my-lady"} 
     %article    
-      %h1.header Things inbetween: a tumblr blog
+      %h1
+        %span Things inbetween: a tumblr blog
       %img.portrait{:src => "assets/images/Notice_120404~03.jpg", :alt => "I thought you were my lady"}
 
   %a{:href => "/journal/days-end"}
@@ -72,13 +78,9 @@
 
 
 %footer
-  
   %aside.links
     %a.next{:href => "/journal"} Load more posts
   
-  %aside.links
-    .menu
-      %a.first{:href => "/journal"} Journal
-      %a{:href => "/profile"} Profile
-      %a{:href => "/work"} Work
-      %a.last{:href => "/home"} Home
+  
+  
+  
