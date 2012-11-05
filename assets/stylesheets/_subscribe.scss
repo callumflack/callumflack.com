@@ -20,7 +20,7 @@ input[type="submit"] {
   width: 130px;
   height: 52px;
   padding-bottom: 0.2em;
-  @extend .sub;
+  @extend span;
   font-size: 16px;
   text-shadow: 1px 1px 1px white;
   color: $text;

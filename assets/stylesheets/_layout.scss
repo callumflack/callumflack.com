@@ -17,7 +17,7 @@ $background: #fdfdfd; //f5f6f7 fdfdfd f1f1f1
 .fixed { position: fixed; }
 
 .text-padding { padding: 0 ($w-pic - $w-text) / 2; }
-.rule-padding { padding: 0 0 1px 0; } //----text height plus padding to make nav height of 67px
+.rule-padding { padding: 0 0 0px 0; }
 
 .rule { border-bottom: 2px solid $text; }
 .rule-invisible { border-bottom: 2px solid $background; }
@@ -48,31 +48,32 @@ nav {
   position: absolute;
   width: $w-pic;
   text-align: center;
-  a {
-    @extend .headline;
-    @extend .rule-padding;
-    @extend .rule;
-    color: $text;
-    &:hover {
-      @extend .rule-invisible;
+  h1 {
+    a {
+      @extend .rule;
+      color: $text;
+      &:hover {
+        @extend .rule-invisible;
+      }
     }
   }
 }
 .menu {
   @extend .location;
   @extend .opacity-0;
-  @extend .headline;
-  a { 
-    color: $text;
-    margin-left: 0;
-    @extend .rule-invisible;
-    text-decoration: none;
-    &.spaced { margin-left: 9px; }
-    &.selected { @extend .rule; }
-  }
-  a:hover { 
-    color: $text;
-    border-color: $text;
+  h1 {
+    a { 
+      color: $text;
+      margin-left: 0;
+      @extend .rule-invisible;
+      text-decoration: none;
+      &.spaced { margin-left: 12px; }
+      &.selected { @extend .rule; }
+      &:hover { 
+        color: $text;
+        border-color: $text;
+      }
+    }
   }
 }
 

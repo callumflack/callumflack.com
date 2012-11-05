@@ -4,7 +4,7 @@
   font-family: 'arnhem_blondregular';
   font-weight: normal;
   font-style: normal;
-  font-size: 21px;
+  font-size: 20px;
   line-height: 140%;
   text-align: left;
   text-transform: none;
@@ -12,35 +12,15 @@
   letter-spacing: 0;
 }
 
-.sub {
-  font-family: 'arnhem_black_scregular';
-  font-weight: normal;
-  font-style: normal;
-  font-size: 16px;
-  line-height: 140%;
-  text-align: center;
-  text-transform: uppercase;
-  text-decoration: none;
-  letter-spacing: 1px;
-}
-
-.headline {
-  font-family: 'arnhem_bold_scregular';
-  text-align: center;
-  letter-spacing: 1px;
-}
-
 .headline-2 {
   font-family: 'arnhem_normal_scregular'; //'arnhem_bold_italic'
   text-align: center;
-  //font-size: 26px;
   letter-spacing: 1px;
 }
 
 
 //--------------------------------------------- a
 a {
-  font-family: 'arnhem_blonditalic'; 
   color: $text;
   text-decoration: none;
   &:hover { 
@@ -50,8 +30,9 @@ a {
 }
 
 .underline { a, a:hover { text-decoration: underline; } }
+p > a, p > a:hover, a.project p { font-family: 'arnhem_blonditalic'; }
+//p > a, p > a:hover { text-decoration: underline; }
 
-p > a, p > a:hover { text-decoration: underline; }
 
 
 
@@ -68,22 +49,25 @@ p {
       }
     } 
   }
-  span {
-    @extend .sub;
-  }
 }
 
 
 
 //----------------------------em dash
-span.em {
-  font-family: 'arnhem_blondregular';
-  letter-spacing: -2px;
-  padding: 0;
-  margin: 0 6px 0 3px;
-  background: none;
-  &.footer {
-    margin: 0 8px 0 7px;
+span {
+  @extend .typeset;
+  font-family: 'arnhem_black_regular';
+  font-size: 16px;
+  text-align: center;
+  text-transform: uppercase;
+  text-decoration: none;
+  letter-spacing: 1px;
+  &.em {
+    font-family: 'arnhem_blondregular';
+    letter-spacing: -2px;
+    padding: 0;
+    margin: 0 6px 0 3px;
+    background: none;
   }
 }
 
@@ -91,32 +75,37 @@ span.em {
 //----------------------------titles
 h1 {
   @extend .typeset;
-  @extend .headline;
+  font-family: 'arnhem_black_scregular';
+  font-size: 21px;
+  text-align: center;
+  letter-spacing: 1px;
   margin: 0 0 20px 0;
   &.title { 
-    font-family: 'arnhem_normal_scregular';
+    font-family: 'arnhem_black_scregular'; //arnhem_normal_scregular
+    font-size: 19px;
+    //text-transform: uppercase;
+    //letter-spacing: 0;
+    
   }
 }
 
-//a h1 span {
-//  @extend .rule-padding;
-//  @extend .rule;
-//}
-//a:hover h1 span {
-//  @extend .rule-h;
-//}
-
-
 h2 {
   @extend .typeset;
-  @extend .headline;
+  font-family: 'arnhem_black_scregular';
+  text-align: center;
+  font-size: 18px;
+  letter-spacing: 1px;
   @extend .underline;
-  margin: 70px 0 30px 0;
+  margin: 70px 0 20px 0;
   a { @extend h2 }
   &.subsub { 
     @extend .headline-2;
     a { @extend h2.subsub; }
   }
+}
+
+h3 {
+  
 }
 
 

@@ -1,23 +1,26 @@
 .profile {
-  background-color: #e9e9e9;
-  .menu a { border-color: #e9e9e9; }
-  .menu a:hover { border-color: $text; }
-  a.selected { border-color: $text; }
+//  background-color: #e9e9e9;
+//  .menu a { border-color: #e9e9e9; }
+//  .menu a:hover { border-color: $text; }
+//  a.selected { border-color: $text; }
   
   article { margin-top: 40px; }
   
   h2 { margin-top: 60px; }
-  
-  img.landscape {
-    width: 400px;
-    height: 212px;
-    left: 50%;
-    margin-left: 280px;
+  article h1 {
+    margin-bottom: 40px;
   }
+  
 //  img.landscape {
-//    width: $w-text;
-//    height: 320px;
+//    width: 400px;
+//    height: 212px;
 //    left: 50%;
-//    margin-left: 180px;
+//    margin-left: 280px;
 //  }
+  img.landscape {
+    width: $w-text;
+    height: 320px;
+    left: 50%;
+    margin-left: 180px;
+  }
 }
