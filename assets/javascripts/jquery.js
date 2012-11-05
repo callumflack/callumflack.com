@@ -9438,27 +9438,3 @@ if ( typeof define === "function" && define.amd && define.amd.jQuery ) {
 }
 
 })( window );
-
-//Adding in Bobes' zepto to show & hide project info
-
-$(".show-info").click (e) ->
- e.preventDefault()
- if expanded
-   startSlideshow()
-   $("body").removeClass("expand-info")
- else
-   stopSlideshow()
-   $("body").addClass("expand-info")
- expanded = !expanded
-
-$(".show-pictures").click (e) ->
- e.preventDefault()
- if expanded
-   startSlideshow()
-   $("body").removeClass("expand-info")
- else
-   stopSlideshow()
-   $("body").addClass("expand-info")
- expanded = !expanded
-
-

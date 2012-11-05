@@ -33,9 +33,7 @@ nav {
   width: $w-pic;
   height: $h-nav;
   z-index: 1977;
-
   &:hover {
-    //@include transparent($background, 1);
     .location {
       @extend .opacity-0;
     }
@@ -64,7 +62,6 @@ nav {
   @extend .location;
   @extend .opacity-0;
   @extend .headline;
-  //height: 30px;
   a { 
     color: $text;
     margin-left: 0;
