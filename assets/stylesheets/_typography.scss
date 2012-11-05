@@ -1,7 +1,4 @@
 .typeset {
-  //font-family: 'serif72_beta_rgregular';
-  //font-family: 'Avenir LT Book';
-  font-family: 'arnhem_blondregular';
   font-weight: normal;
   font-style: normal;
   font-size: 20px;
@@ -12,62 +9,45 @@
   letter-spacing: 0;
 }
 
-.headline-2 {
-  font-family: 'arnhem_normal_scregular'; //'arnhem_bold_italic'
-  text-align: center;
-  letter-spacing: 1px;
-}
 
-
-//--------------------------------------------- a
+//--------------------------------------------- a & p
 a {
   color: $text;
   text-decoration: none;
+  @extend .rule-link;
   &:hover { 
     text-decoration: none;
     color: $link;
   }
 }
 
-.underline { a, a:hover { text-decoration: underline; } }
 p > a, p > a:hover, a.project p { font-family: 'arnhem_blonditalic'; }
-//p > a, p > a:hover { text-decoration: underline; }
-
-
-
-
-//--------------------------------------------- p
-p {
-  margin: 0 0 18px 0;
-  &.links {
-    a {
-      display: block;
-      padding-left: 70px;
-      background: url(link.png) no-repeat scroll 38px 45%;
-      &:hover {
-        background-image: url(link-h.png);
-      }
-    } 
-  }
-}
-
+p { margin: 0 0 18px 0; }
 
 
 //----------------------------em dash
 span {
   @extend .typeset;
-  font-family: 'arnhem_black_regular';
+  font-family: 'arnhem_blackregular';
   font-size: 16px;
   text-align: center;
   text-transform: uppercase;
   text-decoration: none;
   letter-spacing: 1px;
   &.em {
-    font-family: 'arnhem_blondregular';
+    font-family: 'arnhem_normalregular';
     letter-spacing: -2px;
     padding: 0;
     margin: 0 6px 0 3px;
     background: none;
+  }
+  &.bullet {
+    margin-left: 40px;
+    margin-right: 8px;
+    &:hover { color: $link; }
+  }
+  &.read-more {
+    font-family: 'arnhem_normalregular';
   }
 }
 
@@ -91,16 +71,21 @@ h1 {
 
 h2 {
   @extend .typeset;
-  font-family: 'arnhem_black_scregular';
+  font-family: 'arnhem_blackregular'; //arnhem_black_scregular
   text-align: center;
-  font-size: 18px;
+  font-size: 17px;
   letter-spacing: 1px;
-  @extend .underline;
+  text-transform: uppercase;
   margin: 70px 0 20px 0;
+  &.journal {
+    font-family: 'arnhem_blonditalic';
+    text-align: center;
+    font-size: 25px;
+    letter-spacing: 0;
+    text-transform: none;
+    margin-bottom: 26px;
+    //@extend .rule-link;
   a { @extend h2 }
-  &.subsub { 
-    @extend .headline-2;
-    a { @extend h2.subsub; }
   }
 }
 
@@ -111,11 +96,21 @@ h3 {
 
 footer {
   a, p, span, h1, h2 { text-align: center; }
-  @extend .underline;
   a:hover { color: $link; }
 }
 
 button, input, select, textarea {
   @extend .typeset;
+  font-family: 'arnhem_blondregular';
+}
+
+input[type="submit"] {
+  @extend .typeset;
+  font-family: 'arnhem_blackregular';
+  font-size: 16px;
+  text-align: center;
+  text-transform: uppercase;
+  text-decoration: none;
+  letter-spacing: 1px;
 }
 

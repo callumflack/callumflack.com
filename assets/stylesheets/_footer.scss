@@ -11,4 +11,7 @@ footer {
     border-bottom: 8px solid $text;
     margin: 0 auto 60px auto;
   }
+  h2 a:hover {
+    @extend .rule-link;
+  }
 }

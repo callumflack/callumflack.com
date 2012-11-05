@@ -14,6 +14,7 @@
         width: 314px;
         height: 200px;
         margin-right: 1px;
+        border: 0;
         &.last { margin-right: 0; }
 
         img {
@@ -28,11 +29,11 @@
           position: absolute;
           top: 34%;
           z-index: 99;
-          h1, p {
+          h2, p {
             padding: 0;
+            margin: 0;
             visibility: hidden;
             color: $text;
-            margin-bottom: 0;
           }
           p {
             text-align: center;
@@ -42,7 +43,7 @@
         //HOVER OVER PROJECTS
         &:hover {
           //border-bottom-color: $text;
-          &.project h1, &.project p { visibility: visible; }
+          &.project h2, &.project p { visibility: visible; }
           &.project img {
             @extend .opacity-0;
             @extend .fade-delay;

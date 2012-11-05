@@ -1,33 +1,28 @@
 .journal-list {
   a:hover {
     article {
-      p, span {
-        color: $text;
+      p, span { 
+        color: $text; 
+        border-color: $text-50;
       }
-      span {
-        color: $link;
+      h2 span { 
+        color: $link; 
+        border-color: $link;
       }
     }
   }
   
-  
-  p {
-    margin-bottom: 0;
-  }
   section {
-    margin-top: 50px;
+    //margin-top: 50px;
   }
+  
   article {
     margin-bottom: 90px;
-    &.title {
-      margin-bottom: 26px;
-      h1:hover {
-        border-color: $text;
-      }
-    }
-    p > a, p > span {
-      text-decoration: underline;
-      &:hover {
+    p {
+      //font-family: 'arnhem_blonditalic';
+      margin-bottom: 0;
+      span { 
+        @extend .rule-link;
       }
     }
     img {
@@ -37,13 +32,8 @@
       &.landscape { width: 600px; }
     }
   }
+  
   footer {
-    a {
-      &:hover {
-        text-decoration: none;
-      }
-    }
-    nav { margin-top: 0; }
   }
 }
 
@@ -54,7 +44,10 @@
 
 //-----------------------------------------------------------ARTICLES
 .journal-article {
-  h1.anchor:hover { @extend .rule-dark; }
+  h2.journal {
+    font-size: 33px;
+    margin: 30px 0 76px 0;
+  }
 }
 
 
@@ -64,6 +57,6 @@
     margin-bottom: 86px;
   }
   section.pic {
-    h1.anchor:hover { @extend .rule-dark; }
+
   }
 }

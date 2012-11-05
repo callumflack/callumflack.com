@@ -2,10 +2,10 @@ $w-text: 600px;
 $w-pic: 960px;
 $h-nav: 90px;
 $text: #333; //222255
-$text-50: #888;
+$text-50: #999;
 $text-20: #ccc;
-$link: #0193f4; // #0193f4 00e000 00a1ff 0062eb fabb00 00b4e1 #01a0bd #ff6400 0f0 ff7c00 fa6000 dd0 0096e0
-$background: #fdfdfd; //f5f6f7 fdfdfd f1f1f1
+$link: #d00; // #0193f4 00e000 00a1ff 0062eb fabb00 00b4e1 #01a0bd #ff6400 0f0 ff7c00 fa6000 dd0 0096e0
+$background: #fdfdfa; //f5f6f7 fdfdfd f1f1f1
 
 .container {
   position: relative;
@@ -17,13 +17,23 @@ $background: #fdfdfd; //f5f6f7 fdfdfd f1f1f1
 .fixed { position: fixed; }
 
 .text-padding { padding: 0 ($w-pic - $w-text) / 2; }
-.rule-padding { padding: 0 0 0px 0; }
 
-.rule { border-bottom: 2px solid $text; }
-.rule-invisible { border-bottom: 2px solid $background; }
-.rule-h { border-bottom: 2px solid $link; }
-
-.rule-dark { border-top: 3px solid $text; } //-----if you change the px size, change .paths too
+.rule { 
+  border-bottom: 2px solid $text; 
+  padding-bottom: 2px;
+}
+.rule-invisible { 
+  @extend .rule;
+  border-color: $background;
+}
+.rule-h {
+  @extend .rule;
+  border-color: $link;
+}
+.rule-link { 
+  border-bottom: 1px dotted $text-50;
+  &:hover { border-color: $link; }
+}
 
 
 //---------------------------------------------------------Nav
