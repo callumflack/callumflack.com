@@ -103,7 +103,8 @@ section {
     width: $w-pic;
   }
 
-  img { width: $w-pic; }
+  img { //width: $w-pic; 
+  }
 
   article {
     width: $w-text;

@@ -16,10 +16,11 @@ $img-posts2: $w-pic * 0.6875;
   margin-left: -$img-posts1 / 2;
 }
 .portrait { 
-  width: $w-pic-p;
+  height: $w-pic * 0.708;
+  width: 481px; //680px - ($w-pic * 0.708) / 2
   left: 50%;
   //margin-left: -$img-side1 / 2;
-  margin-left: ($w-pic - $w-pic-p) / 2;
+  margin-left: ($w-pic - 481px) / 2;
 }
 .landscape-list {
   width: $img-posts2;
