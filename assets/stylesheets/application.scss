@@ -20,8 +20,8 @@ body {
   text-rendering: optimizeLegibility;
   background-color: $background;
   -webkit-tap-highlight-color: rgba(255,0,0, 0.62);
-  padding: 55px 0 240px 0; //37
-  margin: 0;
+  padding: 0;
+  margin: 0 0 240px 0;
   //border-top: 4px solid $text;
   //border-bottom: 20px solid $text;
 }
@@ -33,3 +33,4 @@ body {
 @import "pg-journal";
 @import "pg-profile";
 @import "pg-work";
+@import "pg-home";

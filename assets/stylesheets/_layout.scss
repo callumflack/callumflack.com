@@ -19,8 +19,8 @@ $background: #fdfdfa; //f5f6f7 fdfdfd f1f1f1
 .text-padding { padding: 0 ($w-pic - $w-text) / 2; }
 
 .rule { 
-  border-bottom: 2px solid $text; 
-  padding-bottom: 2px;
+  border-bottom: 1px solid $text; 
+  padding-bottom: 1px;
 }
 .rule-invisible { 
   @extend .rule;
@@ -40,6 +40,7 @@ $background: #fdfdfa; //f5f6f7 fdfdfd f1f1f1
 
 nav {
   position: relative;
+  padding-top: 55px;
   width: $w-pic;
   height: $h-nav;
   z-index: 1977;
@@ -99,7 +100,7 @@ section {
   margin: 0 auto 40px 0;
   &.absolute {
     top: 0;
-    padding-top: $h-nav;
+    padding-top: $h-nav + 55px;
     width: $w-pic;
   }
 

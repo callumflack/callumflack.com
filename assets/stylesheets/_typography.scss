@@ -55,8 +55,8 @@ span {
 //----------------------------titles
 h1 {
   @extend .typeset;
-  font-family: 'arnhem_black_scregular';
-  font-size: 21px;
+  font-family: 'arnhem_normal_scregular';
+  font-size: 20px;
   text-align: center;
   letter-spacing: 1px;
   margin: 0 0 20px 0;
@@ -73,7 +73,7 @@ h2 {
   @extend .typeset;
   font-family: 'arnhem_blackregular'; //arnhem_black_scregular
   text-align: center;
-  font-size: 17px;
+  font-size: 16px;
   letter-spacing: 1px;
   text-transform: uppercase;
   margin: 70px 0 20px 0;
