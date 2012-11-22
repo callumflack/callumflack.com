@@ -17,9 +17,8 @@ $img-posts2: $w-pic * 0.6875;
 }
 .portrait { 
   height: $w-pic * 0.708;
-  width: 481px; //680px - ($w-pic * 0.708) / 2
+  width: 481px;
   left: 50%;
-  //margin-left: -$img-side1 / 2;
   margin-left: ($w-pic - 481px) / 2;
 }
 .landscape-list {
