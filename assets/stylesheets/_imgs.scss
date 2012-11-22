@@ -4,8 +4,8 @@ $img-posts1: $img-side1 * 0.6875;
 $img-posts2: $w-pic * 0.6875;
 
 
-.post > a > img:hover {
-  //@extend .opacity-20;
+a.img, a.img:hover {
+  border: 0;
 }
 
 

@@ -5,7 +5,7 @@
         color: $text; 
         border-color: $text-50;
       }
-      h2 span { 
+      h2, span { 
         color: $link; 
         border-color: $link;
       }
@@ -53,10 +53,5 @@
 
 //-------------------------------------------------------------PICTURES
 .journal-picture {
-  h2 {
-    margin-bottom: 86px;
-  }
-  section.pic {
 
-  }
 }
