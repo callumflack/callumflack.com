@@ -79,6 +79,10 @@
   img { 
     //height: 627px;
     padding: 4px 0 800px 0;
+    &.marinetti {
+      left: 50%;
+      margin-left: 93.5px;
+    }
   }
   footer {
     padding-bottom: 140px;
