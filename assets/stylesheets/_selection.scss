@@ -1,0 +1,15 @@
+::selection {
+	background: #e5e5e5;
+	color: $text;
+}
+::-moz-selection {
+	background: #e5e5e5;
+	color: $text;
+}
+
+img::selection {
+	background: transparent;
+}
+img::-moz-selection {
+	background: transparent;
+}

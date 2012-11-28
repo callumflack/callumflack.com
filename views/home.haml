@@ -1,0 +1,16 @@
+- @body_class = "home"
+
+%nav
+  .location
+    %h1
+      %a{:href => "/home"} 
+        Callum Flack is a graphic designer
+  .menu
+    %h1
+      %a.selected{:href => "/work"} Work
+      %a.spaced{:href => "/journal"} Journal
+      %a.spaced{:href => "/profile"} Profile
+
+%section
+  %a{:href => "/work"}
+    %img{:src => "assets/images/hi-poster.jpg", :alt => "Callum Flack says hi"}

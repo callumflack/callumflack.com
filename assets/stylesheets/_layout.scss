@@ -1,0 +1,119 @@
+$w-text: 600px;
+$w-pic: 960px;
+$h-nav: 90px;
+$text: #333;
+$text-50: #999;
+$text-20: #ccc;
+$link: #d00;
+$background: white; //fdfdfa
+
+.container {
+  position: relative;
+  width: $w-pic;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+.absolute { position: absolute; }
+.fixed { position: fixed; }
+
+.text-padding { padding: 0 ($w-pic - $w-text) / 2; }
+
+.rule { 
+  border-bottom: 1px solid $text; 
+  padding-bottom: 1px;
+}
+.rule-invisible { 
+  @extend .rule;
+  border-color: $background;
+}
+.rule-h {
+  @extend .rule;
+  border-color: $link;
+}
+.rule-link { 
+  border-bottom: 1px dotted $text-50;
+  &:hover { border-color: $link; }
+}
+
+
+//---------------------------------------------------------Nav
+
+nav {
+  position: relative;
+  padding-top: 55px;
+  width: $w-pic;
+  height: $h-nav;
+  z-index: 1977;
+  &:hover {
+    .location {
+      @extend .opacity-0;
+    }
+    .menu {
+      @extend .fade-delay;
+      @extend .opacity-100;
+    }
+  }
+}
+
+.location {
+  position: absolute;
+  width: $w-pic;
+  text-align: center;
+  a {
+    @extend .rule;
+    color: $text;
+  }
+}
+.menu {
+  @extend .location;
+  @extend .opacity-0;
+  a { 
+    color: $text;
+    margin-left: 0;
+    @extend .rule-invisible;
+    text-decoration: none;
+    &.spaced { margin-left: 12px; }
+    &.selected { @extend .rule; }
+    &:hover { 
+      color: $text;
+      border-color: $text;
+    }
+  }
+}
+
+
+
+//---------------------------------------------------------Text article width
+
+
+
+section {
+  position: relative;
+  width: $w-pic;
+  margin: 0 auto 40px 0;
+  &.absolute {
+    top: 0;
+    padding-top: $h-nav + 55px;
+    width: $w-pic;
+  }
+
+  img { //width: $w-pic; 
+  }
+
+  article {
+    width: $w-text;
+    @extend .text-padding;
+    h1 {
+      @extend .fade-delay;
+      a {
+        padding: 3px 0 49px 0;
+      }
+      &.first {
+        text-decoration: underline;
+      }
+    }
+  }
+  &.first {
+    padding-top: 120px;
+  }
+}

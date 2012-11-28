@@ -1,0 +1,57 @@
+.journal-list {
+  a:hover {
+    article {
+      p, span { 
+        color: $text; 
+        border-color: $text-50;
+      }
+      h2, span { 
+        color: $link; 
+        border-color: $link;
+      }
+    }
+  }
+  
+  section {
+    //margin-top: 50px;
+  }
+  
+  article {
+    margin-bottom: 90px;
+    p {
+      //font-family: 'arnhem_blonditalic';
+      margin-bottom: 0;
+      span { 
+        @extend .rule-link;
+      }
+    }
+    img {
+      display: block;
+      margin: 10px auto 0 auto;
+      &.portrait { width: 380px; }
+      &.landscape { width: 600px; }
+    }
+  }
+  
+  footer {
+  }
+}
+
+
+
+
+
+
+//-----------------------------------------------------------ARTICLES
+.journal-article {
+  h2.journal {
+    font-size: 33px;
+    margin: 30px 0 76px 0;
+  }
+}
+
+
+//-------------------------------------------------------------PICTURES
+.journal-picture {
+
+}

@@ -1,0 +1,14 @@
+.profile {
+
+  article { margin-top: 40px; }
+  
+  h2 { margin-top: 60px; }
+  article h1 {
+    margin-bottom: 40px;
+  }
+  img.landscape {
+    width: $w-text;
+    left: 50%;
+    margin-left: 180px;
+  }
+}
