@@ -24,7 +24,7 @@ $background: white; //fdfdfa
 }
 .rule-invisible { 
   @extend .rule;
-  border-color: $background;
+  border-color: transparent;
 }
 .rule-h {
   @extend .rule;
