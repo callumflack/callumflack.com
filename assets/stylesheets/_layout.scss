@@ -72,7 +72,7 @@ nav {
     margin-left: 0;
     @extend .rule-invisible;
     text-decoration: none;
-    &.spaced { margin-left: 12px; }
+    &.spaced { margin-left: 24px; }
     &.selected { @extend .rule; }
     &:hover { 
       color: $text;
