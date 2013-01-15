@@ -1,31 +1,30 @@
 .work {
   
-  nav 
-    .menu {
-      @extend .opacity-100;
-    }
+  nav {
+    .menu { @extend .opacity-100; }
+  }
 
   section {
     
     article {
       width: $w-pic;
-      height: 226px;
+      height: 170px;
       padding: 0;
-      margin-bottom: 1px;
+      margin-bottom: 2px;
     
       .project {
         position: relative;
         display: inline-block;
-        width: 314px;
-        height: 226px;
-        margin-right: 1px;
+        width: 234px;
+        height: 170px;
+        margin-right: 2px;
         border: 0;
-        &.last { margin-right: 0; }
+        //&.last { margin-right: 0; }
 
         img {
           display: inline-block;
-          height: 226px;
-          width: 318px;
+          width: 238px;
+          height: 170px;
           padding: 0;
           margin: 0 auto;
         }
@@ -49,13 +48,12 @@
           }
         }
     
-        //HOVER OVER PROJECTS
         &:hover {
           //border-bottom-color: $text;
           &.project h2, &.project p { visibility: visible; }
           &.project img {
             @extend .opacity-0;
-//            @extend .fade-delay;
+            @extend .fade-delay-2;
           }
         }
       }
