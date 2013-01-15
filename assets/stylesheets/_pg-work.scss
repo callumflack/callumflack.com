@@ -1,4 +1,9 @@
 .work {
+  
+  nav 
+    .menu {
+      @extend .opacity-100;
+    }
 
   section {
     
