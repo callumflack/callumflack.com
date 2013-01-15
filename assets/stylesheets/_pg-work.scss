@@ -39,6 +39,10 @@
             margin: 0;
             visibility: hidden;
             color: $link;
+            span {
+              @extend .rule-link;
+              border-color: $link;
+            }
           }
           p {
             text-align: center;
