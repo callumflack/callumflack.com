@@ -6,8 +6,8 @@
 
 .opacity-20 {
   zoom: 1;
-  filter: alpha(opacity=40);
-  opacity: 0.4;
+  filter: alpha(opacity=10);
+  opacity: 0.1;
 }
 
 .opacity-100 {
@@ -24,10 +24,10 @@
 }
 
 .fade-delay-2 {
-  -webkit-transition: opacity 1s ease;
-  -moz-transition: opacity 1s ease;
-  -o-transition: opacity 1s ease;
-  transition: opacity 1s ease;
+  -webkit-transition: opacity 1.5s ease;
+  -moz-transition: opacity 1.5s ease;
+  -o-transition: opacity 1.5s ease;
+  transition: opacity 1.5s ease;
 }
 
 .fade-details {
