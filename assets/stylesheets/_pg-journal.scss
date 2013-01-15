@@ -19,16 +19,12 @@
       }
     }
   }
-  
   section {
-    //margin-top: 50px;
+    margin-top: -50px;
   }
   
   article {
     margin-bottom: 90px;
-//    h2 a {
-//      @extend .rule-link;
-//    }
     p {
       //font-family: 'arnhem_blonditalic';
       margin-bottom: 0;
@@ -42,9 +38,6 @@
       &.portrait { width: 380px; }
       &.landscape { width: 600px; }
     }
-  }
-  
-  footer {
   }
 }
 
