@@ -1,12 +1,11 @@
 .journal-list {
-  nav 
-  .menu {
-    @extend .opacity-100;
+
+  nav {
+    .menu {
+      @extend .opacity-100;
+    }
   }
-}
 
-
-.journal-list {
   a:hover {
     article {
       p, span { 
