@@ -82,15 +82,15 @@ h2 {
   letter-spacing: 1px;
   text-transform: uppercase;
   margin: 70px 0 20px 0;
-  &.journal {
+  span.journal {
     font-family: 'arnhem_blonditalic';
     text-align: center;
     font-size: 25px;
     letter-spacing: 0;
     text-transform: none;
     margin-bottom: 26px;
-    //@extend .rule-link;
-  a { @extend h2 }
+    @extend .rule-link;
+//  a { @extend h2 }
   }
 }
 

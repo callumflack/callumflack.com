@@ -1,4 +1,12 @@
 .journal-list {
+  nav 
+  .menu {
+    @extend .opacity-100;
+  }
+}
+
+
+.journal-list {
   a:hover {
     article {
       p, span { 
@@ -8,6 +16,7 @@
       h2, span { 
         color: $link; 
         border-color: $link;
+        
       }
     }
   }
@@ -18,6 +27,9 @@
   
   article {
     margin-bottom: 90px;
+//    h2 a {
+//      @extend .rule-link;
+//    }
     p {
       //font-family: 'arnhem_blonditalic';
       margin-bottom: 0;
@@ -44,9 +56,17 @@
 
 //-----------------------------------------------------------ARTICLES
 .journal-article {
-  h2.journal {
-    font-size: 33px;
-    margin: 30px 0 76px 0;
+  article {
+    h2 {
+      margin: 30px 0 76px 0;
+      span.journal {
+        font-size: 33px;
+        border-color: transparent;
+        &:hover {
+          border-color: transparent;
+        }
+      }
+    }
   }
 }
 
