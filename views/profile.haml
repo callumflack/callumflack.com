@@ -2,8 +2,8 @@
 
 %nav
   %h1
-    .location
-      %a{:href => "/profile"} Callum Flack is a Graphic Designer
+    / .location
+    /   %a{:href => "/profile"} Callum Flack is a Graphic Designer
     .menu
       %a{:href => "/work"} Work
       %a.spaced{:href => "/journal"} Journal
@@ -13,6 +13,7 @@
   %img.landscape{:src => "assets/images/callum-flack.jpg", :alt => "Callum Flack"}
 
   %article
+    %h1 Callum Flack is a Graphic Designer
     %h2
       Contact me by
       %a{:href => "mailto:callumflack@gmail.com"} Email
@@ -55,10 +56,10 @@
     %p
       I designed and hand-coded this site using a Sinatra app that my friend
       %a{:href => "http://tuzinsky.com/"} Bobes Tuzinsky
-      created for me. I use Haml and Sass to write each page, I manage this code though Github and when I push new changes, a script housed on my Github also updates Heroku, where I host my site. You can read more about the process
+      created for me. I use Haml and Sass to write each page, I manage this code though Github and when I push new changes, a script updates Heroku, where I host my site. You can read more about the process
       %a{:href => "/journal"} in my journal.
 
-    %p All words and pictures shown on this site are &copy; Callum Flack 2012.
+    %p All words and pictures shown here are &copy; Callum Flack 2012.
 
 
 %footer
