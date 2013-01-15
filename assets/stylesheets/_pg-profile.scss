@@ -1,8 +1,22 @@
 .profile {
+  
+  nav {
+    .menu {
+      @extend .opacity-100;
+    }
+  }
 
-  article { margin-top: 40px; }
-  article h1 { margin-bottom: 40px; }  
-  h2 { margin-top: 60px; }
+  article {
+    margin-top: 40px;
+    h2 { margin-top: 80px; }
+    h1 {
+      font-family: 'arnhem_blonditalic';
+      letter-spacing: 0;
+      text-transform: none;
+      margin: 0;
+      font-size: 33px;
+    }
+  }
   
   img.landscape {
     width: $w-text;
