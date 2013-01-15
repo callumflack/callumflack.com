@@ -55,7 +55,7 @@
           &.project h2, &.project p { visibility: visible; }
           &.project img {
             @extend .opacity-0;
-            @extend .fade-delay;
+//            @extend .fade-delay;
           }
         }
       }

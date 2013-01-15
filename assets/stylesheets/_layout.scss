@@ -49,7 +49,7 @@ nav {
       @extend .opacity-0;
     }
     .menu {
-      @extend .fade-delay;
+//      @extend .fade-delay;
       @extend .opacity-100;
     }
   }
@@ -104,7 +104,7 @@ section {
     width: $w-text;
     @extend .text-padding;
     h1 {
-      @extend .fade-delay;
+//      @extend .fade-delay;
       a {
         padding: 3px 0 49px 0;
       }
