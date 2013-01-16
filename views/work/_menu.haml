@@ -1,12 +1,10 @@
 %nav.fixed
   %h1
     .location
-      %a= locals[:location]
+      %a.selected= locals[:location]
     .menu
       %a{ href: "/work" } Work
-      %span.em ——
       %a.show-info{ href: "#" }
         %span.info-hidden Show information
         %span.info-visible Back to pictures
-      %span.em ——
-      %a{ href: "/work/#{locals[:following]}" } Next
+      %a.spaced{ href: "/work/#{locals[:following]}" } Next
