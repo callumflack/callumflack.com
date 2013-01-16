@@ -58,7 +58,7 @@
           }
           &.project img {
             @extend .opacity-0;
-            @extend .fade-delay-2;
+            @extend .fade-delay;
           }
         }
       }
