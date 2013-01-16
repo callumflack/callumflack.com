@@ -36,7 +36,8 @@
           h2, p {
             padding: 0;
             margin: 0;
-            visibility: hidden;
+//            visibility: hidden;
+            @extend .opacity-0;
             color: $link;
             span {
               @extend .rule-link;
@@ -50,7 +51,11 @@
     
         &:hover {
           //border-bottom-color: $text;
-          &.project h2, &.project p { visibility: visible; }
+          &.project h2, &.project p { 
+//            visibility: visible;
+            @extend .opacity-100;
+            @extend .fade-delay;
+          }
           &.project img {
             @extend .opacity-0;
             @extend .fade-delay-2;
