@@ -1,11 +1,11 @@
 $w-text: 600px;
 $w-pic: 960px;
 $h-nav: 90px;
-$text: #3d3d3d;
+$text: #444;
 $text-50: #999;
 $text-20: #ccc;
 $link: #d00;
-$background: white; //fdfdfa
+$background: #fafafa;
 
 .container {
   position: relative;
@@ -63,26 +63,34 @@ nav {
   width: $w-pic; //100%
   text-align: center;
   a {
-    @extend .rule;
+//    @extend .rule;
     color: $text;
+    border: 0;
   }
 }
 .menu {
   @extend .location;
   @extend .opacity-0;
   a { 
-    color: $text; //white
+    color: $text-50; //white
     margin-left: 0;
-    @extend .rule-invisible;
+//    @extend .rule-invisible;
     text-decoration: none;
-    &.spaced { margin-left: 24px; }
-    &.selected { @extend .rule; }
+    &.selected { 
+//      @extend .rule;
+    }
     &:hover { 
       color: $text;
       border-color: $text;
     }
   }
 }
+
+.location, .menu {
+  a.selected { color: $text; }
+  a.spaced { margin-left: 24px; }
+}
+
 
 
 
