@@ -1,8 +1,8 @@
 .typeset {
   font-weight: normal;
   font-style: normal;
-  font-size: 19px;
-  line-height: 143%;
+  font-size: 21px;
+  line-height: 150%;
   text-align: left;
   text-transform: none;
   text-decoration: none;
@@ -22,7 +22,12 @@ a {
 }
 
 p > a, p > a:hover, a.project p { font-family: 'arnhem_blonditalic'; }
-p { margin: 0 0 18px 0; }
+p { margin: 0; } //bottom 18px
+p + p { text-indent: 3rem; }
+p.links { 
+  text-indent: 0;
+  margin: 18px 0 18px 3rem;
+}
 
 
 //----------------------------em dash
@@ -42,7 +47,7 @@ span {
     background: none;
   }
   &.bullet {
-    margin-left: 40px;
+//    margin-left: 40px;
     margin-right: 8px;
     &:hover { color: $link; }
   }
@@ -51,17 +56,17 @@ span {
   }
   &.info-hidden, &.info-visible {
     font-family: 'arnhem_normal_scregular';
-    font-size: 20px;
+    font-size: 18px;
     text-transform: none;
   }
 }
 
 
-//----------------------------titles
+//----------------------------menu but should be titles
 h1 {
   @extend .typeset;
-  font-family: 'arnhem_normal_scregular';
-  font-size: 20px;
+  font-family: 'arnhem_bold_scregular';
+  font-size: 17px;
   text-align: center;
   letter-spacing: 1px;
   margin: 0 0 20px 0;
@@ -81,16 +86,24 @@ h2 {
   font-size: 18px;
   letter-spacing: 1px;
   text-transform: uppercase;
-  margin: 70px 0 20px 0;
+  margin: 100px 0 20px 0;
   span.journal {
     font-family: 'arnhem_blonditalic';
     text-align: center;
-    font-size: 25px;
+    font-size: 30px;
     letter-spacing: 0;
     text-transform: none;
-    margin-bottom: 26px;
+    margin-bottom: 56px;
     @extend .rule-link;
 //  a { @extend h2 }
+    &.title {
+      font-size: 39px;
+      padding-bottom: 30px;
+      border-color: transparent;
+      &:hover {
+        border-color: transparent;
+      }
+    }
   }
 }
 
