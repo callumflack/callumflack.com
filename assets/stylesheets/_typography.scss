@@ -55,8 +55,8 @@ span {
     font-family: 'arnhem_normalregular';
   }
   &.info-hidden, &.info-visible {
-    font-family: 'arnhem_normal_scregular';
-    font-size: 18px;
+    font-family: 'arnhem_bold_scregular';
+    font-size: 17px;
     text-transform: none;
   }
 }
@@ -94,7 +94,7 @@ h2 {
     letter-spacing: 0;
     text-transform: none;
     margin-bottom: 56px;
-    @extend .rule-link;
+//    @extend .rule-link;
 //  a { @extend h2 }
     &.title {
       font-size: 39px;
