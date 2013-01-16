@@ -7,20 +7,9 @@
   }
 
   article {
-    margin-top: 40px;
-//    h2 { margin-top: 90px; }
     h1 {
-      font-family: 'arnhem_blonditalic';
-      letter-spacing: 0;
-      text-transform: none;
-      padding-bottom: 30px;
-      font-size: 39px;
+      margin: 10px 0 70px 0;
     }
   }
-  
-  img.landscape {
-    width: $w-text;
-    left: 50%;
-    margin-left: 180px;
-  }
+
 }
