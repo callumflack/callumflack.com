@@ -41,15 +41,18 @@ $background: white; //fdfdfa
 nav {
   position: relative;
   padding-top: 55px;
-  width: $w-pic;
+  width: $w-pic; //100%
   height: $h-nav;
   z-index: 1977;
   &:hover {
+//    background-color: $text;
+//    height: $h-nav*4;
+//    opacity: .9;
     .location {
       @extend .opacity-0;
     }
     .menu {
-//      @extend .fade-delay;
+//      @extend .fade-delay-2;
       @extend .opacity-100;
     }
   }
@@ -57,7 +60,7 @@ nav {
 
 .location {
   position: absolute;
-  width: $w-pic;
+  width: $w-pic; //100%
   text-align: center;
   a {
     @extend .rule;
@@ -68,7 +71,7 @@ nav {
   @extend .location;
   @extend .opacity-0;
   a { 
-    color: $text;
+    color: $text; //white
     margin-left: 0;
     @extend .rule-invisible;
     text-decoration: none;
