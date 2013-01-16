@@ -36,3 +36,7 @@
 .info-visible { display: none; }
 .expand-info .info-hidden, .expand-info .slides  { display: none; }
 .expand-info .info-visible { display: inline; }
+
+.info-hidden, .info-visible {
+  margin-left: 24px;
+}
