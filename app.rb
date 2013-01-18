@@ -95,7 +95,6 @@ helpers do
     dir = File.dirname(name)
     dir = File.dirname(request.path) if dir == "."
     name = "_#{File.basename(name)}"
-    p [locals]
     haml File.join(dir, name).to_sym, locals: locals
   end
 end
