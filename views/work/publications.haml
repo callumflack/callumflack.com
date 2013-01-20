@@ -1,6 +1,6 @@
 - @body_class = "work-project"
 
-= partial "menu", location: "Publications", following: "posters-for-vinyl-collectors"
+= partial "menu-b", location: "Publications", following: "posters-for-vinyl-collectors"
 
 %section.absolute
   .slides
@@ -22,18 +22,16 @@
     %img{:src => "/assets/images/lifelounge-for-fosters-1.jpg", :alt => "Lifelounge brand research book for Fosters"}
     %img{:src => "/assets/images/lifelounge-for-fosters-2.jpg", :alt => "Lifelounge brand research book for Fosters"}
     
-  %article.info
-    %p
-      Although I've not yet taken care of a publication for a length of time, I think it would bring together three of my strengths: letterform and image interplay, typographic systems and attention to detail. I recently completed the Citywide Annual Report for while working at my current employer,
-      %a{:href => "http://www.ellisjones.com.au/"} Ellis Jones.
-      I provided a cleaner, bolder graphic styling with a flexible grid system that allowed for better use of the page area and integration of images with typography. The typography system also allowed complete control for the meticulous Financial Section’s needs. Something that I actually really enjoy.
-    %p.links
-      %span.bullet •
-      %a{:href => "http://citywide.com.au/aboutus/annualreports.aspx"} Visit the Citywide site for the full report
-    %p.first The booklet for Omni's CD edition of the famed German library recording 'Orion 2000' was a chance for me to reconfigure the simple shape icons found on vintage synthesizers of the kind that were also used on the recording.
-    %p The last two images are examples from a branding research document for Fosters, produced freelancing at Lifelounge. I designed and produced the 215 page project, including picture research, from the initial word document.
-
-    %footer.inside-fixed
-      %h2 i design effective experiences for print & screen.
-      %p
-        %a{:href => "mailto:callumflack@gmail.com"} Start a conversation with me to discuss a project.
+    %article
+      .inset
+        %h1.title Fosters, Citywide & Omni
+        %p
+          I recently completed the Citywide Annual Report for while working at my current employer,
+          %a{:href => "http://www.ellisjones.com.au/"} Ellis Jones.
+          I provided a cleaner, bolder graphic styling with a flexible grid system that allowed for better use of the page area and integration of images with typography. 
+        %p.links
+          %span.bullet •
+          %a{:href => "http://citywide.com.au/aboutus/annualreports.aspx"} Visit the Citywide site for the full report
+        %p.first The booklet for Omni's CD edition of the famed German library recording, 'Orion 2000' by the Orchestra Peter Thomas, was a chance for me to reconfigure the simple shape icons found on vintage synthesizers of the kind that were also used on the recording.
+        %p The last two images are examples from a branding research document for Fosters, produced while freelancing at Lifelounge. I designed and produced the 215 page project, including picture research.
+      = partial "footer-work", following: "consumer-goods"

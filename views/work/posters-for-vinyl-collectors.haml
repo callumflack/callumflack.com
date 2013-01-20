@@ -1,6 +1,6 @@
 - @body_class = "work-project"
 
-= partial "menu", location: "Posters for Vinyl Collecting DJs", following: "logos"
+= partial "menu-b", location: "Posters for Vinyl Collecting DJs", following: "logos"
 
 %section.absolute
   .slides
@@ -11,12 +11,13 @@
     %img.portrait{:src => "/assets/images/weirdgear-05.jpg", :alt => "Weird Gear Brisbane, 2009"}
     %img.portrait{:src => "/assets/images/weirdgear-07.jpg", :alt => "Weird Gear Melbourne 2008"}    
     %img.portrait{:src => "/assets/images/watchyourstep.jpg", :alt => "Watch Your Step"}
-    
-    
-  %article.info
-    %p Vinyl hounds are my friends. Part of that friendship is doing posters for them when they're doing gigs. I get free reign to play with lettering, vinyl references, and I'm always pushing for something off-centre, unexpected, in simpler, cleaner forms. Includes posters for Weird Gear; a collective of like-minded DJs in Brisbane, Melbourne, Tokyo, London & New York, and for the legendary Watch Your Step night in Brisbane, Australia.
+        
+    %article
+      .inset
+        %h1.title Curiouser and curiouser.
+        %p 
+          Vinyl hounds are my friends. Part of that friendship is doing posters for them when they're doing gigs. I get free reign to play with lettering, vinyl references, and I'm always pushing for something off-centre, unexpected, in simpler, cleaner forms. Includes posters for Weird Gear; a collective of like-minded DJs in Brisbane, Melbourne, Tokyo, London & New York, and for the legendary 
+          %a{:href => "http://watchyourstepqld.blogspot.com.au"} Watch Your Step night 
+          in Brisbane, Australia.
 
-    %footer.inside-fixed     
-      %h2 i design effective experiences for print & screen.
-      %p
-        %a{:href => "mailto:callumflack@gmail.com"} Start a conversation with me to discuss a project.
+        = partial "footer-work", following: "consumer-goods"
