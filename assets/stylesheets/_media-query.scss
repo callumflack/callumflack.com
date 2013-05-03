@@ -1,0 +1,16 @@
+// http://css-tricks.com/media-queries-sass-3-2-and-codekit/
+// http://www.theint.ro/blogs/outro/4686992-responsive-design-with-sass
+// http://css-tricks.com/resolution-specific-stylesheets/ 
+// http://css-tricks.com/css-media-queries/
+
+// =respond-to($media) { 
+//   +respond-to(narrow)doesn't work?
+   
+@mixin breakpoint($point) {
+	@if $point == narrow {
+		@media screen and (max-width: 760px) { @content; }
+  }
+	@else if $point == tablet {
+		@media screen and (max-width: 1000px) { @content; }
+  }
+}

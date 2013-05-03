@@ -13,15 +13,19 @@ $background: #fefefe; //fdfdfa
   width: 100%;
   height: 5px;
   background-color: $text;
-  z-index: 1977;
+  z-index: 1978;
 }
 
-.container {
+.container { //[role="main"] this breaks, from Schwarz's responsive sass
   position: relative;
   width: $w-pic;
   margin: 0 auto;
   padding: 0 20px;
+//  @include breakpoint(narrow) { 
+//     width: 320px;
+//  }  
 }
+
 .absolute { position: absolute; }
 .fixed { position: fixed; }
 
@@ -50,7 +54,7 @@ $background: #fefefe; //fdfdfa
 nav {
   position: relative;
   padding-top: 60px; //5 added on for anchor
-  width: $w-pic; //100%
+//  width: $w-pic; //100%
   height: $h-nav;
   z-index: 1977;
   &:hover {
@@ -69,7 +73,7 @@ nav {
 
 .location {
   position: absolute;
-  width: $w-pic; //100%
+  width: 100%;
   text-align: center;
   a {
 //    @extend .rule;
@@ -77,6 +81,7 @@ nav {
     border: 0;
   }
 }
+
 .menu {
   @extend .location;
   @extend .opacity-0;
@@ -103,11 +108,11 @@ nav {
 
 
 
-//---------------------------------------------------------Text article width
+//------------------------------Text article width
 
 section {
   position: relative;
-  width: $w-pic;
+  width: 100%;
   margin: 0 auto 40px 0;
   &.absolute {
     top: 0;
@@ -115,7 +120,8 @@ section {
     width: $w-pic;
   }
 
-  img { //width: $w-pic; 
+  img { 
+    width: 100%;
   }
 
   article {
@@ -149,18 +155,4 @@ section {
     }
   }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
