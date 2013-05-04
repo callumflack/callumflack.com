@@ -54,7 +54,7 @@ $background: #fefefe; //fdfdfa
 nav {
   position: relative;
   padding-top: 60px; //5 added on for anchor
-//  width: $w-pic; //100%
+  width: $w-pic; //100%
   height: $h-nav;
   z-index: 1977;
   &:hover {
