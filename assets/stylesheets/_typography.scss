@@ -8,7 +8,6 @@
   text-decoration: none;
   letter-spacing: 0;
   text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
 }
 
 
@@ -40,6 +39,7 @@ h1 {
   font-size: 17px;
   text-align: center;
   letter-spacing: 1px;
+  -webkit-font-smoothing: antialiased;
   margin: 0 0 20px 0;
   &.title {
     font-family: 'arnhem_blonditalic';
