@@ -8,6 +8,12 @@ a.img, a.img:hover {
   border: 0;
 }
 
+//http://css-tricks.com/rundown-of-handling-flexible-media/
+img {
+  max-width: 100%;
+  /* just in case, to force correct aspet ratio */
+  height: auto !important;
+}
 
 .portrait-list {
   left: 50%;
