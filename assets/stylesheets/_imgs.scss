@@ -1,51 +1,49 @@
+/*
+----------------------------------------------------------------
+	I M G S
+---------------------------------------------------------------- */
+
+// reset so that measurements are contained within
+*, *:after, *:before { @include box-sizing(border-box); }
+
+
+
+
 $img-side1: 671px; //721
 $w-pic-p: 500px;
 $img-posts1: $img-side1 * 0.6875;
-$img-posts2: $w-pic * 0.6875;
+$img-posts2: $content-width * 0.6875;
 
 
-a.img, a.img:hover {
-  border: 0;
-}
+
 
 //http://css-tricks.com/rundown-of-handling-flexible-media/
 img {
   max-width: 100%;
-  /* just in case, to force correct aspet ratio */
   height: auto !important;
 }
 
-.portrait-list {
-  left: 50%;
-  width: $img-posts1;
-  height: $img-posts2;
-  margin-left: -$img-posts1 / 2;
-}
 .portrait { 
-  height: $w-pic * 0.708;
-  width: 481px;
+  height: $content-width * 0.708;
+  width: rem(481);
   left: 50%;
-  margin-left: ($w-pic - 481px) / 2;
+  margin-left: ($content-width - rem(481)) / 2;
 }
-.landscape-list {
-  width: $img-posts2;
-  height: $img-posts1;
-  left: 50%;
-  margin-left: -$img-posts2 / 2;
-}
+
 .landscape {
   left: 50%;
   top: 50%;
-  margin-left: -$w-pic / 2;
+  margin-left: -$content-width / 2;
 }
 
 .square {
   left: 50%;
-  margin-left: 140px;
+  margin-left: rem(140);
 }
 
-.portrait-1 {
-  left: 50%;
-  top: 50%;
-//  margin-left: 100px;
+.centered { 
+	position: absolute;
+	left: 25%; 
+	top: 50%;
+	height: auto!important;
 }

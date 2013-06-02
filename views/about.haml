@@ -1,0 +1,84 @@
+- @body_class = "profile"
+
+
+%nav
+	%span.left
+		%a{:href => "/home"} 
+			%h2 
+				%i.icon-arrow_left
+				Home
+	%span.right
+		%a{:href => "/work"}
+			%h2
+				Work
+				%i.icon-arrow_right
+	%span
+		%a{:href => "/about"} 
+			%h2 
+				Callum Flack · About
+	
+
+%article
+	%section.picture
+		%h1
+			%img{:src => "assets/images/callum-play.jpg", :alt => "Callum Flack"}
+
+	%section
+		%h1.title 
+			Callum Flack is a 
+			%br
+			designer who codes
+		%h3
+			Contact me by
+			%a{:href => "mailto:callumflack@gmail.com"} Email
+			or
+			%a{:href => "https://twitter.com/callumflack"} Twitter
+
+		%p I design communications for both page and screen. I plan, create and build assets that enhance value for business and culture. In industry terms, I'm a senior designer and art director with over twelve years experience.
+
+		%p I live in Melbourne, Australia with my wife and young daughter, where I also collect vinyl records of all kinds, read about software eating the world, and try to practise unwired boredom. Read more about my past work and what drives my sensibility:
+
+		%ul
+			%li
+				%a{:href => "http://www.linkedin.com/in/callumflack"} View my curriculum vitæ on Linkedin
+			%li	
+				%a{:href => "journal"} Read more of my approach in my Journal articles
+			%li	
+				%a{:href => "http://www.quora.com/Callum-Flack"} Read my Quora boards
+			%li	
+				%a{:href => "https://sites.google.com/site/coloronetear/"} Listen to a decade of collected soul 45 mixtapes
+
+		%h3 How I work
+
+		%p I work within the contradictory fields of emotion and logic, and aim to communicate a lot of information with ease and distinction. As such, I concentrate on the essence of Why, not the hang-up of What. The result is often defined by what’s not there as much as what is.
+
+		%p The work begins by defining purpose: I eliminate the extraneous and focus on essence and usefulness. Collaboration is a necessity throughout the work process, as requirements develop and opportunities unfold.
+
+		%p Craft is everything. Clear thinking and smart ideas may connect people; attentiveness in executing the ideas enables a seamless experience.
+
+		%p My goal is to create work that’s elegantly effective, for today and tomorrow.
+
+		%h3 About this site
+
+		%p
+			I designed and hand-coded this site using a Ruby on Rails app that my friend
+			%a{:href => "http://tuzinsky.com/"} Bobes Tuzinsky
+			created for me. I use Haml and Sass to write each page, I manage this code though Github and when I push new changes, a script updates Heroku, where I host my site. You can read more about the process
+			%a{:href => "/journal"} in my journal.
+
+		%p All words and pictures shown here are &copy; Callum Flack 2013. Collaborations are credited within the specific article. 
+
+
+%footer
+	%h2 Need help designing your brand?
+	%p
+		%a{:href => "mailto:callumflack@gmail.com"} Start a conversation with me to discuss a project.
+
+	%form{:action => "http://callumflackdesign.createsend.com/t/r/s/xjrurh/", :method => "post", :id => "subscribe"}
+		%input{:type => "text", :name => "cm-xjrurh-xjrurh", :id => "xjrurh-xjrurh", :placeholder => "Add your email to receive news"}
+		%input{:type => "submit", :value => "Subscribe"}
+
+		
+/ %article
+/   %header
+/ 		%a{:href => "/about"} About

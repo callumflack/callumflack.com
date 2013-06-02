@@ -1,71 +1,63 @@
-.opacity-0 {
-  zoom: 1;
-  filter: alpha(opacity=0);
-  opacity: 0.0;
+/*
+----------------------------------------------------------------
+	M I X I N S
+---------------------------------------------------------------- */
+
+/* BREAKPOINTS  ------------------------------------------------ */
+// http://css-tricks.com/media-queries-sass-3-2-and-codekit/
+// http://css-tricks.com/resolution-specific-stylesheets/ 
+// http://css-tricks.com/css-media-queries/
+
+@mixin breakpoint($point) {
+	@if $point == narrow {
+		@media screen and (max-width: 760px) { @content; }
+  }
+	@else if $point == tablet {
+		@media screen and (max-width: 1000px) { @content; }
+  }
 }
 
-.opacity-20 {
-  zoom: 1;
-  filter: alpha(opacity=10);
-  opacity: 0.1;
+
+
+/* PX TO REM  -------------------------------------------------- */
+
+@function rem($pxval, $base: 16) {
+	@return ($pxval / $base) * 1rem;
 }
 
-.opacity-70 {
-  zoom: 1;
-  filter: alpha(opacity=70);
-  opacity: 0.8;
-}
+// https://gist.github.com/ijy/1441967
+//@function em($target, $context: $base-font-size) {
+//   @if $target == 0 { @return 0 }
+//   @return $target / $context + 0em;
+//}
 
-.opacity-100 {
-  zoom: 1;
-  filter: alpha(opacity=100);
-  opacity: 1;
-}
 
-.fade-delay {
-  -webkit-transition: opacity 0.5s ease;
-  -moz-transition: opacity 0.5s ease;
-  -o-transition: opacity 0.5s ease;
-  transition: opacity 0.5s ease;
-}
 
-.fade-delay-2 {
-  -webkit-transition: opacity 1s ease;
-  -moz-transition: opacity 1s ease;
-  -o-transition: opacity 1s ease;
-  transition: opacity 1s ease;
-}
+/* BACKGROUND RGBA  -------------------------------------------- */
 
-.fade-details {
-  -webkit-transition: background 0.3s ease;
-  -moz-transition: background 0.3s ease;
-  -o-transition: background 0.3s ease;
-  transition: background 0.3s ease;
-}
+// Creates a cross-browser rgba background color.
+//@mixin background-rgba($red: 0, $green: 0, $blue: 0, $alpha: 0.5) {
+//    background-color: rgb($red, $green, $blue);
+//    background-color: rgba($red, $green, $blue, $alpha);
+//    @if ($legacy-support-for-ie) {
+//        @include has-layout;	
+//        background-color: transparent\9; $color: rgba($red, $green, $blue, $alpha);
+//        @include filter-gradient($color, $color);
+//    }
+//}
 
-@mixin section-rule {
-  border-top: 1px solid $text-20;
-}
+//@mixin nav-background-rgba($color-text, $alpha: 0.5);
 
-@mixin border-radius($values) {
-  -moz-border-radius: $values;
-  -webkit-border-radius: $values;
-  border-radius: $values;
-}
+
+
+
+/* PULL-IN STYLES  --------------------------------------------- */
 
 @mixin box-shadow($inset, $x, $y, $offset, $color) {
   -moz-box-shadow: $inset $x $y $offset $color;
   -o-box-shadow: $inset $x $y $offset $color;
   -webkit-box-shadow: $inset $x $y $offset $color;
   box-shadow: $inset $x $y $offset $color;
-}
-
-@mixin transition($value) {
-  -moz-transition: $value;
-  -o-transition: $value;
-  -ms-transition: $value;
-  -webkit-transition: $value;
-  transition: $value;
 }
 
 @mixin transparent($color, $alpha) {

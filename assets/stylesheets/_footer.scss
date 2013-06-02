@@ -1,23 +1,21 @@
+/*
+----------------------------------------------------------------
+	F O O T E R
+---------------------------------------------------------------- */
+
 footer {
-  width: $w-text;
-  @extend .text-padding;
-  margin: 0;
-  &.inside-fixed { padding: 0; }
-  h2 { 
-    margin: 60px 0 0 0;
-    a {
-      border: 0;
-      &.spaced { margin-left: 24px; }
-    }
-  }
-  h2::before {
-    content: ' ';
-    display: block;
-    width: 16px;
-    border-bottom: 8px solid $text;
-    margin: 0 auto 60px auto;
-  }
-  h2 a:hover {
-//    @extend .rule-link;
-  }
+	padding-top: rem(34); //50-14
+	
+	ul { 
+		margin: 0;
+		padding: rem(8) 0 0 0;
+		border-top: 1px solid #ddd;
+		text-align: center; 
+		list-style-type: none;
+	}
+	
+	li { @include inline-block; }
+	li a, li span { @extend %headlineset; @extend %headline-small; color: #888; }
+	li span { margin: 0 rem(8); }
+	
 }

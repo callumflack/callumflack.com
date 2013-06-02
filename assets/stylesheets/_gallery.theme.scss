@@ -6,19 +6,46 @@
 
 .gallery {
 	position: relative;
-//   padding-top: 200px;
 	
-  .item { height: 400px; overflow: hidden; text-align: center; background: rgba(0,0,0,.2); }
-	.controls { position: absolute; bottom: 0; width: 100%; text-align: center; }
+  .item { 
+		height: rem(600); 
+		overflow: hidden; 
+		text-align: center; 
+		background: rgba(0,0,0,.2);
+		background-repeat: no-repeat;
+		background-position: center center;
+		@include background-size(cover);
+		
+		img { width: 100%; }
+		
+		h1  { 
+			position: absolute;
+			top: 25%;
+			width: 100%;
+		}
+	}
+	
+	.one   { background-image: url("/assets/images/roundtable-logo.jpg"); }
+	.two   { background-image: url("/assets/images/roundtable-label-birds.jpg"); }
+	.three { background-image: url("/assets/images/roundtable-labels.jpg"); }
+
+	.controls { 
+		position: absolute; 
+		bottom: 0; 
+		width: 100%; 
+		text-align: center; }
 
 	.control-button {
-		display: inline-block; margin: 0 .02em;
+		display: inline-block; 
+		margin: 0 .02em;
 		font-size: 3em; 
+		border: 0;
 		
 		@extend %inactive-button;
 		
-		text-align: center; text-decoration: none;
-		transition: color .1s;
+		text-align: center; 
+		text-decoration: none;
+		@include transition(color .1s);
 
 		&:hover { @extend %active-button; }
 	}

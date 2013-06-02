@@ -1,15 +1,36 @@
 - @body_class = "home"
 
 %nav
-  %h1
-    .location
-      %a{:href => "/home"} 
-        Callum Flack is a Graphic Designer
-    .menu
-      %a{:href => "/work"} Work
-      %a.spaced{:href => "/journal"} Journal
-      %a.spaced{:href => "/profile"} Profile
+	%a.selected{:href => "/home"} 
+		%h2 Callum Flack is a designer who codes
 
-%section
-  %a{:href => "/work"}
-    %img{:src => "assets/images/hi-poster.jpg", :alt => "Callum Flack says hi"}
+%article.gallery-container
+
+	.gallery.items-3.autoplay
+		.control-operator#item-1
+		.control-operator#item-2
+		.control-operator#item-3
+
+		%figure.item.one
+			%h1 1
+
+		%figure.item.two
+			%h1 2
+
+		%figure.item.three
+			%h1 3
+	
+		.controls
+			%a.control-button{:href => "#item-1"}•
+			%a.control-button{:href => "#item-2"}•
+			%a.control-button{:href => "#item-3"}•
+
+%article.grey
+	%section
+		%h1.location 
+			%a{:href => "/about"} About
+		%h1 Dusty yellows my friend
+
+		%p I design communications for both page and screen. I plan, create and build assets that enhance value for business and culture. In industry terms, I'm a senior designer and art director with over twelve years experience.
+		
+		= partial "footer"

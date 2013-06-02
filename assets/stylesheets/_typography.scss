@@ -1,134 +1,201 @@
-.typeset {
+/*
+----------------------------------------------------------------
+	T Y P O G R A P H Y
+---------------------------------------------------------------- */
+
+/* VARIABLES --------------------------------------------------- */
+
+$color-text:    #222;
+$color-text-50: #999;
+$color-text-20: #ccc;
+$color-link:    rgb(0,172,255); //d00 //rgb IE?
+$color-back:    #fefefe; //fdfdfa
+
+$base-font-size:   16px;
+$base-line-height: 24px;
+
+$font-size:        20px;
+$line-height:      28px; //1.5
+
+$font-reg:   'arnhem_blondregular'; //'theinhardt_regular';
+$font-med:   'theinhardt_lightbold';
+$font-bold:  'ars_maquettetrbold'; //'theinhardt_bold';
+$font-heavy: 'ars_maquettetrblack'; //'theinhardt_heavyregular';
+
+
+
+
+/* FONT SIZE IN PX & REM --------------------------------------- */
+// from inuit.css/generic/_mixins
+
+@mixin font-size($font-size, $line-height:false) {
+	font-size:$font-size;
+	font-size:($font-size / $base-font-size)*1rem;
+	@if $line-height == true {
+	    line-height:ceil($font-size / $base-line-height) * ($base-line-height / $font-size);
+	}
+}
+
+
+
+/* DEFINE TEXT TYPE -------------------------------------------- */
+
+%typeset {
+	font-family: $font-reg;
+	font-size: $font-size;
+	font-size: ($font-size / $base-font-size) * 1rem;
+	line-height: $line-height;
   font-weight: normal;
   font-style: normal;
-  font-size: 20px;
-  line-height: 150%;
   text-align: left;
   text-transform: none;
   text-decoration: none;
   letter-spacing: 0;
   text-rendering: optimizeLegibility;
+	-webkit-font-smoothing: antialiased;
+  color: $color-text;
 }
 
+body { @extend %typeset; }
 
-//--------------------------------------------- a & p
+
+
+
+/* A & P ------------------------------------------------------- */
+
+p, ul { margin: 0 0 rem(14) 0; }
+
+ul { padding-left: rem(80); }
+
+%link-rule { 
+  border-bottom: 1px dotted $color-text-50;
+  &:hover { border-color: $color-link; }
+}
+
 a {
-  color: $text;
+  color: $color-text;
   text-decoration: none;
-  @extend .rule-link;
-  &:hover { 
-    text-decoration: none;
-    color: $link;
-  }
+  @extend %link-rule;
+
+  &:hover, &:active { 
+		color: $color-link;
+		@include transition(color 0.5s ease);
+	}
 }
 
-p > a, p > a:hover, a.project p { font-family: 'arnhem_blonditalic'; }
-p { margin: 0; } //bottom 18px
-p + p { text-indent: 3rem; }
-p.links { 
-  text-indent: 0;
-  margin: 18px 0 18px 3rem;
-}
-p.first { text-indent: 0; }
 
 
-//----------------------------menu & titles
-h1 {
-  @extend .typeset;
-  font-family: 'arnhem_bold_scregular';
-  font-size: 17px;
+/* HEADLINE ---------------------------------------------------- */
+
+%headlineset {
+	font-weight: normal;
+	line-height: 1;
   text-align: center;
-  letter-spacing: 1px;
-  -webkit-font-smoothing: antialiased;
-  margin: 0 0 20px 0;
-  &.title {
-    font-family: 'arnhem_blonditalic';
-    font-size: 38px;
-    letter-spacing: 0;
-    text-transform: none;
-    padding-bottom: 30px;
-//    margin-bottom: 56px;
-    border-color: transparent;
-    &:hover {
-      border-color: transparent;
-    }
-  }
-  &.subtitle {
-    font-family: 'arnhem_blonditalic';
-    font-size: 27px;
-    letter-spacing: 0;
-    text-transform: none;
-    margin: 0 0 10px 0  ;
-  }
+  text-transform: uppercase;
 }
+
+%headline-small {
+	@include font-size(13px);
+	letter-spacing: 1px;	
+}
+
+//@mixin type-nav { 
+//	color: white; //IE
+//	color: rgba(255, 255, 255, .8); 
+//}
+
+h1 {
+  font-family: $font-bold;
+  @include font-size(28px);
+	@extend %headlineset;
+  letter-spacing: -1px;
+  margin: 0 0 rem(50) 0;
+}
+
+				h1.title {
+				  font-family: $font-bold;
+				  @include font-size(40px);
+
+					&:hover { border-color: transparent; }
+				}
+	
+				h1.location {
+					font-family: $font-med;
+					@extend %headline-small;
+					padding-top: rem(30);
+					margin-bottom: rem(30);
+				}
+
+				h1.location a {
+					@include inline-block;
+					padding: rem(7) rem(7) rem(5) rem(7);
+					@include border-radius(2px);
+					background-color: $color-text;
+					color: $color-back;
+
+					&:hover { 
+						background-color: $color-link; 
+						@include transition(background-color 0.3s ease);
+					}
+				}
+
 
 h2 {
-  @extend .typeset;
-  font-family: 'arnhem_blackregular';
-  text-align: center;
-  font-size: 17px;
-  letter-spacing: 1px;
-  text-transform: uppercase;
-  margin: 60px 0 15px 0;
-  &.first {
-    margin-top: 20px;
-  }
-//    @extend .rule-link;
-//  a { @extend h2 }
+	font-family: $font-heavy;
+	@extend %headlineset;
+	@extend %headline-small;
+	margin: 0 0 rem(36) 0;
+}
+
+h3 {
+  font-family: $font-bold;
+	font-size: $font-size;
+	@extend %headlineset;
+	text-transform: none;
+  margin: rem(70) 0 rem(42) 0;
+
+  &.first { margin-top: rem(28); }
 }
 
 
 
-//----------------------------em dash
-span {
-  @extend .typeset;
-  font-family: 'arnhem_blackregular';
-  font-size: 17px;
-  text-align: center;
-  text-transform: uppercase;
-  text-decoration: none;
-  letter-spacing: 1px;
-  &.em {
-    font-family: 'arnhem_normalregular';
-    letter-spacing: -2px;
-    padding: 0;
-    margin: 0 6px 0 3px;
-    background: none;
-  }
-  &.bullet {
-//    margin-left: 40px;
-    margin-right: 8px;
-    &:hover { color: $link; }
-  }
-  &.read-more {
-    font-family: 'arnhem_normalregular';
-  }
-  &.info-hidden, &.info-visible {
-    font-family: 'arnhem_bold_scregular';
-    font-size: 17px;
-    text-transform: none;
-  }
-}
+/* EM DASH ----------------------------------------------------- */
+
+//span {
+//  font-family: $font-reg;
+//  text-align: center;
+//  text-transform: uppercase;
+//  text-decoration: none;
+//  letter-spacing: 1px;
+//  &.em {
+//    font-family: $font-reg;
+//    letter-spacing: -2px;
+//    padding: 0;
+//    margin: 0 6px 0 3px;
+//    background: none;
+//  }
+//  &.bullet {
+//    margin-right: 8px;
+//    &:hover { color: $color-link; }
+//  }	
+//  &.read-more { font-family: $font-heavy; }
+//
+//}
 
 
 
-footer {
-  a, p, span, h1, h2 { text-align: center; }
-  a:hover { color: $link; }
-}
+/* FORMS ------------------------------------------------------- */
 
 button, input, select, textarea {
-  @extend .typeset;
-  font-family: 'arnhem_blondregular';
+  @extend %typeset;
+  font-family: $font-bold;
 }
 
 input[type="submit"] {
-  @extend .typeset;
-  font-family: 'arnhem_blackregular';
-  font-size: 16px;
-  text-align: center;
-  text-transform: uppercase;
-  text-decoration: none;
+	font-family: $font-bold;
+  @include font-size(16px);
+  @extend %typeset;
+	@extend %headlineset;
   letter-spacing: 1px;
 }
 

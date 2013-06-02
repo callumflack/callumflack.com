@@ -1,158 +1,87 @@
-$w-text: 600px;
-$w-pic: 960px;
-$h-nav: 90px;
-$text: #222;
-$text-50: #999;
-$text-20: #ccc;
-$link: #d00;
-$background: #fefefe; //fdfdfa
+/*
+----------------------------------------------------------------
+	L A Y O U T
+---------------------------------------------------------------- */
 
-.anchor { 
-  position: fixed;
-  top: 0;
+/* VARIABLES  -------------------------------------------------- */
+
+// reset so that all measurements are contained within parent
+*, *:after, *:before { @include box-sizing(border-box); }
+
+// max-width of content
+$content-width: rem(960);
+
+
+
+
+/* NAV --------------------------------------------------------- */
+
+nav { 
   width: 100%;
-  height: 5px;
-  background-color: $text;
-  z-index: 1978;
+  height: rem(50);
+	text-align: center; 
+  background-color: $color-text; //IE
+  background-color: rgba(black,0.82);
+
+		.left  { float: left; }
+		.right { float: right; }
+	
+	//&:hover { background-color: rgba(black,0.9); }
 }
 
-.container { //[role="main"] this breaks, from Schwarz's responsive sass
+nav a { 
+	@include inline-block;
+	padding: 0 rem(28);
+	height: rem(78);
+	color: $color-back; 
+}
+
+nav h2 { 
+	margin: 0; //reset h2 margins
+	padding-top: rem(32); //(78-13)/2
+	font-family: $font-med;
+}
+
+
+
+/* SCAFFOLDING ------------------------------------------------- */
+
+article {
   position: relative;
-  width: $w-pic;
-  margin: 0 auto;
-  padding: 0 20px;
+  width: 100%;
+	padding: 0 0 rem(80);
+	
+	&.gallery-container { padding-bottom: 0; }
+	
+	&.grey { background-color: rgb(247,247,242); }
+	
 //  @include breakpoint(narrow) { 
 //     width: 320px;
 //  }  
 }
 
-.absolute { position: absolute; }
-.fixed { position: fixed; }
 
-.text-padding { padding: 0 ($w-pic - $w-text) / 2; }
+		section {
+		  position: relative;
+		  max-width: $content-width - rem(300);
+			margin: 0 auto;
+		}
 
-.rule { 
-  border-bottom: 1px solid $text; 
-  padding-bottom: 1px;
-}
-.rule-invisible { 
-  @extend .rule;
-  border-color: transparent;
-}
-.rule-h {
-  @extend .rule;
-  border-color: $link;
-}
-.rule-link { 
-  border-bottom: 1px dotted $text-50;
-  &:hover { border-color: $link; }
-}
+		section.picture { 
+			position: relative;
+			max-width: $content-width;
+			height: auto!important;
+			margin: rem(30) auto rem(50) auto;
+		}
 
-
-//---------------------------------------------------------Nav
-
-nav {
-  position: relative;
-  padding-top: 60px; //5 added on for anchor
-  width: $w-pic; //100%
-  height: $h-nav;
-  z-index: 1977;
-  &:hover {
-//    background-color: $text;
-//    height: $h-nav*4;
-//    opacity: .9;
-    .location {
-      @extend .opacity-0;
-    }
-    .menu {
-//      @extend .fade-delay-2;
-      @extend .opacity-100;
-    }
-  }
-}
-
-.location {
-  position: absolute;
-  width: 100%;
-  text-align: center;
-  a {
-//    @extend .rule;
-    color: $text;
-    border: 0;
-  }
-}
-
-.menu {
-  @extend .location;
-  @extend .opacity-0;
-  a { 
-    color: $text-50; //white
-    margin-left: 0;
-//    @extend .rule-invisible;
-    text-decoration: none;
-    &.selected { 
-//      @extend .rule;
-    }
-    &:hover { 
-      color: $text;
-      border-color: $text;
-    }
-  }
-}
-
-.location, .menu {
-  a.selected { color: $text; }
-  a.spaced { margin-left: 24px; }
-}
+		section.picture h1 { margin: 0; }
 
 
 
 
-//------------------------------Text article width
-
-section {
-  position: relative;
-  width: 100%;
-  margin: 0 auto 40px 0;
-  &.absolute {
-    top: 0;
-    padding-top: $h-nav + 55px;
-    width: $w-pic;
-  }
-
-  img { 
-//    width: 100%;
-  }
-
-  article {
-    width: $w-text;
-    @extend .text-padding;
-    h1 {
-//      @extend .fade-delay;
-      a {
-        padding: 3px 0 49px 0;
-      }
-      &.first {
-        text-decoration: underline;
-      }
-    }
-  }
-  &.first {
-    padding-top: 120px;
-  }
-}
 
 
-//----------------------info w/i slideshow
-.slides {
-  .article {
-    width: $w-pic;
-    height: 680px;
-    .inset {
-      width: $w-text;
-      padding: 180px;
-//      height: 680px;
-    }
-  }
-}
+
+
+
 

@@ -1,34 +1,35 @@
 @import "normalize";
+@import "compass";
+@import "variables";
 @import "mixins";
-@import "media-query";
+
 @import "fontface";
+@import "typography";
+@import "mfglabs_iconset";
+@import "links";
+@import "selection";
+
 @import "layout";
 @import "footer";
-@import "typography";
-//@import "gallery.build";
-//@import "gallery.theme";
+@import "gallery.build";
+@import "gallery.theme";
 @import "imgs";
-@import "selection";
 @import "subscribe";
-@import "slideshow";
+//@import "slideshow";
+
 @import "pg-journal";
 @import "pg-profile";
 @import "pg-work";
 @import "pg-home";
 
 html, body {
-  width: 100%;
-  //height: 100%;
-  margin: 0;
+  overflow-y: scroll;
+  min-height: 100%;
   padding: 0;
 }
 
 body { 
-  @extend .typeset;
-  font-family: 'arnhem_blondregular';
-  color: $text;
-  background-color: $background;
+	position: relative;
+  background-color: $color-back;
   -webkit-tap-highlight-color: rgba(255,0,0, 0.62);
-  padding: 0;
-  margin: 0 0 240px 0;
 }
