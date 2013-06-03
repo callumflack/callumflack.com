@@ -5,10 +5,10 @@
 
 /* VARIABLES --------------------------------------------------- */
 
-$color-text:    #222;
-$color-text-50: #999;
+$color-text:    #111;
+$color-text-50: #777;
 $color-text-20: #ccc;
-$color-link:    rgb(0,172,255); //d00 //rgb IE?
+$color-link:    rgb(0,170,255); //d00 //rgb IE?
 $color-back:    #fefefe; //fdfdfa
 
 $base-font-size:   16px;
@@ -18,9 +18,9 @@ $font-size:        20px;
 $line-height:      28px; //1.5
 
 $font-reg:   'arnhem_blondregular'; //'theinhardt_regular';
-$font-med:   'theinhardt_lightbold';
-$font-bold:  'ars_maquettetrbold'; //'theinhardt_bold';
-$font-heavy: 'ars_maquettetrblack'; //'theinhardt_heavyregular';
+$font-med:   'arnhem_normalitalic'; //'arnhem_normalitalic' arnhem_bolditalic
+$font-bold:  'neuzeit_gro_t_otbold'; //'ars_maquettetrbold'; //'theinhardt_bold';
+$font-heavy: 'neuzeit_gro_t_ot_blackregular'; //'ars_maquettetrblack'; //'theinhardt_heavyregular';
 
 
 
@@ -50,7 +50,7 @@ $font-heavy: 'ars_maquettetrblack'; //'theinhardt_heavyregular';
   text-align: left;
   text-transform: none;
   text-decoration: none;
-  letter-spacing: 0;
+  letter-spacing: normal;
   text-rendering: optimizeLegibility;
 	-webkit-font-smoothing: antialiased;
   color: $color-text;
@@ -65,21 +65,21 @@ body { @extend %typeset; }
 
 p, ul { margin: 0 0 rem(14) 0; }
 
-ul { padding-left: rem(80); }
+ul { padding-left: rem(40); }
 
 %link-rule { 
-  border-bottom: 1px dotted $color-text-50;
-  &:hover { border-color: $color-link; }
+  border-bottom: 2px solid $color-link;
+  //&:hover { border-color: $color-link; }
 }
 
 a {
-  color: $color-text;
+  color: $color-link;
   text-decoration: none;
-  @extend %link-rule;
 
   &:hover, &:active { 
 		color: $color-link;
-		@include transition(color 0.5s ease);
+		@extend %link-rule;
+		//@include transition(color 0.5s ease);
 	}
 }
 
@@ -92,44 +92,42 @@ a {
 	line-height: 1;
   text-align: center;
   text-transform: uppercase;
+	-webkit-font-smoothing: antialiased;
 }
 
 %headline-small {
-	@include font-size(13px);
-	letter-spacing: 1px;	
+	@include font-size(14px);
+	letter-spacing: 0.05rem;
 }
 
-//@mixin type-nav { 
-//	color: white; //IE
-//	color: rgba(255, 255, 255, .8); 
-//}
-
 h1 {
-  font-family: $font-bold;
-  @include font-size(28px);
+  font-family: $font-heavy;
+  @include font-size(35px);
 	@extend %headlineset;
-  letter-spacing: -1px;
+  //letter-spacing: -0.1rem;
   margin: 0 0 rem(50) 0;
 }
 
 				h1.title {
-				  font-family: $font-bold;
+				  font-family: $font-heavy;
 				  @include font-size(40px);
 
 					&:hover { border-color: transparent; }
 				}
 	
 				h1.location {
-					font-family: $font-med;
+					//font-family: $font-med;
 					@extend %headline-small;
 					padding-top: rem(30);
 					margin-bottom: rem(30);
+					//a { color: $color-text; }
 				}
 
 				h1.location a {
 					@include inline-block;
-					padding: rem(7) rem(7) rem(5) rem(7);
+					padding: rem(7) rem(10);
 					@include border-radius(2px);
+					border: 0;
 					background-color: $color-text;
 					color: $color-back;
 
@@ -141,46 +139,21 @@ h1 {
 
 
 h2 {
-	font-family: $font-heavy;
+	font-family: $font-bold;
 	@extend %headlineset;
 	@extend %headline-small;
 	margin: 0 0 rem(36) 0;
 }
 
 h3 {
-  font-family: $font-bold;
-	font-size: $font-size;
+  font-family: $font-med;
 	@extend %headlineset;
+	@include font-size(27px);
 	text-transform: none;
-  margin: rem(70) 0 rem(42) 0;
+  margin: rem(70) 0 rem(30) 0;
 
   &.first { margin-top: rem(28); }
 }
-
-
-
-/* EM DASH ----------------------------------------------------- */
-
-//span {
-//  font-family: $font-reg;
-//  text-align: center;
-//  text-transform: uppercase;
-//  text-decoration: none;
-//  letter-spacing: 1px;
-//  &.em {
-//    font-family: $font-reg;
-//    letter-spacing: -2px;
-//    padding: 0;
-//    margin: 0 6px 0 3px;
-//    background: none;
-//  }
-//  &.bullet {
-//    margin-right: 8px;
-//    &:hover { color: $color-link; }
-//  }	
-//  &.read-more { font-family: $font-heavy; }
-//
-//}
 
 
 

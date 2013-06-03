@@ -17,11 +17,12 @@ $content-width: rem(960);
 /* NAV --------------------------------------------------------- */
 
 nav { 
+	position: absolute;
+	z-index: 1977;
   width: 100%;
   height: rem(50);
 	text-align: center; 
-  background-color: $color-text; //IE
-  background-color: rgba(black,0.82);
+  border-bottom: 1px solid #e5e5e5;
 
 		.left  { float: left; }
 		.right { float: right; }
@@ -31,15 +32,32 @@ nav {
 
 nav a { 
 	@include inline-block;
-	padding: 0 rem(28);
-	height: rem(78);
-	color: $color-back; 
+	padding: 0;
+	height: rem(50);
+	color: $color-text;
+	
+	&.left  { padding-left:  rem(20); }
+	&.right { padding-right: rem(20); }
+	
+	&:hover { border-bottom: 3px solid $color-text; }
+	
+	//&:hover { border: 0; }
+	//h2:hover { border-bottom: 3px solid $color-text; }
 }
+
+nav.reversed {
+	border-color: $color-back;
+	a { color: $color-back; }
+	a:hover { border-color: $color-back; }
+	
+	//h2:hover { border-color: $color-back; }
+}
+
+//.reversed { color: $color-back; border-color: $color-back; }
 
 nav h2 { 
 	margin: 0; //reset h2 margins
-	padding-top: rem(32); //(78-13)/2
-	font-family: $font-med;
+	padding-top: rem(18); //(50-13)/2
 }
 
 
@@ -49,7 +67,7 @@ nav h2 {
 article {
   position: relative;
   width: 100%;
-	padding: 0 0 rem(80);
+	padding: 0 0 rem(120);
 	
 	&.gallery-container { padding-bottom: 0; }
 	
@@ -66,7 +84,12 @@ article {
 		  max-width: $content-width - rem(300);
 			margin: 0 auto;
 		}
-
+		
+		section.reversed h1 { 
+			color: $color-back; 
+			border-color: $color-back; 
+		}
+		
 		section.picture { 
 			position: relative;
 			max-width: $content-width;
@@ -76,6 +99,20 @@ article {
 
 		section.picture h1 { margin: 0; }
 
+		section.cover { 
+			position: relative;
+			max-width: 100%;
+			height: rem(600);
+			background: rgba(0,0,0,.2);
+			background-repeat: no-repeat;
+			background-position: center center;
+			@include background-size(cover);
+			margin: 0 auto rem(50) auto;
+			
+			h1 {
+				padding-top: rem(80);
+			}
+		}
 
 
 

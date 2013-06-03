@@ -4,18 +4,23 @@
 ---------------------------------------------------------------- */
 
 footer {
-	padding-top: rem(34); //50-14
+	padding-top: rem(54); //70-14
 	
 	ul { 
 		margin: 0;
-		padding: rem(8) 0 0 0;
-		border-top: 1px solid #ddd;
+		padding: rem(17) 0 0 0;
+		border-top: 1px solid $color-text-50; //#e5e5e5
+		@extend h2;
 		text-align: center; 
 		list-style-type: none;
 	}
 	
 	li { @include inline-block; }
-	li a, li span { @extend %headlineset; @extend %headline-small; color: #888; }
+	li a, li span { 
+		//@extend %headlineset; 
+		//@extend %headline-small; 
+		color: $color-text;
+	}
 	li span { margin: 0 rem(8); }
 	
 }
