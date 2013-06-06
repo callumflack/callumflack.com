@@ -1,14 +1,12 @@
 @import "gallery/variables";
 
-/*
-	Theme controls how everything looks in Gallery CSS.
-*/
+/* Theme controls how everything looks in Gallery CSS */
 
 .gallery {
 	position: relative;
 	
-  .item { 
-		height: rem(600); 
+    .item { 
+        height: rem(600); 
 		overflow: hidden; 
 		text-align: center; 
 		background: rgba(0,0,0,.2);
@@ -25,11 +23,7 @@
 		}
 	}
 	
-	.one   { background-image: url("/assets/images/roundtable-logo.jpg"); }
-	.two   { background-image: url("/assets/images/roundtable-label-birds.jpg"); }
-	.three { background-image: url("/assets/images/roundtable-labels.jpg"); }
-
-	.controls { 
+    .controls { 
 		position: absolute; 
 		bottom: 0; 
 		width: 100%; 
@@ -49,4 +43,14 @@
 
 		&:hover { @extend %active-button; }
 	}
+}
+
+
+
+/* Page carousel images */
+
+.home {
+	.one   { background-image: url("/assets/images/roundtable-logo.jpg"); }
+	.two   { background-image: url("/assets/images/roundtable-label-birds.jpg"); }
+	.three { background-image: url("/assets/images/roundtable-labels.jpg"); }
 }

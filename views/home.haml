@@ -1,36 +1,72 @@
 - @body_class = "home"
 
-%nav
-	%a.selected{:href => "/home"} 
-		%h2 Callum Flack is a designer who codes
+%nav.color-negative
+    %a.selected{:href => "/home"} 
+        %h1 Callum Flack is a designer who codes
 
-%article.gallery-container
 
-	.gallery.items-3.autoplay
-		.control-operator#item-1
-		.control-operator#item-2
-		.control-operator#item-3
+%article
+    %section.gallery-container
 
-		%figure.item.one
-			%h1 1
+        .gallery.items-3.autoplay
+            .control-operator#item-1
+            .control-operator#item-2
+            .control-operator#item-3
 
-		%figure.item.two
-			%h1 2
+            %figure.item.one
+                %h1 1
 
-		%figure.item.three
-			%h1 3
-	
-		.controls
-			%a.control-button{:href => "#item-1"}•
-			%a.control-button{:href => "#item-2"}•
-			%a.control-button{:href => "#item-3"}•
+            %figure.item.two
+                %h1 2
 
-%article.grey
-	%section
-		%h1.location 
-			%a{:href => "/about"} About
-		%h1 Dusty yellows my friend
+            %figure.item.three
+                %h1 3
+    
+            .controls
+                %a.control-button{:href => "#item-1"}•
+                %a.control-button{:href => "#item-2"}•
+                %a.control-button{:href => "#item-3"}•
 
-		%p I design communications for both page and screen. I plan, create and build assets that enhance value for business and culture. In industry terms, I'm a senior designer and art director with over twelve years experience.
-		
-		= partial "footer"
+
+    %section
+        .text-column
+            %h2.location 
+                %a{:href => "/work"} Work
+            %h1 
+                %a{:href => "/work"} See the work. It speaks for itself.
+            %p
+                I design communications for both page and screen. 
+                I plan, create and build assets that enhance value for 
+                business and culture. In industry terms, I'm a senior 
+                designer and art director for over twelve years.
+                %a.read-more{:href => "/blog/a-paraphrased-sterling-article"} Read more
+
+
+    %section.grey
+        .text-column
+            %h2.location 
+                %a{:href => "/blog"} Blog
+            %h1 
+                %a{:href => "/blog/a-paraphrased-sterling-article"} Why does Jon Hamm also direct Mad Men?
+            %p
+                I design communications for both page and screen. 
+                I plan, create and build assets that enhance value for 
+                business and culture. In industry terms, I'm a senior 
+                designer and art director for over twelve years.
+                %a.read-more{:href => "/blog/a-paraphrased-sterling-article"} Read more
+
+
+    %section.dirty-yellow
+        .text-column
+            %h2.location 
+                %a{:href => "/about"} About
+            %h1 
+                %a{:href => "/about"} Dusty yellows my friend
+            %p
+                I design communications for both page and screen. 
+                I plan, create and build assets that enhance value for 
+                business and culture. In industry terms, I'm a senior 
+                designer and art director for over twelve years.
+                %a.read-more{:href => "/about"} Read more
+
+            = partial "footer"

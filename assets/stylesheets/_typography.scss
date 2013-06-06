@@ -8,7 +8,8 @@
 $color-text:    #111;
 $color-text-50: #777;
 $color-text-20: #ccc;
-$color-link:    rgb(0,170,255); //d00 //rgb IE?
+$color-link:    #00b4f1; //rgb(0,170,255); //d00 //rgb IE?
+$color-rule:    #e5e5e5;
 $color-back:    #fefefe; //fdfdfa
 
 $base-font-size:   16px;
@@ -17,16 +18,18 @@ $base-line-height: 24px;
 $font-size:        20px;
 $line-height:      28px; //1.5
 
-$font-reg:   'arnhem_blondregular'; //'theinhardt_regular';
+$font-reg:   'arnhem_blondregular';
+$font-emph:  'arnhem_blonditalic';
+$font-date:  'arnhem_normalitalic';
 $font-med:   'arnhem_normalitalic'; //'arnhem_normalitalic' arnhem_bolditalic
-$font-bold:  'neuzeit_gro_t_otbold'; //'ars_maquettetrbold'; //'theinhardt_bold';
-$font-heavy: 'neuzeit_gro_t_ot_blackregular'; //'ars_maquettetrblack'; //'theinhardt_heavyregular';
+$font-bold:  'neuzeit_gro_t_otbold';
+$font-heavy: 'neuzeit_gro_t_ot_blackregular';
 
 
 
 
 /* FONT SIZE IN PX & REM --------------------------------------- */
-// from inuit.css/generic/_mixins
+/* from inuit.css/generic/_mixins */
 
 @mixin font-size($font-size, $line-height:false) {
 	font-size:$font-size;
@@ -45,15 +48,15 @@ $font-heavy: 'neuzeit_gro_t_ot_blackregular'; //'ars_maquettetrblack'; //'theinh
 	font-size: $font-size;
 	font-size: ($font-size / $base-font-size) * 1rem;
 	line-height: $line-height;
-  font-weight: normal;
-  font-style: normal;
-  text-align: left;
-  text-transform: none;
-  text-decoration: none;
-  letter-spacing: normal;
-  text-rendering: optimizeLegibility;
+    font-weight: normal;
+    font-style: normal;
+    text-align: left;
+    text-transform: none;
+    text-decoration: none;
+    letter-spacing: normal;
+    text-rendering: optimizeLegibility;
 	-webkit-font-smoothing: antialiased;
-  color: $color-text;
+    color: $color-text;
 }
 
 body { @extend %typeset; }
@@ -61,37 +64,59 @@ body { @extend %typeset; }
 
 
 
-/* A & P ------------------------------------------------------- */
+/* P, A & UL --------------------------------------------------- */
 
 p, ul { margin: 0 0 rem(14) 0; }
 
 ul { padding-left: rem(40); }
 
-%link-rule { 
-  border-bottom: 2px solid $color-link;
-  //&:hover { border-color: $color-link; }
+p.date {
+	font-family: $font-date;
+	@include font-size(18px);
+	text-align: center;
+	margin-bottom: rem(28);
+	//&:hover { color: $color-text; }
 }
+
+/* Useful placeholders to pull in */
+%emphasis        { font-family: $font-emph; }
+%link-rule-hover { border-bottom: 1px solid $color-link; }
+%link-rule       { border-bottom: 1px solid $color-text; }
+%reverse-color   { color: $color-back; border-color: $color-back; }
 
 a {
-  color: $color-link;
-  text-decoration: none;
+    color: $color-text;
+    text-decoration: none;
+    @extend %link-rule;
 
-  &:hover, &:active { 
-		color: $color-link;
-		@extend %link-rule;
-		//@include transition(color 0.5s ease);
-	}
+    &:hover, &:active {
+        color: $color-link;
+        @extend %link-rule-hover;
+    }
+}
+
+a.read-more {
+	@extend %headlineset;
+	@include font-size(16px);
+	color: $color-text;
+	letter-spacing: 0.1rem;
+	@extend %link-rule;
+
+	&:hover {
+        color: $color-link;
+        border-color: $color-link;
+    }
 }
 
 
 
-/* HEADLINE ---------------------------------------------------- */
+/* HEADLINE PLACEHOLDERS --------------------------------------- */
 
 %headlineset {
 	font-weight: normal;
 	line-height: 1;
-  text-align: center;
-  text-transform: uppercase;
+    text-align: center;
+    text-transform: uppercase;
 	-webkit-font-smoothing: antialiased;
 }
 
@@ -100,43 +125,55 @@ a {
 	letter-spacing: 0.05rem;
 }
 
+@for $index from 1 through 3 { h#{$index} a:hover { border-width: 3px; } }
+
+
+
+
+/* H1 ---------------------------------------------------------- */
+
 h1 {
-  font-family: $font-heavy;
-  @include font-size(35px);
-	@extend %headlineset;
-  //letter-spacing: -0.1rem;
-  margin: 0 0 rem(50) 0;
+    font-family: $font-bold;
+    @include font-size(20px);
+    @extend %headlineset;
+    //letter-spacing: -0.1rem;
+    margin: 0 0 rem(5) 0;
+    a {
+        color: $color-text;
+        border: 0;
+        &:hover {
+    		color: $color-link;
+    		border-color: $color-link;
+        }
+    }
 }
 
-				h1.title {
-				  font-family: $font-heavy;
-				  @include font-size(40px);
+/* larger font-size for location tab & blog article headers */
+h2.location + h1,
+.blog-article h1 { @include font-size(30px); }
 
-					&:hover { border-color: transparent; }
-				}
-	
-				h1.location {
-					//font-family: $font-med;
-					@extend %headline-small;
-					padding-top: rem(30);
-					margin-bottom: rem(30);
-					//a { color: $color-text; }
-				}
+/* wrap .title in header w/ .cover-column display:table */
+.grid { display: table-cell; vertical-align: middle; }
 
-				h1.location a {
-					@include inline-block;
-					padding: rem(7) rem(10);
-					@include border-radius(2px);
-					border: 0;
-					background-color: $color-text;
-					color: $color-back;
+h1.title {
+    font-family: $font-bold;
+    @include font-size(40px);
+	color: $color-link;
 
-					&:hover { 
-						background-color: $color-link; 
-						@include transition(background-color 0.3s ease);
-					}
-				}
+    span {
+    	padding: rem(5) rem(10) rem(4);
+        @include border-radius(5px);
+    	background-color: $color-back;
+    }
+}
 
+/* reset links on about contact h1 */
+h1.links a { @extend %link-rule; }
+
+
+
+
+/* H2 ---------------------------------------------------------- */
 
 h2 {
 	font-family: $font-bold;
@@ -145,30 +182,56 @@ h2 {
 	margin: 0 0 rem(36) 0;
 }
 
+/* page location as meta link */
+h2.location {
+	font-family: $font-bold;
+	@extend %headline-small;
+	//padding-top: rem(30);
+	margin-bottom: rem(30);
+
+    a {
+    	@include inline-block;
+    	padding: rem(6) rem(8) rem(4);
+    	//@include border-radius(3px);
+    	@include border-bottom-radius(3px);
+    	border: 0;
+    	background-color: $color-text;
+    	color: $color-back;
+
+    	&:hover {
+    		background-color: $color-link;
+    		@include transition(background-color 0.3s ease);
+    	}
+    }
+}
+
+
+
+/* H3 ---------------------------------------------------------- */
+
 h3 {
-  font-family: $font-med;
+    font-family: $font-med;
 	@extend %headlineset;
 	@include font-size(27px);
 	text-transform: none;
-  margin: rem(70) 0 rem(30) 0;
-
-  &.first { margin-top: rem(28); }
+    margin: rem(70) 0 rem(28) 0;
 }
+
 
 
 
 /* FORMS ------------------------------------------------------- */
 
 button, input, select, textarea {
-  @extend %typeset;
-  font-family: $font-bold;
+    @extend %typeset;
+    font-family: $font-bold;
 }
 
 input[type="submit"] {
 	font-family: $font-bold;
-  @include font-size(16px);
-  @extend %typeset;
-	@extend %headlineset;
-  letter-spacing: 1px;
+    @include font-size(16px);
+    @extend %typeset;
+    @extend %headlineset;
+    letter-spacing: 1px;
 }
 

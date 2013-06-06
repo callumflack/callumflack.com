@@ -3,61 +3,76 @@
 	L A Y O U T
 ---------------------------------------------------------------- */
 
-/* VARIABLES  -------------------------------------------------- */
+/* SET BOX MODEL  ---------------------------------------------- */
 
-// reset so that all measurements are contained within parent
 *, *:after, *:before { @include box-sizing(border-box); }
-
-// max-width of content
-$content-width: rem(960);
 
 
 
 
 /* NAV --------------------------------------------------------- */
 
-nav { 
+nav {
 	position: absolute;
 	z-index: 1977;
-  width: 100%;
-  height: rem(50);
-	text-align: center; 
-  border-bottom: 1px solid #e5e5e5;
+    width: 100%;
+    height: rem(50);
+	text-align: center;
+    border-bottom: 1px solid $color-rule;
 
-		.left  { float: left; }
-		.right { float: right; }
-	
-	//&:hover { background-color: rgba(black,0.9); }
+	.left  { float: left; }
+	.right { float: right; }
 }
 
-nav a { 
+nav a {
 	@include inline-block;
-	padding: 0;
-	height: rem(50);
-	color: $color-text;
-	
-	&.left  { padding-left:  rem(20); }
-	&.right { padding-right: rem(20); }
-	
-	&:hover { border-bottom: 3px solid $color-text; }
-	
-	//&:hover { border: 0; }
-	//h2:hover { border-bottom: 3px solid $color-text; }
-}
-
-nav.reversed {
-	border-color: $color-back;
-	a { color: $color-back; }
-	a:hover { border-color: $color-back; }
-	
-	//h2:hover { border-color: $color-back; }
-}
-
-//.reversed { color: $color-back; border-color: $color-back; }
-
-nav h2 { 
+	padding: rem(18) 0 0 0; //(50-13)/2
 	margin: 0; //reset h2 margins
-	padding-top: rem(18); //(50-13)/2
+	height: rem(50);
+	@extend h2;
+	color: $color-text;
+
+	h1 { @extend h2; }
+
+	&.left  { padding-left:  rem(21); }
+	&.right { padding-right: rem(21); }
+
+	&:hover {
+		border-bottom: 5px solid $color-link;
+		@include transition(border 0.3s ease);
+		h1 {
+            color: $color-link;
+            @include transition(color 0.3s ease);
+        }
+	}
+}
+
+/* text color on reversed out navs */
+.blog-list nav,
+.blog-article nav {
+    position: relative;
+    margin-bottom: rem(50);
+}
+
+/* text color on reversed out navs */
+%nav-text-reverse {
+    a, a:hover h1 {
+        color: $color-back;
+        border-color: $color-back;
+    }
+}
+
+nav.color-reverse {
+	border-color: $color-back;
+	border-color: rgba($color-back,0.5);
+    @extend %nav-text-reverse;
+}
+
+nav.color-negative {
+	border-color: $color-text;
+	background-color: $color-text;
+	background-color: rgba(black,0.7);
+    @extend %nav-text-reverse;
 }
 
 
@@ -65,60 +80,77 @@ nav h2 {
 /* SCAFFOLDING ------------------------------------------------- */
 
 article {
-  position: relative;
-  width: 100%;
-	padding: 0 0 rem(120);
-	
-	&.gallery-container { padding-bottom: 0; }
-	
+    width: 100%;
+    &.blog-post { padding-top: rem(20); }
+}
+
+/* colored sections */
+section, section article {
+    position: relative;
 	&.grey { background-color: rgb(247,247,242); }
-	
-//  @include breakpoint(narrow) { 
-//     width: 320px;
-//  }  
+	&.dirty-yellow { background-color: #f8f6ec; } //#f6eed0 #f3eedd
+}
+
+/* for blog post list only */
+section article {
+    border-top: 1px solid $color-rule;
+	&:first-of-type { border-top: 0; }
+}
+
+/* for location tab link sections only */
+h2.location + h1 { margin-bottom: rem(50); }
+
+
+
+
+/* CONTENT WIDTHS ---------------------------------------------- */
+
+$content-width: rem(960); // max-width of content
+
+%column-margin { margin: 0 auto; }
+
+.cover-column {
+    display: table;
+	width: 100%;
+	height: rem(600);
+	@extend %column-margin;
+	background: #fdfdfd; //http://css-tricks.com/ie-background-rgb-bug/
+	background: rgba(0,0,0,.2);
+	background-repeat: no-repeat;
+	background-position: center center;
+	@include background-size(cover);
+	//margin-bottom: rem(50);
+
+	//h1 { padding-top: rem(80); }
+}
+
+.picture-column {
+	max-width: $content-width;
+	height: auto!important;
+	@extend %column-margin;
+	margin-top: rem(50);
+	padding-bottom: rem(50);
+
+	h1 { margin: 0; }
+}
+
+.text-column {
+    max-width: $content-width - rem(300);
+	@extend %column-margin;
+	padding-bottom: rem(120);
+
+	@include breakpoint(narrow) { max-width: rem(320); }
 }
 
 
-		section {
-		  position: relative;
-		  max-width: $content-width - rem(300);
-			margin: 0 auto;
-		}
-		
-		section.reversed h1 { 
-			color: $color-back; 
-			border-color: $color-back; 
-		}
-		
-		section.picture { 
-			position: relative;
-			max-width: $content-width;
-			height: auto!important;
-			margin: rem(30) auto rem(50) auto;
-		}
+/* Set blog spacings & widths */
+.blog-post { @extend .text-column; }
 
-		section.picture h1 { margin: 0; }
-
-		section.cover { 
-			position: relative;
-			max-width: 100%;
-			height: rem(600);
-			background: rgba(0,0,0,.2);
-			background-repeat: no-repeat;
-			background-position: center center;
-			@include background-size(cover);
-			margin: 0 auto rem(50) auto;
-			
-			h1 {
-				padding-top: rem(80);
-			}
-		}
-
-
-
-
-
-
+.blog-article {
+    .text-column { padding-top: rem(100); }
+    .picture-column ~ .text-column { padding-top: rem(0); }
+    p.date { margin-bottom: rem(56); }
+}
 
 
 

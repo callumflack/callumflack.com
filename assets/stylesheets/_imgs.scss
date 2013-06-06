@@ -3,12 +3,6 @@
 	I M G S
 ---------------------------------------------------------------- */
 
-// reset so that measurements are contained within
-*, *:after, *:before { @include box-sizing(border-box); }
-
-
-
-
 $img-side1: 671px; //721
 $w-pic-p: 500px;
 $img-posts1: $img-side1 * 0.6875;
@@ -17,13 +11,15 @@ $img-posts2: $content-width * 0.6875;
 
 
 
+a img, a img:hover { border: 0; }
+
 //http://css-tricks.com/rundown-of-handling-flexible-media/
 img {
   max-width: 100%;
   height: auto !important;
 }
 
-.portrait { 
+.portrait {
   height: $content-width * 0.708;
   width: rem(481);
   left: 50%;
@@ -31,9 +27,7 @@ img {
 }
 
 .landscape {
-  left: 50%;
-  top: 50%;
-  margin-left: -$content-width / 2;
+  //margin-left: 15%;
 }
 
 .square {
@@ -41,9 +35,18 @@ img {
   margin-left: rem(140);
 }
 
-.centered { 
+.centered {
 	position: absolute;
-	left: 25%; 
+	left: 25%;
 	top: 50%;
 	height: auto!important;
+}
+
+
+
+
+.blog-list .img-mask {
+	width: 100%;
+	height: rem(360);
+	overflow: hidden;
 }

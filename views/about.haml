@@ -1,82 +1,79 @@
-- @body_class = "profile"
+- @body_class = "about"
+
+
+%nav.color-reverse
+    %a.left{:href => "/home"}
+        %i.icon-arrow_left
+        Home
+    %a.right{:href => "/work"}
+        Work
+        %i.icon-arrow_right
+    %a{:href => "/about"}
+        Callum Flack · About
 
 
 %article
-	%nav.reversed
-		%a.left{:href => "/home"}
-			%h2 
-				%i.icon-arrow_left
-				Home
-		%a.right{:href => "/work"}
-			%h2
-				Work
-				%i.icon-arrow_right
-		%a{:href => "/about"} 
-			%h2 
-				Callum Flack · About
-	%section.cover.reversed
-		%h1 
-			A designer who codes
-			-# %img{:src => "assets/images/callum-play.jpg", :alt => "Callum Flack"}
-
-	
+    %section
+        .cover-column
+            %header.grid
+                %h1.title
+                    %span A designer who codes
 
 
-	%section
-		%h3
-			Contact me by
-			%a{:href => "mailto:callumflack@gmail.com"} Email
-			or
-			%a{:href => "https://twitter.com/callumflack"} Twitter
+    %section
+        .text-column
+            %h1.links
+                Contact me by
+                %a{:href => "mailto:callumflack@gmail.com"} Email
+                or
+                %a{:href => "https://twitter.com/callumflack"} Twitter
 
-		:markdown 
-			I design communications for both page and screen. I plan, create and build assets 
-			that enhance value for business and culture. In industry terms, I'm a senior designer 
-			and art director with over twelve years experience.
+            :markdown
+                I design communications for both page and screen. I plan, create and build assets
+                that enhance value for business and culture. In industry terms, I'm a senior designer
+                and art director with over twelve years experience.
 
-			I live in Melbourne, Australia with my wife and young daughter, where I also collect 
-			vinyl records of all kinds, read about software eating the world, and try to practise 
-			unwired boredom. Read more about my past work and what drives my sensibility:
+                I live in Melbourne, Australia with my wife and young daughter, where I also collect
+                vinyl records of all kinds, read about software eating the world, and try to practise
+                unwired boredom. Read more about my past work and what drives my sensibility:
 
-		%ul
-			%li
-				View my curriculum vitæ on 
-				%a{:href => "http://www.linkedin.com/in/callumflack"} Linkedin
-			%li	
-				Read more of my approach in my 
-				%a{:href => "journal"} Blog
-			%li	
-				Listen to a decade of collected 
-				%a{:href => "https://sites.google.com/site/coloronetear/"} soul 45 mixtapes
+            %ul
+                %li
+                    View my curriculum vitæ on
+                    %a{:href => "http://www.linkedin.com/in/callumflack"} Linkedin
+                %li
+                    Read more of my approach in my
+                    %a{:href => "about"} Blog
+                %li
+                    Listen to a decade of collected
+                    %a{:href => "https://sites.google.com/site/coloronetear/"} soul 45 mixtapes
 
-		%h3 How I work
+            %h3 How I work
 
-		:markdown 
-			I work within the contradictory fields of emotion and logic, and aim to communicate a 
-			lot of information with ease and distinction. As such, I concentrate on the essence of Why, 
-			not the hang-up of What. The result is often defined by what’s not there as much as what is.
+            :markdown
+                I work within the contradictory fields of emotion and logic, and aim to communicate a
+                lot of information with ease and distinction. As such, I concentrate on the essence of Why,
+                not the hang-up of What. The result is often defined by what’s not there as much as what is.
 
-			The work begins by defining purpose: I eliminate the extraneous and focus on essence and usefulness. 
-			Collaboration is a necessity throughout the work process, as requirements develop and opportunities unfold.
-			
-			Craft is everything. Clear thinking and smart ideas may connect people; attentiveness in 
-			executing the ideas enables a seamless experience.
-			
-			My goal is to create work that’s elegantly effective, for today and tomorrow.
+                The work begins by defining purpose: I eliminate the extraneous and focus on essence and usefulness.
+                Collaboration is a necessity throughout the work process, as requirements develop and opportunities unfold.
 
-		%h3 About this site
+                Craft is everything. Clear thinking and smart ideas may connect people; attentiveness in
+                executing the ideas enables a seamless experience.
 
-		:markdown
-			I designed and hand-coded this site using a Ruby on Rails app that my friend
-			[Bobes Tuzinsky] (http://tuzinsky.com/ "Bobes Tuzinsky")
-			created for me. I use Haml and Sass to write each page, I manage this code though Github 
-			and when I push new changes, a script updates Heroku, where I host my site. 
-			You can read more about the process in my 
-			[blog] (/blog "blog").
-			
-			All words and pictures shown here are &copy; Callum Flack 2013. 
-			Collaborations are credited within the specific article.
-		
-		= partial "footer"
+                My goal is to create work that’s elegantly effective, for today and tomorrow.
 
+            %h3 About this site
+
+            :markdown
+                I designed and hand-coded this site using a Ruby on Rails app that my friend
+                [Bobes Tuzinsky] (http://tuzinsky.com/ "Bobes Tuzinsky")
+                created for me. I use Haml and Sass to write each page, I manage this code though Github
+                and when I push new changes, a script updates Heroku, where I host my site.
+                You can read more about the process in my
+                [blog] (/blog "blog").
+
+                All words and pictures shown here &copy; Callum Flack 2013.
+
+            = partial "footer"
 

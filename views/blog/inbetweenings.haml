@@ -1,0 +1,27 @@
+- @body_class = "blog-article"
+
+%header
+    %nav
+        %a.left{:href => "/home"}
+            %i.icon-arrow_left
+            Home
+        %a.right{:href => "/about"}
+            About
+            %i.icon-arrow_right
+        %a{:href => "/blog"}
+            Callum Flack · Blog
+
+
+%article
+    %figure.picture-column
+        %img{:src => "/assets/images/days-end.jpg", :alt => "Inbetweenings: a tumblr blog"}
+
+    %section.text-column
+        %h1 Inbetweenings: a tumblr blog
+        %p.date June 4, 2013
+        %p
+            I enjoy taking note of the small things I see when I'm out walking or staring idle.
+            %a{:href => "http://inbetweenings.tumblr.com/"} The resultant pics were a good reason to begin a tumblr blog,
+            which I'm updating whenever I see something interesting, posted unedited, uncropped, directly from my iPhone. What are the pictures of? They're of things inbetween, if you will.
+
+        = partial "footer-blog"
