@@ -21,7 +21,7 @@ $line-height:      28px; //1.5
 $font-reg:   'arnhem_blondregular';
 $font-emph:  'arnhem_blonditalic';
 $font-date:  'arnhem_normalitalic';
-$font-med:   'arnhem_normalitalic'; //'arnhem_normalitalic' arnhem_bolditalic
+$font-med:   'neuzeit_gro_t_otregular'; //'arnhem_normalitalic' arnhem_bolditalic
 $font-bold:  'neuzeit_gro_t_otbold';
 $font-heavy: 'neuzeit_gro_t_ot_blackregular';
 
@@ -91,7 +91,8 @@ a {
 
     &:hover, &:active {
         color: $color-link;
-        @extend %link-rule-hover;
+        //@extend %link-rule-hover;
+        border: 0;
     }
 }
 
@@ -125,7 +126,7 @@ a.read-more {
 	letter-spacing: 0.05rem;
 }
 
-@for $index from 1 through 3 { h#{$index} a:hover { border-width: 3px; } }
+@for $index from 1 through 3 { h#{$index} a:hover { border-width: 2px; } }
 
 
 
@@ -136,39 +137,56 @@ h1 {
     font-family: $font-bold;
     @include font-size(20px);
     @extend %headlineset;
-    //letter-spacing: -0.1rem;
     margin: 0 0 rem(5) 0;
     a {
         color: $color-text;
         border: 0;
         &:hover {
-    		color: $color-link;
-    		border-color: $color-link;
+            color: $color-link;
+            @extend %link-rule-hover;
+            //border-color: $color-link;
         }
     }
 }
 
 /* larger font-size for location tab & blog article headers */
+
 h2.location + h1,
-.blog-article h1 { @include font-size(30px); }
+.blog-article h1 {
+    font-family: $font-med;
+    @include font-size(30px);
+    letter-spacing: -1px;
+}
+
+%display {
+    font-family: $font-med;
+    @include font-size(50px);
+    letter-spacing: -2px;
+}
+
+h1.title { @extend %display; }
 
 /* wrap .title in header w/ .cover-column display:table */
 .grid { display: table-cell; vertical-align: middle; }
 
-h1.title {
-    font-family: $font-bold;
-    @include font-size(40px);
-	color: $color-link;
-
+h1.billboard {
+    @extend %display;
+	color: $color-back;
     span {
-    	padding: rem(5) rem(10) rem(4);
+    	padding: rem(5) rem(12) rem(4);
         @include border-radius(5px);
-    	background-color: $color-back;
+    	background-color: $color-link;
+        //background-color: rgba($color-back,0.9);
     }
 }
 
 /* reset links on about contact h1 */
-h1.links a { @extend %link-rule; }
+h1.links a {
+    @extend %link-rule;
+    border-width: 3px;
+    &:hover { border: 0; }
+}
+//h1.links { @include font-size(30px); }
 
 
 
@@ -210,11 +228,11 @@ h2.location {
 /* H3 ---------------------------------------------------------- */
 
 h3 {
-    font-family: $font-med;
+    font-family: $font-bold;
 	@extend %headlineset;
-	@include font-size(27px);
-	text-transform: none;
-    margin: rem(70) 0 rem(28) 0;
+	@include font-size(20px);
+	//text-transform: none;
+    margin: rem(70) 0 rem(21) 0;
 }
 
 

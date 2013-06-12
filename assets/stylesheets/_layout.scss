@@ -49,9 +49,10 @@ nav a {
 
 /* text color on reversed out navs */
 .blog-list nav,
-.blog-article nav {
+.blog-article nav,
+.work-project nav {
     position: relative;
-    margin-bottom: rem(50);
+    margin-bottom: rem(126) - rem(40); //50
 }
 
 /* text color on reversed out navs */
@@ -81,19 +82,26 @@ nav.color-negative {
 
 article {
     width: 100%;
-    &.blog-post { padding-top: rem(20); }
+    //&.blog-post { padding-top: rem(20); }
 }
 
 /* colored sections */
 section, section article {
     position: relative;
-	&.grey { background-color: rgb(247,247,242); }
-	&.dirty-yellow { background-color: #f8f6ec; } //#f6eed0 #f3eedd
+	&.grey {
+        background-color: rgb(247,247,242);
+        h2.location a { color: rgb(247,247,242); }
+    }
+	&.dirty-yellow {
+        background-color: #f8f6ec; } //#f6eed0 #f3eedd
+        h2.location a { color: #f8f6ec; }
+
+    &.ruled { border-top: 1px solid $color-rule; }
 }
 
 /* for blog post list only */
 section article {
-    border-top: 1px solid $color-rule;
+    //border-top: 1px solid #c5c5c5; //$color-rule
 	&:first-of-type { border-top: 0; }
 }
 
@@ -129,28 +137,39 @@ $content-width: rem(960); // max-width of content
 	height: auto!important;
 	@extend %column-margin;
 	margin-top: rem(50);
-	padding-bottom: rem(50);
+	padding-bottom: rem(56);
 
 	h1 { margin: 0; }
 }
 
+
 .text-column {
     max-width: $content-width - rem(300);
 	@extend %column-margin;
-	padding-bottom: rem(120);
+	padding-bottom: rem(126);
 
 	@include breakpoint(narrow) { max-width: rem(320); }
 }
 
 
 /* Set blog spacings & widths */
-.blog-post { @extend .text-column; }
+.blog-post {
+    @extend .text-column;
+	//padding-bottom: rem(196);
+}
 
 .blog-article {
     .text-column { padding-top: rem(100); }
     .picture-column ~ .text-column { padding-top: rem(0); }
     p.date { margin-bottom: rem(56); }
 }
+
+/* Set work project spacings & widths */
+.work-project {
+    .picture-column { margin-top: 0; }
+    .text-column { padding-bottom: rem(56); }
+}
+
 
 
 

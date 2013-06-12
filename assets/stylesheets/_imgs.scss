@@ -50,3 +50,8 @@ img {
 	height: rem(360);
 	overflow: hidden;
 }
+
+img ~ img { margin-bottom: rem(56); }
+
+img.right  { float:right; }
+img.center { margin-left: rem(150); }

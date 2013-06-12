@@ -5,22 +5,23 @@
 
 footer {
 	padding-top: rem(56);
-	
-	ul { 
+
+	ul {
 		margin: 0;
 		padding: rem(17) 0 0 0;
 		border-top: 1px solid $color-text-50; //#e5e5e5
 		@extend h2;
-		text-align: center; 
+		text-align: center;
 		list-style-type: none;
 	}
-	
+
 	li { @include inline-block; }
-	li a, li span { 
-		//@extend %headlineset; 
-		//@extend %headline-small; 
+	li a, li span {
+		//@extend %headlineset;
+		//@extend %headline-small;
 		color: $color-text;
 	}
+    li a:hover { @extend %link-rule-hover; }
 	li span { margin: 0 rem(8); }
-	
+
 }

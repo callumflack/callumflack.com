@@ -1,6 +1,5 @@
 @import "normalize";
 @import "compass";
-@import "variables";
 @import "mixins";
 
 @import "fontface";
@@ -17,19 +16,19 @@
 @import "subscribe";
 //@import "slideshow";
 
-@import "pg-blog";
+//@import "pg-blog";
 @import "pg-about";
-@import "pg-work";
-@import "pg-home";
+//@import "pg-work";
+//@import "pg-home";
 
 html, body {
-  overflow-y: scroll;
-  min-height: 100%;
-  padding: 0;
+    overflow-y: scroll;
+    min-height: 100%;
+    padding: 0;
 }
 
-body { 
+body {
 	position: relative;
-  background-color: $color-back;
-  -webkit-tap-highlight-color: rgba(255,0,0, 0.62);
+    background-color: $color-back;
+    -webkit-tap-highlight-color: rgba(255,0,0, 0.62);
 }
