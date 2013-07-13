@@ -1,53 +1,53 @@
-/*
-----------------------------------------------------------------
-	T Y P O G R A P H Y
----------------------------------------------------------------- */
-
-/* VARIABLES --------------------------------------------------- */
-
-$color-text:    #111;
-$color-text-50: #777;
-$color-text-20: #ccc;
-$color-link:    #00b4f1; //rgb(0,170,255); //d00 //rgb IE?
-$color-rule:    #e5e5e5;
-$color-back:    #fefefe; //fdfdfa
-
-$base-font-size:   16px;
-$base-line-height: 24px;
-
-$font-size:        20px;
-$line-height:      28px; //1.5
-
-$font-reg:   'arnhem_blondregular';
-$font-emph:  'arnhem_blonditalic';
-$font-date:  'arnhem_normalitalic';
-$font-med:   'neuzeit_gro_t_otregular'; //'arnhem_normalitalic' arnhem_bolditalic
-$font-bold:  'neuzeit_gro_t_otbold';
-$font-heavy: 'neuzeit_gro_t_ot_blackregular';
+/* ==========================================================================
+   Typography
+   ========================================================================== */
 
 
+/* Variables
+   ========================================================================== */
+
+$cText: #111;
+$cText50: #777;
+$cText20: #ccc;
+$cLink: #00b4f1; //rgb(0,170,255); //d00 //rgb IE?
+$cRule: #e5e5e5;
+$cBack: #fefefe; //fdfdfa
+
+$fSizeBase: 16px;
+$LineHeightBase: 1.5;
+$fSize: 22px;
+$LineHeight: 1.5; //32px;
 
 
-/* FONT SIZE IN PX & REM --------------------------------------- */
-/* from inuit.css/generic/_mixins */
+/* Font-faces
+   ========================================================================== */
 
-@mixin font-size($font-size, $line-height:false) {
-	font-size:$font-size;
-	font-size:($font-size / $base-font-size)*1rem;
-	@if $line-height == true {
-	    line-height:ceil($font-size / $base-line-height) * ($base-line-height / $font-size);
-	}
-}
+@include font-face("arnhem_blondregular", "arnhem-blond");
+@include font-face("arnhem_blonditalic", "arnhem-blonditalic");
+@include font-face("arnhem_normalitalic", "arnhem-normalitalic");
+@include font-face("neuzeit_gro_t_otregular", "urw_neuzeitgrotesktot-reg-webfont");
+@include font-face("neuzeit_gro_t_otbold", "urw_neuzeitgrotesktot-bol-webfont");
+@include font-face("neuzeit_gro_t_ot_blackregular", "urw_neuzeitgrotesktot-bla-webfont");
+
+$fRegular: "arnhem_blondregular";
+$fEmphasis: "arnhem_blonditalic";
+$fDate: "arnhem_normalitalic";
+$fMedium: 'neuzeit_gro_t_otregular'; //'arnhem_normalitalic' arnhem_bolditalic
+$fBold: 'neuzeit_gro_t_otbold';
+$fHeavy: 'neuzeit_gro_t_ot_blackregular';
 
 
+/* p, a & lists
+   ========================================================================== */
 
-/* DEFINE TEXT TYPE -------------------------------------------- */
+/**
+ * Text settings
+ */
 
-%typeset {
-	font-family: $font-reg;
-	font-size: $font-size;
-	font-size: ($font-size / $base-font-size) * 1rem;
-	line-height: $line-height;
+%text {
+	font-family: $fRegular;
+	@include font-size(22px);
+    line-height: $LineHeight;
     font-weight: normal;
     font-style: normal;
     text-align: left;
@@ -55,43 +55,43 @@ $font-heavy: 'neuzeit_gro_t_ot_blackregular';
     text-decoration: none;
     letter-spacing: normal;
     text-rendering: optimizeLegibility;
-	-webkit-font-smoothing: antialiased;
-    color: $color-text;
+	//-webkit-font-smoothing: antialiased;
+    color: $cText;
 }
 
-body { @extend %typeset; }
+%text--emphasis { font-family: $fEmphasis; }
+%text--rev { color: $cBack; border-color: $cBack; }
 
+%rule { border-bottom: 1px solid $cText; }
+%ruleHover { border-bottom: 1px solid $cLink; }
 
+/**
+ * Define text tags
+ */
 
+p { @extend %text; }
 
-/* P, A & UL --------------------------------------------------- */
+p, ul { margin: 0 0 em(14) 0; }
 
-p, ul { margin: 0 0 rem(14) 0; }
-
-ul { padding-left: rem(40); }
+ul { padding-left: em(40); }
 
 p.date {
-	font-family: $font-date;
+	font-family: $fDate;
 	@include font-size(18px);
 	text-align: center;
-	margin-bottom: rem(28);
-	//&:hover { color: $color-text; }
+	margin-bottom: em(28);
 }
 
-/* Useful placeholders to pull in */
-%emphasis        { font-family: $font-emph; }
-%link-rule-hover { border-bottom: 1px solid $color-link; }
-%link-rule       { border-bottom: 1px solid $color-text; }
-%reverse-color   { color: $color-back; border-color: $color-back; }
+/**
+ * Define anchor tag text
+ */
 
 a {
-    color: $color-text;
+    color: $cText;
     text-decoration: none;
-    @extend %link-rule;
-
-    &:hover, &:active {
-        color: $color-link;
-        //@extend %link-rule-hover;
+    @extend %linkRule;
+    &:hover {
+        color: $cLink;
         border: 0;
     }
 }
@@ -99,19 +99,17 @@ a {
 a.read-more {
 	@extend %headlineset;
 	@include font-size(16px);
-	color: $color-text;
-	letter-spacing: 0.1rem;
-	@extend %link-rule;
-
+	letter-spacing: -1px;
+	@extend %linkRule;
 	&:hover {
-        color: $color-link;
-        border-color: $color-link;
+        color: $cLink;
+        border-color: $cLink;
     }
 }
 
 
-
-/* HEADLINE PLACEHOLDERS --------------------------------------- */
+/* Headlines
+   ========================================================================== */
 
 %headlineset {
 	font-weight: normal;
@@ -123,133 +121,119 @@ a.read-more {
 
 %headline-small {
 	@include font-size(14px);
-	letter-spacing: 0.05rem;
+	letter-spacing: 0.05em;
 }
 
-@for $index from 1 through 3 { h#{$index} a:hover { border-width: 2px; } }
+@for $index from 1 through 6 { h#{$index} a:hover { border-width: 2px; } }
 
-
-
-
-/* H1 ---------------------------------------------------------- */
+/**
+ * H1
+ */
 
 h1 {
-    font-family: $font-bold;
+    font-family: $fBold;
     @include font-size(20px);
     @extend %headlineset;
-    margin: 0 0 rem(5) 0;
+    margin: 0 0 em(5) 0;
     a {
-        color: $color-text;
+        color: $cText;
         border: 0;
         &:hover {
-            color: $color-link;
-            @extend %link-rule-hover;
-            //border-color: $color-link;
+            color: $cLink;
+            @extend %linkRuleH;
         }
     }
 }
 
-/* larger font-size for location tab & blog article headers */
+/**
+ * larger font-size for location tab & blog article headers
+ */
 
 h2.location + h1,
 .blog-article h1 {
-    font-family: $font-med;
+    font-family: $fMedium;
     @include font-size(30px);
     letter-spacing: -1px;
 }
 
 %display {
-    font-family: $font-med;
+    font-family: $fMedium;
     @include font-size(50px);
     letter-spacing: -2px;
 }
 
 h1.title { @extend %display; }
 
-/* wrap .title in header w/ .cover-column display:table */
+/**
+ * wrap .title in header w/ .cover-column display:table
+ */
+
 .grid { display: table-cell; vertical-align: middle; }
 
 h1.billboard {
     @extend %display;
-	color: $color-back;
+	color: $cBack;
     span {
-    	padding: rem(5) rem(12) rem(4);
+    	padding: em(5) em(12) em(4);
         @include border-radius(5px);
-    	background-color: $color-link;
-        //background-color: rgba($color-back,0.9);
+    	background-color: $cLink;
+        //background-color: rgba($cBack,0.9);
     }
 }
 
-/* reset links on about contact h1 */
+/**
+ * reset links on about contact h1
+ */
+
 h1.links a {
-    @extend %link-rule;
-    border-width: 3px;
+    @extend %linkRule;
+    border-width: 1px;
     &:hover { border: 0; }
 }
-//h1.links { @include font-size(30px); }
 
-
-
-
-/* H2 ---------------------------------------------------------- */
+/**
+ * H2
+ */
 
 h2 {
-	font-family: $font-bold;
+	font-family: $fBold;
 	@extend %headlineset;
 	@extend %headline-small;
-	margin: 0 0 rem(36) 0;
+	margin: 0 0 em(36) 0;
 }
 
-/* page location as meta link */
+// page location as meta link
 h2.location {
-	font-family: $font-bold;
+	font-family: $fBold;
 	@extend %headline-small;
-	//padding-top: rem(30);
-	margin-bottom: rem(30);
-
-    a {
-    	@include inline-block;
-    	padding: rem(6) rem(8) rem(4);
-    	//@include border-radius(3px);
-    	@include border-bottom-radius(3px);
-    	border: 0;
-    	background-color: $color-text;
-    	color: $color-back;
-
-    	&:hover {
-    		background-color: $color-link;
-    		@include transition(background-color 0.3s ease);
-    	}
-    }
+	margin-bottom: em(30);
+    margin-top: -1px;
 }
 
+h2.location a {
+	@include inline-block;
+	padding: em(6) em(8) em(4);
+	//@include border-radius(3px);
+	@include border-bottom-radius(3px);
+	border: 0;
+	background-color: $cText;
+	color: $cBack;
 
+	&:hover {
+		background-color: $cLink;
+		@include transition(background-color 0.3s ease);
+	}
+}
 
-/* H3 ---------------------------------------------------------- */
+/**
+ * H3
+ */
 
 h3 {
-    font-family: $font-bold;
+    font-family: $fBold;
 	@extend %headlineset;
 	@include font-size(20px);
 	//text-transform: none;
-    margin: rem(70) 0 rem(21) 0;
-}
-
-
-
-
-/* FORMS ------------------------------------------------------- */
-
-button, input, select, textarea {
-    @extend %typeset;
-    font-family: $font-bold;
-}
-
-input[type="submit"] {
-	font-family: $font-bold;
-    @include font-size(16px);
-    @extend %typeset;
-    @extend %headlineset;
-    letter-spacing: 1px;
+    margin: em(56) 0 em(28) 0;
 }
 

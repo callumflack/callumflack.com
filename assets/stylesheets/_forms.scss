@@ -1,0 +1,16 @@
+/* ==========================================================================
+   Forms
+   ========================================================================== */
+
+button, input, select, textarea {
+    @extend %text;
+    font-family: $fBold;
+}
+
+input[type="submit"] {
+	font-family: $fBold;
+    @include font-size(16px);
+    @extend %text;
+    @extend %headlineset;
+    letter-spacing: 1px;
+}

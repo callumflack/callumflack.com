@@ -1,10 +1,11 @@
-@import "normalize";
 @import "compass";
+@import "normalize";
 @import "mixins";
 
-@import "fontface";
+//@import "fontface";
 @import "typography";
 @import "mfglabs_iconset";
+@import "forms";
 @import "links";
 @import "selection";
 
@@ -14,21 +15,16 @@
 @import "gallery.theme";
 @import "imgs";
 @import "subscribe";
-//@import "slideshow";
 
-//@import "pg-blog";
 @import "pg-about";
-//@import "pg-work";
-//@import "pg-home";
+
 
 html, body {
     overflow-y: scroll;
     min-height: 100%;
     padding: 0;
+    background-color: $cBack;
+    a:link { -webkit-tap-highlight-color: rgba(255,0,0, 0.62); }
 }
 
-body {
-	position: relative;
-    background-color: $color-back;
-    -webkit-tap-highlight-color: rgba(255,0,0, 0.62);
-}
+//body { position: relative; }

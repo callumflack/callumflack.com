@@ -1,15 +1,15 @@
 .about {
 
-    img { width: rem(330); }
+    img { width: em(330); }
 
 	.cover-column {
-        background-image: url("/assets/images/newwcastle-2.jpg");
-        margin-bottom: rem(70);
+        background-image: url("/assets/images/newwcastle-2.jpg"); //newwcastle-2.jpg IMG_5560-1.jpg
+        margin-bottom: em(70);
     }
 
     .text-column h1 {
         //margin: rem(70) 0 rem(56);
-        margin-bottom: rem(21);
+        margin-bottom: em(21);
     }
 
 }
