@@ -100,7 +100,7 @@ a.read-more {
 	@extend %headlineset;
 	@include font-size(16px);
 	letter-spacing: -1px;
-	@extend %linkRule;
+	@extend %rule;
 	&:hover {
         color: $cLink;
         border-color: $cLink;
@@ -140,7 +140,7 @@ h1 {
         border: 0;
         &:hover {
             color: $cLink;
-            @extend %linkRuleH;
+            @extend %ruleHover;
         }
     }
 }
@@ -186,7 +186,7 @@ h1.billboard {
  */
 
 h1.links a {
-    @extend %linkRule;
+    @extend %rule;
     border-width: 1px;
     &:hover { border: 0; }
 }

@@ -21,7 +21,7 @@ footer {
 		//@extend %headline-small;
 		color: $cText;
 	}
-    li a:hover { @extend %linkRuleH; }
+    li a:hover { @extend %ruleHover; }
 	li span { margin: 0 em(8); }
 
 }
