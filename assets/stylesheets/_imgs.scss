@@ -1,57 +1,25 @@
+/* ==========================================================================
+   Images
+   ========================================================================== */
+
 /*
-----------------------------------------------------------------
-	I M G S
----------------------------------------------------------------- */
+ * Ref: http://css-tricks.com/rundown-of-handling-flexible-media/
+ * 1. Remove the gap between images and the bottom of their containers: h5bp.com/i/440
+ * 2. %textMargin isn't enough
+ */
 
-$img-side1: 671px; //721
-$w-pic-p: 500px;
-$img-posts1: $img-side1 * 0.6875;
-$img-posts2: $content-width * 0.6875;
-
-
-
-
-a img, a img:hover { border: 0; }
-
-//http://css-tricks.com/rundown-of-handling-flexible-media/
 img {
-  max-width: 100%;
-  height: auto !important;
+    max-width: 100%;
+    height: auto !important;
+    vertical-align: middle; /* 1 */
+    margin-bottom: rem(20); /* 2 */
 }
 
-.portrait {
-  height: $content-width * 0.708;
-  width: rem(481);
-  left: 50%;
-  margin-left: ($content-width - rem(481)) / 2;
+/**
+ * Fix top-align of text & img
+ */
+
+section.slideshow,
+.about article img {
+    margin-top: rem(9);
 }
-
-.landscape {
-  //margin-left: 15%;
-}
-
-.square {
-  left: 50%;
-  margin-left: rem(140);
-}
-
-.centered {
-	position: absolute;
-	left: 25%;
-	top: 50%;
-	height: auto!important;
-}
-
-
-
-
-.blog-list .img-mask {
-	width: 100%;
-	height: rem(360);
-	overflow: hidden;
-}
-
-img ~ img { margin-bottom: rem(56); }
-
-img.right  { float:right; }
-img.center { margin-left: rem(150); }

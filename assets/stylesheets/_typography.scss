@@ -2,41 +2,6 @@
    Typography
    ========================================================================== */
 
-
-/* Variables
-   ========================================================================== */
-
-$cText: #111;
-$cText50: #777;
-$cText20: #ccc;
-$cLink: #00b4f1; //rgb(0,170,255); //d00 //rgb IE?
-$cRule: #e5e5e5;
-$cBack: #fefefe; //fdfdfa
-
-$fSizeBase: 16px;
-$LineHeightBase: 1.5;
-$fSize: 22px;
-$LineHeight: 1.5; //32px;
-
-
-/* Font-faces
-   ========================================================================== */
-
-@include font-face("arnhem_blondregular", "arnhem-blond");
-@include font-face("arnhem_blonditalic", "arnhem-blonditalic");
-@include font-face("arnhem_normalitalic", "arnhem-normalitalic");
-@include font-face("neuzeit_gro_t_otregular", "urw_neuzeitgrotesktot-reg-webfont");
-@include font-face("neuzeit_gro_t_otbold", "urw_neuzeitgrotesktot-bol-webfont");
-@include font-face("neuzeit_gro_t_ot_blackregular", "urw_neuzeitgrotesktot-bla-webfont");
-
-$fRegular: "arnhem_blondregular";
-$fEmphasis: "arnhem_blonditalic";
-$fDate: "arnhem_normalitalic";
-$fMedium: 'neuzeit_gro_t_otregular'; //'arnhem_normalitalic' arnhem_bolditalic
-$fBold: 'neuzeit_gro_t_otbold';
-$fHeavy: 'neuzeit_gro_t_ot_blackregular';
-
-
 /* p, a & lists
    ========================================================================== */
 
@@ -45,9 +10,9 @@ $fHeavy: 'neuzeit_gro_t_ot_blackregular';
  */
 
 %text {
-	font-family: $fRegular;
-	@include font-size(22px);
-    line-height: $LineHeight;
+	font-family: $fontFace;
+	font-size: $fontSizeBase;
+    line-height: 1.25;
     font-weight: normal;
     font-style: normal;
     text-align: left;
@@ -55,185 +20,135 @@ $fHeavy: 'neuzeit_gro_t_ot_blackregular';
     text-decoration: none;
     letter-spacing: normal;
     text-rendering: optimizeLegibility;
-	//-webkit-font-smoothing: antialiased;
-    color: $cText;
+	-webkit-font-smoothing: antialiased;
+    color: $cText50;
+    margin: 0;
 }
 
-%text--emphasis { font-family: $fEmphasis; }
-%text--rev { color: $cBack; border-color: $cBack; }
-
-%rule { border-bottom: 1px solid $cText; }
-%ruleHover { border-bottom: 1px solid $cLink; }
+%textMargin {
+    margin-bottom: rem(24);
+}
 
 /**
  * Define text tags
  */
 
-p { @extend %text; }
-
-p, ul { margin: 0 0 em(14) 0; }
-
-ul { padding-left: em(40); }
-
-p.date {
-	font-family: $fDate;
-	@include font-size(18px);
-	text-align: center;
-	margin-bottom: em(28);
+p, a, ul, li, span {
+    @extend %text;
+    @extend %textMargin;
+    &:last-of-type { margin-bottom: 0; }
 }
+
+@for $index from 1 through 6 {
+    h#{$index} {
+        @extend %text;
+        @extend %textMargin;
+    }
+}
+
+ul { padding-left: rem(36); }
 
 /**
  * Define anchor tag text
  */
 
 a {
-    color: $cText;
-    text-decoration: none;
-    @extend %linkRule;
+    color: $cText50;
+    text-decoration: underline;
     &:hover {
-        color: $cLink;
-        border: 0;
+        color: $cText;
+        text-decoration: none;
     }
 }
 
-a.read-more {
-	@extend %headlineset;
-	@include font-size(16px);
-	letter-spacing: -1px;
-	@extend %rule;
-	&:hover {
-        color: $cLink;
-        border-color: $cLink;
-    }
+/**
+ * Font awesome up/down icon
+ */
+
+i {
+    font-size: 130%;
+    margin-right: 2px;
 }
 
 
 /* Headlines
    ========================================================================== */
 
-%headlineset {
-	font-weight: normal;
-	line-height: 1;
-    text-align: center;
-    text-transform: uppercase;
-	-webkit-font-smoothing: antialiased;
+h1,
+h1 a {
+    //color: $cText;
 }
 
-%headline-small {
-	@include font-size(14px);
-	letter-spacing: 0.05em;
-}
 
-@for $index from 1 through 6 { h#{$index} a:hover { border-width: 2px; } }
+/* Tag and element manipulations
+   ========================================================================== */
 
 /**
- * H1
+ * Nav
  */
 
-h1 {
-    font-family: $fBold;
-    @include font-size(20px);
-    @extend %headlineset;
-    margin: 0 0 em(5) 0;
-    a {
+%navText {
+    color: $cText50;
+    text-decoration: none;
+    &:hover { color: $cText; }
+}
+
+nav > h1 a { @extend %navText; }
+nav > h1   { margin-bottom: 0; }
+
+nav a,
+nav span {
+    @extend %navText;
+    &.selected { color: $cText; }
+}
+
+nav span { letter-spacing: -3px; }
+
+/**
+ * About text
+ */
+
+.textColumn {
+    h1, a, p, span {
+        @include font-size(24px);
         color: $cText;
-        border: 0;
-        &:hover {
-            color: $cLink;
-            @extend %ruleHover;
-        }
+    }
+    h1 {
+        //margin-bottom: rem(72);
+    }
+    h1 a:hover, a:hover {
+        color: $cText50;
+    }
+    h1 span, h1 span a {
+        @include font-size(16px)
+    }
+    h1::after {
+        content: '• • •';
+        display: block;
+        margin: rem(44) 0 rem(48);
+        @include font-size(16px);
+        text-align: center;
+    }
+    p:last-of-type,
+    p.last {
+        @include font-size(16px);
     }
 }
 
 /**
- * larger font-size for location tab & blog article headers
+ * Attention: newsletter
  */
 
-h2.location + h1,
-.blog-article h1 {
-    font-family: $fMedium;
-    @include font-size(30px);
-    letter-spacing: -1px;
+p.attention, p.attention span { color: $cHighlight; }
+
+p.attention::before,
+form::after {
+    content: '• • •';
+    display: block;
+    margin: rem(44) 0 rem(48);
+    @include font-size(16px);
+    text-align: center;
+    color: $cHighlight;
 }
 
-%display {
-    font-family: $fMedium;
-    @include font-size(50px);
-    letter-spacing: -2px;
-}
-
-h1.title { @extend %display; }
-
-/**
- * wrap .title in header w/ .cover-column display:table
- */
-
-.grid { display: table-cell; vertical-align: middle; }
-
-h1.billboard {
-    @extend %display;
-	color: $cBack;
-    span {
-    	padding: em(5) em(12) em(4);
-        @include border-radius(5px);
-    	background-color: $cLink;
-        //background-color: rgba($cBack,0.9);
-    }
-}
-
-/**
- * reset links on about contact h1
- */
-
-h1.links a {
-    @extend %rule;
-    border-width: 1px;
-    &:hover { border: 0; }
-}
-
-/**
- * H2
- */
-
-h2 {
-	font-family: $fBold;
-	@extend %headlineset;
-	@extend %headline-small;
-	margin: 0 0 em(36) 0;
-}
-
-// page location as meta link
-h2.location {
-	font-family: $fBold;
-	@extend %headline-small;
-	margin-bottom: em(30);
-    margin-top: -1px;
-}
-
-h2.location a {
-	@include inline-block;
-	padding: em(6) em(8) em(4);
-	//@include border-radius(3px);
-	@include border-bottom-radius(3px);
-	border: 0;
-	background-color: $cText;
-	color: $cBack;
-
-	&:hover {
-		background-color: $cLink;
-		@include transition(background-color 0.3s ease);
-	}
-}
-
-/**
- * H3
- */
-
-h3 {
-    font-family: $fBold;
-	@extend %headlineset;
-	@include font-size(20px);
-	//text-transform: none;
-    margin: em(56) 0 em(28) 0;
-}
 

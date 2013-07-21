@@ -1,16 +1,50 @@
 /* ==========================================================================
-   Forms
-   ========================================================================== */
+Forms
+========================================================================== */
 
 button, input, select, textarea {
     @extend %text;
-    font-family: $fBold;
+}
+
+form {
+    margin: 0 0 rem(48);
+}
+
+input, textarea {
+    margin: 0;
+    padding: rem(8) rem(12);
+    border: 0;
+    @include box-shadow(none);
+    background-color: white;
+    white-space: nowrap;
+    overflow: hidden;
+    -o-text-overflow: ellipsis;
+    text-overflow: ellipsis;
+}
+
+input[type="text"] {
+    width: 80%;
+    margin: 0 rem(10) 0 0;
+    padding-left: 0;
+    border-bottom: 1px solid rgba($cHighlight, 0.5);
+    text-align: left;
+}
+
+//http://css-tricks.com/snippets/css/style-placeholder-text/
+::-webkit-input-placeholder,
+:-moz-placeholder,
+::-moz-placeholder,
+:-ms-input-placeholder {
+    color: $cHighlight; //$cText50;
 }
 
 input[type="submit"] {
-	font-family: $fBold;
-    @include font-size(16px);
-    @extend %text;
-    @extend %headlineset;
-    letter-spacing: 1px;
+    text-align: left;
+    @include border-radius(3px);
+    background-color: $cHighlight;
+    color: white;
+    &:hover {
+        background-color: $cText;
+        @include single-transition(background-color, .3s, ease-in-out);
+    }
 }

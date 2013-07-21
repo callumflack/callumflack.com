@@ -1,8 +1,10 @@
-// Easy media queries
-// @include bp(tablet) { SCSS here };
-// http://css-tricks.com/media-queries-sass-3-2-and-codekit/
-// http://css-tricks.com/resolution-specific-stylesheets/
-// http://css-tricks.com/css-media-queries/
+/**
+ * easy media queries
+ * @include bp(tablet) { SCSS here };
+ * http://css-tricks.com/media-queries-sass-3-2-and-codekit/
+ * http://css-tricks.com/resolution-specific-stylesheets/
+ * http://css-tricks.com/css-media-queries/
+ */
 
 @mixin bp($point) {
 	@if $point == desk {
@@ -16,24 +18,41 @@
 	}
 }
 
+/**
+ * microclearfix
+ */
 
-// Micro clearfix
-@mixin microclearfix {
+@mixin cf {
 	&:before, &:after { content: ""; display: table; }
 	&:after { clear: both; }
 	*zoom: 1;
 }
 
+/**
+ * bourbon pixels to ems converter
+ */
 
-// bourbon pixels to ems converter
-@function em($pxval, $base: 16) {
-    @return ($pxval / $base) * 1em;
+@function rem($pxval, $base: 16) {
+    @return ($pxval / $base) * 1rem;
 }
 
+/**
+ * vertical rhythm unit in rem [test]
+ */
 
-// https://github.com/thoughtbot/bourbon/blob/master/app/assets/stylesheets/css3/_font-face.scss
-// Order of the includes matters, and it is: normal, bold, italic, bold+italic.
-// @include font-face(ProximaNova, 'fonts/proximanova_semibolditalic_macroman/ProximaNova-SboldIt-webfont', normal, italic);
+//@function rem($vr, $lineHeightBase) {
+//    @return ($vr / $lineHeightBase) * 1rem;
+//}
+
+
+
+
+/**
+ * https://github.com/thoughtbot/bourbon/blob/master/app/assets/stylesheets/css3/_font-face.scss
+ * Order of the includes matters, and it is: normal, bold, italic, bold+italic.
+ * @include font-face(ProximaNova, 'fonts/proximanova_semibolditalic_macroman/ProximaNova-SboldIt-webfont', normal, italic);
+ */
+
 @mixin font-face($font-family, $file-path, $weight: normal, $style: normal) {
   @font-face {
     font-family: $font-family;
@@ -47,62 +66,24 @@
   }
 }
 
+/**
+ * Inuit: create a fully formed type style (sizing and vertical rhythm)
+ * by passing in a single value, e.g.: @include font-size(10px);
+ * http://jsfiddle.net/redclover/mkYtY/
+ * http://designbyjoel.com/blog/2013-02-28-sass-rems/
+ * or? https://gist.github.com/ijy/1441967
+ * @function rem($target, $context: $fontSizeBase) {
+ *   @if $target == 0 { @return 0 }
+ *   @return $target / $context + 0em;
+ */
 
-// Inuit: create a fully formed type style (sizing and vertical rhythm)
-// by passing in a single value, e.g.: @include font-size(10px);
-// http://jsfiddle.net/redclover/mkYtY/
-// http://designbyjoel.com/blog/2013-02-28-sass-rems/
-// or? https://gist.github.com/ijy/1441967
-// @function em($target, $context: $fSizeBase) {
-//   @if $target == 0 { @return 0 }
-//   @return $target / $context + 0em;
-//}
-
-@mixin font-size($fSize, $line-height:false) {
-    font-size:$fSize;
-    font-size:($fSize / $fSizeBase)*1rem;
+@mixin font-size($font-size, $line-height:false) {
+    font-size:$font-size;
+    font-size:($font-size / $fontSizeBase)*1rem;
     @if $line-height == true {
-        line-height:ceil($fSize / $LineHeightBase) * ($LineHeightBase / $fSize);
+        line-height:ceil($font-size / $lineHeightBase) * ($lineHeightBase / $font-size);
     }
 }
 
 
 
-// PULL-IN STYLES  --------------------------------------------- */
-
-@mixin box-shadow($inset, $x, $y, $offset, $color) {
-    -moz-box-shadow: $inset $x $y $offset $color;
-    -o-box-shadow: $inset $x $y $offset $color;
-    -webkit-box-shadow: $inset $x $y $offset $color;
-    box-shadow: $inset $x $y $offset $color;
-}
-
-@mixin background-gradient {
-    background: #F9F9F9;
-    background: -moz-linear-gradient(top, #F9F9F9 0%, #DBDBDB 100%);
-    background: -ms-linear-gradient(top, #F9F9F9 0%, #DBDBDB 100%);
-    background: -o-linear-gradient(top, #F9F9F9 0%, #DBDBDB 100%);
-    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #F9F9F9), color-stop(100%, #DBDBDB));
-    background: -webkit-linear-gradient(top, #F9F9F9 0%, #DBDBDB 100%);
-    background: linear-gradient(top, #F9F9F9 0%, #DBDBDB 100%);
-}
-
-@mixin background-gradient-hover {
-    background: #FAFAFA;
-    background: -moz-linear-gradient(top, #FAFAFA 0%, #EAEAEA 100%);
-    background: -ms-linear-gradient(top, #FAFAFA 0%, #EAEAEA 100%);
-    background: -o-linear-gradient(top, #FAFAFA 0%, #EAEAEA 100%);
-    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #FAFAFA), color-stop(100%, #EAEAEA));
-    background: -webkit-linear-gradient(top, #FAFAFA 0%, #EAEAEA 100%);
-    background: linear-gradient(top, #FAFAFA 0%, #EAEAEA 100%);
-}
-
-@mixin background-gradient-active {
-    background: #DBDBDB;
-    background: -moz-linear-gradient(top, #DBDBDB 0%, #F9F9F9 100%);
-    background: -ms-linear-gradient(top, #DBDBDB 0%, #F9F9F9 100%);
-    background: -o-linear-gradient(top, #DBDBDB 0%, #F9F9F9 100%);
-    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #DBDBDB), color-stop(100%, #F9F9F9));
-    background: -webkit-linear-gradient(top, #DBDBDB 0%, #F9F9F9 100%);
-    background: linear-gradient(top, #DBDBDB 0%, #F9F9F9 100%);
-}

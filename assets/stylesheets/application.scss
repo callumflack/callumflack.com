@@ -1,28 +1,19 @@
 @import "compass";
+@import "normalize";
 @import "mixins";
-
-//@import "fontface";
-@import "typography";
-@import "mfglabs_iconset";
-@import "forms";
-@import "links";
-@import "selection";
+@import "variables";
 
 @import "layout";
-@import "footer";
-@import "gallery.build";
-@import "gallery.theme";
+@import "typography";
 @import "imgs";
-@import "subscribe";
-
-@import "pg-about";
+@import "forms";
 
 html, body {
     overflow-y: scroll;
     min-height: 100%;
     padding: 0;
     background-color: $cBack;
+    ::selection, ::-moz-selection { background: #61d7ee; color: white; } //$cText
+    //img::selection, img::-moz-selection { background: transparent; }
     a:link { -webkit-tap-highlight-color: rgba(255,0,0, 0.62); }
 }
-
-//body { position: relative; }
