@@ -10,7 +10,7 @@
  */
 
 %text {
-	font-family: $fontFace;
+	font-family: $fontFace, "Helvetica Neue", Helvetica, Arial;
 	font-size: $fontSizeBase;
     line-height: 1.25;
     font-weight: normal;
@@ -66,7 +66,7 @@ a {
  */
 
 i {
-    font-size: 130%;
+    font-size: 70%; //80% 130%
     margin-right: 2px;
 }
 
@@ -77,6 +77,15 @@ i {
 h1,
 h1 a {
     //color: $cText;
+}
+
+/**
+ * Vertical rhythm for About title & slideshow caption
+ */
+
+h1.title,
+h3.caption {
+    margin-top: rem(20);
 }
 
 
@@ -126,11 +135,13 @@ nav span { letter-spacing: -3px; }
         content: '• • •';
         display: block;
         margin: rem(44) 0 rem(48);
-        @include font-size(16px);
+        @include font-size(12px);
         text-align: center;
+        letter-spacing: rem(2);
     }
-    p:last-of-type,
-    p.last {
+    //p:last-of-type,
+    p.last,
+    p.last a {
         @include font-size(16px);
     }
 }
@@ -142,13 +153,14 @@ nav span { letter-spacing: -3px; }
 p.attention, p.attention span { color: $cHighlight; }
 
 p.attention::before,
-form::after {
-    content: '• • •';
+form.separate::after {
+    content: '•  •  •';
     display: block;
     margin: rem(44) 0 rem(48);
-    @include font-size(16px);
+    @include font-size(12px);
     text-align: center;
-    color: $cHighlight;
+    letter-spacing: 2px;
+    color: $cText;
 }
 
 

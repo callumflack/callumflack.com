@@ -7,31 +7,42 @@
             %br
             Design + Code
             %br
-        %a{:href => "/about"} About
+        %a{:href => "#about"} About
         %span &nbsp;.&nbsp;&nbsp;&nbsp;
-        / %a{:href => "/blog"} Blog
-        / %span &nbsp;.&nbsp;&nbsp;&nbsp;
-        %a{:href => "mailto:callumflack@gmail.com"} Contact
+        %a{:href => "/about"} Contact
 
 %article
     %section.slideshow
 
-        %figure
+        .slide#millennius#start
             = partial "slideMsgRight"
             .contentRight
                 %img{:src => "/assets/images/millennius-800.jpg", :alt => "Poster for the Millennius Fashion Event, 1998"}
                 %h3.caption
                     Poster Campaign. Vision Opera, London 2007.
-        %figure
+
+        .slide#roundtable
             = partial "slideMsg"
             .contentHolder
-                %img{:src => "/assets/images/roundtable-birds-1200.jpg", :alt => ""}
+                .gallery.items-2.autoplay
+                    .control-operator#item-1
+                    .control-operator#item-2
+                    %figure.item.title-1
+                        %img{:src => "/assets/images/roundtable-birds-1200.jpg", :alt => ""}
+                    %figure.item.title-2
+                        %img{:src => "/assets/images/DP-Medical.jpg", :alt => ""}
+                    .controls
+                        %a.control-button{:href => "#item-1"} •
+                        %a.control-button{:href => "#item-2"} •
+
                 %h3.caption
                     Poster Campaign. Vision Opera, London 2007.
-        %figure
-            = partial "slideMsgUp"
+
+        .slide#dangerouspixels
+            = partial "slideMsg"
             .contentHolder
                 %img{:src => "/assets/images/DP-Medical.jpg", :alt => ""}
                 %h3.caption
                     Poster Campaign. Vision Opera, London 2007.
 
+        = partial "about"

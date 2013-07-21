@@ -5,14 +5,12 @@
 /*
  * Ref: http://css-tricks.com/rundown-of-handling-flexible-media/
  * 1. Remove the gap between images and the bottom of their containers: h5bp.com/i/440
- * 2. %textMargin isn't enough
  */
 
 img {
     max-width: 100%;
     height: auto !important;
     vertical-align: middle; /* 1 */
-    margin-bottom: rem(20); /* 2 */
 }
 
 /**
@@ -21,5 +19,5 @@ img {
 
 section.slideshow,
 .about article img {
-    margin-top: rem(9);
+    margin-top: rem(8);
 }

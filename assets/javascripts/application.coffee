@@ -1,7 +1,7 @@
 #= require jquery.js
 
 $ ->
-  slides = $(".slideshow figure")
+  slides = $(".slideshow .slide")
   first = $(slides[0])
   base = first.offset().top
   body = $("body")

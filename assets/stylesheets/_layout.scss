@@ -18,12 +18,8 @@ header {
 }
 
 nav {
-    margin-left: rem(24);
-}
-
-nav,
-article {
     margin-top: rem(72);
+    margin-left: rem(24);
 }
 
 /**
@@ -33,6 +29,7 @@ article {
 article {
     position: relative;
     max-width: rem(1200);
+    margin-top: 0;
     margin-right: auto;
     margin-left: auto;
     margin-bottom: rem(144);
@@ -44,14 +41,14 @@ section {
 }
 
 
-/* Slideshow
+/* Vertical slideshow
    ========================================================================== */
 
 section.slideshow {
     //position: absolute;
 }
 
-figure {
+.slide {
     position: relative;
     @include cf;
     margin-bottom: rem(900);
@@ -63,8 +60,27 @@ figure {
 }
 
 /**
- * Action info panel
+ * Top-align ID anchors w/ nav
  */
+
+.slide,
+section#about {
+    padding-top: rem(72);
+}
+
+/**
+ * Counter parent figure for gallery-css
+ */
+
+figure.item {
+    //padding-top: 0;
+    //margin-bottom: 0;
+    cursor: pointer;
+}
+
+
+/* Slideshow user info on hover
+   ========================================================================== */
 
 .superfluous {
     position: absolute;
@@ -80,11 +96,16 @@ figure {
     margin-left: 50%;
 }
 
-.superfluous:hover {
-    @include opacity(1); //.96
-    @include single-transition(opacity, .5s, ease-in-out, 4s);
+.slide:hover .superfluous {
+    z-index: 1977;
+    @include opacity(1);
+    @include single-transition(opacity, .5s, ease-in-out, 5s);
     cursor: pointer;
 }
+
+/**
+ * Hover info text
+ */
 
 .grid {
     display: table-cell;
@@ -95,6 +116,10 @@ figure {
 .grid i {
     color: $cText;
     text-align: center;
+}
+
+.grid p {
+    @include font-size(24px);
 }
 
 
