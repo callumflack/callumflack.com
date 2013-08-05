@@ -21,7 +21,7 @@
     letter-spacing: normal;
     text-rendering: optimizeLegibility;
 	-webkit-font-smoothing: antialiased;
-    color: $cText50;
+    color: $cText;
     margin: 0;
 }
 
@@ -53,10 +53,10 @@ ul { padding-left: rem(36); }
  */
 
 a {
-    color: $cText50;
+    color: $cText;
     text-decoration: underline;
     &:hover {
-        color: $cText;
+        color: $cHighlight;
         text-decoration: none;
     }
 }
@@ -79,6 +79,14 @@ h1 a {
     //color: $cText;
 }
 
+h1.title {
+}
+
+h3.caption {
+    padding-bottom: rem(4);
+    border-bottom: 1px solid $cText50;
+}
+
 /**
  * Vertical rhythm for About title & slideshow caption
  */
@@ -89,6 +97,7 @@ h3.caption {
 }
 
 
+
 /* Tag and element manipulations
    ========================================================================== */
 
@@ -97,9 +106,9 @@ h3.caption {
  */
 
 %navText {
-    color: $cText50;
+    color: $cText;
     text-decoration: none;
-    &:hover { color: $cText; }
+    &:hover { color: $cHighlight; }
 }
 
 nav > h1 a { @extend %navText; }
@@ -108,28 +117,37 @@ nav > h1   { margin-bottom: 0; }
 nav a,
 nav span {
     @extend %navText;
-    &.selected { color: $cText; }
+    &.selected { color: $cHighlight; }
 }
 
 nav span { letter-spacing: -3px; }
+
+/**
+ * Highlight text
+ */
+
+.text--highlight { color: $cHighlight; }
 
 /**
  * About text
  */
 
 .textColumn {
-    h1, a, p, span {
-        @include font-size(24px);
-        color: $cText;
+    h1.title {
+        font-family: $fontFaceBold;
+        @include font-size(36px);
+        line-height: .9;
+        color: $cHighlight;
     }
-    h1 {
-        //margin-bottom: rem(72);
+    a, p, span {
+        @include font-size(24px);
     }
     h1 a:hover, a:hover {
-        color: $cText50;
+        //color: $cHighlight;
     }
-    h1 span, h1 span a {
-        @include font-size(16px)
+    h1.title span, h1.title span a {
+        @include font-size(16px);
+        color: $cHighlight;
     }
     h1::after {
         content: '• • •';

@@ -3,7 +3,9 @@
    ========================================================================== */
 
 @include font-face('theinhardt_regular', 'theinhardtreg-webfont');
+@include font-face('theinhardt_lightbold', 'theinhardtmed-webfont');
 $fontFace: 'theinhardt_regular';
+$fontFaceBold: 'theinhardt_lightbold';
 
 $fontSizeBase: 16px;
 $lineHeightBase: 24px;

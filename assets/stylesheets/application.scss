@@ -7,16 +7,14 @@
 @import "typography";
 @import "imgs";
 @import "forms";
+@import "selection";
 
 @import "gallery.build";
 @import "gallery.theme";
 
-html, body {
+html {
     overflow-y: scroll;
     min-height: 100%;
     padding: 0;
     background-color: $cBack;
-    ::selection, ::-moz-selection { background-color: #61d7ee; color: white; } //$cText
-    img::selection, img::-moz-selection { background: transparent; }
-    a:link { -webkit-tap-highlight-color: rgba(255,0,0, 0.62); }
 }

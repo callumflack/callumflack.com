@@ -9,13 +9,15 @@
             %br
         %a{:href => "#about"} About
         %span &nbsp;.&nbsp;&nbsp;&nbsp;
-        %a{:href => "/about"} Contact
+        %a{:href => "/blog"} Blog
+        %span &nbsp;.&nbsp;&nbsp;&nbsp;
+        %a{:href => "mailto:callumflack@gmail.com"} Email
 
 %article
     %section.slideshow
 
         .slide#millennius#start
-            = partial "slideMsgRight"
+            = partial "slideMsg-right"
             .contentRight
                 %img{:src => "/assets/images/millennius-800.jpg", :alt => "Poster for the Millennius Fashion Event, 1998"}
                 %h3.caption
@@ -24,19 +26,9 @@
         .slide#roundtable
             = partial "slideMsg"
             .contentHolder
-                .gallery.items-2.autoplay
-                    .control-operator#item-1
-                    .control-operator#item-2
-                    %figure.item.title-1
-                        %img{:src => "/assets/images/roundtable-birds-1200.jpg", :alt => ""}
-                    %figure.item.title-2
-                        %img{:src => "/assets/images/DP-Medical.jpg", :alt => ""}
-                    .controls
-                        %a.control-button{:href => "#item-1"} •
-                        %a.control-button{:href => "#item-2"} •
-
+                = partial "gallery-roundtable"
                 %h3.caption
-                    Poster Campaign. Vision Opera, London 2007.
+                    Visual identity & packaging. Roundtable Records, Melbourne 2009–2013.
 
         .slide#dangerouspixels
             = partial "slideMsg"
@@ -44,5 +36,12 @@
                 %img{:src => "/assets/images/DP-Medical.jpg", :alt => ""}
                 %h3.caption
                     Poster Campaign. Vision Opera, London 2007.
+
+        .slide#posters
+            = partial "slideMsg-about"
+            .contentHolder
+                = partial "gallery-posters"
+                %h3.caption
+                    Posters. Vision Opera, London 2007.
 
         = partial "about"

@@ -112,14 +112,9 @@ figure.item {
     vertical-align: middle;
 }
 
-.grid p,
-.grid i {
-    color: $cText;
-    text-align: center;
-}
-
 .grid p {
     @include font-size(24px);
+    text-align: center;
 }
 
 
