@@ -4,13 +4,15 @@
  */
 
 ::selection {
-    background: lighten($cHighlight, 40%); //#61d7ee;
+    background: black; //#61d7ee; lighten($cHighlight, 40%);
     text-shadow: none;
+    color: $cText;
 }
 
 ::-moz-selection {
-    background: lighten($cHighlight, 40%);
+    background: black;
     text-shadow: none;
+    color: $cText;
 }
 
 img::selection {

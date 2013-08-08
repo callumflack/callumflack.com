@@ -1,7 +1,7 @@
 #= require jquery.js
 
 $ ->
-  slides = $(".slideshow .slide")
+  slides = $(".js-slideshow .js-slide")
   first = $(slides[0])
   base = first.offset().top
   body = $("body")
@@ -16,7 +16,7 @@ $ ->
     next = first unless next.length
     scrollTo(next)
 
-  $(".back-to-top").click (event) ->
+  $("#backTop").click (event) ->
     event.preventDefault()
     scrollTo(first)
 

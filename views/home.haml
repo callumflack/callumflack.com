@@ -9,39 +9,42 @@
             %br
         %a{:href => "#about"} About
         %span &nbsp;.&nbsp;&nbsp;&nbsp;
-        %a{:href => "/blog"} Blog
-        %span &nbsp;.&nbsp;&nbsp;&nbsp;
+        //%a{:href => "/blog"} Blog
+        //%span &nbsp;.&nbsp;&nbsp;&nbsp;
         %a{:href => "mailto:callumflack@gmail.com"} Email
 
-%article
-    %section.slideshow
+%article.js-slideshow#start
 
-        .slide#millennius#start
-            = partial "slideMsg-right"
-            .contentRight
-                %img{:src => "/assets/images/millennius-800.jpg", :alt => "Poster for the Millennius Fashion Event, 1998"}
-                %h3.caption
-                    Poster Campaign. Vision Opera, London 2007.
+    %section.project.js-slide#millennius
+        /= partial "slideMsg-right"
+        .content.u-pullRight
+            %img{:src => "/assets/images/millennius-800.jpg", :alt => "Poster for the Millennius Fashion Event, 1998"}
+            %h3.gallery-caption
+                Poster Campaign. Vision Opera, London 2007.
+                = partial "slideMsg-next"
 
-        .slide#roundtable
-            = partial "slideMsg"
-            .contentHolder
-                = partial "gallery-roundtable"
-                %h3.caption
-                    Visual identity & packaging. Roundtable Records, Melbourne 2009–2013.
+    %section.project.js-slide#roundtable
+        /= partial "slideMsg"
+        .content
+            = partial "gallery-roundtable"
+            %h3.gallery-caption
+                Visual identity & packaging. Roundtable Records, Melbourne 2009–2013.
+                = partial "slideMsg-next"
 
-        .slide#dangerouspixels
-            = partial "slideMsg"
-            .contentHolder
-                %img{:src => "/assets/images/DP-Medical.jpg", :alt => ""}
-                %h3.caption
-                    Poster Campaign. Vision Opera, London 2007.
+    %section.project.js-slide#dangerouspixels
+        = partial "slideMsg"
+        .content
+            %img{:src => "/assets/images/DP-Medical.jpg", :alt => ""}
+            %h3.gallery-caption
+                Poster Campaign. Vision Opera, London 2007.
+                = partial "slideMsg-next"
 
-        .slide#posters
-            = partial "slideMsg-about"
-            .contentHolder
-                = partial "gallery-posters"
-                %h3.caption
-                    Posters. Vision Opera, London 2007.
+    %section.project.js-slide#posters
+        = partial "slideMsg-about"
+        .content
+            = partial "gallery-posters"
+            %h3.gallery-caption
+                Posters. Vision Opera, London 2007.
+                = partial "slideMsg-next"
 
-        = partial "about"
+    = partial "about"

@@ -5,10 +5,6 @@
 /* p, a & lists
    ========================================================================== */
 
-/**
- * Text settings
- */
-
 %text {
 	font-family: $fontFace, "Helvetica Neue", Helvetica, Arial;
 	font-size: $fontSizeBase;
@@ -29,10 +25,6 @@
     margin-bottom: rem(24);
 }
 
-/**
- * Define text tags
- */
-
 p, a, ul, li, span {
     @extend %text;
     @extend %textMargin;
@@ -48,12 +40,8 @@ p, a, ul, li, span {
 
 ul { padding-left: rem(36); }
 
-/**
- * Define anchor tag text
- */
-
 a {
-    color: $cText;
+    color: inherit;
     text-decoration: underline;
     &:hover {
         color: $cHighlight;
@@ -61,14 +49,6 @@ a {
     }
 }
 
-/**
- * Font awesome up/down icon
- */
-
-i {
-    font-size: 70%; //80% 130%
-    margin-right: 2px;
-}
 
 
 /* Headlines
@@ -82,9 +62,10 @@ h1 a {
 h1.title {
 }
 
-h3.caption {
-    padding-bottom: rem(4);
-    border-bottom: 1px solid $cText50;
+h3.gallery-caption {
+    padding-bottom: rem(6); //4 if control font-size: 1.5rem
+    margin-bottom: 0;
+    border-bottom: 1px solid #b5b5b5; //$cText20
 }
 
 /**
@@ -92,13 +73,13 @@ h3.caption {
  */
 
 h1.title,
-h3.caption {
+h3.gallery-caption {
     margin-top: rem(20);
 }
 
 
 
-/* Tag and element manipulations
+/* Block and element manipulations
    ========================================================================== */
 
 /**
@@ -122,45 +103,58 @@ nav span {
 
 nav span { letter-spacing: -3px; }
 
+nav a#about:target ~ section#about { color: $cHighlight; }
+
+
 /**
- * Highlight text
+ * 'Next' text
  */
 
-.text--highlight { color: $cHighlight; }
+.text--next {
+    @include font-size(36px);
+    text-align: center;
+    color: $cHighlight;
+}
 
 /**
- * About text
+ * 'About' text
  */
 
 .textColumn {
     h1.title {
-        font-family: $fontFaceBold;
-        @include font-size(36px);
-        line-height: .9;
+        //font-family: $fontFaceBold;
+        @include font-size(36px); //48
+        line-height: 1;
         color: $cHighlight;
+        margin-bottom: rem(12);
     }
     a, p, span {
         @include font-size(24px);
+        //color: $cText;
     }
     h1 a:hover, a:hover {
         //color: $cHighlight;
     }
-    h1.title span, h1.title span a {
+    h2, h2 a {
         @include font-size(16px);
         color: $cHighlight;
+        margin-bottom: rem(72);
     }
-    h1::after {
-        content: '• • •';
-        display: block;
-        margin: rem(44) 0 rem(48);
-        @include font-size(12px);
-        text-align: center;
-        letter-spacing: rem(2);
-    }
-    //p:last-of-type,
+//    h1::after {
+//        content: '•  •  •'; //* * * — — —
+//        display: block;
+//        margin: rem(44) auto rem(48) auto;
+//        //width: 20px;
+//        //border-bottom: 3px solid;
+//        @include font-size(12px); //18 for *
+//        color: $cText;
+//        text-align: center;
+//        letter-spacing: rem(2);
+//    }
     p.last,
     p.last a {
         @include font-size(16px);
+        //color: $cText50;
     }
 }
 
@@ -172,13 +166,18 @@ p.attention, p.attention span { color: $cHighlight; }
 
 p.attention::before,
 form.separate::after {
-    content: '•  •  •';
+    content: '*'; //•  •  •  ———
     display: block;
-    margin: rem(44) 0 rem(48);
-    @include font-size(12px);
+    margin: 29px 0 32px; //rem(44) 0 rem(48)
+    @include font-size(24px);
     text-align: center;
-    letter-spacing: 2px;
-    color: $cText;
+    //letter-spacing: -2px; //2
+    color: $cHighlight;
+}
+
+form.separate::after {
+    margin-top: 39px;
+    letter-spacing: -4px;
 }
 
 

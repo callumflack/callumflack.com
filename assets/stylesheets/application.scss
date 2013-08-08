@@ -3,14 +3,16 @@
 @import "mixins";
 @import "variables";
 
+@import "utilities";
+
 @import "layout";
 @import "typography";
 @import "imgs";
 @import "forms";
 @import "selection";
 
-@import "gallery.build";
-@import "gallery.theme";
+@import "gallery/gallery.prefixed";
+@import "gallery/gallery.theme";
 
 html {
     overflow-y: scroll;

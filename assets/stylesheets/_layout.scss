@@ -38,34 +38,20 @@ article {
 section {
     position: relative;
     @include cf;
+    padding-top: rem(72);
 }
 
 
 /* Vertical slideshow
    ========================================================================== */
 
-section.slideshow {
-    //position: absolute;
-}
+$projectHeight: rem(800);
 
-.slide {
-    position: relative;
-    @include cf;
-    margin-bottom: rem(900);
-}
-
-.contentHolder {
-    max-height: rem(800);
-    @include cf;
-}
-
-/**
- * Top-align ID anchors w/ nav
- */
-
-.slide,
-section#about {
-    padding-top: rem(72);
+.project {
+    //position: relative;
+    //@include cf;
+    max-height: $projectHeight;
+    margin-bottom: $projectHeight;
 }
 
 /**
@@ -79,56 +65,35 @@ figure.item {
 }
 
 
-/* Slideshow user info on hover
+/* Slideshow 'next' on hover
    ========================================================================== */
 
-.superfluous {
-    position: absolute;
-    display: table;
-    height: rem(800);
-    width: 100%;
-    background-color: white;
-    @include opacity(0);
+.content-info {
+    //position: absolute;
+    //height: $projectHeight;
+    //width: 100%;
+    //@include opacity(0);
 }
 
-.superfluous.halfRight {
-    width: 50%;
-    margin-left: 50%;
-}
+//.project:hover .content-info > .u-alignVertHold {
+//    z-index: 1977;
+//    @include opacity(1);
+//    @include single-transition(opacity, .3s, ease-in-out, 3s); //dist: duration 2s
+//    cursor: pointer;
+//}
 
-.slide:hover .superfluous {
-    z-index: 1977;
-    @include opacity(1);
-    @include single-transition(opacity, .5s, ease-in-out, 5s);
+.project:hover,
+.project:hover .slideLink {
+    color: $cHighlight;
     cursor: pointer;
 }
 
-/**
- * Hover info text
- */
 
-.grid {
-    display: table-cell;
-    vertical-align: middle;
-}
-
-.grid p {
-    @include font-size(24px);
-    text-align: center;
-}
-
-
-
-/* Text
+/* Text column
    ========================================================================== */
 
 .textColumn {
     max-width: rem(600);
-}
-
-//position: absolute; right: 0; won't work
-.contentRight {
-    float: right;
 }
 
 .contentCenter {

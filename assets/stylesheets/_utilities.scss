@@ -1,0 +1,75 @@
+/* Alignment
+   ========================================================================== */
+
+/**
+ * Align vertically
+ */
+
+.u-alignVertHold {
+    position: absolute;
+    display: table;
+    height: rem(800);
+    width: 100%;
+    background-color: white;
+    @include opacity(0);
+}
+
+.u-alignVertHold--halfRight {
+    width: 50% !important;
+    margin-left: 50%;
+}
+
+
+.u-alignVert {
+    display: table-cell;
+    vertical-align: middle;
+}
+
+/**
+ * Align centrally
+ */
+
+.u-alignCenter {
+    display: block;
+    margin: 0 auto;
+}
+
+/**
+ * Align horizontally
+ */
+
+.u-pullLeft {
+    float: left !important;
+}
+
+.u-pullRight {
+    float: right !important;
+}
+
+
+
+/* Spacing
+   ========================================================================== */
+
+.u-marginBm { margin-bottom: 10px !important; }
+
+
+
+/* Text
+   ========================================================================== */
+
+/**
+ * Horizontal text alignment
+ */
+
+.u-textCenter {
+    text-align: center;
+}
+
+.u-textLeft {
+    text-align: left;
+}
+
+.u-textRight {
+    text-align: right;
+}
