@@ -8,7 +8,7 @@
  * Slides structure
  */
 
-$colWidth: rem(550);
+$colWidth: rem(350);
 
 header,
 section {
@@ -21,7 +21,7 @@ section {
     background-color: $cBack;
 }
 
-header { background-color: #f8f8ec; }
+header { background-color: $cBackStart; }
 
 nav,
 .info {
