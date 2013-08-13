@@ -5,85 +5,109 @@
 *, *:after, *:before { @include box-sizing(border-box); }
 
 /**
- * Navigation
+ * Slides structure
  */
 
-header {
-    position: fixed;
-    top: 0;
-    right: auto;
-    bottom: 0;
-    left: 0;
-    width: 15%;
-}
+$colWidth: rem(550);
 
-nav {
-    margin-top: rem(72);
-    margin-left: rem(24);
-}
-
-/**
- * Article, centred
- */
-
-article {
-    position: relative;
-    max-width: rem(1200);
-    margin-top: 0;
-    margin-right: auto;
-    margin-left: auto;
-    margin-bottom: rem(144);
-}
-
+header,
 section {
     position: relative;
-    @include cf;
-    padding-top: rem(72);
+    //height: 100%;
+    height: rem(2000);
+    width: 100%;
+    //@include cf;
+    padding: $lHbR;
+    background-color: $cBack;
 }
 
+header { background-color: #f8f8ec; }
 
-/* Vertical slideshow
+nav,
+.info {
+    position: fixed;
+    left: $lHb;
+    max-width: $colWidth;
+    margin-top: -3px;
+}
+
+.info {
+    position: absolute;
+    top: $lHbR;
+}
+
+/* Slides
    ========================================================================== */
 
 $projectHeight: rem(800);
+$projectClear: rem(640);
 
-.project {
-    //position: relative;
-    //@include cf;
+.carousel {
+    position: relative;
+    float: right;
+    @include cf;
+    width: rem(1000);
+    height: $projectHeight;
     max-height: $projectHeight;
-    margin-bottom: $projectHeight;
+    margin-bottom: $projectClear;
+
+    .banner {
+        position: relative;
+        overflow: auto;
+        width: 100%;
+        height: $projectHeight;
+    }
+
+    .banner > ul {
+        margin: 0;
+        padding: 0;
+    }
+
+    .banner > ul li {
+        display: block;
+        float: left;
+        height: $projectHeight;
+        list-style: none;
+    }
+
+    .banner .inner {
+        width: 100%;
+        height: 100%;
+    }
+
+    .yellow1 { background-color: yellow; }
+    .yellow2 { background-color: #DAD490; }
+    .yellow3 { background-color: #BCC653; }
+    .pink1   { background-color: pink; }
 }
 
-/**
- * Counter parent figure for gallery-css
- */
-
-figure.item {
-    //padding-top: 0;
-    //margin-bottom: 0;
-    cursor: pointer;
-}
 
 
 /* Slideshow 'next' on hover
    ========================================================================== */
 
 .content-info {
-    //position: absolute;
-    //height: $projectHeight;
-    //width: 100%;
-    //@include opacity(0);
+    position: absolute;
+    display: table;
+    top: 0;
+    height: $projectHeight;
+    width: 100%;
+
+    background-color: $cBack;
+    @include opacity(0);
+
+    a { z-index: 2013; }
 }
 
-//.project:hover .content-info > .u-alignVertHold {
-//    z-index: 1977;
-//    @include opacity(1);
-//    @include single-transition(opacity, .3s, ease-in-out, 3s); //dist: duration 2s
-//    cursor: pointer;
-//}
+.project:hover .content-info {
+    //z-index: 1977;
+    @include opacity(1);
+    @include single-transition(opacity, .3s, ease-in-out, .3s); //dist: duration 2s
+    cursor: pointer;
+}
 
 .project:hover,
-.project:hover .slideLink {
+.project:hover .bannerLink {
     color: $cHighlight;
     cursor: pointer;
 }

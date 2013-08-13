@@ -40,8 +40,8 @@
  * vertical rhythm unit in rem [test]
  */
 
-//@function rem($vr, $lineHeightBase) {
-//    @return ($vr / $lineHeightBase) * 1rem;
+//@function rem($vr, $lHb) {
+//    @return ($vr / $lHb) * 1rem;
 //}
 
 
@@ -72,16 +72,16 @@
  * http://jsfiddle.net/redclover/mkYtY/
  * http://designbyjoel.com/blog/2013-02-28-sass-rems/
  * or? https://gist.github.com/ijy/1441967
- * @function rem($target, $context: $fontSizeBase) {
+ * @function rem($target, $context: $fSb) {
  *   @if $target == 0 { @return 0 }
  *   @return $target / $context + 0em;
  */
 
 @mixin font-size($font-size, $line-height:false) {
     font-size:$font-size;
-    font-size:($font-size / $fontSizeBase)*1rem;
+    font-size:($font-size / $fSb)*1rem;
     @if $line-height == true {
-        line-height:ceil($font-size / $lineHeightBase) * ($lineHeightBase / $font-size);
+        line-height:ceil($font-size / $lHb) * ($lHb / $font-size);
     }
 }
 

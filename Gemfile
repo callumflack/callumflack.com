@@ -5,6 +5,8 @@ gem "rake"
 gem "haml"
 gem "sass"
 gem "compass-rails"
+gem "autoprefixer-rails"
+
 gem "coffee-script"
 gem "maruku"
 

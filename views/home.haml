@@ -1,50 +1,35 @@
 - @body_class = "home"
 
-%header
+%header#start
     %nav
-        %a{:href => "/"}
-            Callum Flack
+        %h1
+            %a{:href => "/"}
+                Callum Flack is a designer who codes.
+        %p
+            I design and build communication products for screen and page
+            by focussing on Why, not What.
+        %p
+            I believe that:
+        %ul
+            %li Ideas are easy. Execution makes the thing.
+            %li Clarity is what shows above an iceberg of focus and elimination. Clarity, not simplicity, is the aim.
+            %li Seeing multiple viewpoints demystifies blah blah blah.
+        %p
+            Talk to me:
+            %a{:href => "mailto:callumflack@gmail.com"} email,
+            %a{:href => "https://twitter.com/callumflack"} twitter,
+            %a{:href => "https://github.com/callumflack"} github,
+            or
+            %a{:href => "http://www.linkedin.com/in/callumflack"} linkedin.
+        %p
             %br
-            Design + Code
-            %br
-        %a{:href => "#about"} About
-        %span &nbsp;.&nbsp;&nbsp;&nbsp;
-        //%a{:href => "/blog"} Blog
-        //%span &nbsp;.&nbsp;&nbsp;&nbsp;
-        %a{:href => "mailto:callumflack@gmail.com"} Email
+            %a{:href => "##roundtable"} View a work primer
 
-%article.js-slideshow#start
 
-    %section.project.js-slide#millennius
-        /= partial "slideMsg-right"
-        .content.u-pullRight
-            %img{:src => "/assets/images/millennius-800.jpg", :alt => "Poster for the Millennius Fashion Event, 1998"}
-            %h3.gallery-caption
-                Poster Campaign. Vision Opera, London 2007.
-                = partial "slideMsg-next"
+%section#roundtable
+    = partial "carousel-yellow"
+    = partial "info-yellow"
 
-    %section.project.js-slide#roundtable
-        /= partial "slideMsg"
-        .content
-            = partial "gallery-roundtable"
-            %h3.gallery-caption
-                Visual identity & packaging. Roundtable Records, Melbourne 2009–2013.
-                = partial "slideMsg-next"
-
-    %section.project.js-slide#dangerouspixels
-        = partial "slideMsg"
-        .content
-            %img{:src => "/assets/images/DP-Medical.jpg", :alt => ""}
-            %h3.gallery-caption
-                Poster Campaign. Vision Opera, London 2007.
-                = partial "slideMsg-next"
-
-    %section.project.js-slide#posters
-        = partial "slideMsg-about"
-        .content
-            = partial "gallery-posters"
-            %h3.gallery-caption
-                Posters. Vision Opera, London 2007.
-                = partial "slideMsg-next"
-
-    = partial "about"
+%section#millennius
+    = partial "carousel-pink"
+    = partial "info-pink"

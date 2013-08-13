@@ -7,11 +7,12 @@
 $fontFace: 'theinhardt_regular';
 $fontFaceBold: 'theinhardt_lightbold';
 
-$fontSizeBase: 16px;
-$lineHeightBase: 24px;
+$fSb: 16px;
+$lHb: 24px;
+$lHbR: rem(24);
 
 $cText: #888;
 $cText50: #999;
 $cText20: #aaa;
-$cHighlight: black; //#cc0000 #b60001 blues: #007aff #00adff; //#11b5d5;
+$cHighlight: black; // black #cc0000 #b60001 blues: #007aff #00adff; //#11b5d5;
 $cBack: #fdfdfd;

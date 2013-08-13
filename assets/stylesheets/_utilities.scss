@@ -10,7 +10,7 @@
     display: table;
     height: rem(800);
     width: 100%;
-    background-color: white;
+    background-color: $cBack;
     @include opacity(0);
 }
 

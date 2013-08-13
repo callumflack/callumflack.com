@@ -7,6 +7,13 @@ sass_dir = "sass"
 images_dir = "images"
 javascripts_dir = "javascripts"
 
+require 'autoprefixer-rails'
+
+on_stylesheet_saved do |file|
+  css = File.read(file)
+  File.open(file, 'w') { |io| io << AutoprefixerRails.compile(css) }
+end
+
 # You can select your preferred output style here (can be overridden via the command line):
 # output_style = :expanded or :nested or :compact or :compressed
 

@@ -7,7 +7,7 @@
 
 %text {
 	font-family: $fontFace, "Helvetica Neue", Helvetica, Arial;
-	font-size: $fontSizeBase;
+	@include font-size(24px);
     line-height: 1.25;
     font-weight: normal;
     font-style: normal;
@@ -22,23 +22,16 @@
 }
 
 %textMargin {
-    margin-bottom: rem(24);
+    margin-bottom: $lHb/3;
 }
 
-p, a, ul, li, span {
+p, a, li, span {
     @extend %text;
     @extend %textMargin;
     &:last-of-type { margin-bottom: 0; }
 }
 
-@for $index from 1 through 6 {
-    h#{$index} {
-        @extend %text;
-        @extend %textMargin;
-    }
-}
-
-ul { padding-left: rem(36); }
+ul { margin: 0 0 $lHb/3 0; }
 
 a {
     color: inherit;
@@ -49,14 +42,42 @@ a {
     }
 }
 
+/**
+ * Nav Em-dash list style
+ */
+
+nav {
+    ul { padding-left: 0; }
+    ul li:before {
+        content:"—";
+        position: relative;
+        //left: rem(24);
+        margin: 0 4px 0 24px;
+        padding-top: 3px;
+        @include font-size(20px);
+    }
+    ul li {
+        list-style: none;
+        //text-indent: rem(-12);
+        text-indent: -43px;
+    }
+}
+
 
 
 /* Headlines
    ========================================================================== */
 
+@for $index from 1 through 6 {
+    h#{$index} {
+        @extend %text;
+        @extend %textMargin;
+    }
+}
+
 h1,
 h1 a {
-    //color: $cText;
+    color: $cHighlight;
 }
 
 h1.title {
@@ -87,23 +108,28 @@ h3.gallery-caption {
  */
 
 %navText {
+    @include font-size(25px); //48
+    //line-height: 1.2;
     color: $cText;
-    text-decoration: none;
-    &:hover { color: $cHighlight; }
+    margin-bottom: $lHb/3;
+    //&:hover { color: $cHighlight; }
 }
 
-nav > h1 a { @extend %navText; }
-nav > h1   { margin-bottom: 0; }
+//header a, nav a { @extend %navText; }
+//nav > h1   { margin-bottom: 0; }
 
-nav a,
-nav span {
-    @extend %navText;
-    &.selected { color: $cHighlight; }
+nav {
+
+    h1, p, a, span  {
+        @extend %navText;
+    }
+
+    h1 a {
+        color: $cHighlight;
+        text-decoration: none;
+    }
 }
 
-nav span { letter-spacing: -3px; }
-
-nav a#about:target ~ section#about { color: $cHighlight; }
 
 
 /**
