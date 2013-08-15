@@ -1,0 +1,49 @@
+/* Alignment
+   ========================================================================== */
+
+/**
+ * Align vertically
+ */
+
+.u-alignVertHold {
+    position: absolute;
+    display: table;
+    height: rem(800);
+    width: 100%;
+    background-color: $cBg;
+    @include opacity(0);
+}
+
+.u-alignVertHold--halfRight {
+    width: 50% !important;
+    margin-left: 50%;
+}
+
+
+.u-alignVert {
+    display: table-cell;
+    vertical-align: middle;
+}
+
+/**
+ * Align vertically & horizontally
+ * http://codepen.io/shshaw/pen/gEiDt
+ */
+
+.u-absoluteCenter {
+  margin: auto;
+  position: absolute;
+  top: 0; left: 0; bottom: 0; right: 0;
+}
+
+.u-AbsoluteRight {
+    left: auto;
+}
+
+.u-AbsoluteLeft {
+    right: auto;
+}
+
+.u-fitHeight {
+    height: 100% !important;
+}

@@ -5,9 +5,9 @@
 #= require unslider.js
 
 $ ->
-    $(".banner").unslider()
-        speed: 500
-        delay: 3000
+    $(".banner").unslider
+        speed: 200
+        delay: 5000
         keys: true
         dots: false
         fluid: true

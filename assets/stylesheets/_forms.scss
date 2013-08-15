@@ -26,7 +26,7 @@ input[type="text"] {
     width: 80%;
     margin: 0 rem(10) 0 0;
     padding-left: 0;
-    border-bottom: 1px solid rgba($cHighlight, 0.5);
+    border-bottom: 1px solid rgba($cLink, 0.5);
     text-align: left;
 }
 
@@ -35,13 +35,13 @@ input[type="text"] {
 :-moz-placeholder,
 ::-moz-placeholder,
 :-ms-input-placeholder {
-    color: $cHighlight; //$cText50;
+    color: $cLink; //$cText50;
 }
 
 input[type="submit"] {
     text-align: left;
     @include border-radius(3px);
-    background-color: $cHighlight;
+    background-color: $cLink;
     color: white;
     &:hover {
         background-color: $cText;

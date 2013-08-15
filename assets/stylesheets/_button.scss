@@ -1,0 +1,59 @@
+/* ==========================================================================
+   Button theme
+   ========================================================================== */
+
+.Button {
+    padding: 0.4em 0; // override .c-button
+
+    a {
+        padding: 0.4em 0.75em; // inherit from .c-button
+        text-decoration: none;
+        color: $cLink;
+    }
+    &:hover {
+        //@include single-transition(background-color, .1s, ease-in-out);
+        background-color: $cLink;
+        border-color: $cLink;
+        a { color: white; }
+    }
+}
+
+//.Button + .Button { margin-left: $lHbR/2; }
+//.Button--plain + .Button--plain { margin-left: 0; }
+
+/**
+ * Modifiers
+ */
+
+.Button--clear {
+    border-width: 2px;
+}
+
+.Button--succinct {
+    border-color: $cText50;
+    a {
+        @include font-size(16px);
+        color: $cText;
+    }
+    @include bp(tablet) { float: right; }
+    @include bp(osx) { float: none; }
+}
+
+.Button--plain {
+    border-color: $cBg;
+    &:hover {
+        border-color: $cBg;
+        background-color: $cBg;
+        a { color: $cLink; }
+    }
+    a {
+        @include font-size(16px);
+        color: $cText;
+    }
+}
+
+.Button--light {
+    a { color: $cText20; }
+}
+
+

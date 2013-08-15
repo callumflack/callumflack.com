@@ -1,22 +1,52 @@
+/* SETTINGS ===================== */
+
 @import "compass";
 @import "normalize";
+
+/* SUIT CORE ==================== */
+
+@import "core/c-arrange";
+@import "core/c-base";
+@import "core/c-button-group";
+@import "core/c-button";
+@import "core/c-flex-embed";
+@import "core/c-griddle";
+
+@import "core/u-dimension";
+@import "core/u-display";
+@import "core/u-layout";
+@import "core/u-link";
+@import "core/u-offset";
+@import "core/u-space";
+@import "core/u-state";
+@import "core/u-text";
+
+/* THEME ======================== */
+
 @import "mixins";
 @import "variables";
 
-@import "utilities";
+@import "alignVertical";
 
 @import "layout";
+@import "carousel";
+
 @import "typography";
+
+@import "button";
 @import "imgs";
 @import "forms";
 @import "selection";
 
-@import "gallery/gallery.prefixed";
-@import "gallery/gallery.theme";
+/* BASE ========================= */
 
 html {
     overflow-y: scroll;
     min-height: 100%;
+    font-size: 16px;
     padding: 0;
-    background-color: $cBack;
+    background-color: $cBg;
+
+    @include bp(tablet) { font-size: 14px; }
+    @include bp(osx)  { font-size: 13px; }
 }

@@ -4,7 +4,7 @@
  */
 
 ::selection {
-    background: black; //#61d7ee; lighten($cHighlight, 40%);
+    background: black; //#61d7ee; lighten($cLink, 40%);
     text-shadow: none;
     color: $cText;
 }

@@ -1,0 +1,51 @@
+/* ==========================================================================
+   Intrinsic ratio embed - http://j.mp/GIHbnu
+   ========================================================================== */
+
+/**
+ * Flexible multi-media embeds
+ *
+ * For use with multi-media embeds, such as videos or slideshows, that need to
+ * retain a specific aspect ratio but adapt to elements of variable widths.
+ *
+ * Example HTML:
+ *
+ * <div class="Container">
+ *     <div class="FlexEmbed FlexEmbed--16by9">
+ *         [iframe|object|embed]
+ *     </div>
+ * </div>
+ */
+
+.FlexEmbed {
+    position: relative;
+    overflow: hidden;
+    height: 0;
+    padding: 0;
+}
+
+.FlexEmbed iframe,
+.FlexEmbed embed,
+.FlexEmbed object {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    ;
+}
+
+/**
+ * Modifier: 16:9 aspect ratio
+ */
+
+.FlexEmbed--16by9 {
+    padding-bottom: 56.25%;
+}
+
+/**
+ * Modifier: 4:3 aspect ratio
+ */
+
+.FlexEmbed--4by3 {
+    padding-bottom: 75%;
+}

@@ -13,11 +13,6 @@ img {
     vertical-align: middle; /* 1 */
 }
 
-/**
- * Fix top-align of text & img
- */
-
-section.js-slideshow,
-.about article img {
-    margin-top: rem(8);
+img.outline {
+    border: 1px solid #ddd;
 }

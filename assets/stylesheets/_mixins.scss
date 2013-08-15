@@ -8,24 +8,20 @@
 
 @mixin bp($point) {
 	@if $point == desk {
-		@media (max-width : 1600px) { @content; }
+		@media (max-width: 1620px) { @content; }
+	}
+	@if $point == air {
+		@media (min-width: 1300px) and (max-width: 1619px) { @content; } //default max-width: 1600 // Air 11in 1366 by 768, 13in 1440 by 900
 	}
 	@if $point == tablet {
-		@media (max-width : 1024px) { @content; }
+		@media (max-width: 1299px) { @content; }
 	}
-	@else if $point == narrow {
-		@media (max-width : 768px) { @content; }
+	@if $point == palm {
+		@media (max-width: 768px) { @content; }
 	}
-}
-
-/**
- * microclearfix
- */
-
-@mixin cf {
-	&:before, &:after { content: ""; display: table; }
-	&:after { clear: both; }
-	*zoom: 1;
+	@else if $point == osx {
+		@media (max-width: 400px) { @content; } //set this to 320 upon pushing live
+	}
 }
 
 /**
@@ -35,17 +31,6 @@
 @function rem($pxval, $base: 16) {
     @return ($pxval / $base) * 1rem;
 }
-
-/**
- * vertical rhythm unit in rem [test]
- */
-
-//@function rem($vr, $lHb) {
-//    @return ($vr / $lHb) * 1rem;
-//}
-
-
-
 
 /**
  * https://github.com/thoughtbot/bourbon/blob/master/app/assets/stylesheets/css3/_font-face.scss
