@@ -20,7 +20,7 @@
 		@media (max-width: 768px) { @content; }
 	}
 	@else if $point == osx {
-		@media (max-width: 400px) { @content; } //set this to 320 upon pushing live
+		@media (max-width: 320px) { @content; } //set this to 320 upon pushing live
 	}
 }
 

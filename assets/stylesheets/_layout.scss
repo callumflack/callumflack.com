@@ -8,9 +8,11 @@ $wProject: rem(1200);
 $hProject: $wProject*0.667;
 $mProject: rem(640);
 
-$wProject-r: 80%; //100vw
-$hProject-r: 80vw*0.667; //44vh
-$mProject-r: 20%;
+$wProject-tablet: 70%; //100vw
+$hProject-tablet: 70vw*0.8; //44vh
+
+$wProject-osx: 100%;
+$hProject-osx: 80vw; //67?
 
 /**
  * Sections as pages
@@ -19,13 +21,14 @@ $mProject-r: 20%;
 header,
 section {
     position: relative;
-    height: $wProject + $hProject;
+    height: rem(1440);
     width: 100%;
     padding: $lHbR;
     background-color: $cBg;
 }
 
-header { background-color: darken($cBg, 5%); }
+header,
+section#end { background-color: darken($cBg, 5%); }
 
 
 /* Page info part
@@ -50,12 +53,15 @@ nav,
     @include bp(palm) { float: none; }
 }
 
-.navInner {
+header .navInner,
+header .carousel {
     position: fixed;
-    max-width: inherit;
-    margin-right: $lHbR;
-
     @include bp(osx) { position: relative; }
+}
+
+header .navInner {
+    max-width: inherit; //$wInfo*1.5; //inherit
+    margin-right: $lHbR;
 }
 
 /**
@@ -92,14 +98,21 @@ nav,
 /* Page carousel part
    ========================================================================== */
 
+header#start > .carousel {
+    @include bp(osx) { display: none; }
+
+    @include bp(tablet) {
+        //margin-top: rem(200);
+        display: none;
+    }
+}
+
 .carousel {
     position: relative;
     float: right;
     @extend .u-cf;
     width: $wProject;
     height: $hProject;
-    //max-height: $hProject;
-    //margin-bottom: $mProject;
 
     /* load griddle */
     @include griddle-build(2 3 4 5 6 12);
@@ -108,10 +121,13 @@ nav,
 
     @include bp(tablet) {
         float: none;
-        width: $wProject-r;
-        height: $hProject-r;
-        //max-height: $hProject-r;
-        //margin-bottom: $mProject-r;
+        width: $wProject-tablet;
+        height: $hProject-tablet;
+    }
+
+    @include bp(osx) {
+        width: $wProject-osx;
+        height: $hProject-osx;
     }
 }
 

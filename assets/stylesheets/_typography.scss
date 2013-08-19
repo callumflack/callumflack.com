@@ -81,18 +81,23 @@ nav {
         color: $cRed;
         text-decoration: none;
         border-bottom: 1px solid $cRed;
+
+        &:hover {
+            color: $cRed;
+            border-bottom: 0;
+        }
     }
 
     /**
      * Nav Em-dash list style
      */
 
-    .ul-dash {
+    .ul--dash {
         padding-left: rem(28);
         list-style: none;
     }
 
-    .ul-dash > li:before {
+    .ul--dash > li:before {
         content: "—";
         text-indent: 0;
         display: inline-block;

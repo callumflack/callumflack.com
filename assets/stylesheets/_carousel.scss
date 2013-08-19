@@ -18,6 +18,7 @@ Carousel elements
         display: block;
         float: left;
         list-style: none;
+        margin: 0;
 
         img + img { margin-left: $lHbR/4; }
 
@@ -27,7 +28,21 @@ Carousel elements
 
         /* unslider requires a height */
         height: $hProject;
-        @include bp(tablet) { height: $hProject-r; }
+        @include bp(tablet) { height: $hProject-tablet + 0.5vw; }
+        @include bp(osx) { height: $hProject-osx; }
+
+        /* set images w/i %li container unless in ratio */
+        img.fixH {
+            height: $hProject - rem(1);
+            @include bp(tablet) { height: $hProject-tablet - 0.5vw; }
+            @include bp(osx) { height: $hProject-osx; }
+        }
+//
+//        /* …unless in ratio */
+//        &.unfixHeight {
+//            img { height: auto !important; }
+//            @include bp(tablet) { img { height: auto !important; } }
+//        }
     }
 
     /*
@@ -48,8 +63,8 @@ Carousel elements
         height: $hProject;
 
         @include bp(tablet) {
-            width: $wProject-r;
-            height: $hProject-r;
+            width: $wProject-tablet;
+            height: $hProject-tablet;
         }
     }
 
@@ -57,7 +72,7 @@ Carousel elements
         position: relative;
         height: $hProject;
 
-        @include bp(tablet) { height: $hProject-r; }
+        @include bp(tablet) { height: $hProject-tablet; }
     }
 
     .retainHW--h1-3 { height: $hProject/3; }
