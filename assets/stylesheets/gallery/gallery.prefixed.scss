@@ -1,0 +1,745 @@
+.gallery .control-operator:target ~ .controls .control-button {
+  color: #ddd
+}
+
+.gallery .control-button:first-of-type,
+.items-2 .control-operator:nth-of-type(1):target ~ .controls .control-button:nth-of-type(1),
+.items-2 .control-operator:nth-of-type(2):target ~ .controls .control-button:nth-of-type(2),
+.items-3 .control-operator:nth-of-type(1):target ~ .controls .control-button:nth-of-type(1),
+.items-3 .control-operator:nth-of-type(2):target ~ .controls .control-button:nth-of-type(2),
+.items-3 .control-operator:nth-of-type(3):target ~ .controls .control-button:nth-of-type(3),
+.items-4 .control-operator:nth-of-type(1):target ~ .controls .control-button:nth-of-type(1),
+.items-4 .control-operator:nth-of-type(2):target ~ .controls .control-button:nth-of-type(2),
+.items-4 .control-operator:nth-of-type(3):target ~ .controls .control-button:nth-of-type(3),
+.items-4 .control-operator:nth-of-type(4):target ~ .controls .control-button:nth-of-type(4),
+.items-5 .control-operator:nth-of-type(1):target ~ .controls .control-button:nth-of-type(1),
+.items-5 .control-operator:nth-of-type(2):target ~ .controls .control-button:nth-of-type(2),
+.items-5 .control-operator:nth-of-type(3):target ~ .controls .control-button:nth-of-type(3),
+.items-5 .control-operator:nth-of-type(4):target ~ .controls .control-button:nth-of-type(4),
+.items-5 .control-operator:nth-of-type(5):target ~ .controls .control-button:nth-of-type(5) {
+  color: black
+}
+
+.gallery .item:first-of-type {
+  position: static;
+  opacity: 1
+}
+
+.gallery .item {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  -moz-transition: opacity .5s;
+  -webkit-transition: opacity .5s;
+  -o-transition: opacity .5s;
+  transition: opacity .5s
+}
+
+.gallery .control-operator {
+  display: none
+}
+
+.gallery .control-operator:target ~ .item {
+  pointer-events: none;
+  opacity: 0;
+  -moz-animation: none;
+  -webkit-animation: none;
+  -o-animation: none;
+  animation: none
+}
+
+.gallery .control-operator:target ~ .controls .control-button {
+  -moz-animation: none;
+  -webkit-animation: none;
+  -o-animation: none;
+  animation: none
+}
+
+@keyframes controlAnimation-2 {
+  0% {
+    color: #ddd
+  }
+
+  12.5%, 50% {
+    color: black
+  }
+
+  62.5%, 100% {
+    color: #ddd
+  }
+}
+
+@keyframes galleryAnimation-2 {
+  0% {
+    opacity: 0
+  }
+
+  12.5%, 50% {
+    opacity: 1
+  }
+
+  62.5%, 100% {
+    opacity: 0
+  }
+}
+
+.items-2.autoplay .control-button {
+  -moz-animation: controlAnimation-2 8s infinite;
+  -webkit-animation: controlAnimation-2 8s infinite;
+  -o-animation: controlAnimation-2 8s infinite;
+  animation: controlAnimation-2 8s infinite
+}
+
+.items-2.autoplay .item {
+  -moz-animation: galleryAnimation-2 8s infinite;
+  -webkit-animation: galleryAnimation-2 8s infinite;
+  -o-animation: galleryAnimation-2 8s infinite;
+  animation: galleryAnimation-2 8s infinite
+}
+
+.items-2 .control-operator:nth-of-type(1):target ~ .item:nth-of-type(1) {
+  pointer-events: auto;
+  opacity: 1
+}
+
+.items-2 .control-button:nth-of-type(1),
+.items-2 .item:nth-of-type(1) {
+  -moz-animation-delay: -1s;
+  -webkit-animation-delay: -1s;
+  -o-animation-delay: -1s;
+  animation-delay: -1s
+}
+
+.items-2 .control-operator:nth-of-type(2):target ~ .item:nth-of-type(2) {
+  pointer-events: auto;
+  opacity: 1
+}
+
+.items-2 .control-button:nth-of-type(2),
+.items-2 .item:nth-of-type(2) {
+  -moz-animation-delay: 3s;
+  -webkit-animation-delay: 3s;
+  -o-animation-delay: 3s;
+  animation-delay: 3s
+}
+
+@keyframes controlAnimation-3 {
+  0% {
+    color: #ddd
+  }
+
+  8.3%, 33.3% {
+    color: black
+  }
+
+  41.7%, 100% {
+    color: #ddd
+  }
+}
+
+@keyframes galleryAnimation-3 {
+  0% {
+    opacity: 0
+  }
+
+  8.3%, 33.3% {
+    opacity: 1
+  }
+
+  41.7%, 100% {
+    opacity: 0
+  }
+}
+
+.items-3.autoplay .control-button {
+  -moz-animation: controlAnimation-3 12s infinite;
+  -webkit-animation: controlAnimation-3 12s infinite;
+  -o-animation: controlAnimation-3 12s infinite;
+  animation: controlAnimation-3 12s infinite
+}
+
+.items-3.autoplay .item {
+  -moz-animation: galleryAnimation-3 12s infinite;
+  -webkit-animation: galleryAnimation-3 12s infinite;
+  -o-animation: galleryAnimation-3 12s infinite;
+  animation: galleryAnimation-3 12s infinite
+}
+
+.items-3 .control-operator:nth-of-type(1):target ~ .item:nth-of-type(1) {
+  pointer-events: auto;
+  opacity: 1
+}
+
+.items-3 .control-button:nth-of-type(1),
+.items-3 .item:nth-of-type(1) {
+  -moz-animation-delay: -1s;
+  -webkit-animation-delay: -1s;
+  -o-animation-delay: -1s;
+  animation-delay: -1s
+}
+
+.items-3 .control-operator:nth-of-type(2):target ~ .item:nth-of-type(2) {
+  pointer-events: auto;
+  opacity: 1
+}
+
+.items-3 .control-button:nth-of-type(2),
+.items-3 .item:nth-of-type(2) {
+  -moz-animation-delay: 3s;
+  -webkit-animation-delay: 3s;
+  -o-animation-delay: 3s;
+  animation-delay: 3s
+}
+
+.items-3 .control-operator:nth-of-type(3):target ~ .item:nth-of-type(3) {
+  pointer-events: auto;
+  opacity: 1
+}
+
+.items-3 .control-button:nth-of-type(3),
+.items-3 .item:nth-of-type(3) {
+  -moz-animation-delay: 7s;
+  -webkit-animation-delay: 7s;
+  -o-animation-delay: 7s;
+  animation-delay: 7s
+}
+
+@keyframes controlAnimation-4 {
+  0% {
+    color: #ddd
+  }
+
+  6.3%, 25% {
+    color: black
+  }
+
+  31.3%, 100% {
+    color: #ddd
+  }
+}
+
+@keyframes galleryAnimation-4 {
+  0% {
+    opacity: 0
+  }
+
+  6.3%, 25% {
+    opacity: 1
+  }
+
+  31.3%, 100% {
+    opacity: 0
+  }
+}
+
+.items-4.autoplay .control-button {
+  -moz-animation: controlAnimation-4 16s infinite;
+  -webkit-animation: controlAnimation-4 16s infinite;
+  -o-animation: controlAnimation-4 16s infinite;
+  animation: controlAnimation-4 16s infinite
+}
+
+.items-4.autoplay .item {
+  -moz-animation: galleryAnimation-4 16s infinite;
+  -webkit-animation: galleryAnimation-4 16s infinite;
+  -o-animation: galleryAnimation-4 16s infinite;
+  animation: galleryAnimation-4 16s infinite
+}
+
+.items-4 .control-operator:nth-of-type(1):target ~ .item:nth-of-type(1) {
+  pointer-events: auto;
+  opacity: 1
+}
+
+.items-4 .control-button:nth-of-type(1),
+.items-4 .item:nth-of-type(1) {
+  -moz-animation-delay: -1s;
+  -webkit-animation-delay: -1s;
+  -o-animation-delay: -1s;
+  animation-delay: -1s
+}
+
+.items-4 .control-operator:nth-of-type(2):target ~ .item:nth-of-type(2) {
+  pointer-events: auto;
+  opacity: 1
+}
+
+.items-4 .control-button:nth-of-type(2),
+.items-4 .item:nth-of-type(2) {
+  -moz-animation-delay: 3s;
+  -webkit-animation-delay: 3s;
+  -o-animation-delay: 3s;
+  animation-delay: 3s
+}
+
+.items-4 .control-operator:nth-of-type(3):target ~ .item:nth-of-type(3) {
+  pointer-events: auto;
+  opacity: 1
+}
+
+.items-4 .control-button:nth-of-type(3),
+.items-4 .item:nth-of-type(3) {
+  -moz-animation-delay: 7s;
+  -webkit-animation-delay: 7s;
+  -o-animation-delay: 7s;
+  animation-delay: 7s
+}
+
+.items-4 .control-operator:nth-of-type(4):target ~ .item:nth-of-type(4) {
+  pointer-events: auto;
+  opacity: 1
+}
+
+.items-4 .control-button:nth-of-type(4),
+.items-4 .item:nth-of-type(4) {
+  -moz-animation-delay: 11s;
+  -webkit-animation-delay: 11s;
+  -o-animation-delay: 11s;
+  animation-delay: 11s
+}
+
+@keyframes controlAnimation-5 {
+  0% {
+    color: #ddd
+  }
+
+  5%, 20% {
+    color: black
+  }
+
+  25%, 100% {
+    color: #ddd
+  }
+}
+
+@keyframes galleryAnimation-5 {
+  0% {
+    opacity: 0
+  }
+
+  5%, 20% {
+    opacity: 1
+  }
+
+  25%, 100% {
+    opacity: 0
+  }
+}
+
+.items-5.autoplay .control-button {
+  -moz-animation: controlAnimation-5 20s infinite;
+  -webkit-animation: controlAnimation-5 20s infinite;
+  -o-animation: controlAnimation-5 20s infinite;
+  animation: controlAnimation-5 20s infinite
+}
+
+.items-5.autoplay .item {
+  -moz-animation: galleryAnimation-5 20s infinite;
+  -webkit-animation: galleryAnimation-5 20s infinite;
+  -o-animation: galleryAnimation-5 20s infinite;
+  animation: galleryAnimation-5 20s infinite
+}
+
+.items-5 .control-operator:nth-of-type(1):target ~ .item:nth-of-type(1) {
+  pointer-events: auto;
+  opacity: 1
+}
+
+.items-5 .control-button:nth-of-type(1),
+.items-5 .item:nth-of-type(1) {
+  -moz-animation-delay: -1s;
+  -webkit-animation-delay: -1s;
+  -o-animation-delay: -1s;
+  animation-delay: -1s
+}
+
+.items-5 .control-operator:nth-of-type(2):target ~ .item:nth-of-type(2) {
+  pointer-events: auto;
+  opacity: 1
+}
+
+.items-5 .control-button:nth-of-type(2),
+.items-5 .item:nth-of-type(2) {
+  -moz-animation-delay: 3s;
+  -webkit-animation-delay: 3s;
+  -o-animation-delay: 3s;
+  animation-delay: 3s
+}
+
+.items-5 .control-operator:nth-of-type(3):target ~ .item:nth-of-type(3) {
+  pointer-events: auto;
+  opacity: 1
+}
+
+.items-5 .control-button:nth-of-type(3),
+.items-5 .item:nth-of-type(3) {
+  -moz-animation-delay: 7s;
+  -webkit-animation-delay: 7s;
+  -o-animation-delay: 7s;
+  animation-delay: 7s
+}
+
+.items-5 .control-operator:nth-of-type(4):target ~ .item:nth-of-type(4) {
+  pointer-events: auto;
+  opacity: 1
+}
+
+.items-5 .control-button:nth-of-type(4),
+.items-5 .item:nth-of-type(4) {
+  -moz-animation-delay: 11s;
+  -webkit-animation-delay: 11s;
+  -o-animation-delay: 11s;
+  animation-delay: 11s
+}
+
+.items-5 .control-operator:nth-of-type(5):target ~ .item:nth-of-type(5) {
+  pointer-events: auto;
+  opacity: 1
+}
+
+.items-5 .control-button:nth-of-type(5),
+.items-5 .item:nth-of-type(5) {
+  -moz-animation-delay: 15s;
+  -webkit-animation-delay: 15s;
+  -o-animation-delay: 15s;
+  animation-delay: 15s
+}
+
+@-moz-keyframes controlAnimation-2 {
+  0% {
+    color: #ddd
+  }
+
+  12.5%, 50% {
+    color: black
+  }
+
+  62.5%, 100% {
+    color: #ddd
+  }
+}
+
+@-webkit-keyframes controlAnimation-2 {
+  0% {
+    color: #ddd
+  }
+
+  12.5%, 50% {
+    color: black
+  }
+
+  62.5%, 100% {
+    color: #ddd
+  }
+}
+
+@-o-keyframes controlAnimation-2 {
+  0% {
+    color: #ddd
+  }
+
+  12.5%, 50% {
+    color: black
+  }
+
+  62.5%, 100% {
+    color: #ddd
+  }
+}
+
+@-moz-keyframes galleryAnimation-2 {
+  0% {
+    opacity: 0
+  }
+
+  12.5%, 50% {
+    opacity: 1
+  }
+
+  62.5%, 100% {
+    opacity: 0
+  }
+}
+
+@-webkit-keyframes galleryAnimation-2 {
+  0% {
+    opacity: 0
+  }
+
+  12.5%, 50% {
+    opacity: 1
+  }
+
+  62.5%, 100% {
+    opacity: 0
+  }
+}
+
+@-o-keyframes galleryAnimation-2 {
+  0% {
+    opacity: 0
+  }
+
+  12.5%, 50% {
+    opacity: 1
+  }
+
+  62.5%, 100% {
+    opacity: 0
+  }
+}
+
+@-moz-keyframes controlAnimation-3 {
+  0% {
+    color: #ddd
+  }
+
+  8.3%, 33.3% {
+    color: black
+  }
+
+  41.7%, 100% {
+    color: #ddd
+  }
+}
+
+@-webkit-keyframes controlAnimation-3 {
+  0% {
+    color: #ddd
+  }
+
+  8.3%, 33.3% {
+    color: black
+  }
+
+  41.7%, 100% {
+    color: #ddd
+  }
+}
+
+@-o-keyframes controlAnimation-3 {
+  0% {
+    color: #ddd
+  }
+
+  8.3%, 33.3% {
+    color: black
+  }
+
+  41.7%, 100% {
+    color: #ddd
+  }
+}
+
+@-moz-keyframes galleryAnimation-3 {
+  0% {
+    opacity: 0
+  }
+
+  8.3%, 33.3% {
+    opacity: 1
+  }
+
+  41.7%, 100% {
+    opacity: 0
+  }
+}
+
+@-webkit-keyframes galleryAnimation-3 {
+  0% {
+    opacity: 0
+  }
+
+  8.3%, 33.3% {
+    opacity: 1
+  }
+
+  41.7%, 100% {
+    opacity: 0
+  }
+}
+
+@-o-keyframes galleryAnimation-3 {
+  0% {
+    opacity: 0
+  }
+
+  8.3%, 33.3% {
+    opacity: 1
+  }
+
+  41.7%, 100% {
+    opacity: 0
+  }
+}
+
+@-moz-keyframes controlAnimation-4 {
+  0% {
+    color: #ddd
+  }
+
+  6.3%, 25% {
+    color: black
+  }
+
+  31.3%, 100% {
+    color: #ddd
+  }
+}
+
+@-webkit-keyframes controlAnimation-4 {
+  0% {
+    color: #ddd
+  }
+
+  6.3%, 25% {
+    color: black
+  }
+
+  31.3%, 100% {
+    color: #ddd
+  }
+}
+
+@-o-keyframes controlAnimation-4 {
+  0% {
+    color: #ddd
+  }
+
+  6.3%, 25% {
+    color: black
+  }
+
+  31.3%, 100% {
+    color: #ddd
+  }
+}
+
+@-moz-keyframes galleryAnimation-4 {
+  0% {
+    opacity: 0
+  }
+
+  6.3%, 25% {
+    opacity: 1
+  }
+
+  31.3%, 100% {
+    opacity: 0
+  }
+}
+
+@-webkit-keyframes galleryAnimation-4 {
+  0% {
+    opacity: 0
+  }
+
+  6.3%, 25% {
+    opacity: 1
+  }
+
+  31.3%, 100% {
+    opacity: 0
+  }
+}
+
+@-o-keyframes galleryAnimation-4 {
+  0% {
+    opacity: 0
+  }
+
+  6.3%, 25% {
+    opacity: 1
+  }
+
+  31.3%, 100% {
+    opacity: 0
+  }
+}
+
+@-moz-keyframes controlAnimation-5 {
+  0% {
+    color: #ddd
+  }
+
+  5%, 20% {
+    color: black
+  }
+
+  25%, 100% {
+    color: #ddd
+  }
+}
+
+@-webkit-keyframes controlAnimation-5 {
+  0% {
+    color: #ddd
+  }
+
+  5%, 20% {
+    color: black
+  }
+
+  25%, 100% {
+    color: #ddd
+  }
+}
+
+@-o-keyframes controlAnimation-5 {
+  0% {
+    color: #ddd
+  }
+
+  5%, 20% {
+    color: black
+  }
+
+  25%, 100% {
+    color: #ddd
+  }
+}
+
+@-moz-keyframes galleryAnimation-5 {
+  0% {
+    opacity: 0
+  }
+
+  5%, 20% {
+    opacity: 1
+  }
+
+  25%, 100% {
+    opacity: 0
+  }
+}
+
+@-webkit-keyframes galleryAnimation-5 {
+  0% {
+    opacity: 0
+  }
+
+  5%, 20% {
+    opacity: 1
+  }
+
+  25%, 100% {
+    opacity: 0
+  }
+}
+
+@-o-keyframes galleryAnimation-5 {
+  0% {
+    opacity: 0
+  }
+
+  5%, 20% {
+    opacity: 1
+  }
+
+  25%, 100% {
+    opacity: 0
+  }
+}

@@ -1,51 +1,18 @@
-$img-side1: 671px; //721
-$w-pic-p: 500px;
-$img-posts1: $img-side1 * 0.6875;
-$img-posts2: $w-pic * 0.6875;
+/* ==========================================================================
+   Images
+   ========================================================================== */
 
+/*
+ * Ref: http://css-tricks.com/rundown-of-handling-flexible-media/
+ * 1. Remove the gap between images and the bottom of their containers: h5bp.com/i/440
+ */
 
-a.img, a.img:hover {
-  border: 0;
-}
-
-//http://css-tricks.com/rundown-of-handling-flexible-media/
 img {
-  max-width: 100%;
-  /* just in case, to force correct aspet ratio */
-  height: auto !important;
+    max-width: 100%;
+    height: auto; // !important
+    vertical-align: middle; /* 1 */
 }
 
-.portrait-list {
-  left: 50%;
-  width: $img-posts1;
-  height: $img-posts2;
-  margin-left: -$img-posts1 / 2;
-}
-.portrait { 
-  height: $w-pic * 0.708;
-  width: 481px;
-  left: 50%;
-  margin-left: ($w-pic - 481px) / 2;
-}
-.landscape-list {
-  width: $img-posts2;
-  height: $img-posts1;
-  left: 50%;
-  margin-left: -$img-posts2 / 2;
-}
-.landscape {
-  left: 50%;
-  top: 50%;
-  margin-left: -$w-pic / 2;
-}
-
-.square {
-  left: 50%;
-  margin-left: 140px;
-}
-
-.portrait-1 {
-  left: 50%;
-  top: 50%;
-//  margin-left: 100px;
+img.outline {
+    border: 1px solid #ddd;
 }

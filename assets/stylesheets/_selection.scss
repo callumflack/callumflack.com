@@ -1,15 +1,28 @@
+/*
+ * Remove text-shadow in selection highlight: h5bp.com/i
+ * These selection declarations have to be separate.
+ */
+
 ::selection {
-	background: #e5e5e5;
-	color: $text;
+    background: black; //#61d7ee; lighten($cLink, 40%);
+    text-shadow: none;
+    color: $cText;
 }
+
 ::-moz-selection {
-	background: #e5e5e5;
-	color: $text;
+    background: black;
+    text-shadow: none;
+    color: $cText;
 }
 
 img::selection {
-	background: transparent;
+    background: transparent;
 }
+
 img::-moz-selection {
-	background: transparent;
+    background: transparent;
+}
+
+a:link {
+    -webkit-tap-highlight-color: rgba(255,0,0, 0.62);
 }

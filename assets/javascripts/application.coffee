@@ -1,24 +1,13 @@
 #= require jquery.js
+#= require jquery.arbitrary-anchor.js
+#= require jquery.event.swipe.js
+#= require jquery.event.move.js
+#= require unslider.js
 
 $ ->
-  slides = $(".slides img")
-  first = $(slides[0])
-  base = first.offset().top
-  body = $("body")
-
-  scrollTo = (slide) ->
-    top = slide.offset().top
-    body.animate(scrollTop: top - base, 400, "swing")
-
-  slides.click (event) ->
-    image = $(this)
-    next = image.next()
-    next = first unless next.length
-    scrollTo(next)
-
-  $(".back-to-top").click (event) ->
-    event.preventDefault()
-    scrollTo(first)
-
-  $(".show-info").click (event) ->
-    $("body").toggleClass("expand-info")
+    $(".banner").unslider
+        speed: 200
+        delay: 5000
+        keys: true
+        dots: false
+        fluid: true

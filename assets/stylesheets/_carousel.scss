@@ -1,0 +1,80 @@
+/* ==========================================================================
+Carousel elements
+========================================================================== */
+
+.carousel {
+
+    .banner {
+        position: relative;
+        overflow: auto;
+    }
+
+    .banner > ul {
+        margin: 0;
+        padding: 0;
+    }
+
+    .banner > ul li {
+        display: block;
+        float: left;
+        list-style: none;
+        margin: 0;
+
+        img + img { margin-left: $lHbR/4; }
+
+        /* keep slides at the edges */
+        text-align: right;
+        @include bp(tablet) { text-align: left; }
+
+        /* unslider requires a height */
+        height: $hProject;
+        @include bp(tablet) { height: $hProject-tablet + 0.5vw; }
+        @include bp(osx) { height: $hProject-osx; }
+
+        /* set images w/i %li container unless in ratio */
+        img.fixH {
+            height: $hProject - rem(1);
+            @include bp(tablet) { height: $hProject-tablet - 0.5vw; }
+            @include bp(osx) { height: $hProject-osx; }
+        }
+//
+//        /* …unless in ratio */
+//        &.unfixHeight {
+//            img { height: auto !important; }
+//            @include bp(tablet) { img { height: auto !important; } }
+//        }
+    }
+
+    /*
+    * Slide background colors
+    */
+
+    .bg-grey { background-color: darken($cBg, 5%); }
+    .bg-outline { border: 1px solid darken($cBg, 50%); }
+
+    /*
+    * Parent use for .u-absoluteCenter
+    * Build horizontal layers with these
+    */
+
+    .retainHW {
+        position: relative;
+        width: $wProject;
+        height: $hProject;
+
+        @include bp(tablet) {
+            width: $wProject-tablet;
+            height: $hProject-tablet;
+        }
+    }
+
+    .retainH {
+        position: relative;
+        height: $hProject;
+
+        @include bp(tablet) { height: $hProject-tablet; }
+    }
+
+    .retainHW--h1-3 { height: $hProject/3; }
+    .retainHW--h1-4 { height: $hProject/4; }
+}

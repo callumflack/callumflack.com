@@ -1,158 +1,134 @@
-$w-text: 600px;
-$w-pic: 960px;
-$h-nav: 90px;
-$text: #222;
-$text-50: #999;
-$text-20: #ccc;
-$link: #d00;
-$background: #fefefe; //fdfdfa
+/* ==========================================================================
+   Layout
+   ========================================================================== */
 
-.anchor { 
-  position: fixed;
-  top: 0;
-  width: 100%;
-  height: 5px;
-  background-color: $text;
-  z-index: 1978;
-}
+*, *:after, *:before { @include box-sizing(border-box); }
 
-.container { //[role="main"] this breaks, from Schwarz's responsive sass
-  position: relative;
-  width: $w-pic;
-  margin: 0 auto;
-  padding: 0 20px;
-//  @include breakpoint(narrow) { 
-//     width: 320px;
-//  }  
-}
+$wProject: rem(1200);
+$hProject: $wProject*0.667;
+$mProject: rem(640);
 
-.absolute { position: absolute; }
-.fixed { position: fixed; }
+$wProject-tablet: 70%; //100vw
+$hProject-tablet: 70vw*0.8; //44vh
 
-.text-padding { padding: 0 ($w-pic - $w-text) / 2; }
+$wProject-osx: 100%;
+$hProject-osx: 80vw; //67?
 
-.rule { 
-  border-bottom: 1px solid $text; 
-  padding-bottom: 1px;
-}
-.rule-invisible { 
-  @extend .rule;
-  border-color: transparent;
-}
-.rule-h {
-  @extend .rule;
-  border-color: $link;
-}
-.rule-link { 
-  border-bottom: 1px dotted $text-50;
-  &:hover { border-color: $link; }
-}
+/**
+ * Sections as pages
+ */
 
-
-//---------------------------------------------------------Nav
-
-nav {
-  position: relative;
-  padding-top: 60px; //5 added on for anchor
-  width: $w-pic; //100%
-  height: $h-nav;
-  z-index: 1977;
-  &:hover {
-//    background-color: $text;
-//    height: $h-nav*4;
-//    opacity: .9;
-    .location {
-      @extend .opacity-0;
-    }
-    .menu {
-//      @extend .fade-delay-2;
-      @extend .opacity-100;
-    }
-  }
-}
-
-.location {
-  position: absolute;
-  width: 100%;
-  text-align: center;
-  a {
-//    @extend .rule;
-    color: $text;
-    border: 0;
-  }
-}
-
-.menu {
-  @extend .location;
-  @extend .opacity-0;
-  a { 
-    color: $text-50; //white
-    margin-left: 0;
-//    @extend .rule-invisible;
-    text-decoration: none;
-    &.selected { 
-//      @extend .rule;
-    }
-    &:hover { 
-      color: $text;
-      border-color: $text;
-    }
-  }
-}
-
-.location, .menu {
-  a.selected { color: $text; }
-  a.spaced { margin-left: 24px; }
-}
-
-
-
-
-//------------------------------Text article width
-
+header,
 section {
-  position: relative;
-  width: 100%;
-  margin: 0 auto 40px 0;
-  &.absolute {
-    top: 0;
-    padding-top: $h-nav + 55px;
-    width: $w-pic;
-  }
+    position: relative;
+    height: rem(1440);
+    width: 100%;
+    padding: $lHbR;
+    background-color: $cBg;
+}
 
-  img { 
-//    width: 100%;
-  }
+header,
+section#end { background-color: darken($cBg, 5%); }
 
-  article {
-    width: $w-text;
-    @extend .text-padding;
-    h1 {
-//      @extend .fade-delay;
-      a {
-        padding: 3px 0 49px 0;
-      }
-      &.first {
-        text-decoration: underline;
-      }
+
+/* Page info part
+   ========================================================================== */
+
+$wInfo: rem(370);
+$alignTop: rem(3);
+
+nav,
+.info {
+    position: relative;
+    float: left;
+    width: 100%;
+    max-width: $wInfo;
+
+    @include bp(tablet) {
+        float: none;
+        max-width: 100%;
+        margin-bottom: $lHbR*2;
     }
-  }
-  &.first {
-    padding-top: 120px;
-  }
+    // this is purely to have this bp show in the responsive extension in chrome
+    @include bp(palm) { float: none; }
+}
+
+header .navInner,
+header .carousel {
+    position: fixed;
+    @include bp(osx) { position: relative; }
+}
+
+header .navInner {
+    max-width: inherit; //$wInfo*1.5; //inherit
+    margin-right: $lHbR;
+}
+
+/**
+ * Blocks within info part
+ */
+
+.block { position: relative; }
+
+.block--info {
+    margin-top: -($alignTop);
+
+    @include bp(tablet) { max-width: 50%; }
+    @include bp(osx) { max-width: 100%; }
+}
+
+.block--infoNav {
+    margin-top: $lHbR;
+
+    @include bp(tablet) {
+        position: absolute;
+        top: 0;
+        right: 0;
+        margin: 0;
+    }
+    @include bp(osx) {
+        position: relative;
+        top: 0;
+        right: 0;
+        margin-top: $lHbR/1.5;
+    }
 }
 
 
-//----------------------info w/i slideshow
-.slides {
-  .article {
-    width: $w-pic;
-    height: 680px;
-    .inset {
-      width: $w-text;
-      padding: 180px;
-//      height: 680px;
+/* Page carousel part
+   ========================================================================== */
+
+header#start > .carousel {
+    @include bp(osx) { display: none; }
+
+    @include bp(tablet) {
+        //margin-top: rem(200);
+        display: none;
     }
-  }
 }
+
+.carousel {
+    position: relative;
+    float: right;
+    @extend .u-cf;
+    width: $wProject;
+    height: $hProject;
+
+    /* load griddle */
+    @include griddle-build(2 3 4 5 6 12);
+
+    @include bp(air) { width: rem(860); }
+
+    @include bp(tablet) {
+        float: none;
+        width: $wProject-tablet;
+        height: $hProject-tablet;
+    }
+
+    @include bp(osx) {
+        width: $wProject-osx;
+        height: $hProject-osx;
+    }
+}
+
 

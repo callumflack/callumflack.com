@@ -1,0 +1,65 @@
+- @body_class = "blog-list"
+
+%header
+	%nav
+		%a.left{:href => "/home"}
+			%i.icon-arrow_left
+			Home
+		%a.right{:href => "/about"}
+			About
+			%i.icon-arrow_right
+		%a{:href => "/blog"}
+			Callum Flack · Blog
+
+
+%article
+	%section
+		%article.blog-post
+			%h1
+				%a{:href => "/blog/inbetweenings"} Things inbetween: a tumblr blog
+			%p June 3, 2012
+			%figure.img-mask
+				%img{:src => "assets/images/Notice-120418.jpg", :alt => "Inbetweenings, a tumblr blog"}
+
+		%article.blog-post
+			%h1
+				%a{:href => "/blog/a-paraphrased-sterling-article"} A paraphrased Sterling article
+			%p June 3, 2012
+			%p
+				I want to share the story behind approximately $2700 dollars worth of my spending this year that reveals
+				how I am finally starting to leave the middle class, materially, financially and psychologically. I am
+				doing something called trading up.
+				%a{:href => "/blog/a-paraphrased-sterling-article"} Read more
+
+		%article.blog-post
+			%h1
+				%a{:href => "/blog/inbetweenings"} Things inbetween: a tumblr blog
+			%p June 3, 2012
+			.img-mask
+				%img{:src => "assets/images/Notice-120418.jpg", :alt => "Inbetweenings, a tumblr blog"}
+
+		%article.blog-post
+			%h1
+				%a{:href => "/blog/a-paraphrased-sterling-article"} A paraphrased Sterling article
+			%p June 3, 2012
+			%p
+				I want to share the story behind approximately $2700 dollars worth of my spending this year that reveals
+				how I am finally starting to leave the middle class, materially, financially and psychologically. I am
+				doing something called trading up.
+				%a{:href => "/blog/a-paraphrased-sterling-article"} Read more
+
+
+	%section.dirty-yellow
+		.text-column
+			%h2.location
+				%a{:href => "/about"} About
+			%h1
+				%a{:href => "/about"} A designer who codes
+
+			%p
+				I design communications for both page and screen.
+				I plan, create and build assets that enhance value for
+				business and culture. In industry terms, I'm a senior
+				designer and art director with over twelve years experience.
+
+			= partial "footer"

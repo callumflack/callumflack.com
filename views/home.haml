@@ -1,15 +1,73 @@
 - @body_class = "home"
 
-%nav
-  %h1
-    .location
-      %a{:href => "/home"} 
-        Callum Flack is a Graphic Designer
-    .menu
-      %a{:href => "/work"} Work
-      %a.spaced{:href => "/journal"} Journal
-      %a.spaced{:href => "/profile"} Profile
+%header#start
+    %nav
+        .navInner
+            .block.block--info
+                %h1
+                    %a{:href => "/"}
+                        Callum Flack is a designer who codes.
+                %p
+                    I design and build identities and products for screen and page
+                    by focussing on Why, not What.
 
-%section
-  %a{:href => "/work"}
-    %img{:src => "assets/images/hi-poster.jpg", :alt => "Callum Flack says hi"}
+                %p
+                    In it since 2000, I have a comprehensive skill set: from brand identity design and art direction to web design and user interface design.
+                    I believe that:
+
+                %ul.ul--dash
+                    %li Ideas can easily become fickle. Execution makes the thing.
+                    %li Clarity is what shows above an iceberg of focus and elimination. Clarity, not simplicity, is the aim.
+                    %li Seeing it as designer, as user/audience and with a bird's eye view helps find connections. Connections are where meaning lies.
+                %p
+                    Contact:
+                    %a{:href => "mailto:callumflack@gmail.com"} email,
+                    %a{:href => "https://twitter.com/callumflack"} twitter,
+                    %a{:href => "https://github.com/callumflack"} github,
+                    %a{:href => "http://www.linkedin.com/in/callumflack"} linkedin.
+
+            .block.block--infoNav
+                %button.Button.Button--clear
+                    %a{:href => "##welend"} &#8595; View the work
+
+    = partial "work/best-carousel"
+
+%section#welend
+    = partial "work/welend-info"
+    = partial "work/welend-carousel"
+
+%section#villagemelbourne
+    = partial "work/villagem-info"
+    = partial "work/villagem-carousel"
+
+%section#boxdice
+    = partial "work/boxdice-info"
+    = partial "work/boxdice-carousel"
+
+%section#roundtablerecords
+    = partial "work/roundtable-info"
+    = partial "work/roundtable-carousel"
+
+%section#inbound
+    = partial "work/inbound-info"
+    = partial "work/inbound-carousel"
+
+%section#ipad
+    = partial "work/ipad-info"
+    = partial "work/ipad-carousel"
+
+%section#advertising
+    = partial "work/ads-info"
+    = partial "work/ads-carousel"
+
+%section#posters
+    = partial "work/posters-info"
+    = partial "work/posters-carousel"
+
+%section#logos
+    = partial "work/logos-info"
+    = partial "work/logos-carousel"
+
+%section#end
+    = partial "work/end"
+

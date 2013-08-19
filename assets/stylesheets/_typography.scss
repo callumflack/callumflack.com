@@ -1,134 +1,112 @@
-.typeset {
-  font-weight: normal;
-  font-style: normal;
-  font-size: 20px;
-  line-height: 150%;
-  text-align: left;
-  text-transform: none;
-  text-decoration: none;
-  letter-spacing: 0;
-  text-rendering: optimizeLegibility;
-}
+/* ==========================================================================
+   Typography
+   ========================================================================== */
 
+/* p, a & lists
+   ========================================================================== */
 
-//--------------------------------------------- a & p
-a {
-  color: $text;
-  text-decoration: none;
-  @extend .rule-link;
-  &:hover { 
+%text {
+	font-family: $fontFace, "Helvetica Neue", Helvetica, Arial, Sans-serif;
+    @include font-size(20px);
+    line-height: 1.25;
+    font-weight: normal;
+    font-style: normal;
+    text-align: left;
+    text-transform: none;
     text-decoration: none;
-    color: $link;
-  }
+    letter-spacing: normal;
+    text-rendering: optimizeLegibility;
+	-webkit-font-smoothing: antialiased;
+    color: $cText;
+    margin: 0;
+
+    //@include bp(tablet) { @include font-size(20px); }
 }
 
-p > a, p > a:hover, a.project p { font-family: 'arnhem_blonditalic'; }
-p { margin: 0; } //bottom 18px
-p + p { text-indent: 3rem; }
-p.links { 
-  text-indent: 0;
-  margin: 18px 0 18px 3rem;
+%textMargin {
+    margin-bottom: $lHbR/3;
 }
-p.first { text-indent: 0; }
 
+p, a, li, span {
+    @extend %text;
+    @extend %textMargin;
+    //&:last-of-type { margin-bottom: 0; }
+}
 
-//----------------------------menu & titles
-h1 {
-  @extend .typeset;
-  font-family: 'arnhem_bold_scregular';
-  font-size: 17px;
-  text-align: center;
-  letter-spacing: 1px;
-  -webkit-font-smoothing: antialiased;
-  margin: 0 0 20px 0;
-  &.title {
-    font-family: 'arnhem_blonditalic';
-    font-size: 38px;
-    letter-spacing: 0;
-    text-transform: none;
-    padding-bottom: 30px;
-//    margin-bottom: 56px;
-    border-color: transparent;
+ul { margin: 0 0 $lHbR/3 0; }
+
+a {
+    color: inherit;
+    text-decoration: underline;
     &:hover {
-      border-color: transparent;
+        color: $cLink;
+        text-decoration: none;
     }
-  }
-  &.subtitle {
-    font-family: 'arnhem_blonditalic';
-    font-size: 27px;
-    letter-spacing: 0;
-    text-transform: none;
-    margin: 0 0 10px 0  ;
-  }
 }
 
-h2 {
-  @extend .typeset;
-  font-family: 'arnhem_blackregular';
-  text-align: center;
-  font-size: 17px;
-  letter-spacing: 1px;
-  text-transform: uppercase;
-  margin: 60px 0 15px 0;
-  &.first {
-    margin-top: 20px;
-  }
-//    @extend .rule-link;
-//  a { @extend h2 }
+p.note, p.note a { @include font-size(16px); }
+
+
+
+/* Headlines
+   ========================================================================== */
+
+@for $index from 1 through 6 {
+    h#{$index} {
+        @extend %text;
+        @extend %textMargin;
+    }
+}
+
+h1, h1 a { color: $cLink; }
+
+
+
+/* Home 'about' page
+   ========================================================================== */
+
+%navText {
+    @include font-size(20px);
+    color: $cLink;
+    margin-bottom: $lHbR/3;
+}
+
+nav {
+
+    h1, p, a, li  { @extend %navText; }
+
+    h1 { margin-bottom: $lHbR/3 + rem(4); }
+
+    h1 a {
+        color: $cRed;
+        text-decoration: none;
+        border-bottom: 1px solid $cRed;
+
+        &:hover {
+            color: $cRed;
+            border-bottom: 0;
+        }
+    }
+
+    /**
+     * Nav Em-dash list style
+     */
+
+    .ul--dash {
+        padding-left: rem(28);
+        list-style: none;
+    }
+
+    .ul--dash > li:before {
+        content: "—";
+        text-indent: 0;
+        display: inline-block;
+        width: 0;
+        position: relative;
+        left: rem(-28);
+    }
 }
 
 
 
-//----------------------------em dash
-span {
-  @extend .typeset;
-  font-family: 'arnhem_blackregular';
-  font-size: 17px;
-  text-align: center;
-  text-transform: uppercase;
-  text-decoration: none;
-  letter-spacing: 1px;
-  &.em {
-    font-family: 'arnhem_normalregular';
-    letter-spacing: -2px;
-    padding: 0;
-    margin: 0 6px 0 3px;
-    background: none;
-  }
-  &.bullet {
-//    margin-left: 40px;
-    margin-right: 8px;
-    &:hover { color: $link; }
-  }
-  &.read-more {
-    font-family: 'arnhem_normalregular';
-  }
-  &.info-hidden, &.info-visible {
-    font-family: 'arnhem_bold_scregular';
-    font-size: 17px;
-    text-transform: none;
-  }
-}
-
-
-
-footer {
-  a, p, span, h1, h2 { text-align: center; }
-  a:hover { color: $link; }
-}
-
-button, input, select, textarea {
-  @extend .typeset;
-  font-family: 'arnhem_blondregular';
-}
-
-input[type="submit"] {
-  @extend .typeset;
-  font-family: 'arnhem_blackregular';
-  font-size: 16px;
-  text-align: center;
-  text-transform: uppercase;
-  text-decoration: none;
-  letter-spacing: 1px;
-}
 

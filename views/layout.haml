@@ -1,24 +1,21 @@
 !!!5
 %html
-  %head
-    %meta{'charset' => "utf-8"}
-    %meta{'http-equiv' => "X-UA-Compatible", :content => "IE=edge,chrome=1"}
-    %title Callum Flack Graphic Design
-    %meta{:name => "title", :content => "Callum Flack Graphic Design."}
-    %meta{:name => "description", :content => "Callum Flack is a designer for page and screen. He plans, design and builds visual communications."}
-    %meta{:name => "author", :content => "Callum Flack"}
-    -# Google will often use "title, description, author"" as its description of your page/site.
-    -# <meta name="google-site-verification" content="" set your site up: http://google.com/webmasters
-    %meta{:name => "author", :content => "Callum Flack"}
-    %meta{:name => "Copyright", :content => "Copyright Callum Flack 2013. All rights reserved. All wrongs righted."}
-    %meta{:name => "viewport", :content => "width=device-width, initial-scale=1.0"}
-    %link{:rel => "apple-touch-icon", :sizes => "114x114", :href => "assets/icon.png"}
-    = stylesheet_tag :application
-      
-  %body{ class: @body_class }
-    
-    .anchor
-    .container
-    
-      ~ yield
-      = javascript_tag :application
+    %head
+        %meta{'charset' => "utf-8"}
+        %meta{'http-equiv' => "X-UA-Compatible", :content => "IE=edge,chrome=1"}
+        %title Callum Flack Graphic Design
+        %meta{:name => "title", :content => "Callum Flack Graphic Design."}
+        %meta{:name => "description", :content => "Callum Flack is a designer for page and screen. He plans, design and builds visual communications."}
+        %meta{:name => "author", :content => "Callum Flack"}
+        -# Google will often use "title, description, author"" as its description of your page/site.
+        -# <meta name="google-site-verification" content="" set your site up: http://google.com/webmasters
+        %meta{:name => "author", :content => "Callum Flack"}
+        %meta{:name => "Copyright", :content => "Copyright Callum Flack 2013. All rights reserved. All wrongs righted."}
+        %meta{:name => "viewport", :content => "width=device-width, initial-scale=1.0"}
+        %link{:rel => "apple-touch-icon", :sizes => "114x114", :href => "assets/icon.png"}
+        = stylesheet_tag :application
+
+    %body{ class: @body_class }
+
+        ~ yield
+        = javascript_tag :application

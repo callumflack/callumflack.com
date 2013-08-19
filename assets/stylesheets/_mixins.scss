@@ -1,108 +1,74 @@
-.opacity-0 {
-  zoom: 1;
-  filter: alpha(opacity=0);
-  opacity: 0.0;
+/**
+ * easy media queries
+ * @include bp(tablet) { SCSS here };
+ * http://css-tricks.com/media-queries-sass-3-2-and-codekit/
+ * http://css-tricks.com/resolution-specific-stylesheets/
+ * http://css-tricks.com/css-media-queries/
+ */
+
+@mixin bp($point) {
+	@if $point == desk {
+		@media (max-width: 1620px) { @content; }
+	}
+	@if $point == air {
+		@media (min-width: 1300px) and (max-width: 1619px) { @content; } //default max-width: 1600 // Air 11in 1366 by 768, 13in 1440 by 900
+	}
+	@if $point == tablet {
+		@media (max-width: 1299px) { @content; }
+	}
+	@if $point == palm {
+		@media (max-width: 768px) { @content; }
+	}
+	@else if $point == osx {
+		@media (max-width: 320px) { @content; } //set this to 320 upon pushing live
+	}
 }
 
-.opacity-20 {
-  zoom: 1;
-  filter: alpha(opacity=10);
-  opacity: 0.1;
+/**
+ * bourbon pixels to ems converter
+ */
+
+@function rem($pxval, $base: 16) {
+    @return ($pxval / $base) * 1rem;
 }
 
-.opacity-70 {
-  zoom: 1;
-  filter: alpha(opacity=70);
-  opacity: 0.8;
+/**
+ * https://github.com/thoughtbot/bourbon/blob/master/app/assets/stylesheets/css3/_font-face.scss
+ * Order of the includes matters, and it is: normal, bold, italic, bold+italic.
+ * @include font-face(ProximaNova, 'fonts/proximanova_semibolditalic_macroman/ProximaNova-SboldIt-webfont', normal, italic);
+ */
+
+@mixin font-face($font-family, $file-path, $weight: normal, $style: normal) {
+  @font-face {
+    font-family: $font-family;
+    font-weight: $weight;
+    font-style:  $style;
+    src: url('#{$file-path}.eot');
+    src: url('#{$file-path}.eot?#iefix')          format('embedded-opentype'),
+         url('#{$file-path}.woff')                format('woff'),
+         url('#{$file-path}.ttf')                 format('truetype'),
+         url('#{$file-path}.svg##{$font-family}') format('svg');
+  }
 }
 
-.opacity-100 {
-  zoom: 1;
-  filter: alpha(opacity=100);
-  opacity: 1;
+/**
+ * Inuit: create a fully formed type style (sizing and vertical rhythm)
+ * by passing in a single value, e.g.: @include font-size(10px);
+ * http://jsfiddle.net/redclover/mkYtY/
+ * http://designbyjoel.com/blog/2013-02-28-sass-rems/
+ * or? https://gist.github.com/ijy/1441967
+ * @function rem($target, $context: $fSb) {
+ *   @if $target == 0 { @return 0 }
+ *   @return $target / $context + 0em;
+ */
+
+@mixin font-size($font-size, $line-height:false) {
+    font-size:$font-size;
+    font-size:($font-size / $fSb)*1rem;
+    @if $line-height == true {
+        line-height:ceil($font-size / $lHb) * ($lHb / $font-size);
+    }
 }
 
-.fade-delay {
-  -webkit-transition: opacity 0.5s ease;
-  -moz-transition: opacity 0.5s ease;
-  -o-transition: opacity 0.5s ease;
-  transition: opacity 0.5s ease;
-}
 
-.fade-delay-2 {
-  -webkit-transition: opacity 1s ease;
-  -moz-transition: opacity 1s ease;
-  -o-transition: opacity 1s ease;
-  transition: opacity 1s ease;
-}
 
-.fade-details {
-  -webkit-transition: background 0.3s ease;
-  -moz-transition: background 0.3s ease;
-  -o-transition: background 0.3s ease;
-  transition: background 0.3s ease;
-}
-
-@mixin section-rule {
-  border-top: 1px solid $text-20;
-}
-
-@mixin border-radius($values) {
-  -moz-border-radius: $values;
-  -webkit-border-radius: $values;
-  border-radius: $values;
-}
-
-@mixin box-shadow($inset, $x, $y, $offset, $color) {
-  -moz-box-shadow: $inset $x $y $offset $color;
-  -o-box-shadow: $inset $x $y $offset $color;
-  -webkit-box-shadow: $inset $x $y $offset $color;
-  box-shadow: $inset $x $y $offset $color;
-}
-
-@mixin transition($value) {
-  -moz-transition: $value;
-  -o-transition: $value;
-  -ms-transition: $value;
-  -webkit-transition: $value;
-  transition: $value;
-}
-
-@mixin transparent($color, $alpha) {
-  $rgba: rgba($color, $alpha);
-  $ie-hex-str: ie-hex-str($rgba);
-  background-color: transparent;
-  background-color: $rgba;
-  filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#{$ie-hex-str},endColorstr=#{$ie-hex-str});
-  zoom: 1;
-}
-
-@mixin background-gradient {
-  background: #F9F9F9;
-  background: -moz-linear-gradient(top, #F9F9F9 0%, #DBDBDB 100%);
-  background: -ms-linear-gradient(top, #F9F9F9 0%, #DBDBDB 100%);
-  background: -o-linear-gradient(top, #F9F9F9 0%, #DBDBDB 100%);
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #F9F9F9), color-stop(100%, #DBDBDB));
-  background: -webkit-linear-gradient(top, #F9F9F9 0%, #DBDBDB 100%);
-  background: linear-gradient(top, #F9F9F9 0%, #DBDBDB 100%);
-}
-
-@mixin background-gradient-hover {
-  background: #FAFAFA;
-  background: -moz-linear-gradient(top, #FAFAFA 0%, #EAEAEA 100%);
-  background: -ms-linear-gradient(top, #FAFAFA 0%, #EAEAEA 100%);
-  background: -o-linear-gradient(top, #FAFAFA 0%, #EAEAEA 100%);
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #FAFAFA), color-stop(100%, #EAEAEA));
-  background: -webkit-linear-gradient(top, #FAFAFA 0%, #EAEAEA 100%);
-  background: linear-gradient(top, #FAFAFA 0%, #EAEAEA 100%);
-}
-
-@mixin background-gradient-active {
-  background: #DBDBDB;
-  background: -moz-linear-gradient(top, #DBDBDB 0%, #F9F9F9 100%);
-  background: -ms-linear-gradient(top, #DBDBDB 0%, #F9F9F9 100%);
-  background: -o-linear-gradient(top, #DBDBDB 0%, #F9F9F9 100%);
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #DBDBDB), color-stop(100%, #F9F9F9));
-  background: -webkit-linear-gradient(top, #DBDBDB 0%, #F9F9F9 100%);
-  background: linear-gradient(top, #DBDBDB 0%, #F9F9F9 100%);
-}
