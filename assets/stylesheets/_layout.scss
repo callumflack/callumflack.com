@@ -53,15 +53,20 @@ nav,
     @include bp(palm) { float: none; }
 }
 
-header .navInner,
-header .carousel {
+%pageFixed {
     position: fixed;
     @include bp(osx) { position: relative; }
 }
 
 header .navInner {
-    max-width: inherit; //$wInfo*1.5; //inherit
+    @extend %pageFixed;
+    max-width: inherit; //$wInfo*1.5;
     margin-right: $lHbR;
+}
+
+header .carousel {
+    @extend %pageFixed;
+    right: $lHbR;
 }
 
 /**
