@@ -61,7 +61,6 @@ nav,
 header .navInner {
     @extend %pageFixed;
     max-width: inherit; //$wInfo*1.5;
-    margin-right: $lHbR;
 }
 
 header .carousel {
