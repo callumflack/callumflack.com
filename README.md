@@ -1,6 +1,7 @@
 # run localhost with unicorn
 
 bundle exec unicorn -l 9000
+(-l 9000 to avoid a local printer conflict)
 
 # deployment
 
