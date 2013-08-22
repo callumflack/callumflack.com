@@ -1,11 +1,8 @@
 # deploy site amends
 
-push to github
-then, push new stuff to heroku
+1. push to github
+2. push to heroku via $ rake deploy or $ git push heroku master, whichever you prefer
 
-when in cd Code/callumflack.com
-rake deploy
-or git push heroku master, whichever you prefer
+# run localhost with unicorn
 
-# run on localhost
 bundle exec unicorn -l 9000
