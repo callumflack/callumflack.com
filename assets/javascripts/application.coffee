@@ -1,4 +1,5 @@
 #= require jquery.js
+#= require modernizr.js
 #= require jquery.arbitrary-anchor.js
 #= require jquery.event.swipe.js
 #= require jquery.event.move.js
