@@ -1,6 +1,6 @@
 /* ==========================================================================
-Carousel elements
-========================================================================== */
+   Carousel elements
+   ========================================================================== */
 
 .carousel {
 
@@ -27,7 +27,7 @@ Carousel elements
         @include bp(tablet) { text-align: left; }
 
         /* unslider requires a height */
-        height: $hProject;
+        height: $hProject*1.045;
         @include bp(tablet) { height: $hProject-tablet + 0.5vw; }
         @include bp(osx) { height: $hProject-osx; }
 
@@ -37,7 +37,7 @@ Carousel elements
             @include bp(tablet) { height: $hProject-tablet - 0.5vw; }
             @include bp(osx) { height: $hProject-osx; }
         }
-//
+
 //        /* …unless in ratio */
 //        &.unfixHeight {
 //            img { height: auto !important; }
@@ -45,17 +45,48 @@ Carousel elements
 //        }
     }
 
+    /* carousel nav */
+    .banner .dots {
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        text-align: right;
+        overflow: visible;
+    }
+    .banner .dots li {
+        display: inline-block;
+        width: 10px;
+        height: 10px;
+        margin: 0 4px;
+        text-indent: -999em;
+        border: 1px solid $cText;
+        border-radius: 6px;
+        cursor: pointer;
+        opacity: .4;
+        -webkit-transition: background .5s, opacity .5s;
+        -moz-transition: background .5s, opacity .5s;
+        transition: background .5s, opacity .5s;
+        &:last-of-type {
+            margin-right: 0;
+        }
+    }
+    .banner .dots li.active {
+        background: $cText;
+        opacity: 1;
+    }
+
     /*
-    * Slide background colors
-    */
+     * Slide background colors
+     */
 
     .bg-grey { background-color: darken($cBg, 5%); }
     .bg-outline { border: 1px solid darken($cBg, 50%); }
 
     /*
-    * Parent use for .u-absoluteCenter
-    * Build horizontal layers with these
-    */
+     * Parent use for .u-absoluteCenter
+     * Build horizontal layers with these
+     */
 
     .retainHW {
         position: relative;
@@ -78,3 +109,9 @@ Carousel elements
     .retainHW--h1-3 { height: $hProject/3; }
     .retainHW--h1-4 { height: $hProject/4; }
 }
+
+#ipad .carousel .banner .dots li.active {
+    border-color: $cBg;
+    background: $cBg;
+}
+

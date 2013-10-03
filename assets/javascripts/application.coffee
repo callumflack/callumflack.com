@@ -7,10 +7,10 @@
 
 $ ->
     $(".banner").unslider
-        speed: 200
-        delay: 5000
+        speed: 100
+        delay: 4000
         keys: true
-        dots: false
+        dots: true
         fluid: true
 
 # https://gist.github.com/rezwyi/3919572
