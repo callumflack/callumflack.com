@@ -4,6 +4,8 @@ Bundler.require
 
 require "mime/types"
 
+set :protection, :except => :frame_options
+
 get "/*/" do
   redirect to(params[:splat].first), 301
 end
