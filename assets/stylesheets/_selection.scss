@@ -6,13 +6,13 @@
 ::selection {
     background: black; //#61d7ee; lighten($cLink, 40%);
     text-shadow: none;
-    color: $cText;
+    color: $cBg;
 }
 
 ::-moz-selection {
     background: black;
     text-shadow: none;
-    color: $cText;
+    color: $cBg;
 }
 
 img::selection {

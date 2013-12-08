@@ -1,0 +1,61 @@
+/* ==========================================================================
+   
+   Scrolling nav
+   
+   ========================================================================== */
+
+
+// Remove when modal is on
+.md-show ~ .scroll-nav { display: none; }
+
+.scroll-nav {
+	@include scut-fixed(40% $bs n n);
+	z-index: 1977;
+}
+
+// Reset ul bottom-margin
+.scroll-nav__item { margin-bottom: 0; }
+
+.scroll-nav__link {		
+	padding: $bs/4 $bs $bs/4 $bs/2;
+	margin: $bs/4 0;
+	filter: Alpha(Opacity=10);
+	opacity: 0.1;	
+	border-bottom: none;
+
+	// Circles in span for cleaner hover UX
+	span { 
+		@include scut-circle($bs/1.75, $cText); 
+		margin-bottom: 0;
+	}
+
+	&:before {
+		$caption-width: 500px;
+		display: block;
+		width: $caption-width;
+		position: absolute;
+		left: -$caption-width;
+		visibility: hidden;
+		text-align: right;
+		text-indent: 0;
+		margin-top: 4px;
+		font-size: 14px;
+		color: $cText;
+	}
+
+	&#scroll-start:before { content: 'Start'; }
+	&#scroll-one:before   { content: '1. Doing this'; }
+	&#scroll-two:before   { content: '2. Doing that'; }
+	&#scroll-three:before { content: '3. Doing this too'; }
+	&#scroll-four:before  { content: '4. Doing that plus'; }
+	&#scroll-five:before  { content: '5. And doing this'; }
+	&#scroll-end:before   { content: 'This is the end'; }
+
+	&:hover {
+		filter: Alpha(Opacity=100);
+		opacity: 1;
+		&:before {
+			visibility: visible;
+		}
+	}
+}

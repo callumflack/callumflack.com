@@ -3,9 +3,9 @@
     %head
         %meta{'charset' => "utf-8"}
         %meta{'http-equiv' => "X-UA-Compatible", :content => "IE=edge,chrome=1"}
-        %title Callum Flack is a designer who codes
-        %meta{:name => "title", :content => "Callum Flack is a designer who codes"}
-        %meta{:name => "description", :content => "Callum Flack is a designer who codes identities and products for screen and page by focussing on Why, not What."}
+        %title Callum Flack. Design + Development.
+        %meta{:name => "title", :content => "Callum Flack. Design + Front-end Development"}
+        %meta{:name => "description", :content => "Callum Flack, is a designer who codes identities and products for screen and page by focussing on Why, not What."}
         %meta{:name => "author", :content => "Callum Flack"}
         %meta{:name => "copyright", :content => "Copyright Callum Flack 2013. All rights reserved. All wrongs righted."}
         -# <meta name="google-site-verification" content="" set your site up: http://google.com/webmasters
@@ -17,3 +17,14 @@
 
         ~ yield
         = javascript_tag :application
+
+        / this mess is the modal
+        %script{:src => "/assets/javascripts/mw-classie.js"}
+        %script{:src => "/assets/javascripts/mw-modalEffects.js"}
+        / for the blur effect
+        / by @derSchepp https://github.com/Schepp/CSS-Filters-Polyfill
+        :javascript
+            // this is important for IEs
+            var polyfi/lter_scriptpath = '/js/';
+        %script{:src => "/assets/javascripts/mw-cssParser.js"}
+        / %script{:src => "/assets/javascripts/mw-css-filters-polyfill.js"}

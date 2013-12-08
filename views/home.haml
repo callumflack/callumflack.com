@@ -1,72 +1,38 @@
 - @body_class = "home"
 
-%header#start
-    %nav
-        .navInner
-            .block.block--info
-                %h1
-                    %a{:href => "/"}
-                        Callum Flack is a designer who codes.
-                %p
-                    I design and build identities and products for screen and page by focussing on Why, not What.
+= partial "work/modal-welend"
+= partial "scrollnav"
 
-                %p
-                    In it since 2000, I have a comprehensive skill set: from art direction and brand identity design to user interface design and front-end development.
-                    I believe that:
+.container
+    %header#start
+        .columnText
+            %h1 Callum Flack is a designer who codes.
+            
+            %p.textBold.textLg
+                I design and develop identities and products for screen and page by focussing on Why, not What.
 
-                %ul.ul--dash
-                    %li Execution eats the idea's tail (ideas are nothing without execution, execution is vacuous without an idea).
-                    %li Clarity is what shows above an iceberg of focus and elimination. Clarity, not simplicity, is the aim.
-                    %li Seeing it as designer, as user/audience and with a bird's eye view helps find connections. Connections are where meaning lies.
-                %p
-                    Contact:
-                    %a{:href => "mailto:callumflack@gmail.com"} email,
-                    %a{:href => "https://twitter.com/callumflack"} twitter,
-                    %a{:href => "https://github.com/callumflack"} github,
-                    %a{:href => "http://www.linkedin.com/in/callumflack"} linkedin.
+            %p
+                At it since 2000, I have a holistic skill set: from art direction, brand identity design, editorial design and typography to user experience design, interface design, front-end development with mobile integration, interaction design and content strategy. I believe that:
 
-            .block.block--infoNav
-                %button.Button.Button--clear
-                    %a{:href => "##welend"} &#8595; View the work
+            %ul
+                %li.List-number-one Differentiation usually occurs from unexpected insight. Insight requires exploration, conversation, knowhow, iteration and grit.
+                %li.List-number-two Clarity results from focus and elimination. Clarity, not simplicity, is the aim.
+                %li.List-number-three Seeing it as designer, as user and as a system helps find connections. Connections are where meaning lies.
+            %p
+                I can be contacted via:
+                %a{:href => "mailto:callumflack@gmail.com"} email,
+                %a{:href => "https://twitter.com/callumflack"} twitter,
+                %a{:href => "https://github.com/callumflack"} github,
+                %a{:href => "http://www.linkedin.com/in/callumflack"} linkedin.
 
-    = partial "work/best-carousel"
+            .nextProject
+                / %button.Button.Button--clear
+                / %a{:href => "##one"} &#8595; Five reasons why you should hire me
+                %a{:href => "##one"} Five reasons why I'm all that
 
-%section#welend
-    = partial "work/welend-info"
-    = partial "work/welend-carousel"
+    %section#one    
+        = partial "work/reason-one"
 
-%section#villagemelbourne
-    = partial "work/villagem-info"
-    = partial "work/villagem-carousel"
-
-%section#boxdice
-    = partial "work/boxdice-info"
-    = partial "work/boxdice-carousel"
-
-%section#roundtablerecords
-    = partial "work/roundtable-info"
-    = partial "work/roundtable-carousel"
-
-%section#inbound
-    = partial "work/inbound-info"
-    = partial "work/inbound-carousel"
-
-%section#ipad
-    = partial "work/ipad-info"
-    = partial "work/ipad-carousel"
-
-%section#advertising
-    = partial "work/ads-info"
-    = partial "work/ads-carousel"
-
-%section#posters
-    = partial "work/posters-info"
-    = partial "work/posters-carousel"
-
-%section#logos
-    = partial "work/logos-info"
-    = partial "work/logos-carousel"
-
-%section#end
-    = partial "work/end"
+    %section#end
+        = partial "work/end"
 

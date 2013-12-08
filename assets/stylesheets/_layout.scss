@@ -1,10 +1,8 @@
 /* ==========================================================================
    Layout
    ========================================================================== */
-
-*, *:after, *:before { @include box-sizing(border-box); }
-
-$wProject: rem(1200);
+ 
+$wProject: rem(900);
 $hProject: $wProject*0.667;
 $mProject: rem(640);
 
@@ -14,89 +12,26 @@ $hProject-tablet: 70vw*0.8; //44vh
 $wProject-osx: 100%;
 $hProject-osx: 80vw; //67?
 
-/**
- * Sections as pages
- */
+.columnText {
+    width: rem(660);
+    margin: 0 auto;
+}
+
+
+
+/* Sections as pages
+   ========================================================================== */
 
 header,
 section {
     position: relative;
-    height: rem(1440);
-    width: 100%;
-    padding: $lHbR;
+    height: auto;
+    width: rem(900);
+    margin: 0 auto;
+    padding: rem(200) 0;
     background-color: $cBg;
 }
 
-header,
-section#end { background-color: darken($cBg, 5%); }
-
-
-/* Page info part
-   ========================================================================== */
-
-$wInfo: rem(370);
-$alignTop: rem(3);
-
-nav,
-.info {
-    position: relative;
-    float: left;
-    width: 100%;
-    max-width: $wInfo;
-
-    @include bp(tablet) {
-        float: none;
-        max-width: 100%;
-        margin-bottom: $lHbR*2;
-    }
-    // this is purely to have this bp show in the responsive extension in chrome
-    @include bp(palm) { float: none; }
-}
-
-%pageFixed {
-    position: fixed;
-    @include bp(osx) { position: relative; }
-}
-
-header .navInner {
-    @extend %pageFixed;
-    max-width: inherit; //$wInfo*1.5;
-}
-
-header .carousel {
-    @extend %pageFixed;
-    right: $lHbR;
-}
-
-/**
- * Blocks within info part
- */
-
-.block { position: relative; }
-
-.block--info {
-    margin-top: -($alignTop);
-
-    @include bp(tablet) { max-width: 50%; }
-    @include bp(osx) { max-width: 100%; }
-}
-
-.block--infoNav {
-    margin-top: $lHbR;
-
-    @include bp(tablet) {
-        position: absolute;
-        top: 0;
-        right: 0;
-        margin: 0;
-    }
-    @include bp(osx) {
-        position: relative;
-        top: 0;
-        right: 0;
-        margin-top: $lHbR/1.5;
-    }
-}
 
 
 /* Page carousel part
@@ -134,5 +69,24 @@ header#start > .carousel {
         height: $hProject-osx;
     }
 }
+
+
+
+/* Section nav
+   ========================================================================== */
+
+.nextProject {
+    @include scut-relative($bs*2 n n n);
+    @include scut-side-lined($style: dotted, $height: 2px, $color: #bbb, $space: 0.2em, $v-adjust: 0.1em);
+
+    > a { border-bottom: none; }
+}
+
+
+
+
+
+
+
 
 

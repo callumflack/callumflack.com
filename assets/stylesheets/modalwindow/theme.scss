@@ -1,0 +1,28 @@
+.container {
+	background: $cBg;
+}
+
+.projectList {
+	padding: rem(30) 0;
+	img {
+		z-index: 1977;
+	}
+}
+
+.md-trigger {
+	display: inline-block;
+	position: relative;	
+	cursor: pointer;
+	&:hover {
+		img { visibility: hidden; }
+		.project-synopsis { visibility: visible; }
+	}
+}
+
+.project-synopsis {
+	position: absolute;
+	top: 0;
+	left: 0;
+	margin: rem(20);
+	visibility: hidden;
+}

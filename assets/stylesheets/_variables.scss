@@ -2,19 +2,19 @@
    Variables
    ========================================================================== */
 
-@include font-face('theinhardt_regular', 'theinhardtreg-webfont');
-@include font-face('theinhardt_lightbold', 'theinhardtmed-webfont');
+@include scut-font-face('theinhardt_regular', 'theinhardtreg-webfont');
+@include scut-font-face('theinhardt_lightbold', 'theinhardtmed-webfont');
 $fontFace: 'theinhardt_regular';
 $fontFaceBold: 'theinhardt_lightbold';
 
-$fSb: 16px;
-$lHb: 24px;
-$lHbR: rem(24);
+$base-font-size: 16px;
+$base-line-height: 21px; //16*1.3
+$bs: rem(21);
 
-$cText: #777;
+$cText: #111;
 $cText50: #999;
 $cText20: #aaa;
 $cLink: black; // black #cc0000 #b60001 blues: #007aff #00adff; //#11b5d5;
 $cRed: #cc0000;
 $cBg: #fdfdfd;
-$cBgStart: #eaeaea; //#f2f2f3 BBC backgr
+$cBgStart: #eaeaea; //#f2f2f3 BBC backgr 

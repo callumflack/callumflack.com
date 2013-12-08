@@ -1,4 +1,4 @@
-/**
+/** 
  * easy media queries
  * @include bp(tablet) { SCSS here };
  * http://css-tricks.com/media-queries-sass-3-2-and-codekit/
@@ -25,48 +25,46 @@
 }
 
 /**
- * bourbon pixels to ems converter
+ * bourbon pixels to ems/rems converter
  */
 
 @function rem($pxval, $base: 16) {
     @return ($pxval / $base) * 1rem;
 }
 
-/**
- * https://github.com/thoughtbot/bourbon/blob/master/app/assets/stylesheets/css3/_font-face.scss
- * Order of the includes matters, and it is: normal, bold, italic, bold+italic.
- * @include font-face(ProximaNova, 'fonts/proximanova_semibolditalic_macroman/ProximaNova-SboldIt-webfont', normal, italic);
- */
+// SCUT PIXELS TO EMS
+// http://davidtheclark.github.io/scut/#pixels-to-ems
 
-@mixin font-face($font-family, $file-path, $weight: normal, $style: normal) {
-  @font-face {
-    font-family: $font-family;
-    font-weight: $weight;
-    font-style:  $style;
-    src: url('#{$file-path}.eot');
-    src: url('#{$file-path}.eot?#iefix')          format('embedded-opentype'),
-         url('#{$file-path}.woff')                format('woff'),
-         url('#{$file-path}.ttf')                 format('truetype'),
-         url('#{$file-path}.svg##{$font-family}') format('svg');
-  }
+// Depends on `scut-strip-unit`.
+
+@function scut-rem (
+  $pixels,
+  $base: 16
+) {
+
+  // $base could be in em or px (no unit = px).
+  // Adjust accordingly to create a $divisor that
+  // serves as context for $pixels.
+  $multiplier: if(unit($base) == em, 16, 1);
+  $divisor: scut-strip-unit($base) * $multiplier;
+
+  @return ($pixels / $divisor) * 1rem;
+
 }
+
 
 /**
  * Inuit: create a fully formed type style (sizing and vertical rhythm)
  * by passing in a single value, e.g.: @include font-size(10px);
- * http://jsfiddle.net/redclover/mkYtY/
- * http://designbyjoel.com/blog/2013-02-28-sass-rems/
- * or? https://gist.github.com/ijy/1441967
- * @function rem($target, $context: $fSb) {
- *   @if $target == 0 { @return 0 }
- *   @return $target / $context + 0em;
+ * With unit stripping: http://jsfiddle.net/redclover/mkYtY/
+ * Also: http://designbyjoel.com/blog/2013-02-28-sass-rems/
  */
 
-@mixin font-size($font-size, $line-height:false) {
-    font-size:$font-size;
-    font-size:($font-size / $fSb)*1rem;
-    @if $line-height == true {
-        line-height:ceil($font-size / $lHb) * ($lHb / $font-size);
+@mixin font-size($font-size, $line-height:false){
+	font-size:$font-size;
+    font-size:($font-size / $base-font-size)*1rem;
+    @if $line-height == true{
+        line-height:ceil($font-size / $base-line-height) * ($base-line-height / $font-size);
     }
 }
 

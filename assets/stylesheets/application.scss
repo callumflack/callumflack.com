@@ -2,6 +2,18 @@
 
 @import "compass";
 @import "normalize";
+@import "scut";
+@import "mixins";
+@import "variables";
+
+/* ADD ONS ==================== */
+
+@import "owl/owl.carousel";
+@import "owl/owl.theme";
+@import "modalwindow/component";
+// @import "modalwindow/default";
+@import "modalwindow/theme";
+@import "scrollnav";
 
 /* SUIT CORE ==================== */
 
@@ -23,22 +35,19 @@
 
 /* THEME ======================== */
 
-@import "mixins";
-@import "variables";
-
 @import "alignVertical";
-
 @import "layout";
 @import "carousel";
-
 @import "typography";
-
 @import "button";
 @import "imgs";
 @import "forms";
 @import "selection";
 
+
 /* BASE ========================= */
+
+*, *:after, *:before { @include box-sizing(border-box); }
 
 html {
     overflow-y: scroll;
@@ -47,6 +56,6 @@ html {
     padding: 0;
     background-color: $cBg;
 
-    @include bp(tablet) { font-size: 14px; }
-    @include bp(osx)  { font-size: 13px; }
+    // @include bp(tablet) { font-size: 14px; }
+    // @include bp(osx)  { font-size: 13px; }
 }
