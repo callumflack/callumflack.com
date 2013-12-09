@@ -47,6 +47,6 @@ html {
     padding: 0;
     background-color: $cBg;
 
-    @include bp(tablet) { font-size: 14px; }
-    @include bp(osx)  { font-size: 13px; }
+    @include bp(tablet) { font-size: 15px; }
+    @include bp(osx)  { font-size: 12px; }
 }
