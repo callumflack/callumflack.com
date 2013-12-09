@@ -7,11 +7,14 @@
 
 $ ->
     $(".banner").unslider
-        speed: 100
-        delay: 4000
+        speed: 200
+        delay: 3500
+        init: 100
         keys: true
         dots: true
         fluid: true
+        pause: false
+        easing: 'swing' #see: https://github.com/idiot/unslider/issues/94
 
 # https://gist.github.com/rezwyi/3919572
 # https://gist.github.com/chrishamant/946868
