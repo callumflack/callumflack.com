@@ -16,3 +16,13 @@ img {
 img.outline {
     border: 1px solid #ddd;
 }
+
+.dualRight > li {
+	@extend .u-pullRight;
+	display: inline-block;
+	margin-left: 12px;
+}
+
+.carouselHeight {
+	height: rem(800);
+}
