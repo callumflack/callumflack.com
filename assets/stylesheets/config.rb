@@ -6,6 +6,7 @@ css_dir = "stylesheets"
 sass_dir = "sass"
 images_dir = "images"
 javascripts_dir = "javascripts"
+environment = :production
 output_style = :compressed
 line_comments = false
 
@@ -19,6 +20,8 @@ line_comments = false
 # line_comments = false
 
 # See: http://compass-style.org/help/tutorials/configuration-reference/
+
+# NB: restart Compass to execute any changes made in this file.
 
 # If you prefer the indented syntax, you might want to regenerate this
 # project again passing --syntax sass, or you can uncomment this:
