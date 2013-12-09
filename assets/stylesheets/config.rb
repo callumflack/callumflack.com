@@ -1,4 +1,4 @@
-# Require any additional compass plugins here.
+# Require any additional compass plugins here. 
 
 # Set this to the root of your project when deployed:
 http_path = "/"
@@ -6,6 +6,8 @@ css_dir = "stylesheets"
 sass_dir = "sass"
 images_dir = "images"
 javascripts_dir = "javascripts"
+output_style = "compressed"
+line_comments = "false"
 
 require 'autoprefixer-rails'
 
@@ -23,6 +25,7 @@ end
 # To disable debugging comments that display the original location of your selectors. Uncomment:
 # line_comments = false
 
+# See: http://compass-style.org/help/tutorials/configuration-reference/
 
 # If you prefer the indented syntax, you might want to regenerate this
 # project again passing --syntax sass, or you can uncomment this:
